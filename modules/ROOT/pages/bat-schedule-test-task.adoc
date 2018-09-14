@@ -1,0 +1,62 @@
+= To Schedule Testing and Monitoring
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This procedure describes how to schedule, run, and monitor an API test in Anypoint Platform using the default schedule and how to use a cron job to change the schedule. BAT is deployed by default in the Production environment of Anypoint Platform when you execute the bat login command. After deploying BAT, you execute a `bat schedule <options>` command. By default, if you don't include the optional cron expression in the command, the test runs every 15 minutes. The last step in this procedure changes the default to use a cron expression that runs the test once a day for a month.
+
+After running the command, BAT creates a monitor in Anypoint Platform. The monitor collects information about the scheduled execution of the test. To obtain this information, you need to set up a third-party reporting tool as described in the linked topic.
+
+. Log into Anypoint Platform using BAT. For example:
++
+`bat login --username=<value> --password=<value>`
++
+. Create a schedule using the default, every 15 minutes, and monitor the testing. Provide an arbitrary endpoint URL and optionally specify the current directory by using --init-folder to store scheduling information. For example:
++
+`+bat schedule endpoint http://www.example.com --init-folder+`
++
+The schedule is published to Exchange using the default login profile.
++
+Output looks like this in Mac OSX:
++
+----
+BAT Version: 1.0.51
+#  File: ./tests/step.0.dwl
+
+    api-mon
+      ✓ GET http://apimon.cloudhub.io/users (1316.85ms)
+        ✓ 200 must equal 200
+#  File: ./tests/step.1.dwl
+...
+            ✓ 10 must equal 10
+#  Reporter: bat/Reporters/JSON.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180226111256.json
+#  Reporter: bat/Reporters/HTML.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180226111256.html
+#Creating artifact...
+  + exchange.json
+  + .DS_Store
+  + tests/step.0.dwl
+  + tests/step.1.dwl
+  + main.dwl
+  + bat.yaml
+# Creating artifact...OK
+# Uploading 88f362bd-2092-4dbf-b9f2-db5624d7b4ab:www.telhill.com-ncQRvDwc:0.0.1
+# Version 0.0.1 published
+scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
+----
++
+. Go to the path for one of the local reporters listed in the output to see information about the executed test. For example, on Mac OSX, go to `/var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180226111256.html`.
+. Go to Exchange and take a look at the asset named after the arbitrary URL, `+http://www.example.com+` in this example, that you provided in the `bat schedule endpoint` command.
+. List the schedule of tests.
++
+`bat schedule list [--profile=<value>]`
++
+. Schedule a test to run repeated using a cron expression. For example, run the test at 12:00 PM every day for one month:
++
+`bat schedule create --cron="0 0 12 1/1 * ? *"`
+
+Next, configure and view test reports.
+
+== See Also
+
+* xref:bat-reporting-task.adoc[To Configure and View Test Reports]
+* xref:bat-command-reference.adoc[BAT Command Reference]

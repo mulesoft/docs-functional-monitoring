@@ -1,0 +1,193 @@
+= BAT CLI Reference
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The BAT command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI.  The BAT CLI is integrated with Anypoint Platform.
+
+This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
+
+== bat Command
+
+The *bat* command provides an API functional monitoring command line interface.
+
+=== Syntax
+
+`bat [<file> ... | <option> ...]`
+
+`bat [login --username=<value> [--profile=<value>] --host=<value>]`
+
+This option displays an interactive command for the password.
+
+`password for user [username]: <password>`
+
+Optionally, you can include the option `--password=<password>` in the login command.
+
+Where:
+
+* file is the relative path to the path and file name. The file must have one of the following base names and one of the following extensions:
++
+** base file names: main, bat
+** extensions: .yaml, or .yml
++
+When you execute bat without any arguments, BAT reads the YAML in the current directory and runs the specified tests.
+You can create a `config` folder and add different configuration files in `config` for the environments.
+
+----
+test-project
+├── bat.yaml
+├── tests
+└── config
+    ├── default
+    ├── devx
+    ├── qax
+    ├── stgx
+    └── prod
+----
+
+== Command Line Options
+
+* `bat ~/path/to/folder/` +
+Executes the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
+* `bat ./folder/file.dwl` +
+Executes the desired file. The root of the project is the current folder.
+The root of the project is used to resolve imports, and load libraries and files.
+** `--config=<name>`
++
+Selects a configuration file (from the `config` folder) and registers the result as a global variable.
++
+** `--version`
++
+Prints to standard output the version numbers of installed BAT and wrapper. If the latest version is not installed, that version is downloaded.
++
+** `--bat-version=1.0.51`
++
+Executes BAT using the specified version.
++
+** `--update`
++
+Installs the latest BAT CLI.
++
+** `--validate`
++
+Validates the file or folder. Also works with `--config` to validate specific configurations.
++
+** `get_token`
++
+Returns the token for accessing Anypoint Platform in the credentials file. Requires that you first run `bat login` to generate a profile.
++
+** `worker register`
++
+Generates a post with the machine name and create a dummy target.
++
+** `target ls list`
++
+Lists all the targets information from the profile's organization.
++
+** `schedule create [--cron="<expression>"]`
++
+Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 15 minutes.
++
+** `schedule disable <scheduleID>`
+Disables the schedule that is identified by the specified ID. If you run `bat schedule ls` after you run this command, you will see that the value
++
+** `schedule enable <scheduleID>`
++
+Enables the schedule that is identified by the specified ID. Use this command only when you want to enable a schedule that you have disabled with the `bat schedule disable <scheduleID>` command.
++
+** `schedule endpoint <arbitrary-URL> [--cron="<cron>"] [--name=<suiteName>] [--target=<targetId>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--sumo-endpoint=<sumoEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder]`
++
+Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, you can add commands to generate the bat.yaml with different parameters.
++
+*** `[--cron="<cron>"]` By default, tests are scheduled to run every 15 minutes. You can change with the cron expression
++
++
+*** `[--name="<suiteName>"]` To set the name of the suite
++
++
+*** `[--target="<targetId>"]` Set a specific target to the monitor
++
++
+*** `[--new-relic-license-key="<newRelicLicenseKey>"]` Add the new relic report to the bat.yaml.
++
++
+*** `[--slack-webhook="<slackWebHook>"]` Add the slack report to the bat.yaml.
++
++
+*** `[--sumo-endpoint="<sumoEndpoint>"]` Add the sumo report to the bat.yaml.
++
++
+*** `[--pager-duty-routing-key="<pagerDutyRoutingKey>"]` Add the pager duty report to the bat.yaml.
++
++
+*** `[--custom-report-url="<customReportUrl>"] [--custom-report-headers="<header1,header2,...,headerN>"] | [--custom-report-transformation="<pathToDwlFile>"]` Add the custom report to the bat.yaml file and optionally you can add the transformation file.
++
++
+*** `[--init-folder]` Store generated exchange.json, bat.yaml and main.dml in the current directory.
++
+** `schedule ls | list`
++
+List all the schedulers information from the profile's organization.
++
+** `schedule rm | remove <scheduleId>`
++
+Deletes a schedule by its ID.
++
+** `--username=<value>`
++
+Value is an Anypoint Platform user name.
++
+** `--password=<value>`
++
+Value is the password for the Anypoint Platform user name.
+
+** `--profile=<value>`
++
+Profile is:
++
+*** The name of a profile for accessing an Anypoint Platform location and retaining the login information between BAT sessions. Using this option eliminates the need to relogin between sessions. Optional.
+*** The name of a profile for scheduling an endpoint that can be different from the BAT login profile you used. By default, BAT uses the login profile for scheduling. Optional.
++
+** `--init-folder`
++
+Stores the files, exchange.json and main.dwl, generated by creating the monitor in the current directory. Optional.
+** `--init`
++
+Same as the `bat init` command, which sets up a basic project folder. The folder contains the following files:
++
+----
+bat.yaml
+tests/
+tests/HelloWorld.dwl
+config/
+config/default.dwl
+config/prod.dwl
+config/dev.dwl
+----
+
+== BAT Command Examples
+
+* Run multiple test files from the bat.yaml file.
++
+`bat bat.yaml`
++
+* Run a single file.
++
+`bat ./test/myFile.dwl`
+* Determine the installed version.
++
+`bat --version`
++
+Example output if you do not have the latest version is:
++
+----
+Updating Version: You have an older BAT version.
+The new version will be downloaded in /Users/<username>/.bat/bat-cli-1.0.51
+Downloading version 1.0.51. Please wait`.......................
+BAT Wrapper: 1.0.53
+BAT Version: 1.0.51
+----
+
+== See Also
+
+* xref:bat-schedule-test-task.adoc[To Schedule a Test]

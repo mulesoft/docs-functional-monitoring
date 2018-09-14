@@ -1,0 +1,409 @@
+= BDD Test Writing Language Reference
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Behavior Driven Development (BDD) is the syntax for writing BAT tests for processing in DataWeave. BDD is an embedded domain specific language (EDSL) that resembles other testing frameworks, such as Mocha and Jasmine.
+
+The following statement is required in each BAT test:
+
+`import * from bat::BDD`
+
+This statement imports the Domain Specific Language (DSL) testing library BDD.dwl, which defines words you frequently use when writing, such as describe, it, GET, POST, and sleep).
+
+This statement imports common matchers, such as mustEqual, mustMatch, every, oneOf, and assert.
+
+The following example shows how you typically begin writing a test:
+
+[source,text,linenums]
+----
+import * from bat::BDD
+import * from bat::Assertions
+import * from bat::Mutable
+
+
+var context = HashMap()
+---
+describe("the login flow") in [
+  it("tries a secured endpoint") in [
+    GET `http://127.0.0.1:4567/secured_by_token` with {
+
+    } assert [
+      $.response.status mustEqual 401,
+    ]
+  ],
+  it("gets the access token") in [
+    POST `http://127.0.0.1:4567/get_access_token` with {} assert [
+      $.response.body.new_token mustMatch /accessToken_\d+/,
+    ] execute [
+      context.set('token', $.response.body.new_token)
+    ] assert [
+      context.get('token') mustMatch /accessToken_\d+/,
+      context.get('token') mustEqual $.response.body.new_token,
+      $.response.status mustEqual 200,
+    ]
+  ],
+  it("tries to get a secured endpoint") in [
+    GET `http://127.0.0.1:4567/secured_by_token/header` with {
+      headers: {
+        Authorization: context.get('token')
+      }
+    } assert [
+      $.request.headers.Authorization mustEqual context.get('token'),
+      $.response.status mustEqual 200
+    ]
+  ]
+]
+----
+
+== About Test Files
+
+Create a `.dwl` file for each functional scenario. A folder-based organization of files is recommended. This organization accommodates reports the BAT testing generates. For example:
+
+----
+tests
+├── CoreServices
+│   └── Sanity.dwl
+└── DesignCenter
+    ├── APIDesigner
+    │   └── Designer.dwl
+    └── MyFolder
+        ├── DataSense.dwl
+        └── GetProjects.dwl
+----
+
+A test file must contain a `describe` expression.
+
+----
+import * from bat::BDD
+---
+describe `Demo scenario` in [
+
+]
+----
+
+A test suite must contain at least one test (.dwl) file.
+
+== Test Blocks
+
+Test blocks make the test more readable. You can write every test block as a function call or a custom interpolation.
+
+=== Test Keywords
+
+You use the following keywords and follow Fowler's _GivenWhenThen_ structure, in tests:
+
+[%header,cols="3*a"]
+|===
+|Function Name |Description |Stops execution if it fails
+|`describe`   |For grouping, which you can nest as deep to add contextual information for reports |No
+|`scenario`   |Same as describe |No
+|`suite`      |Same as describe |No
+|`given`      |Test step, used for preparation |Yes
+|`when`       |Test step, normally used to create side effects |Yes
+|`it`         |Test step, validations |No
+|`should`     |Test step |No
+|`must`       |Test step |Yes
+|`it should "str"`|Test step |No
+|`it must ""` |Test step |Yes
+|`while` |Test step | No
+|`until` |Test step | No
+|===
+
+=== About a Test Block
+
+Test blocks have a shorthand name to skip the block described as `x<name>`. For example, the skipped version of `describe` is `xdescribe`.
+
+[source,text,linenums]
+----
+describe("A flow")  in [ ... ] // Describes a sequence of test blocks
+xdescribe("A flow") in [ ... ] // The same, but skipped.
+
+describe `A flow` in [ ... ]   // The same as describe, but with a custom interpolation
+xdescribe `A flow` in [ ... ]  // The same, but skipped.
+----
+
+=== About Custom Interpolators
+
+Custom interpolators provide a way to call functions and decompose interpolations in two lists:
+
+* The first list contains all the string literals.
+* The second one contains the interpolated values.
+
+You do not need to convert the values to strings. Enclose a custom interpolation text and value in backticks (```).
+
+Every item in the following block can be used as custom interpolators and has the `x<name>` version.
+
+[source,text,linenums]
+----
+import * from bat::BDD         // <-----
+import * from bat::Assertions
+---
+describe `User trades stocks` in [
+  scenario `User requests a sell before close of trading` in [
+    given `I have 100 shares of MSFT stock` in [
+      POST `http://broker/create_stocks` with {
+        body: {
+          quantity: 100,
+          paper: 'MSFT'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    given `I have 150 shares of APPL stock` in [
+      POST `http://broker/create_stocks` with {
+        body: {
+          quantity: 150,
+          paper: 'APPL'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    when `I ask to sell 20 shares of MSFT stock` in [
+      POST `http://broker/sell_stocks` with {
+        body: {
+          quantity: 20,
+          paper: 'APPL'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    it should "have 80 shares of MSFT stock" in [
+      GET `http://broker/get_stocks/MSFT` with {
+        headers: {}
+      } assert [
+        $.response.status == 200,
+        $.response.body.quantity == 80
+      ]
+    ],
+    it should "have 150 shares of APPL stock" in [
+      GET `http://broker/get_stocks/APPL` with {
+        headers: {}
+      } assert [
+        $.response.status == 200,
+        $.response.body.quantity == 150
+      ]
+    ]
+  ]
+]
+----
+
+You can also write the block without custom interpolators to conform to your coding style guide. This doesn't affect behavior:
+
+[source,text,linenums]
+----
+import * from bat::BDD         // <-----
+import * from bat::Assertions
+---
+describe("User trades stocks") in [
+  scenario("User requests a sell before close of trading") in [
+    given("I have 100 shares of MSFT stock") in [
+      POST `http://broker/create_stocks` with {
+        body: {
+          quantity: 100,
+          paper: 'MSFT'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    given("I have 150 shares of APPL stock") in [
+      POST `http://broker/create_stocks` with {
+        body: {
+          quantity: 150,
+          paper: 'APPL'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    when("I ask to sell 20 shares of MSFT stock") in [
+      POST `http://broker/sell_stocks` with {
+        body: {
+          quantity: 20,
+          paper: 'APPL'
+        }
+      } assert [
+        $.response.status == 201
+      ]
+    ],
+    should("have 80 shares of MSFT stock") in [
+      GET `http://broker/get_stocks/MSFT` with {
+        headers: {}
+      } assert [
+        $.response.status == 200,
+        $.response.body.quantity == 80
+      ]
+    ],
+    should("have 150 shares of APPL stock") in [
+      GET `http://broker/get_stocks/APPL` with {
+        headers: {}
+      } assert [
+        $.response.status == 200,
+        $.response.body.quantity == 150
+      ]
+    ]
+  ]
+]
+----
+
+== To Control Execution and Delete Assets
+
+If you get a failure in the middle of a test, you need to delete any created assets. For example, the user creates an asset, performs a validation, and then deletes it.
+Typically, that validation fails, and since it breaks the test, the asset is not deleted and your database starts  accumulating test data. Typically this means changing a `must` to a `should` so that execution can continue, but not leave
+a failed asset.
+
+Incorrect Example:
+
+If the update name in line 6 fails, the project is not deleted because the execution stops.
+
+[source,text,linenums]
+----
+describe `update project names` in [
+  it must 'create a project' in [
+    createProject()     // OK
+  ],
+  it must 'update the name' in [
+    updateProjectName() // FAILS
+  ],
+  // Because the previous step is a `must` that failed, execution stops here and the next steps don't execute
+  it must 'clean up deleting the project' in [
+    deleteProject()     // CANCELLED
+  ]
+]
+----
+
+Use these reserved words to wrap steps to stop or allow execution to continue:
+
+* `should` means something might fail, but it is not mandatory for the test.
+* `must` means that something, such as project creation, must execute to continue.
+
+Correct Example:
+
+[source,text,linenums]
+----
+describe `update project names` in [
+  it must 'create a project' in [
+    /**
+     * Project creation is a MUST, because in this scenario
+     * we depend on the created project to continue.
+     */
+    createProject()     // OK
+  ],
+  it should 'update the name' in [
+    /**
+     * Validations are should because the execution must continue
+     * if the validation fails.
+     */
+    updateProjectName() // FAILS
+  ],
+  // Because the previous step is a should and it failed, continue executing.
+  it must 'clean up deleting the project' in [
+    deleteProject()     // OK
+  ]
+]
+----
+
+== To Execute Steps Selectively
+
+The `assuming` function skips the test if the result is false. This command has the following syntax:
+
+`[TestBlockExpression] assuming [BooleanExpression] in ...`
+
+For example:
+
+[source,text,linenums]
+----
+describe `E2E Scenario` in [
+  it should 'always do something' in [
+    doSomething()
+  ],
+  it should 'do something else' in [
+    doSomethingElse()
+  ],
+  it should 'sometimes, do something else' assuming (random() > 0.5) in [
+    // This is executed randomly, based on          ^^^^^^^^^^^^^^^^ that condition
+    doSomethingElse()
+  ],
+  it should 'do something in dev environments' assuming (config.env == 'DEV') in [
+    // This is executed only when                       ^^^^^^^^^^^^^^^^^^^^^ that == true
+    doSomethingElse()
+  ]
+]
+----
+
+To make the code more readable and understandable, you can use two aliases for this function. `when` and `whenNot`. For example:
+
+[source,text,linenums]
+----
+describe `E2E Scenario` in [
+  it should 'always do something' in [
+    doSomething()
+  ],
+  it must 'do something else' when config.runSanity in [
+    doSomethingElse()
+  ],
+  it should 'do something else' when a == b in [
+    doSomethingElse()
+  ],
+  it should 'do something in dev environments' whenNot config.isSmokeTests in [
+    doSomethingElse()
+  ]
+]
+----
+
+== Executing Loop Sentences
+
+The while or until functions run the test while (or until) a condition becomes true or false.
+
+Signature of the while function:
+
+* `while( sentence , condition, time per request, number of retries)`
+* `do { sentence } while (condition) //-> Default values: 1 second and 3 retries`.
+
+Signature for the until function:
+
+* `until( sentence , condition, time per request, number of retries)`
+* `do { sentence } until (condition) //-> Default values: 1 second and 3 retries`.
+
+Example:
+
+[source,java,linenums]
+----
+dwl
+import * from bat::BDD
+import * from bat::Assertions
+import * from bat::Types
+---
+suite("Example for until and while") in [
+  it should 'test the while prefix' in [
+    while(() -> GET `http://apimon.cloudhub.io/users` with {},
+    (x: BATHttpStep) -> x.result.response.status != 200, 10000, 5)
+  ],
+  it should 'test the while infix' in [
+    do {
+      () -> GET `http://apimon.cloudhub.io/users` with {} assert [
+          $.response.status mustEqual 200
+        ]
+    } while ($.response.status != 200)
+  ],
+  it should 'test the until prefix' in [
+    until(() -> GET `http://apimon.cloudhub.io/users` with {},
+     (x: BATHttpStep) -> x.result.response.status != 200, 10000, 5)
+  ],
+  it should 'test the until infix' in [
+    do {
+      () -> GET `http://apimon.cloudhub.io/users` with {} assert [
+          $.response.status mustEqual 200
+        ]
+    } until ($.result.response.status != 200)
+  ]
+]
+----
+
+== See Also
+
+* https://forums.mulesoft.com[MuleSoft Forum].
+* https://support.mulesoft.com[Contact MuleSoft Support].

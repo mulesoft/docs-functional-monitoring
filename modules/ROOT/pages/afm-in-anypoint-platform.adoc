@@ -1,0 +1,14 @@
+= API Functional Monitoring in Anypoint Monitoring
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can monitor APIs in the *Functional Monitoring* section of Anypoint Monitoring, which you can access from the home page of Anypoint Platform.
+
+To monitor an API means to monitor the performance of its response to requests that are sent to the resources at its endpoints. The *Functional Monitoring* section contains tools for creating a monitor and for uploading a monitor (a test suite written in the Behavior Driven Development (BDD) test-writing language).
+
+
+== See also
+
+* xref:afm-create-monitor.adoc[Create a Monitor]
+* xref:afm-upload-monitor.adoc[Upload a Monitor]

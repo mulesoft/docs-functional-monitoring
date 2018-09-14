@@ -1,0 +1,236 @@
+= To Configure and View Test Reports
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can configure BAT for use with a number of reporting systems. For example:
+
+* New Relic
+* PagerDuty
+* Slack
+* SUMO
+* Custom
+* Local
+
+Specify report generation in the reporters section of the bat.yaml file.
+
+== New Relic
+
+Using New Relic with API functional monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
+
+New Relic has a plugin configured for BAT that can capture the metrics from test suites. To use the plugin to capture metrics, you need to configure your bat.yaml file by adding the following information:
+
+* An output directory
+* Your NEW_RELIC_LICENSE_KEY
+
+=== To View New Relic Reports
+
+. Obtain a New Relic license key.
++
+* Go to the New Relic Account Settings.
+* Copy your license key from the right sidebar under Account Summary.
+. Add the license key to your bat.yaml file:
++
+[source,yaml,linenums]
+----
+reporters:
+  - type: NewRelic
+    outFile: outputNewRelic.json
+    options:
+      NEW_RELIC_LICENSE_KEY: "xxxxxxxxxxxxxxx"
+----
++
+. Schedule a test and create a monitor.
++
+. Go to New Relic, and click Plugins.
++
+The BAT plugin information appears.
++
+. Click the test suite name.
++
+image::bat-plugin.png[]
++
+New test result data appears in New Relic after you run each test.
++
+image::bat-new-relic-metrics.png[]
+
+== PagerDuty
+
+The integration of BAT with PagerDuty generates an incident when a test fails and triggers configured PagerDuty alerts. If a monitor always fails with the same error, BAT does not generate a new issue, but instead ignores these errors.
+
+== To Configure PagerDuty Reporting
+
+. In PagerDuty, configure an integration:
++
+* Configure > Services.
++
+image::bat-pager-duty.png[]
++
+* Select the integration. For example, select bat-monitoring.
++
+image::bat-integrations-pagerduty.png[]
++
+. Copy the integration key and add it to your bat.yaml file:
++
+*Bat.yaml example*
++
+[source,yaml,linenums]
+----
+reporters:
+  - type: PagerDuty
+    outFile: PagerDuty.json
+    options:
+      SERVICE_KEY: "xxxxxxxxxxxxxxxxxxx"
+----
++
+Reports about failed tests appear in PagerDuty.
+
+image::bat-pager-duty-report.png[]
+
+== Slack
+
+You can integrate BAT and Slack to generate alerts in Slack. You send messages to a specific channel through a webhook.
+
+. Create the webhook:
++
+* In Slack, go to your organization’s app directory page at yourorg.slack.com/apps.
+* Search for Incoming WebHooks and add a configuration.
++
+image::bat-incoming-webhooks.png[]
++
+. Choose or create a channel to post notifications to.
++
+image::bat-post-to-channel.png[]
++
+* Copy the webhook URL of your new configuration.
++
+image::bat-webhook-url.png[]
++
+. In the bat.yaml file, add the URL of the webhook as a parameter.
++
+[source,yaml,linenums]
+----
+metadata:
+  slack_channel: bat-bot
+...
+reporters:
+  - type: Slack
+    outFile: outputSlack.json
+    options:
+      SLACK_WEBHOOK: "yourwebhook-URL"
+----
++
+The alert notification occurs in the case of failure and provides the name of the suite in which the error occurs.
+
+image::bat-demo-failed.png[]
+
+== Sumo Logic
+
+To use Sumo Logic, you create a collection and specify it in the bat.yaml. The collection can be shared with other tests or used only as a monitor. At the end of each execution, BAT generates a post to SUMO that sends the trade-off information of requests and responses that were executed during the test. This enables you to see expected results and how the test behaves.
+
+You must provide the endpoint of the collection.
+
+image::bat-sumo-report.png[]
+
+You can use BAT to post a log in the specified collection, and create dashboards.
+
+image::bat-sumo-collection.png[]
+
+=== To Integrate Sumo and BAT
+
+. In Sumo Logic, use the Setup Wizard to Set Up Streaming Data.
++
+image::bat-sumo-setup.png[]
++
+. Choose Your Custom App > HTTP Source or All Other Sources > HTTP Source and fill out the source category.
+. Copy the HTTP source and implement the Sumo Logic integration in your bat.yaml file:
++
+----
+reporters:
+  - type: SumoLogic
+    outfile: SumoLogic.json
+    options:
+      SUMO_ENDPOINT: <your endpoint URL>
+----
++
+The SUMO_ENDPOINT is, for example:
++
+`+https://endpoint1.collection.us2.sumologic.com/...+`
++
+In a few moments, the test results appear in Sumo Logic under Log Search.
++
+image::bat-sumo-results.png[]
+
+== Custom Post Report
+
+BAT publishes the result.json with a post to the URL specified in the bat.yaml file. You can add headers if necessary.
+
+[source,yaml,linenums]
+----
+reporters:
+  - type: Custom
+    options:
+      URL: "http://www.httpbin.org/post"
+      HEADERS: "'Authorization':'Bearer token','Content-Type':'application/json'"
+----
+
+== About Local Reports
+
+BAT generates basic types of reports locally in JSON and HTML. When you execute tests, the path to the reports appears in the output.
+
+Example:
+
+[source,yaml,linenums]
+----
+Reporter: /var/folders/vz/56jp75d941592x_1d8mfy9f40000gn/T/bat_report_20180320121736.json
+Reporter: /var/folders/vz/56jp75d941592x_1d8mfy9f40000gn/T/bat_report_20180320121736.html
+----
+
+== To Configure Local Report Generation
+
+In the bat.yaml file, specify a `type` field to generate local reports. For example:
+
+[source,yaml,linenums]
+----
+reporters:
+  - type: JSON
+    outFile: JSON.json
+  - type: HTML
+    outFile: HTML.html
+  - type: JUnit
+    outFile: JUnit.xml
+----
+
+== To Create a Local Custom Report
+
+You can generate a custom report based on a DataWeave transformation that is specified in the bat.yaml using the `file` keyword.
+
+[source,yaml,linenums]
+----
+reporters:
+  - type: Local
+    file: reporter/transform.dwl
+    outFile: local.json
+----
+
+The transform.dwl file contains the following code:
+
+[source,dataweave,linenums]
+----
+%dw 2.0
+output application/json
+var result = if (payload.result.pass[0]) " is ok" else " failed"
+---
+{
+    result: "The suite <" ++ payload.name ++ "> with assertion <" ++ payload.result[0].name ++ ">" ++ result
+}
+----
+
+And the result is:
+
+[source,dataweave,linenums]
+----
+{
+  "result": "The suite <Hello world suite> with assertion <answer 200> is ok"
+}
+----

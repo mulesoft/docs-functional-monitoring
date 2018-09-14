@@ -1,0 +1,58 @@
+= Execute BAT Tests
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In this procedure, you execute the tests you wrote earlier in the workflow. Using the BAT CLI, you can execute one test at a time or all tests listed in the bat.yaml. By default, BAT generates HTML and JSON reports about the test results.
+
+. Run the `bat` command in the directory where bat.yaml is located.
++
+The output shows the results of the test and location of reports. For example:
++
+----
+bat
+BAT Version: 1.0.51
+#  File: ./tests/step.0.dwl
+
+    api-mon
+      ✓ GET http://apimon.cloudhub.io/users (295.45ms)
+        ✓ 200 must equal 200
+#  File: ./tests/step.1.dwl
+
+    api-mon
+
+        gets a list of users
+          ✓ GET http://apimon.cloudhub.io/users (239.88ms)
+            ✓ 200 must equal 200
+            ✓ "application/json" must equal "application/json"
+{
+  kind: "Assertion",
+  pass: true,
+  name: "10 must equal 10",
+  softFail: false,
+  result: {
+    kind: "Assertion::Equal",
+    expectedValue: "10" as String {mimeType: "application/dw"},
+    givenValue: "10" as String {mimeType: "application/dw"}
+  }
+}
+            ✓ 10 must equal 10
+#  Reporter: bat/Reporters/JSON.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180225145000.json
+#  Reporter: bat/Reporters/HTML.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180225145000.html
+----
++
+. Open the HTML report shown on the last line of the output above.
++
+image::bat-html-report.png[]
++
+. Expand and click items in the navigation pane to drill down.
++
+Details about the request, response, assertions, and the raw data of the response appear.
++
+image::bat-html-report-request.png[]
+
+Next, xref:bat-playground-task.adoc[Run tests in the BAT Playground].
+
+== See Also
+
+* xref:bat-workflow-test.adoc[Workflow: Test an API Using API Functional Monitoring]

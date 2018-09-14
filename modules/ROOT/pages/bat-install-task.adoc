@@ -1,0 +1,16 @@
+= To Install BAT
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
+
+Run the following command to install the BAT CLI wrapper:
+
+`curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
+
+After installation, you can run the BAT command from any directory.
+
+== See Also
+
+* xref:bat-command-reference.adoc[BAT Command Reference]

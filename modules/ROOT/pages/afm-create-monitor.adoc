@@ -1,0 +1,68 @@
+= Create a Monitor
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test suite that tests one or more endpoints, and schedules the test suite to run at intervals that you select.
+
+After every interval, you can view the results of the test and statistics about API performance
+
+
+== Before you begin
+
+* Ensure that your user ID has the Monitoring Center User permission. An administrator for your organization can grant you this permission in Anypoint Access Management.
+* Determine which endpoints you want to test and the REST methods that you want to test them with.
+* Decide upon the return codes that you expect the methods to return.
+* Figure out the frequency at which you would like the monitor to test the endpoints. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer.
+* Determine which execution location you would like to run the monitor in. If any query parameter is needed you should add it as part of the location. For instance:
+`https//endpoint.com/whatever?queryParam1=value&queryParam2=value2`.
+* Decide whether you would like the request messages to include additional header information.
+* Obtain one of the following pieces of information, if you would like to send reports to one of these reporting tools:
++
+|===
+|Reporting Tool |Required Information
+
+|NewRelic
+|License Key
+
+|PagerDuty
+|RoutingKey
+
+|Slack
+|Webhook
+
+|SumoLogic
+|Endpoint
+|===
+
+
+== Procedure
+To create a monitor:
+
+. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create*.
+. Specify a name and a short description for the monitor.
+. Fill in the fields with the information that you have gathered.
+. Click *Create*.
+
+== Result
+
+The dashboard opens. The monitor is listed on the left.
+
+Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
+
+After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
+
+== What to do next
+
+Click the *Scheduling* tab to see the schedule for the monitor. You can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
+
+After the monitor runs, click the *Monitored Endpoints* tab to see:
+
+* Whether all endpoints returned the expected codes, as indicated by *PASSED* in the first column of the table
+* Statistics about the execution of the test of the endpoint
+
+As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
+
+Click *Tests* to see statistics and information pertaining to the monitor. Because you have only one test in the monitor, the statistics and information in this section apply to the test, too.
+
+If you want to delete the monitor, delete all versions of it in the *Tests* section.

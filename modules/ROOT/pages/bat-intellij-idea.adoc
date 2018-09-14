@@ -1,0 +1,55 @@
+= Write and Run BAT Tests in IntelliJ IDEA
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can write and run BAT tests in IntelliJ IDEA. The DataWeave 2.0 Intellij plugin, which adds the required support, offers these features:
+
+* Support for local refactoring
+* Syntax highlighting
+* A view of the structure of the BAT test that you are editing
+* MULE XML language injection
+* String interpolation
+* Support for running tests
+
+== About this task
+
+The steps in this procedure explain how to modify a BAT project for support in IntelliJ IDEA, open that project, create a new test file, and run a test.
+
+== Before you begin
+
+* Ensure that the DataWeave 2.0 IntelliJ plugin in installed in your IntelliJ IDEA editor. You can install it by following these steps:
++
+. In IntelliJ IDEA, open the preferences.
+. Select *Plugins* and then click *Browse Repositories*.
+. Click *Manage Repositories*.
+. Click the plus icon to add a custom repository.
+. Paste in the following URL: https://plugins.jetbrains.com/plugins/Develop/10362
+. Click *Check Now* to verify that the repository is reachable. Then, click *OK*.
+. In the *Browse Repositories* dialog, search on `dataweave`.
+. Select *DataWeave 2.0 IntelliJ Plugin* and then click *Install* in the plugin details.
+. Restart IntelliJ IDEA.
+
+* Log into BAT in a terminal window and run the `bat --update` command to be sure that you have the latest version of the BAT CLI.
+
+== Procedure
+
+. If you do not already have a BAT project that you want to work with, create one with the `bat init` command in a terminal window.
+. Inside the project folder, run the command `bat idea`.
++
+*Result*: The command creates a new file in the project: `_project-name_.iml`
+. In IntelliJ IDEA, open the project by selecting the project folder.
+. In the *Project Structure* dialog, set the Java SDK that you want to use for your project.
+. If you want to write a test, create a new test file:
+.. Right-click the folder that contains your tests and select *New* > *DataWeave Component*.
+.. In the dialog box, select *Bat Test* in the *Kind* field.
+
++
+*Result*: A new Bat Test file appears in the Tests folder. Double-click that to open it in the editor pane. Write your test in that file.
+. To run a test:
+.. Open it in the editor pane.
+.. Right-click in the file.
+.. In the right-click menu, select *Run* > *Bat Test _filename_*.
+
++
+*Result*: The output of the test appears in the *Run* tool window.
