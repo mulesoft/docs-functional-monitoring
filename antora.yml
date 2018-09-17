@@ -1,5 +1,5 @@
 name: api-functional-monitoring
 title: API Functional Monitoring
-version: 'latest'
+version: master
 nav:
 - modules/ROOT/nav.adoc
