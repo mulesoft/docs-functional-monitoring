@@ -1,4 +1,5 @@
 .xref:index.adoc[API Functional Monitoring]
+* xref:index.adoc[About API Functional Monitoring]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
  ** xref:afm-upload-monitor.adoc[Upload a Monitor]
