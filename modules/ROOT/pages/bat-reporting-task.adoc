@@ -11,6 +11,7 @@ You can configure BAT for use with a number of reporting systems. For example:
 * SUMO
 * Custom
 * Local
+* Email
 
 Specify report generation in the reporters section of the bat.yaml file.
 
@@ -234,3 +235,19 @@ And the result is:
   "result": "The suite <Hello world suite> with assertion <answer 200> is ok"
 }
 ----
+
+== Email
+
+When using the Anypoint Platform you can create an email reporter to enable email alerts to several accounts.
+
+_This option is only available in the Anypoint Platform since it uses the Anypoint Platform Alert Notification System._
+
+[source,yaml,linenums]
+----
+reporters:
+  - type: Email
+    options:
+      EMAILS: test@example.com;other@example.com;youremail@example.com
+----
+
+The notification occurs in the case of a failure. And will provide the suite's name in which the error occurs and a list of the assertions.
