@@ -238,9 +238,7 @@ And the result is:
 
 == Email
 
-When using the Anypoint Platform you can create an email reporter to enable email alerts to several accounts.
-
-_This option is only available in the Anypoint Platform since it uses the Anypoint Platform Alert Notification System._
+To use the email report it is necessary to specify the email address to which you want to notify, it can be a single address or a list (these addresses can be from any email provider). The notification will occur in case of failure. And it will provide the name of the suite in which the error occurs and a list of the statements. This report can only be used for the tests created in Anypoint Functional Monitoring, not with the CLI.
 
 [source,yaml,linenums]
 ----
@@ -249,5 +247,3 @@ reporters:
     options:
       EMAILS: test@example.com;other@example.com;youremail@example.com
 ----
-
-The notification occurs in the case of a failure. And will provide the suite's name in which the error occurs and a list of the assertions.
