@@ -33,6 +33,9 @@ After every interval, you can view the results of the test and statistics about 
 
 |SumoLogic
 |Endpoint
+
+|Email
+|Email address
 |===
 
 
