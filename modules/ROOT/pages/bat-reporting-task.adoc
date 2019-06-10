@@ -238,7 +238,7 @@ And the result is:
 
 == Email
 
-To use the email report it is necessary to specify the email address to which you want to notify, it can be a single address or a list (these addresses can be from any email provider). The notification will occur in case of failure. And it will provide the name of the suite in which the error occurs and a list of the statements. This report can only be used for the tests created in Anypoint Functional Monitoring, not with the CLI.
+To email test reports that indicate failures, specify any email addresses that you want to send reports to. You can send reports to one or more email addresses, separating multiple email addresses with semicolons. Each report includes the name of the suite in which the error occurs and a list of the statements. Reports are emailed only for tests created in Anypoint Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
 
 [source,yaml,linenums]
 ----
