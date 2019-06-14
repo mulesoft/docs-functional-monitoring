@@ -11,6 +11,7 @@ You can configure BAT for use with a number of reporting systems. For example:
 * SUMO
 * Custom
 * Local
+* Email
 
 Specify report generation in the reporters section of the bat.yaml file.
 
@@ -233,4 +234,16 @@ And the result is:
 {
   "result": "The suite <Hello world suite> with assertion <answer 200> is ok"
 }
+----
+
+== Email
+
+To email test reports that indicate failures, specify any email addresses that you want to send reports to. You can send reports to one or more email addresses, separating multiple email addresses with semicolons. Each report includes the name of the suite in which the error occurs and a list of the statements. Reports are emailed only for tests created in Anypoint Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
+
+[source,yaml,linenums]
+----
+reporters:
+  - type: Email
+    options:
+      EMAILS: test@example.com;other@example.com;youremail@example.com
 ----
