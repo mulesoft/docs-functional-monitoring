@@ -3,9 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Although you cannot edit a test that you have already created for a monitor, you can create a new version of a test. In the new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
-
-The version number of the new test is the same as that for the previous test, but with the third part of the number incremented by 1. For example, if the version number of the previous test is 1.0.0, the new version is at 1.0.1.
+Although you cannot edit a test that exists for a monitor, you can create a new version of a test. In the new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
 
 You can create a new version of a test only if the test has not been customized to include features that the *Create a Monitor from Scratch* page does not support. (It is possible to customize a test by downloading it, editing it manually, and then uploading it.) Tests created manually and then uploaded also are not editable if they contain features that the *Create a Monitor from Scratch* page does not support.
 
@@ -18,6 +16,8 @@ You can create a new version of a test only if the test has not been customized 
 
 == Result
 
-After you click *Update*, a new version of the test is listed in the *Tests* section for the monitor.
+After you click *Update*, a new version of the test is listed in the *Tests* section for the monitor. Previous versions of the test are still listed, so that you can still view the data that is associated with them.
 
-Schedules that ran the previous version of the test now run only the new version of the test. The previous version is no longer scheduled to run. If you want to run previous versions of a test, you can create new schedules for them.
+A version number is automatically assigned to the new test. The number is based on the version number for the most recent previously created test. For example, suppose that a monitor contains one test and the version number of the test is 1.0.0. If you create a new version of the test, the number assigned to it is 1.0.1. Next, if you create a new version of either test 1.0.0 or 1.0.1, the new version is assigned the number 1.0.2.
+
+Schedules that ran the previous version of the test now run only the new version of the test. The previous version is no longer scheduled to run. If you want to run previous versions of a test, you can create new schedules for them. For example, suppose that a monitor contains one test that is versioned 1.0.0. You create a new version of the test. The schedules that ran 1.0.0 now run 1.0.1.
