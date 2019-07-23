@@ -1,4 +1,7 @@
 = Create a New Version of a Test
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 You cannot edit a test that you have already created for a monitor. However, you can create a new version of a test. In that new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
 
