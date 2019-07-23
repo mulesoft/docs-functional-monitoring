@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You cannot edit a test that you have already created for a monitor. However, you can create a new version of a test. In that new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
+Although you cannot edit a test that you have already created for a monitor, you can create a new version of a test. In the new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
 
 The version number of the new test is the same as that for the previous test, but with the third part of the number incremented by 1. For example, if the version number of the previous test is 1.0.0, the new version is at 1.0.1.
 
-You can create a new version of a test only if the test has not been customized to include features that the *Create a Monitor from Scratch* page does not support. It is possible to customize a test by downloading it, editing it manually, and then uploading it. Tests created manually and then uploaded also are not editable if they contain features that the *Create a Monitor from Scratch* page does not support.
+You can create a new version of a test only if the test has not been customized to include features that the *Create a Monitor from Scratch* page does not support. (It is possible to customize a test by downloading it, editing it manually, and then uploading it.) Tests created manually and then uploaded also are not editable if they contain features that the *Create a Monitor from Scratch* page does not support.
 
 == Procedure
 
