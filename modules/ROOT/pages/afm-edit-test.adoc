@@ -31,7 +31,7 @@ After you click *Update*, the new test is listed in the *Tests* section for the 
 Anypoint Platform adds the edited test as a new test in the *Tests* section for the same monitor.
 
 == Result
-Previous tests are still listed, so that you can still view the data that is associated with them. You can also create new tests that are based on them.
+Previous tests are still listed in the *Tests* section for the monitor, so that you can still view the data that is associated with them. You can also create new tests that are based on them.
 
 A version number is automatically assigned to the new test. The number is based on the version number of the test that it is based on. For example, suppose that a monitor contains one test and the version number of the test is 1.0.0. If you create a new test from this one, the number assigned to the new test is 1.0.1. Next, if you create a new test that is based on either test 1.0.0 or 1.0.1, the new test is assigned the number 1.0.2.
 
