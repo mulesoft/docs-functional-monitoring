@@ -5,10 +5,10 @@ endif::[]
 
 You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test suite that tests one or more endpoints, and schedules the test suite to run at intervals that you select.
 
-After every interval, you can view the results of the test and statistics about API performance
+After every interval, you can view the results of the test and statistics about API performance.
 
 
-== Before you begin
+== Before You Begin
 
 * Ensure that your user ID has the Monitoring Center User permission. An administrator for your organization can grant you this permission in Anypoint Access Management.
 * Determine which endpoints you want to test and the REST methods that you want to test them with.
@@ -49,7 +49,7 @@ To create a monitor:
 
 == Result
 
-The dashboard opens. The monitor is listed on the left.
+The dashboard opens. The monitor that you created is listed on the left.
 
 Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
 
@@ -66,6 +66,10 @@ After the monitor runs, click the *Monitored Endpoints* tab to see:
 
 As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
 
-Click *Tests* to see statistics and information pertaining to the monitor. Because you have only one test in the monitor, the statistics and information in this section apply to the test, too.
+Click *Tests* to see statistics and other information about the monitor. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test, too.
 
 If you want to delete the monitor, delete all versions of it in the *Tests* section.
+
+== See Also
+
+ * xref:afm-edit-test.adoc[Edit a monitor]

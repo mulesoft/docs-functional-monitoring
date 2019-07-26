@@ -2,6 +2,7 @@
 * xref:index.adoc[About API Functional Monitoring]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
+ ** xref:afm-edit-test.adoc[Create a New Test from an Existing One]
  ** xref:afm-upload-monitor.adoc[Upload a Monitor]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
  ** xref:bat-install-task.adoc[To Install BAT]
