@@ -3,12 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-API Functional Monitoring is a framework for assuring the quality and reliability of public APIs that are being used in application networks.
-
-[IMPORTANT]
-====
-Only the testing of publicly available APIs is supported. APIs that are behind firewalls cannot be tested.
-====
+API Functional Monitoring is a framework for assuring the quality and reliability of both public APIs and private APIs that are being used in application networks.
 
 The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
 
