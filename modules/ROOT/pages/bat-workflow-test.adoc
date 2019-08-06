@@ -12,7 +12,7 @@ This workflow covers everything from creation to testing and test reporting of a
 . xref:api-manager::proxy-deploy-cloudhub-latest-task.adoc[Deploy a Proxy, for example, to CloudHub]
 . xref:bat-write-tests-task.adoc[Configure and write BAT tests].
 . xref:bat-execute-task.adoc[Execute BAT tests locally].
-. xref:bat-playground-task.adoc[Run tests in the BAT Playground] to experiment with functions for testing your API.
+// . xref:bat-playground-task.adoc[Run tests in the BAT Playground] to experiment with functions for testing your API.
 . xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
 . xref:bat-reporting-task.adoc[Set up and view a report] on the scheduled test.
 
