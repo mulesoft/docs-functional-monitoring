@@ -57,13 +57,9 @@ After the monitor has run, the list item for the test suite will indicate whethe
 
 [IMPORTANT]
 ====
-Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. For example, if a single test runs against multiple endpoints and takes longer than 120 to finish, try creating multiple tests that each run against a single endpoint. You can split a test by following these steps:
+Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests.
 
-. Create a new test from the long-running test, as explained xref:afm-edit-test.adoc[here].
-. In that new test, remove all but one endpoint.
-. Follow the first two steps for every endpoint that you want to test.
-. Delete the original test.
-. Create a schedule for each test.
+If you do not want to split a long-running test, you can download the monitor and run it from the BAT CLI.
 ====
 
 == What to do next
@@ -84,3 +80,4 @@ If you want to delete the monitor, delete all versions of it in the *Tests* sect
 == See Also
 
  * xref:afm-edit-test.adoc[Edit a monitor]
+ * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
