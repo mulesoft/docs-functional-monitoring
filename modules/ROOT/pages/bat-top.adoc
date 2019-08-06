@@ -24,12 +24,12 @@ Additional prerequisites for monitoring scheduled tests in the cloud are:
 * An account on Anypoint Platform.
 * A reporting tool supported by BAT.
 
-== BAT Playground
+// == BAT Playground
 
-The BAT playground is a web application you can use to familiarize yourself with Behavior Driven Development (BDD) syntax. In the playground, you can run playground-provided tests or your own.
+// The BAT playground is a web application you can use to familiarize yourself with Behavior Driven Development (BDD) syntax. In the playground, you can run playground-provided tests or your own.
 
 == See Also
 
 * xref:bat-install-task.adoc[To Install BAT]
-* xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]
+// * xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]
 * xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
