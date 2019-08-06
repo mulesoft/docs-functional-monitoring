@@ -57,7 +57,7 @@ After the monitor has run, the list item for the test suite will indicate whethe
 
 [IMPORTANT]
 ====
-Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. It is suggested to download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test, and then upload the monitors.
+Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. It is suggested to download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
 
 If you do not want to split a long-running test, you can download the monitor and run it from the BAT CLI.
 ====
