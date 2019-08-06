@@ -9,7 +9,7 @@
  ** xref:bat-workflow-test.adoc[Workflow: Test an API Using API Functional Monitoring]
   *** xref:bat-write-tests-task.adoc[To Configure and Write BAT Tests]
   *** xref:bat-execute-task.adoc[To Execute BAT Tests]
-  *** xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]
+//  *** xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]
   *** xref:bat-schedule-test-task.adoc[To Schedule Testing and Monitoring]
   *** xref:bat-reporting-task.adoc[To Configure and View Test Reports]
  ** xref:bat-intellij-idea.adoc[Write and Run BAT Tests in IntelliJ IDEA]
