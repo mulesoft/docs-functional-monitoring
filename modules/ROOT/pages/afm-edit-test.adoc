@@ -1,38 +1,38 @@
-= Create a New Test from an Existing One
+= Create a Version of a Test from an Existing One
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-There are two methods by which you can create a new test from an existing test in a monitor:
+There are two methods by which you can create a version of an existing test in a monitor:
 
-By using the interface in Anypoint Monitoring:: In the new test, you can change, remove, or add assertions, headers, endpoints, and reporters.
+By using the interface in Anypoint Monitoring:: In the new version, you can change, remove, or add assertions, headers, endpoints, and reporters.
 
 By editing a test manually and then uploading it to Anypoint Monitoring::
-The interface in Anypoint Monitoring supports a subset of the functional-monitoring features that you can use if you write tests manually. If you have uploaded to Anypoint Monitoring a monitor that you created or edited manually, you might not be able to use the interface to create a new test that is based on a test in that monitor. If you receive an error message, you must create the new test manually.
+The interface in Anypoint Monitoring supports a subset of the functional-monitoring features that you can use if you write tests manually. If you have uploaded to Anypoint Monitoring a monitor that you created or edited manually, you might not be able to use the interface to create a version of a test in that monitor. If you receive an error message, you must create the new test manually.
 
 == Procedure
 
-* To create a new test by using the interface in Anypoint Monitoring:
+* To create a version of an existing test by using the interface in Anypoint Monitoring:
 .. Open the monitor that includes the test that you want to base a new test on.
 .. Click the *Tests* tab.
 .. Find the test and click the pencil icon directly beneath it.
 .. In the *Modify Existing Monitor* page, make your changes to the test.
 
 +
-After you click *Update*, the new test is listed in the *Tests* section for the monitor.
+After you click *Update*, the new version is listed in the *Tests* section for the monitor.
 
-* To create a new test by editing an existing test manually:
+* To create a version of a test by editing the existing test manually:
 .. Open the monitor that contains the test that you want to base a new test on.
 .. Download the test by clicking the download icon.
 .. Edit the test manually, but do not change the name of the project folder. For example, if the `.zip` file is named `612dbc11-a043-4b8b-b76e-7d51f84723c7_test_1.0.0.zip`, the project folder has the same name, without the file extension, of course. Keep the name of the project folder as is.
 .. In Anypoint Platform, upload the project folder.
 
 +
-Anypoint Platform adds the edited test as a new test in the *Tests* section for the same monitor.
+Anypoint Platform adds the edited test as a new version of the original test in the *Tests* section for the same monitor.
 
 == Result
-Previous tests are still listed in the *Tests* section for the monitor, so that you can still view the data that is associated with them. You can also create new tests that are based on them.
+Previous versions are listed in the *Tests* section for the monitor, so that you can still view the data that is associated with them. You can create versions that are based on any previous version.
 
-A version number is automatically assigned to the new test. The number is based on the version number of the test that it is based on. For example, suppose that a monitor contains one test and the version number of the test is 1.0.0. If you create a new test from this one, the number assigned to the new test is 1.0.1. Next, if you create a new test that is based on either test 1.0.0 or 1.0.1, the new test is assigned the number 1.0.2.
+A version number is automatically assigned to the new version.
 
-Schedules that ran the base test now run only the new test. The base test is no longer scheduled to run. If you want to run any of the previous tests, you can create new schedules for them. For example, suppose that a monitor contains one test that is versioned 1.0.0. You create a new test that is based on this test. As a result, the schedules that ran 1.0.0 now run only 1.0.1.
+Schedules that ran the base version now run only the new version. The base version is no longer scheduled to run. If you want to run any of the previous versions, you can create new schedules for them. For example, suppose that a monitor contains one test that is versioned 1.0.0. You create a version that is based on 1.0.0. As a result, the schedules that ran 1.0.0 now run only 1.0.1.

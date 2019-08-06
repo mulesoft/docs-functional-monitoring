@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test suite that tests one or more endpoints, and schedules the test suite to run at intervals that you select.
+You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test suite to run at intervals that you specify.
 
 After every interval, you can view the results of the test and statistics about API performance.
 
@@ -54,6 +54,17 @@ The dashboard opens. The monitor that you created is listed on the left.
 Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
 
 After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
+
+[IMPORTANT]
+====
+Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. For example, if a single test runs against multiple endpoints and takes longer than 120 to finish, try creating multiple tests that each run against a single endpoint. You can split a test by following these steps:
+
+. Create a new test from the long-running test, as explained xref:afm-edit-test.adoc[here].
+. In that new test, remove all but one endpoint.
+. Follow the first two steps for every endpoint that you want to test.
+. Delete the original test.
+. Create a schedule for each test.
+====
 
 == What to do next
 
