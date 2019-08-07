@@ -36,3 +36,7 @@ Previous versions are listed in the *Tests* section for the monitor, so that you
 A version number is automatically assigned to the new version.
 
 Schedules that ran the base version now run only the new version. The base version is no longer scheduled to run. If you want to run any of the previous versions, you can create new schedules for them. For example, suppose that a monitor contains one test that is versioned 1.0.0. You create a version that is based on 1.0.0. As a result, the schedules that ran 1.0.0 now run only 1.0.1.
+
+== See also
+
+* xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
