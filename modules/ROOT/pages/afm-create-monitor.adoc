@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test suite that tests one or more endpoints, and schedules the test suite to run at intervals that you select.
+You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test suite to run at intervals that you specify.
 
 After every interval, you can view the results of the test and statistics about API performance.
 
@@ -55,6 +55,13 @@ Beneath the name of the monitor is an indicator that explains when the current r
 
 After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
 
+[IMPORTANT]
+====
+Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. Download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
+
+If you do not want to split a long-running test, download the monitor and run it from the BAT CLI.
+====
+
 == What to do next
 
 Click the *Scheduling* tab to see the schedule for the monitor. You can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
@@ -73,3 +80,4 @@ If you want to delete the monitor, delete all versions of it in the *Tests* sect
 == See Also
 
  * xref:afm-edit-test.adoc[Edit a monitor]
+ * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
