@@ -1,1 +1,13 @@
 = Monitoring Public APIs Versus Monitoring Private Ones
+
+
+Public locations:: Standard locations that are provided by CloudHub for testing endpoints of APIs that are publicly accessible with or without authentication. These locations might run schedules for many MuleSoft customers; therefore, the load that any one customer can place on CloudHub is limited. You have a limited number of schedules that you can create; must pay more for the allocation of more schedules.
++
+Examples of public locations:
++
+** us-east-1
+** us-east-2
+
+Private location:: You create private locations. These are Mule workers that you allocate, that run in an Anypoint Platform environment, and that act as proxies to allow the testing of endpoints of APIs that are accessible only within private networks. You can to create as many schedules as your allotment of vCores can accommodate. Every private location consumes 0.2 vCores.
++
+When you create a private location, you can give it any name you like.
