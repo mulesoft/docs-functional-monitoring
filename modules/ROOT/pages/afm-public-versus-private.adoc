@@ -17,7 +17,29 @@ Private location:: You create private locations. These are Mule workers that you
 +
 When you create a private location, you can give it any name you like.
 
-== Example of Selecting a Public Location
+== Select a Public Location When You Create a Monitor in Anypoint Monitoring
+
+When you create a monitor, you create version 1.0.0 of the test that the monitor runs and the schedule for running the test. The fields under the heading *Execution Location* are for configuring the schedule. In the *Location* field, click the arrow and, in the menu that appears, select one of the options under the heading *Public Locations*.
 
 
-== Example of Selecting a Private Location
+== Select a Public Location When You Modify or Create a Schedule in Anypoint Monitoring
+
+In an existing monitor, you can modify or add a schedule in the *Schedules* section.
+
+* To the right of schedule listed in the table in this section, click the three dots and select *Modify* to open the Modify Schedule dialog.
+* Click the *Add Schedule* button to open the Add Schedule dialog.
+
+In either dialog, click the arrow in the *Location* field and select one of the options under the heading *Public Locations*.
+
+
+== Specify a Public Location When You Create a Monitor by Using the BAT CLI
+
+
+
+== Select or Create a Private Location When You Create a Monitor in Anypoint Monitoring
+
+
+== Select or Create a Private Location When You Create a Schedule in Anypoint Monitoring
+
+
+== Specify a Private Location When You Create a Monitor by Using the BAT CLI
