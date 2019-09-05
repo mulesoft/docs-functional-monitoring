@@ -1,5 +1,10 @@
 = Monitoring Public APIs Versus Monitoring Private Ones
 
+Whether you can monitor the endpoints of a public API or of an API that is in a private network depends on the type of location that you choose to run a test in. A _location_ in API Functional Monitoring is the place you specify that the test should be run. You select a location when you create a schedule for a version of a test.
+
+== Types of Location
+
+There are two types of location:
 
 Public locations:: Standard locations that are provided by CloudHub for testing endpoints of APIs that are publicly accessible with or without authentication. These locations might run schedules for many MuleSoft customers; therefore, the load that any one customer can place on CloudHub is limited. You have a limited number of schedules that you can create; must pay more for the allocation of more schedules.
 +
@@ -11,3 +16,8 @@ Examples of public locations:
 Private location:: You create private locations. These are Mule workers that you allocate, that run in an Anypoint Platform environment, and that act as proxies to allow the testing of endpoints of APIs that are accessible only within private networks. You can to create as many schedules as your allotment of vCores can accommodate. Every private location consumes 0.2 vCores.
 +
 When you create a private location, you can give it any name you like.
+
+== Example of Selecting a Public Location
+
+
+== Example of Selecting a Private Location
