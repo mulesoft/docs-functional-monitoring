@@ -18,10 +18,10 @@ A new monitor consists of a test and a schedule for that test. When you create a
 
 For the schedule that the monitor runs the test according to, you specify:
 
-* The version of the test to run. You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version, the third digit is incremented by one.
+* The version of the test to run. You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version of the test, the third digit is incremented by one.
 * The location from which to run the test. Locations can be public or private. For details, see xref:afm-public-versus-private.adoc[Monitoring Public APIs Versus Monitoring Private Ones].
-* The interval of time to wait between executions of the test.
-* The number of minutes after creating the monitor to wait before executing the test for the first time. You can add or modify schedules in a monitor; when you do, this start time represents the time after adding or modifying the schedule to wait before executing a test.
+* The interval of time to wait between executions of the test. The first execution starts at the beginning of the next hour. For example, if you create a monitor at 9:36 a.m., the test is first run at 10:00 a.m..
+* The number of minutes after the start of the next hour to wait before executing the test for the first time. For example, if you set the value to 5 and you create a monitor at 9:36 a.m., the test is first run at 10:05 a.m..
 
 The following diagram represents the content of a new monitor.
 
@@ -33,7 +33,7 @@ Over time, you can create new versions of the test and create additional schedul
 .Diagram of the same monitor after it has been changed over time
 image::afm-ui-overview-b.png[]
 
-The preceding diagrams describe the content of a monitor. However, the user interface for API Functional Monitoring does not display test versions and schedules together, as they do. Instead, test versions are in the *Tests* section and schedules are in the *Schedules* section, as this schematic diagram of the same monitor shows. You can identify the pairs of test versions and schedules by the version numbers. 
+The preceding diagrams describe the content of a monitor. However, the user interface for API Functional Monitoring does not display test versions and schedules together, as they do. Instead, test versions are in the *Tests* section and schedules are in the *Schedules* section, as this schematic diagram of the same monitor shows. You can identify the pairs of test versions and schedules by the version numbers.
 
 .Schematic diagram showing the same monitor in the user interface for API Functional Monitoring. The test versions are displayed separately from the schedules. The first diagram shows that the test versions are displayed in the *Tests* section. The second diagram shows that the schedules are displayed in the *Schedules* section. The actual user interface displays the version numbers differently.
 image::afm-ui-test-versions-and-schedules.png[]
