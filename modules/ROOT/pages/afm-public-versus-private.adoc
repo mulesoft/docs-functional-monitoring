@@ -1,49 +1,40 @@
 = Monitoring Public APIs Versus Monitoring Private Ones
 
 Monitors (both the test versions and the schedules that a monitor contains) are run by instances of Mule, and these instances are called _workers_. Each worker runs a single monitor.
-+
-A worker runs in a locality, and can run in one of two types of locality. The type of locality that a worker runs in determines whether the worker can test only publicly accessible APIs or APIs on private networks. The type of locality also determines whether you are limited to running a maximum number of monitors or whether the number of monitors that you can run depend on your allotment of vCores.
 
-The types of locality are:
+A worker runs in one of CloudHub's 12 different _worker clouds_, each of these clouds corresponding to a geographic region. The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager::cloudhub-architecture.adoc[About CloudHub Architecture]. You can select a region available to you to run a worker in when you create a monitor, add a schedule to a monitor, or modify a monitor. Examples of names of worker clouds are `us-east-1` and `eu-central-1`.
 
-* The 12 different _worker clouds_, each corresponding to a geographic region.
-+
-The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager::cloudhub-architecture.adoc[About CloudHub Architecture]. You can select a region available to you to run a worker in.
-+
-Workers running in these localities can run tests only against APIs that are publicly accessible. Moreover, the number of workers that you can run is limited. If you reach the limit, you must contact your MuleSoft administrator about raising your maximum.
+Normally, workers that run the monitors you create with API Functional Monitoring can run tests only against APIs that are publicly accessible. They cannot access APIs that are in private networks. Moreover, the number of workers that you can run is limited. If you reach the limit, you must contact your MuleSoft administrator about raising your maximum.
 
-* A Mule Runtime that is running within a private network.
-
-Whether you can monitor the endpoints of a public API or of an API that is in a private network depends on the type of locality that you choose to run a test in. A _locality_ in API Functional Monitoring is the place you specify that the test should be run. You select a locality when you create a schedule for a version of a test.
+However, if you have a subscription to Anypoint Virtual Private Cloud (VPC), workers that run your monitors can access APIs in your private network. You can also run as many as your allotment of vCores allows. Each worker consumes 0.2 vCores.
 
 
-Private locality:: You create private localities. These are Mule workers that you allocate, that run in an Anypoint Platform environment, and that act as proxies to allow the testing of endpoints of APIs that are accessible only within private networks. You can to create as many schedules as your allotment of vCores can accommodate. Every private locality consumes 0.2 vCores.
-+
-When you create a private locality, you can give it any name you like.
-
-== Select a Public locality When You Create a Monitor in Anypoint Monitoring
-
-When you create a monitor, you create version 1.0.0 of the test that the monitor runs and the schedule for running the test. The fields under the heading *Execution locality* are for configuring the schedule. In the *locality* field, click the arrow and, in the menu that appears, select one of the options under the heading *Public localities*.
+The type of location that a worker runs in determines whether the worker can test only publicly accessible APIs or APIs on private networks. The type of location also determines whether you are limited to running a maximum number of monitors or whether the number of monitors that you can run depend on your allotment of vCores.
 
 
-== Select a Public locality When You Modify or Create a Schedule in Anypoint Monitoring
+== Select a Public location When You Create a Monitor in Anypoint Monitoring
+
+When you create a monitor, you create version 1.0.0 of the test that the monitor runs and the schedule for running the test. The fields under the heading *Execution location* are for configuring the schedule. In the *location* field, click the arrow and, in the menu that appears, select one of the options under the heading *Public locations*.
+
+
+== Select a Public location When You Modify or Create a Schedule in Anypoint Monitoring
 
 In an existing monitor, you can modify or add a schedule in the *Schedules* section.
 
 * To the right of schedule listed in the table in this section, click the three dots and select *Modify* to open the Modify Schedule dialog.
 * Click the *Add Schedule* button to open the Add Schedule dialog.
 
-In either dialog, click the arrow in the *locality* field and select one of the options under the heading *Public localities*.
+In either dialog, click the arrow in the *location* field and select one of the options under the heading *Public locations*.
 
 
-== Specify a Public locality When You Create a Monitor by Using the BAT CLI
+== Specify a Public location When You Create a Monitor by Using the BAT CLI
 
 
 
-== Select or Create a Private locality When You Create a Monitor in Anypoint Monitoring
+== Select or Create a Private location When You Create a Monitor in Anypoint Monitoring
 
 
-== Select or Create a Private locality When You Create a Schedule in Anypoint Monitoring
+== Select or Create a Private location When You Create a Schedule in Anypoint Monitoring
 
 
-== Specify a Private locality When You Create a Monitor by Using the BAT CLI
+== Specify a Private location When You Create a Monitor by Using the BAT CLI
