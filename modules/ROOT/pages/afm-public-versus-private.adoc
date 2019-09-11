@@ -2,7 +2,7 @@
 
 Tests are run by instances of Mule, and these instances are called _workers_. A worker can run in one of two types of location:
 
-* One of the 12 different _worker clouds_, each corresponding to a geographic region. The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager:cloudhub-architecture.adoc[About CloudHub Architecture].
+* One of the 12 different _worker clouds_, each corresponding to a geographic region. The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager::cloudhub-architecture.adoc[About CloudHub Architecture].
 
 Whether you can monitor the endpoints of a public API or of an API that is in a private network depends on the type of location that you choose to run a test in. A _location_ in API Functional Monitoring is the place you specify that the test should be run. You select a location when you create a schedule for a version of a test.
 
