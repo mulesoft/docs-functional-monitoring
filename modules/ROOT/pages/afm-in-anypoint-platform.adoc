@@ -20,8 +20,7 @@ For the schedule that the monitor runs the test according to, you specify:
 
 * The version of the test to run. You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version of the test, the third digit is incremented by one.
 * The location from which to run the test. Locations can be public or private. For details, see xref:afm-public-versus-private.adoc[Monitoring Public APIs Versus Monitoring Private Ones].
-* The interval of time to wait between executions of the test. The first execution starts at the beginning of the next hour. For example, if you create a monitor at 9:36 a.m., the test is first run at 10:00 a.m..
-* The number of minutes after the start of the next hour to wait before executing the test for the first time. For example, if you set the value to 5 and you create a monitor at 9:36 a.m., the test is first run at 10:05 a.m..
+* The interval of time to wait between executions of the test. 
 
 The following diagram represents the content of a new monitor.
 
