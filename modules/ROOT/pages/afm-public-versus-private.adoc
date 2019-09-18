@@ -1,4 +1,9 @@
 = Monitoring Public APIs Versus Monitoring Private Ones
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 Monitors (which contain both one or more versions of a test and one or more schedules) are run by instances of Mule Runtime, and these instances are called _workers_. Each worker runs a single monitor.
 
@@ -10,7 +15,7 @@ Also, the number of workers that you can run at the same time in worker clouds i
 
 However, if you have a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment. These workers can access APIs in your private network. You can also run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores.
 
-== Public Locations and Private Locations
+== Public and Private Locations
 
 In AFM, a _public location_ is one of the twelve worker clouds. When you select one of these as part of creating a monitor or as part of adding or editing a schedule, you are specifying that the API that you want the monitor to test or the schedule to run a test against is a public API. In addition, you are specifying that you want to allocate a worker from the limited number of workers that you can allocate.
 
