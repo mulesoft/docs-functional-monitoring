@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Monitors (which contain both one or more versions of a test and one or more schedules) are run by instances of Mule Runtime, and these instances are called _workers_. Each worker runs a single monitor.
+Monitors are run by instances of Mule Runtime, and these instances are called _workers_. Each worker runs a single monitor.
 
 A worker normally runs in one of CloudHub's twelve different _worker clouds_. Each of these clouds corresponds to a geographic region. (The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager::cloudhub-architecture.adoc[About CloudHub Architecture].) When you create a monitor, add a schedule to a monitor, or modify a schedule, you can specify to run the worker in one of the regions that are available to you. For example, you might have access to the worker clouds `us-east-1` and `us-east-2`, and you could select one of these to run the worker in.
 
