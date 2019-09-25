@@ -7,15 +7,16 @@ endif::[]
 
 == Monitoring the Endpoints of Public APIs
 
-Public APIs are APIs of which the endpoints are exposed on the open internet. In API Functional Monitoring (AFM), workers running in a public location run the monitors that you create to monitor the endpoints of public APIs. A _public location_ is a region in CloudHub that is shared with other MuleSoft customers.
+Public APIs are APIs of which the endpoints are exposed on the open internet. In API Functional Monitoring (AFM), workers running in a public location run the tests in monitors that you create to monitor the endpoints of public APIs. A _public location_ is a region in CloudHub that is shared with other MuleSoft customers.
 
-Because the location is shared, the amount of resources that you can consume in it is limited, though you can increase the limits. Initially, AFM lets your organization in Anypoint Platform run up to five workers at one time. Therefore, you can monitor the endpoints of up to five public APIs at one time.
+Because the location is shared, the amount of resources that you can consume in it is limited, though you can increase the limits. Initially, AFM lets your organization in Anypoint Platform run up to five workers across public locations at one time. Therefore, you can run up to five tests of the endpoints in public APIs at one time. If you reach the limit and want to run more tests simultaneously, contact your MuleSoft administrator about raising your maximum.
 
-When you select one of these as part of creating a monitor or as part of adding or editing a schedule, you are specifying that the API that you want the monitor to test or the schedule to run a test against is a public API. In addition, you are specifying that you want to allocate a worker from the limited number of workers that you can allocate.
 
-Workers that run in a worker cloud and that run the monitors you create with API Functional Monitoring (AFM) can run monitors that test only APIs that are publicly accessible. Such workers cannot access APIs that are in private networks.
 
-Also, the number of workers that you can run at the same time in worker clouds is limited. For example, if your limit is five, the total number of workers that you can run simultaneously in worker clouds is five. If you run two in, say, `us-east-1` and three in `us-east-2`, you are still subject to the limit. You cannot run five in each worker cloud. If you reach the limit, you must contact your MuleSoft administrator about raising your maximum.
+What determines the number of workers that are running tests at any particular time are the schedules that you associate with tests.
+
+
+
 
 However, if you have a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment. These workers can access APIs in your private network. You can also run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores.
 
