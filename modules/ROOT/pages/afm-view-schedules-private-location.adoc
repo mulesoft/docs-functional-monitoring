@@ -4,3 +4,19 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can find out how many schedules a private location is used by. When a private location is used by a schedule, a worker to run the test associated with the schedule is created in that location. Therefore, seeing the number of schedules that use a private location shows you how many workers are running in that location.
+
+== Procedure
+
+. Display the list of locations by clicking the *Locations* tab at the top of the screen.
+. Select a private location.
+
+== Result
+
+The list of schedules that use the private location appears to the right. For each schedule, the following information appears:
+
+* The length of time to elapse before the associated test is run again
+* The interval at which the test is run
+* The name of the monitor that the test is defined in
+* The test version that is run
