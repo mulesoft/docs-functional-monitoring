@@ -15,6 +15,7 @@ When you add a schedule to a monitor, you can use the schedule to run any of the
 == Procedure
 
 To add a schedule from the *Schedules* section of a monitor:
+
 . Select the monitor in which you want to add a schedule.
 . Click the *Schedules* tab.
 . Click *Add Schedule*.
@@ -23,9 +24,10 @@ To add a schedule from the *Schedules* section of a monitor:
 * The test version that you want the schedule to run
 * The location to run the test from
 * The frequency at which to run the test
-* Click *Add*.
+. Click *Add*.
 
 To add a schedule from the list of schedules that use a particular location:
+
 . Display the list of locations by clicking the *Locations* tab at the top of the screen.
 . Select the location that you want to use in a new schedule.
 . Click *Add Schedule* under the list of schedules to the right of the list of locations.
@@ -34,7 +36,7 @@ To add a schedule from the list of schedules that use a particular location:
 * The name of the monitor to apply the schedule to
 * The test version that you want the schedule to run
 * The frequency at which to run the test
-* Click *Add*.
+. Click *Add*.
 
 == Result
-The countdown to the first run of the associated test version begins.
+The countdown to the first run of the selected test version begins.

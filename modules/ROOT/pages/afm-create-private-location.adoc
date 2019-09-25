@@ -26,6 +26,17 @@ To create a private location independently of any other task:
 +
 The name can be up to 255 characters, and can include spaces and special characters.
 . Select the environment in which to run the workers that are created to run tests in your monitors.
+. Click *Create*.
+
+== Result
+
+The private location is added to the list of private locations. While AFM is registering the location, the status indicator for the location is yellow. After it is registered, if the environment in which the location was created is online, the location shows a green status indicator.
+
+If the indicator is red, then go to Runtime Manager and restart the environment. Check the logs for the environment, too, to troubleshoot the problem that caused it to go offline.
+
+== What to Do Next
+
+You can now run tests from the private location by adding a schedule that uses the location or modifying an existing schedule to use it.
 
 == See Also
 
