@@ -4,3 +4,30 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can create a private location as part of three tasks:
+* When you are creating a monitor
+* When you are adding a schedule to a monitor
+* When you are modifying a schedule in a monitor
+
+You can also create a private location independently of these three tasks. The following procedure explains the steps for this last method.
+
+== Before You Begin
+
+Your organization in Anypoint Platform must have a subscription to Anypoint Virtual Private Cloud.
+
+== Procedure
+
+To create a private location independently of any other task:
+
+. Display the list of locations by clicking the *Locations* tab at the top of the screen.
+. Click *Create Private Location*.
+. Name the location.
+. Select the environment in which to run the workers that are created to run tests in your monitors.
+
+== See Also
+
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring of the Endpoints of Public and Private APIs]
+* xref:afm-create-monitor.adoc[Create a Monitor]
+* xref:afm-add-schedule.adoc[Add a Schedule]
+* xref:afm-modify-schedule.adoc[Modify a Schedule]
