@@ -9,39 +9,37 @@ endif::[]
 
 Public APIs are APIs of which the endpoints are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations. A _public location_ is a region (which you can think of as a resource pool) in CloudHub that is shared with other MuleSoft customers.
 
-Because the location is shared, the amount of resources that you can consume in it is limited, though you can increase the limit. Initially, AFM lets your organization in Anypoint Platform run up to five workers across public locations at one time. Therefore, you can run up to five tests of the endpoints in public APIs at one time. What determines the number of workers that are running tests at any particular time are the schedules that you associate with tests. Across the monitors that are created in AFM in your organization, there can be only five schedules. If you reach the limit and want to run more tests simultaneously, contact your MuleSoft administrator about raising your maximum.
+=== Length of Time Before Tests Time Out
+
+To prevent tests run in public locations from consuming too many resources, AFM allows tests to wait longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
+
+=== Scheduling Tests
+
+Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets the limitations on the following aspects of scheduling:
+
+Number of Schedules::
++
+Initially, AFM lets your organization in Anypoint Platform run up to five workers across public locations at one time. Therefore, you can run up to five tests of the endpoints in public APIs at one time. What determines the number of workers that are running tests at any particular time are the schedules that you associate with tests. Across the monitors that are created in AFM in your organization, there can be only five schedules. If you reach the limit and want to run more tests simultaneously, contact your MuleSoft administrator about raising your maximum.
+
+Duration of Intervals Between Executions of Tests::
++
+The shortest interval at which you can schedule a test to be run is fifteen minutes.
 
 == Monitoring the Endpoints of Private APIs
 
-With a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. Workers running in such a network segment can access APIs in your private network. You can also run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores.
-
-A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
-
-Before you can select a private location, you must create one, which involves specifying a name. For example, you might create a private location that you name `myLocation`. When you choose to run a monitor in `myLocation`, AFM allocates a worker in Anypoint Virtual Cloud in the `myLocation` namespace.
-
-== Select a Public location When You Create a Monitor in Anypoint Monitoring
-
-When you create a monitor, you create version 1.0.0 of the test that the monitor runs and the schedule for running the test. The fields under the heading *Execution location* are for configuring the schedule. In the *location* field, click the arrow and, in the menu that appears, select one of the options under the heading *Public locations*.
+With a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
 
 
-== Select a Public location When You Modify or Create a Schedule in Anypoint Monitoring
+Before you can run tests from a private location, you must create one, which involves specifying a name. For example, you might create a private location that you name `myLocation`. When you choose to run a test in `myLocation`, AFM allocates a worker in Anypoint Virtual Cloud in the `myLocation` namespace.
 
-In an existing monitor, you can modify or add a schedule in the *Schedules* section.
+=== Length of Time Before Tests Time Out
 
-* To the right of schedule listed in the table in this section, click the three dots and select *Modify* to open the Modify Schedule dialog.
-* Click the *Add Schedule* button to open the Add Schedule dialog.
+Because tests are run in a VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase the time in Runtime Manager.
 
-In either dialog, click the arrow in the *location* field and select one of the options under the heading *Public locations*.
+// What are the exact steps for increasing the time?
 
+=== Scheduling Tests
 
-== Specify a Public location When You Create a Monitor by Using the BAT CLI
+When you use private locations, you can run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
 
-
-
-== Select or Create a Private location When You Create a Monitor in Anypoint Monitoring
-
-
-== Select or Create a Private location When You Create a Schedule in Anypoint Monitoring
-
-
-== Specify a Private location When You Create a Monitor by Using the BAT CLI
+Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.
