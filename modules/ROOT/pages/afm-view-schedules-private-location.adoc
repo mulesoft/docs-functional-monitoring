@@ -1,0 +1,6 @@
+= View the Schedules That Use a Private Location
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
