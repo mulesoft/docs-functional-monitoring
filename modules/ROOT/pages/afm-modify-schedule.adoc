@@ -4,3 +4,44 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can modify a schedule if you want to change:
+
+* The test version that it runs
+* The location in which the test is run from
+* The frequency at which to run the test
+* The monitor in which the test is defined
+
+== Before You Begin
+
+If you want to modify a schedule to use a public location instead of a private one, ensure that your organization in Anypoint Platform has not reached its maximum of schedules for public locations. An indicator at the top of the *Monitors* section gives the count of such schedules that are already being used.
+
+== Procedure
+
+To modify a schedule from the *Schedules* section of a monitor:
+
+. Select the monitor in which you want to modify a schedule.
+. Click the *Schedules* tab.
+. Find the schedule in the list, click the three dots on the right end of the table row, and select *Modify*.
+. In the Modify Schedule dialog, change one or more of these items:
++
+* The test version that you want the schedule to run
+* The location to run the test from
+* The frequency at which to run the test
+. Click *Save*.
+
+To add a schedule from the list of schedules that use a particular location:
+
+. Display the list of locations by clicking the *Locations* tab at the top of the screen.
+. Select the location that you want to use in a new schedule.
+. Find the schedule in the list, click the three dots on the right end of the table row, and select *Modify*.
+. In the Modify Schedule dialog, change one or more of these items:
++
+* The name of the monitor to apply the schedule to
+* The test version that you want the schedule to run
+* The frequency at which to run the test
+. Click *Save*.
+
+== Result
+
+Changes take place after the current interval expires. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
