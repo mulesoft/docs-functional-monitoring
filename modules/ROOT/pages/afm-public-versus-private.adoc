@@ -1,13 +1,17 @@
-= Monitoring Public and Private APIs
+= Monitoring the Endpoints of Public and Private APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-Monitors are run by instances of Mule Runtime, and these instances are called _workers_. Each worker runs a single monitor.
+== Monitoring the Endpoints of Public APIs
 
-A worker normally runs in one of CloudHub's twelve different _worker clouds_. Each of these clouds corresponds to a geographic region. (The complete list of regions is listed in the "Global Worker Clouds" section of the topic xref:runtime-manager::cloudhub-architecture.adoc[About CloudHub Architecture].) When you create a monitor, add a schedule to a monitor, or modify a schedule, you can specify to run the worker in one of the regions that are available to you. For example, you might have access to the worker clouds `us-east-1` and `us-east-2`, and you could select one of these to run the worker in.
+Public APIs are APIs of which the endpoints are exposed on the open internet. In API Functional Monitoring (AFM), workers running in a public location run the monitors that you create to monitor the endpoints of public APIs. A _public location_ is a region in CloudHub that is shared with other MuleSoft customers.
+
+Because the location is shared, the amount of resources that you can consume in it is limited, though you can increase the limits. Initially, AFM lets your organization in Anypoint Platform run up to five workers at one time. Therefore, you can monitor the endpoints of up to five public APIs at one time.
+
+When you select one of these as part of creating a monitor or as part of adding or editing a schedule, you are specifying that the API that you want the monitor to test or the schedule to run a test against is a public API. In addition, you are specifying that you want to allocate a worker from the limited number of workers that you can allocate.
 
 Workers that run in a worker cloud and that run the monitors you create with API Functional Monitoring (AFM) can run monitors that test only APIs that are publicly accessible. Such workers cannot access APIs that are in private networks.
 
@@ -17,7 +21,6 @@ However, if you have a subscription to Anypoint Virtual Private Cloud (VPC), you
 
 == Public and Private Locations
 
-In AFM, a _public location_ is one of the twelve worker clouds. When you select one of these as part of creating a monitor or as part of adding or editing a schedule, you are specifying that the API that you want the monitor to test or the schedule to run a test against is a public API. In addition, you are specifying that you want to allocate a worker from the limited number of workers that you can allocate.
 
 A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
 
