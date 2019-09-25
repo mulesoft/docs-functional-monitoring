@@ -23,6 +23,8 @@ To create a private location independently of any other task:
 . Display the list of locations by clicking the *Locations* tab at the top of the screen.
 . Click *Create Private Location*.
 . Name the location.
++
+The name can be up to 255 characters, and can include spaces and special characters.
 . Select the environment in which to run the workers that are created to run tests in your monitors.
 
 == See Also
