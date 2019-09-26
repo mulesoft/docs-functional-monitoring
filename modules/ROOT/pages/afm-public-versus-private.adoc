@@ -29,7 +29,6 @@ The shortest interval at which you can schedule a test to be run is fifteen minu
 
 With a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
 
-
 Before you can run tests from a private location, you must create one, which involves specifying a name. For example, you might create a private location that you name `myLocation`. When you choose to run a test in `myLocation`, AFM allocates a worker in Anypoint Virtual Cloud in the `myLocation` namespace.
 
 === Length of Time Before Tests Time Out
