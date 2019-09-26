@@ -4,3 +4,15 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can delete a monitor that you no longer need.
+
+== Procedure
+
+. Select the monitor that you want to delete.
+. In the top-right corner of the screen, click the *Delete* button that is next to the trash-can icon.
+. In the Delete Monitor dialog, click *Delete*.
+
+== Result
+
+The monitor, all versions of its test, and all schedules that are associated with those versions are deleted. The workers that are provisioned for the schedules are all deleted and the resources they are consuming are made available to other workers.
