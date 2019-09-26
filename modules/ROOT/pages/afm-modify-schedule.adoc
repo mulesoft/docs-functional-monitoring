@@ -44,4 +44,4 @@ To add a schedule from the list of schedules that use a particular location:
 
 == Result
 
-Changes take place after the current interval expires. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
+Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.

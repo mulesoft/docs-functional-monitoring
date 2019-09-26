@@ -4,3 +4,21 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can run a test on demand without waiting for the current interval of its schedule to elapse. Doing so does not reset the schedule to start from when the on-demand test ended. The current interval that is indicated by the timer in the display of the monitor continues to elapse.
+
+== Before You Begin
+
+Because you are running the test outside of a schedule, you must select the location from which to run it. If you want to run it in the same location as that used by the schedule, you can click the *Schedules* tab to look at the schedule and see at a glance the location that it uses.
+
+== Procedure
+
+. Select the monitor for which you want to run a test on demand.
+. Click the *Tests* tab to see the list of test versions.
+. Click the Play icon for the test version that you want to run.
+. In the Run Versioned Test dialog, select the location and environment in which you want to run the test.
+. Click *Run Now*.
+
+== Result
+
+The test runs immediately and the results are displayed. The current interval in the associated schedule continues to elapse.
