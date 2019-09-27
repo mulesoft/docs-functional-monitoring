@@ -1,0 +1,94 @@
+= To Create a Monitor That Uses a Particular Location
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+
+
+. Run the following command to list the locations that are in your default profile:
++
+```
+bat location ls
+```
++
+[NOTE]
+====
+To use a non-default profile, add `--profile=<name-of-profile>` to the commands in these steps.
+====
+. Find the entry for the location that you want to use. For public locations, the value of the `organizationId` field is `public`. For private locations, the value is your organization ID.
++
+Here is example output from this command:
++
+```
+organizationId: 612dbc11-a043-4b8b-b76e-7d51f84723c7
+targets:
+-
+  id: 75c403a6-8054-43ec-b611-63b9efff820d
+  name: us-east-1
+  transport: LAMBDA
+  organizationId: public
+-
+  id: 799baaeb-3c86-4798-b5b4-6d6954254229
+  name: us-east-2
+  transport: LAMBDA
+  organizationId: public
+-
+  id: b4b4db50-bcbb-4b9a-93e1-50259fd100f7
+  name: myLocation
+  transport: MULE
+  organizationId: 612dbc11-a043-4b8b-b76e-7d51f84723c7
+```
+. Copy to your clipboard the value of the `id` field for the location that you want to use.
++
+For example, to use the private location in the example output, copy the value of the `id` field for the third location listed.
+. Create the schedule, using the `--target` parameter and pasting in the value of the `id` field, as in this example:
++
+```
+bat schedule create --target=b4b4db50-bcbb-4b9a-93e1-50259fd100f7
+```
++
+[NOTE]
+====
+This schedule uses the default interval of 15 minutes. If you want to use a different interval, see the
+====
+
+== Result
+
+The output of the `bat schedule create` command looks like this:
+
+```
+#Creating artifact...
+  + exchange.json
+  + .DS_Store
+  + config/default.dwl
+  + config/qax.dwl
+  + config/devx.dwl
+  + config/stgx.dwl
+  + tests/HelloWorld.dwl
+  + bat.yaml
+# Creating artifact...OK
+# Uploading 612dbc11-a043-4b8b-b76e-7d51f84723c7:HelloWorldSuite:0.0.1
+# Version 0.0.1 published
+scheduleId: 345305b4-0244-4a75-a304-220495e2e34a
+```
+
+If you run the `bat schedule ls` command, you see an entry like this one:
+
+```
+# HelloWorldSuite
+# every 15 minutes
+id: 345305b4-0244-4a75-a304-220495e2e34a
+test: 612dbc11-a043-4b8b-b76e-7d51f84723c7:HelloWorldSuite
+version: 0.0.1
+organizationId: 612dbc11-a043-4b8b-b76e-7d51f84723c7
+config: default
+target:
+  id: b4b4db50-bcbb-4b9a-93e1-50259fd100f7
+  name: myLocation
+  transport: MULE
+nextExecution: 2019-09-27T02:15:00Z
+cron: 0 */15 * * * ? *
+active: true
+```
