@@ -1,4 +1,4 @@
-= Differences in the Monitoring of the Endpoints of Public and Private APIs
+= Differences in the Monitoring Public and Private APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

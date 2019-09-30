@@ -40,3 +40,7 @@ To add a schedule from the list of schedules that use a particular location:
 
 == Result
 The countdown to the first run of the selected test version begins.
+
+== See Also
+
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring Public and Private APIs

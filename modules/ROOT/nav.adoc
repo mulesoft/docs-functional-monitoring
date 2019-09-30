@@ -1,6 +1,6 @@
 .xref:index.adoc[API Functional Monitoring]
 * xref:index.adoc[About API Functional Monitoring]
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of the Endpoints of Public and Private APIs]
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring Public and Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
  ** xref:afm-create-private-location.adoc[Create a Private Location]
