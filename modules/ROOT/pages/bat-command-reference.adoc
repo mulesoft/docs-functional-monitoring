@@ -119,9 +119,9 @@ Creates a private location in your organization in Anypoint Platform. A _private
 +
 Deletes a private location from the list of private locations in your organization in Anypoint Platform.
 
-** `location list`
+** `location ls|list`
 +
-Lists the private locations in your organization in Anypoint Platform.
+Lists the private and public locations in your organization in Anypoint Platform. This command replaces `target ls|list`.
 
 ** `schedule create [--cron="<expression>"]`
 +
@@ -163,10 +163,6 @@ List all the schedulers information from the profile's organization.
 ** `schedule rm | remove <scheduleId>`
 +
 Deletes a schedule by its ID.
-
-** `target ls list`
-+
-Lists all the targets information from the profile's organization.
 
 ** `worker register`
 +
