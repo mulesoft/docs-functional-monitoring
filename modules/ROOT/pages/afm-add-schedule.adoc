@@ -14,6 +14,8 @@ When you add a schedule to a monitor, you can use the schedule to run any of the
 
 == Procedure
 
+There are two different methods that you can use to add a schedule.
+
 To add a schedule from the *Schedules* section of a monitor:
 
 . Select the monitor in which you want to add a schedule.

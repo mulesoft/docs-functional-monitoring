@@ -7,10 +7,10 @@ endif::[]
 
 You can delete versions of a test from a monitor if you no longer need them.
 
-[NOTE]
-====
 Old versions of tests display data about test executions that might still be useful for you to know. Before deleting a version, ensure that you no longer need the data about it.
-====
+
+All schedules that run a test that you delete are also deleted. If you delete the only version that is in a monitor, the monitor itself is also deleted.
+
 
 == Procedure
 
@@ -19,5 +19,3 @@ Old versions of tests display data about test executions that might still be use
 . In the Remove Version confirmation dialog, click *Remove*.
 
 == Result
-
-All schedules that run that test are also deleted. If you delete the only version that is in a monitor, the monitor itself is also deleted.

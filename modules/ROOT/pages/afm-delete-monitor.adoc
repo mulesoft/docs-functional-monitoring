@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can delete a monitor that you no longer need.
+You can delete a monitor that you no longer need. However, there is no cost to keeping the monitor if it is not scheduled to run.
 
 == Procedure
 
