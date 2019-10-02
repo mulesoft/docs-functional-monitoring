@@ -17,7 +17,9 @@ bat location ls
 ====
 To use a non-default profile, add `--profile=<name-of-profile>` to the commands in these steps.
 ====
-. Find the entry for the location that you want to use. For public locations, the value of the `organizationId` field is `public`. For private locations, the value is your organization ID.
+. Find the entry for the location that you want to use.
++
+For public locations, the value of the `organizationId` field is `public`. For private locations, the value is your organization ID.
 +
 Here is example output from this command:
 +
@@ -51,7 +53,7 @@ bat schedule create --target=b4b4db50-bcbb-4b9a-93e1-50259fd100f7
 +
 [NOTE]
 ====
-This schedule uses the default interval of 15 minutes. If you want to use a different interval, see the
+This schedule uses the default interval of 15 minutes.
 ====
 
 == Result

@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can run a test on demand without waiting for the current interval of its schedule to elapse. Doing so does not reset the schedule to start from when the on-demand test ended. The current interval that is indicated by the timer in the display of the monitor continues to elapse.
+You can run a test on demand without waiting for the current interval of its schedule to elapse. Doing so does not reset the schedule, which continues to run at previously set intervals.
 
 == Before You Begin
 

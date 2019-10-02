@@ -5,11 +5,11 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can look back at the details of past executions of a test version.
+You can review the details of past executions of a test version.
 
 == Procedure
 
-. Select the monitor for which you want to view the historical results of the executions of a test version.
+. Select the monitor for which you want to view a test version's historical results.
 . Click the *Tests* tab to see the list of test versions.
 . Click the History icon for the test version that you want to run.
 
