@@ -12,7 +12,7 @@ You can create a private location as part of three tasks:
 
 You can also create a private location independently of these three tasks. Then, when you create a monitor, add a schedule, or modify a schedule, you can simply select the private location. The following procedure explains the steps for this last method.
 
-For information about what a private location is and why you might want to create one, see xref:afm-public-versus-private.adoc[Differences in the Monitoring of the Endpoints of Public and Private APIs].
+For information about what a private location is and why you might want to create one, see xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs].
 
 == Before You Begin
 
@@ -42,7 +42,7 @@ You can now run tests from the private location, either by adding a schedule tha
 
 == See Also
 
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of the Endpoints of Public and Private APIs]
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
 * xref:afm-create-monitor.adoc[Create a Monitor]
 * xref:afm-add-schedule.adoc[Add a Schedule]
 * xref:afm-modify-schedule.adoc[Modify a Schedule]

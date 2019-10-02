@@ -14,9 +14,11 @@ You can modify a schedule if you want to change:
 
 == Before You Begin
 
-If you want to modify a schedule to use a public location instead of a private one, ensure that your organization in Anypoint Platform has not reached its maximum of schedules for public locations. An indicator at the top of the *Monitors* section gives the count of such schedules that are already being used.
+If you want to modify a schedule to use a public location instead of a private one, ensure that your organization in Anypoint Platform has not reached its maximum number of schedules for public locations. An indicator at the top of the *Monitors* section gives the count of such schedules that are already being used.
 
 == Procedure
+
+There are two different methods for modifying a schedule.
 
 To modify a schedule from the *Schedules* section of a monitor:
 

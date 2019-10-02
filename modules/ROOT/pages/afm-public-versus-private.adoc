@@ -1,9 +1,11 @@
-= Differences in the Monitoring Public and Private APIs
+= Differences in the Monitoring of Public and Private APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+You can create monitors that test the endpoints of either public APIs or private APIs. When you test the endpoints of private APIs, there are looser limits on the length of time at which an API is said to have timed out and on the number of tests that you can run simultaneously. 
 
 == Monitoring the Endpoints of Public APIs
 
