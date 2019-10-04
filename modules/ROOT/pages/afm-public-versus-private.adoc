@@ -1,0 +1,48 @@
+= Differences in the Monitoring of Public and Private APIs
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can create monitors that test the endpoints of either public APIs or private APIs. When you test the endpoints of private APIs, there are looser limits on the length of time at which an API is said to have timed out and on the number of tests that you can run simultaneously.
+
+== Monitoring the Endpoints of Public APIs
+
+Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations. A _public location_ is a region (which you can think of as a resource pool) in CloudHub that is shared with other MuleSoft customers.
+
+=== Length of Time Before Tests Time Out
+
+To prevent tests run in public locations from consuming too many resources, AFM prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
+
+=== Scheduling Tests
+
+Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets the limitations on the following aspects of scheduling:
+
+Number of Schedules::
++
+Initially, AFM lets your organization in Anypoint Platform run up to five workers across public locations at one time. Therefore, you can run up to five tests of the endpoints in public APIs at one time.
+
+The number of workers that are running tests at any particular time is determined by the schedules that you associate with tests. Across the monitors that are created in AFM in your organization, there can be only five schedules. If you reach the limit and want to run more tests simultaneously, contact your MuleSoft administrator about raising your maximum.
+
+Duration of Intervals Between Executions of Tests::
++
+The shortest interval at which you can schedule a test to be run is fifteen minutes.
+
+== Monitoring the Endpoints of Private APIs
+
+With a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
+
+Before you can run tests from a private location, you must create one, which involves specifying a name. For example, you might create a private location that you name `myLocation`. When you choose to run a test in `myLocation`, AFM allocates a worker in Anypoint Virtual Private Cloud in the `myLocation` namespace.
+
+=== Length of Time Before Tests Time Out
+
+Because tests are run in a VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager.
+
+// What are the exact steps for increasing the time?
+
+=== Scheduling Tests
+
+When you use private locations, you can run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
+
+Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.

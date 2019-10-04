@@ -1,0 +1,32 @@
+= View a Test's History
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can review the details of past executions of a test version.
+
+== Procedure
+
+. Select the monitor for which you want to view a test version's historical results.
+. Click the *Tests* tab to see the list of test versions.
+. Click the History icon for the test version that you want to run.
+
+== Results
+
+The History page is opened for the test version. The page displays the status of each execution and statistics that are associated with it. The statistics are:
+
+* When the test was last executed
+* How long the execution lasted
+* The location from which the test was run
+* The environment from which the test was run
+
+Click the *Details* button for one of the executions to see this information for each tested endpoint:
+
+* The status of the test
+* The length of time that passed before a response was received
+* The type of request
+* The headers in the request
+* The headers in the response
+* The results of the test assertions

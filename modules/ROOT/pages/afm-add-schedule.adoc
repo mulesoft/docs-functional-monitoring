@@ -1,0 +1,48 @@
+= Add a Schedule
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can add a schedule to an existing monitor if either of the following two conditions is true:
+
+* You plan to run the test associated with the schedule in a public location and the allocation of schedules for your organization in Anypoint Platform is not exhausted.
+* You plan to run the test associated with the schedule in a private location.
+
+When you add a schedule to a monitor, you can use the schedule to run any of the versions of the test for that monitor.
+
+== Procedure
+
+There are two different methods that you can use to add a schedule.
+
+To add a schedule from the *Schedules* section of a monitor:
+
+. Select the monitor in which you want to add a schedule.
+. Click the *Schedules* tab.
+. Click *Add Schedule*.
+. In the Add Schedule dialog, specify this information:
++
+* The test version that you want the schedule to run
+* The location to run the test from
+* The frequency at which to run the test
+. Click *Add*.
+
+To add a schedule from the list of schedules that use a particular location:
+
+. Display the list of locations by clicking the *Locations* tab at the top of the screen.
+. Select the location that you want to use in a new schedule.
+. Click *Add Schedule* under the list of schedules to the right of the list of locations.
+. In the Add Schedule dialog, specify this information:
++
+* The name of the monitor to apply the schedule to
+* The test version that you want the schedule to run
+* The frequency at which to run the test
+. Click *Add*.
+
+== Result
+The countdown to the first run of the selected test version begins.
+
+== See Also
+
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs

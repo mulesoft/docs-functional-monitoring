@@ -3,10 +3,47 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
 You can monitor APIs in the *Functional Monitoring* section of Anypoint Monitoring, which you can access from the home page of Anypoint Platform.
 
-To monitor an API means to monitor the performance of its response to requests that are sent to the resources at its endpoints. The *Functional Monitoring* section contains tools for creating a monitor and for uploading a monitor (a test suite written in the Behavior Driven Development (BDD) test-writing language).
+To monitor an API means to monitor the performance of its response to requests that are sent to the resources at its endpoints. The *Functional Monitoring* section contains tools for creating a monitor and for editing monitors, Also, if you've created a monitor by writing a test suite in the Behavior Driven Development (BDD) test-writing language, you can upload that monitor.
 
+A new monitor consists of a test and a schedule for that test. When you create a monitor, you specify for the test that the monitor includes:
+
+* The endpoints that you want to test
+* Optional assertions to test at the endpoints (for example, you might expect a 200 status code)
+* Optional HTTP request headers to include when pinging the endpoints
+* Optional reporting tools which you want the results of the test sent to (such as SumoLogic or Slack)
+
+For the schedule that the monitor runs the test according to, you specify:
+
+* The version of the test to run.
++
+You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version of the test, the third digit is incremented by one.
+* The location from which to run the test.
++
+Locations can be public or private. For details, see xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs].
+* The interval of time to wait between executions of the test.
+
+The following diagram represents the content of a new monitor:
+
+.A new monitor includes a test, which is at version 1.0.0, and a schedule for running the test.
+image::afm-ui-overview-a.png[]
+
+When you create the monitor, you specify the endpoints that you want to test. For the schedule, you specify the location in which to run the test, and the interval at which to run the test.
+
+Over time, you can create new versions of the test and create additional schedules. The following diagram represents a monitor in which there are four versions of a test and two schedules. Only the most recent two versions of the test are scheduled to be run.
+
+.You can revise a monitor to include newer versions of the test.
+image::afm-ui-overview-b.png[]
+
+The preceding diagrams describe the content of a monitor. However, the user interface for API Functional Monitoring does not display test versions and schedules together, as the diagrams do. Instead, test versions are in the *Tests* section and schedules are in the *Schedules* section, as this schematic diagram of the same monitor shows. You can identify the pairs of test versions and schedules by the version numbers.
+
+.This schematic diagram shows the same monitor as it is represented in the user interface for API Functional Monitoring.
+image::afm-ui-test-versions-and-schedules.png[]
+
+The test versions are displayed separately from the schedules. The first diagram shows that the test versions are displayed in the *Tests* section. The second diagram shows that the schedules are displayed in the *Schedules* section. The actual user interface displays the version numbers differently.
 
 == See also
 
