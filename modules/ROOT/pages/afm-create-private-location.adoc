@@ -6,6 +6,7 @@ endif::[]
 :imagesdir: ../assets/images
 
 You can create a private location as part of three tasks:
+
 * When you create a monitor
 * When you add a schedule to a monitor
 * When you modify a schedule in a monitor
