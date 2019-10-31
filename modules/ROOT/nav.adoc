@@ -1,5 +1,6 @@
 .xref:index.adoc[API Functional Monitoring]
 * xref:index.adoc[About API Functional Monitoring]
+* xref:test-of-diagram-frames.adoc[Testing]
 * xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
