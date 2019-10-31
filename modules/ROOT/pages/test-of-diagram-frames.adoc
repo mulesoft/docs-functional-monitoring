@@ -1,0 +1,19 @@
+= Tests of diagram frames
+
+:imagesdir: ../assets/images
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla felis, molestie a nulla ut, fringilla pharetra nisl. Etiam lobortis odio in lectus volutpat tristique. Fusce in porttitor ex. Integer id purus maximus, tempor justo sed, lobortis nunc. Integer id lacinia risus. Phasellus sed luctus lectus. Duis scelerisque purus eget tellus imperdiet, id iaculis libero fringilla. Proin molestie ullamcorper aliquet. Nullam lacinia, sapien at malesuada ornare, felis orci commodo nulla, nec lobortis elit ante quis mauris. Nullam aliquam, nibh ac interdum venenatis, augue elit vulputate turpis, quis ullamcorper mauris diam id magna.
+
+== First Heading
+
+Ut sit amet risus id nulla viverra suscipit. Praesent leo urna, hendrerit pretium eleifend sed, finibus eu mi. Suspendisse potenti. Praesent sit amet massa vel felis luctus varius sed quis lectus. Integer at erat venenatis, hendrerit leo in, rhoncus ante. Praesent vel feugiat est. Nam scelerisque posuere ornare. Suspendisse in placerat quam. Sed accumsan eu urna eu tristique. Cras tincidunt efficitur sapien eu venenatis. Cras fringilla est quis tincidunt laoreet. Duis non porta est. Nunc non nisi facilisis tellus congue posuere. Phasellus viverra magna et nisl commodo feugiat. Donec ut interdum nibh, nec finibus eros. Mauris dignissim sem risus, tempor bibendum eros efficitur sed.
+
+image::01-diagram-frame.png[]
+
+== Second Heading
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eget ligula lacus. Quisque mattis lacus quis tellus finibus, at faucibus augue mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec erat nec magna ultrices ultrices eget ac ante. Nulla cursus placerat suscipit. Quisque lorem magna, varius id nisi eu, iaculis lobortis elit. Nam accumsan egestas molestie. Mauris ut nunc nulla. Nulla convallis ex vitae maximus mollis. Curabitur a risus quis massa congue elementum consequat ac arcu. Curabitur vulputate ante augue, sed gravida metus faucibus sit amet. Cras odio massa, rutrum nec dictum nec, aliquet a ante. Quisque laoreet ultricies dolor, in gravida tellus. Proin sodales mollis lacinia.
+
+Cras vulputate vulputate magna hendrerit feugiat. Nunc non finibus purus, ut tempor eros. Nulla sed neque dolor. Aliquam erat volutpat. Suspendisse a vestibulum eros. Fusce tempus non mauris id gravida. Cras malesuada mi ipsum, id consequat eros pharetra quis. Quisque eu sagittis lectus, quis blandit felis. Etiam lorem felis, viverra sit amet enim iaculis, pulvinar laoreet arcu. Vestibulum lobortis justo nec nisl egestas, vitae ultrices orci bibendum. Fusce elementum nulla imperdiet nisi viverra, a iaculis augue ornare. Pellentesque consectetur ipsum ut metus rutrum viverra. Etiam iaculis augue quis purus convallis, quis luctus odio elementum.
+
+Vestibulum euismod dolor at maximus volutpat. In fermentum nec mauris a suscipit. Aliquam commodo nisl arcu, at dignissim leo luctus nec. Cras ultricies est ut diam commodo consectetur. Phasellus a ultrices ex. Nunc at arcu volutpat, blandit elit aliquam, cursus dui. Nunc sollicitudin lacus vel nulla sagittis fermentum. Praesent auctor velit sapien, eu vestibulum nisi tincidunt sed.
