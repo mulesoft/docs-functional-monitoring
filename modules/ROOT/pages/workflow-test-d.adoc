@@ -1,0 +1,7 @@
+= Manage APIs with Anypoint Theramin
+
+Tellus molestie nunc non blandit massa. Odio eu feugiat pretium nibh ipsum consequat nisl.
+
+image::workflow-fifth.png[]
+
+Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Dignissim convallis aenean et tortor at. At lectus urna duis convallis convallis tellus id interdum velit. Libero volutpat sed cras ornare. Vel pretium lectus quam id leo in. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Habitant morbi tristique senectus et netus et malesuada fames. Et ultrices neque ornare aenean euismod elementum. Sit amet purus gravida quis blandit turpis cursus in hac. Eu lobortis elementum nibh tellus molestie nunc non. Luctus accumsan tortor posuere ac ut consequat. Viverra adipiscing at in tellus integer.

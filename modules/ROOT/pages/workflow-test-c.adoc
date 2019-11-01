@@ -1,0 +1,7 @@
+= Configure Anypoint Theramin
+
+Eleifend mi in nulla posuere sollicitudin aliquam. Orci dapibus ultrices in iaculis.
+
+image::workflow-fourth.png[]
+
+Proin nibh nisl condimentum id venenatis. Luctus venenatis lectus magna fringilla urna porttitor. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Quam id leo in vitae. Nullam non nisi est sit amet. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Auctor elit sed vulputate mi sit. Molestie nunc non blandit massa enim nec dui. Vulputate sapien nec sagittis aliquam malesuada. Ullamcorper malesuada proin libero nunc consequat interdum. Facilisis mauris sit amet massa. Nunc non blandit massa enim.

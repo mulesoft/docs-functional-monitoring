@@ -1,0 +1,7 @@
+= Review Prerequisites for Anypoint Theramin
+
+Lectus magna fringilla urna porttitor rhoncus dolor purus. Sagittis vitae et leo duis.
+
+image::workflow-second.png[]
+
+Pretium quam vulputate dignissim suspendisse in. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Orci a scelerisque purus semper eget. Mauris commodo quis imperdiet massa tincidunt. Sit amet tellus cras adipiscing. Morbi tincidunt augue interdum velit. Sit amet cursus sit amet dictum sit amet justo donec. Id nibh tortor id aliquet. Bibendum est ultricies integer quis.
