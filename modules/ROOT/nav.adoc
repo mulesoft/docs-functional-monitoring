@@ -5,7 +5,7 @@
  ** xref:workflow-test-a.adoc[Review Prerequisites]
  ** xref:workflow-test-b.adoc[Download and Install]
  ** xref:workflow-test-c.adoc[Configure]
- ** xref:workflow-test-b.adoc[Manage APIs]
+ ** xref:workflow-test-d.adoc[Manage APIs]
 * xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
