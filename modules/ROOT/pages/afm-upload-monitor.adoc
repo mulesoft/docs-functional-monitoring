@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can upload a suite of tests that you have written and want to run as a monitor, viewing the results the information displays in the *Functional Monitoring* section of Anypoint Monitoring. When you create monitors manually, you can create more complex test cases by using features such as the DataWeave expression language and context variables for saving values between calls to endpoints. 
+You can upload a suite of tests that you have written and want to run as a monitor, viewing the results the information displays in the *Functional Monitoring* section of Anypoint Monitoring. When you create monitors by writing them, you can create more complex test cases by using features such as the DataWeave expression language and context variables for saving values between calls to endpoints. 
 
 
 == Before you begin
