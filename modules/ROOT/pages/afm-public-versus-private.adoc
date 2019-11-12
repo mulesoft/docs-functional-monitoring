@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can create monitors that test the endpoints of either public APIs or private APIs. When you test the endpoints of private APIs, there are looser limits on the length of time at which an API is said to have timed out and on the number of tests that you can run simultaneously.
+You can create monitors that test the endpoints of public APIs that are deployed anywhere on the Web and accessible by anyone, or the endpoints of private APIs that are deployed in CloudHub and accessible only to people who are in your private network. When you test the endpoints of private APIs, there are looser limits on the length of time at which an API is said to have timed out and on the number of tests that you can run simultaneously.
 
 == Monitoring the Endpoints of Public APIs
 
@@ -31,7 +31,7 @@ The shortest interval at which you can schedule a test to be run is fifteen minu
 
 == Monitoring the Endpoints of Private APIs
 
-With a subscription to Anypoint Virtual Private Cloud (VPC), you can run workers in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
+Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (VPC). With VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a namespace in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within that namespace that can run tests against APIs that are accessible only within the network that VPC is configured for. You can create multiple private locations in a single VPC.
 
 Before you can run tests from a private location, you must create one, which involves specifying a name. For example, you might create a private location that you name `myLocation`. When you choose to run a test in `myLocation`, AFM allocates a worker in Anypoint Virtual Private Cloud in the `myLocation` namespace.
 
