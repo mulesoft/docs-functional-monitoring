@@ -5,11 +5,17 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can create monitors that test the endpoints of public APIs that are deployed anywhere on the Web and accessible by anyone, or the endpoints of private APIs that are deployed in CloudHub and accessible only to people who are in your private network. When you test the endpoints of private APIs, there are looser limits on the length of time at which an API is said to have timed out and on the number of tests that you can run simultaneously.
+You can create monitors that test the endpoints of public APIs that are deployed in CloudHub or anywhere on the Web and accessible by anyone, or the endpoints of private APIs that are deployed in CloudHub and accessible only to people who are in your private network.
 
 == Monitoring the Endpoints of Public APIs
 
 Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations. A _public location_ is a region (which you can think of as a resource pool) in CloudHub that is shared with other MuleSoft customers.
+
+The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
+
+Before you can run tests from a private location, you must create one, which involves specifying a name and an environment for the worker to run it. The environment must be associated with a VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
+
+The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows a VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
 
 .The possible relationship types between monitors, schedules, public locations, APIs, and environments
 image::afm-public-locations.png[]

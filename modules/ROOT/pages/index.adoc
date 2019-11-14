@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks.
+API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are APIs deployed in CloudHub or anywhere on the Web and accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
 
 The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
 
@@ -11,7 +11,7 @@ The solution helps you carry out the following tasks:
 
 * *White-box testing:* This type of testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
 * *Black-box testing:* This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
-* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in a black-box testing.
+* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
 
 A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
 
