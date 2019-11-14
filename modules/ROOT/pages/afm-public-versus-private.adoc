@@ -30,7 +30,7 @@ Monitor 3 runs on two separate schedules, and each is associated with a differen
 +
 Monitor 4 runs on two separate schedules, and each is associated with the same public location, though each could be associated with a different public location. Each of the two tested public APIs is in a different environment. One environment could be a test environment, and the other environment could be a production environment. Public API 7 and public API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in public API 7 and the same endpoints in public API 8.
 
-* *Fifth relationship type (represented by solid violet lines):*
+* *Fifth relationship type (represented by dashed, dark blue lines):*
 +
 Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10, both of which are accessible on the World-Wide Web.
 
