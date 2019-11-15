@@ -2,9 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
 :page-aliases: afm-public-versus-private.adoc
-
 :imagesdir: ../assets/images
 
 Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations. A _public location_ is a region (which you can think of as a resource pool) in CloudHub that is shared with other MuleSoft customers.
