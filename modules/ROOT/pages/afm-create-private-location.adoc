@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
-
+ 
 You can create a private location as part of three tasks:
 
 * When you create a monitor
@@ -43,7 +43,6 @@ You can now run tests from the private location, either by adding a schedule tha
 
 == See Also
 
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
 * xref:afm-create-monitor.adoc[Create a Monitor]
 * xref:afm-add-schedule.adoc[Add a Schedule]
 * xref:afm-modify-schedule.adoc[Modify a Schedule]
