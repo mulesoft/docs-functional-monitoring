@@ -23,7 +23,7 @@ For the schedule that the monitor runs the test according to, you specify:
 You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version of the test, the third digit is incremented by one.
 * The location from which to run the test.
 +
-Locations can be public or private. For details, see xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs].
+Locations can be public or private. For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 * The interval of time to wait between executions of the test.
 
 The following diagram represents the content of a new monitor:
