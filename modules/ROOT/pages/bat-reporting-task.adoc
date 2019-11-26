@@ -17,10 +17,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 Using New Relic with API functional monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
 
-New Relic has a plugin configured for BAT that can capture the metrics from test suites. To use the plugin to capture metrics, you need to configure your bat.yaml file by adding the following information:
-
-* An output directory
-* Your NEW_RELIC_LICENSE_KEY
+New Relic has a plugin configured for BAT that can capture the metrics from test suites. 
 
 === To Configure Reporting
 
