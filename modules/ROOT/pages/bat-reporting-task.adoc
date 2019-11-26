@@ -272,7 +272,7 @@ EMAILS: email_address1;email_address2;email_address3
 
 
 
-== Custom Post Report
+== Custom Reports
 
 BAT publishes the result.json with a post to the URL specified in the bat.yaml file. You can add headers if necessary.
 
@@ -285,7 +285,7 @@ reporters:
       HEADERS: "'Authorization':'Bearer token','Content-Type':'application/json'"
 ----
 
-== About Local Reports
+== Local Reports
 
 BAT generates basic types of reports locally in JSON and HTML. When you execute tests, the path to the reports appears in the output.
 
