@@ -49,11 +49,7 @@ The BAT plugin information appears.
 +
 . Click the test suite name.
 +
-image::bat-plugin.png[]
-+
 New test result data appears in New Relic after you run each test.
-+
-image::bat-new-relic-metrics.png[]
 
 == PagerDuty
 
@@ -65,11 +61,7 @@ The integration of BAT with PagerDuty generates an incident when a test fails an
 +
 * Configure > Services.
 +
-image::bat-pager-duty.png[]
-+
 * Select the integration. For example, select bat-monitoring.
-+
-image::bat-integrations-pagerduty.png[]
 +
 . Copy the integration key and add it to your bat.yaml file:
 +
@@ -86,8 +78,6 @@ reporters:
 +
 Reports about failed tests appear in PagerDuty.
 
-image::bat-pager-duty-report.png[]
-
 == Slack
 
 You can integrate BAT and Slack to generate alerts in Slack. You send messages to a specific channel through a webhook.
@@ -97,15 +87,9 @@ You can integrate BAT and Slack to generate alerts in Slack. You send messages t
 * In Slack, go to your organization’s app directory page at yourorg.slack.com/apps.
 * Search for Incoming WebHooks and add a configuration.
 +
-image::bat-incoming-webhooks.png[]
-+
 . Choose or create a channel to post notifications to.
 +
-image::bat-post-to-channel.png[]
-+
 * Copy the webhook URL of your new configuration.
-+
-image::bat-webhook-url.png[]
 +
 . In the bat.yaml file, add the URL of the webhook as a parameter.
 +
@@ -123,25 +107,17 @@ reporters:
 +
 The alert notification occurs in the case of failure and provides the name of the suite in which the error occurs.
 
-image::bat-demo-failed.png[]
-
 == Sumo Logic
 
 To use Sumo Logic, you create a collection and specify it in the bat.yaml. The collection can be shared with other tests or used only as a monitor. At the end of each execution, BAT generates a post to SUMO that sends the trade-off information of requests and responses that were executed during the test. This enables you to see expected results and how the test behaves.
 
 You must provide the endpoint of the collection.
 
-image::bat-sumo-report.png[]
-
 You can use BAT to post a log in the specified collection, and create dashboards.
-
-image::bat-sumo-collection.png[]
 
 === To Integrate Sumo and BAT
 
 . In Sumo Logic, use the Setup Wizard to Set Up Streaming Data.
-+
-image::bat-sumo-setup.png[]
 +
 . Choose Your Custom App > HTTP Source or All Other Sources > HTTP Source and fill out the source category.
 . Copy the HTTP source and implement the Sumo Logic integration in your bat.yaml file:
@@ -159,8 +135,6 @@ The SUMO_ENDPOINT is, for example:
 `+https://endpoint1.collection.us2.sumologic.com/...+`
 +
 In a few moments, the test results appear in Sumo Logic under Log Search.
-+
-image::bat-sumo-results.png[]
 
 == Custom Post Report
 
