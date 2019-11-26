@@ -1,4 +1,4 @@
-= To Configure and View Test Reports
+= Configure Reports of Test Failures
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
