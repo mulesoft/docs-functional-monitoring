@@ -17,25 +17,24 @@ You can also configure custom reports and reports that are sent to a location on
 
 Using New Relic with API functional monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
 
-New Relic has a plugin configured for BAT that can capture the metrics from test suites. 
+New Relic has a plugin configured for BAT that can capture the metrics from test suites.
 
 === To Configure Reporting
 
 . Obtain your New Relic license key.
-+
-* Go to the New Relic Account Settings.
-* Copy your license key from the right sidebar under Account Summary.
+a. Go to the New Relic Account Settings.
+b. Copy your license key from the right sidebar under Account Summary.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your license key secret and you are running tests from a private location:
-.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your license encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
-.. Copy the name of the new shared secret.
-.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-.. In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
+b. Copy the name of the new shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+d. In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -73,20 +72,20 @@ The integration of BAT with PagerDuty generates an incident when a test fails an
 === To Configure Reporting
 
 . In PagerDuty, configure an integration:
-.. Select *Configure* > *Services*.
-.. Select the integration.
+a. Select *Configure* > *Services*.
+b. Select the integration.
 . Copy the service key.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your service key secret and you are running tests from a private location:
-.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your service key encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
-.. Copy the name of the new shared secret.
-.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-.. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
+b. Copy the name of the new shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+d. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -122,21 +121,21 @@ You can integrate BAT and Slack to send notifications to a Slack channel when te
 === To Configure Failure Notifications
 
 . Create a webhook:
-.. In Slack, go to your organization’s app directory page.
-.. Search for "Incoming WebHooks" and add a configuration.
+a. In Slack, go to your organization’s app directory page.
+b. Search for "Incoming WebHooks" and add a configuration.
 . Choose or create a channel to post notifications to.
 . Copy the webhook URL of your new configuration.
 . In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, type `metadata:`. A few blank lines below that, type reporters:`.
 . If you want to keep your webhook URL secret and you are running tests from a private location:
-.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your webhook encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
-.. Copy the name of the new shared secret.
-.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-.. In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
+b. Copy the name of the new shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+d. In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
 +
 [source,yaml]
 ----
@@ -144,7 +143,7 @@ You can integrate BAT and Slack to send notifications to a Slack channel when te
 ----
 +
 slack_channel:: Specify the name of the Slack channel that you want to send notifications to.
-.. In your `bat.yaml` file, add Slack as a reporter by adding these indented lines to the `reporters` section:
+e. In your `bat.yaml` file, add Slack as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -185,15 +184,15 @@ You can use BAT to post a log in the specified collection, and create dashboards
 . Copy the endpoint URL.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your endpoint URL secret and you are running tests from a private location:
-.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your endpoint URL encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
-.. Copy the name of the new shared secret.
-.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-.. In your `bat.yaml` file, add Sumo Logic as a reporter by adding these indented lines to the `reporters` section:
+b. Copy the name of the new shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+d. In your `bat.yaml` file, add Sumo Logic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -226,15 +225,15 @@ Reports are emailed only for tests created in Anypoint Functional Monitoring in 
 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep an email address secret and you are running tests from a private location:
-.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your the email address encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
-.. Copy the name of the new shared secret.
-.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-.. In your `bat.yaml` file, add `Email` as a reporter by adding these indented lines to the `reporters` section:
+b. Copy the name of the new shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+d. In your `bat.yaml` file, add `Email` as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
