@@ -3,24 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To create the example project, which includes a basic project folder, configuation files, a sample "Hello, World" test, and a `.yaml` descriptor file, you can run the command 'bat init'. To learn how to run the sample test, you can then read xref:bat-execute-task.adoc[Execute BAT Tests].
 
-Alternatively, if you want to set up a basic project yourself, you can follow the steps in this procedure:
-
-. Create a directory for the configuration YAML, for example /api-monitoring and a subdirectory for the tests, for example /tests.
-. Create a minimal bat.yaml that is the manifest file for testing. For example, the bat.yaml for this procedure lists two test files:
-+
-----
-files:
-
- - file: ./tests/step.0.dwl
- - file: ./tests/step.1.dwl
-
-suite:
-  name: "hello world test suite"
-----
-+
-. Save the bat.yaml at the top level of your testing directory /api-monitoring.
 . Create a test file. For example:
 +
 ----
