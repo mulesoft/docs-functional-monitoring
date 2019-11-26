@@ -20,6 +20,7 @@
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
  ** xref:bat-install-task.adoc[To Install BAT]
  ** xref:bat-workflow-test.adoc[Tutorial: Test an API Using the BAT CLI]
+  *** xref:start-new-project.adoc[Start a New Project]
   *** xref:bat-write-tests-task.adoc[To Configure and Write BAT Tests]
   *** xref:bat-execute-task.adoc[To Execute BAT Tests]
   *** xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]

@@ -3,13 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can test any REST API, such as the Deck of Cards API, which is deployed on a server on the internet. The BAT demo github project, for example, uses the Deck of Cards API.
-
 This workflow covers everything from creation to testing and test reporting of a simplified API. After you create and deploy the API on Anypoint Platform, you can create a simple hello world test suite.
 
-. xref:design-center::design-create-publish-api-specs.adoc[Design an API to test and publish it to Anypoint Exchange].
-. xref:api-manager::manage-exchange-api-task.adoc[Manage the API in API Manager].
-. xref:api-manager::proxy-deploy-cloudhub-latest-task.adoc[Deploy a Proxy, for example, to CloudHub]
+
 . xref:bat-write-tests-task.adoc[Configure and write BAT tests].
 . xref:bat-execute-task.adoc[Execute BAT tests locally].
 . xref:bat-playground-task.adoc[Run tests in the BAT Playground] to experiment with functions for testing your API.

@@ -1,0 +1,66 @@
+= Start a New Project
+
+. Create a directory in your computer's filesystem.
+. Change to the new directory.
+. Create a file named `bat.yaml`.
+. Open the file for editing.
+. Add these two lines:
++
+[source,yaml]
+----
+suite:
+  name: "name_of_suite_of_tests"
+----
++
+name_of_suite_of_tests:: Specify the name that you want to give the suite of tests that you plan to write.
+. Save the file.
+. Create a folder in which to create your tests. You can give the folder any name.
+. Create a folder named `config`. In this folder, you will create configuration files to use for your tests. Configuration files contain information that the BAT CLI needs to connect to the systems where the APIs that you want to test are located.
+
+== Example
+
+To see the content of an example project, create another directory in your computer's filesystem. Then, change to that directory and run the `bat init` command. The command creates these folders and files:
+
+----
+.
+├── bat.yaml
+├── config
+│   ├── default.dwl
+│   ├── devx.dwl
+│   ├── qax.dwl
+│   └── stgx.dwl
+└── tests
+    └── HelloWorld.dwl
+----
+
+The `bat.yaml` file contains these lines:
+
+----
+suite:
+  name: "Hello World Suite"
+files:
+  - file: tests/HelloWorld.dwl
+reporters:
+    - type: HTML
+      outFile: /tmp/HTML.html
+  # - type: SumoLogic
+  #   options:
+  #     SUMO_ENDPOINT: <sumo_source>
+  # - type: PagerDuty
+  #   options:
+  #     PAGER_DUTY_ROUTING_KEY: <routing_key>
+  # - type: Slack
+  #   options:
+  #     SLACK_WEBHOOK: <webhook_url>
+  # - type: Email
+  #   options:
+  #     EMAILS: <email_list>
+  # - type: NewRelic
+  #   options:
+  #     NEW_RELIC_LICENSE_KEY: <license_key>
+  # - type: JSON
+  #   outFile: /tmp/JSON.json
+  # - type: JUnit
+  #   outFile: /tmp/JUnit.xml
+----
+The `suite` section names the suite, which contains only one test. The test is listed in the `files` section as the file `HelloWorld.dwl` in the `tests` folder. As you create tests in the
