@@ -1,21 +1,30 @@
 = Start a New Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
+Starting a new project for testing API endpoints involves only a few steps to create a configuration file, named `bat.yaml`. The BAT CLI uses
+
+== To Start a New Project
 . Create a directory in your computer's filesystem.
 . Change to the new directory.
 . Create a file named `bat.yaml`.
 . Open the file for editing.
-. Add these two lines:
+. Add these five lines:
 +
 [source,yaml]
 ----
 suite:
   name: "name_of_suite_of_tests"
+
+files:
+
 ----
 +
 name_of_suite_of_tests:: Specify the name that you want to give the suite of tests that you plan to write.
 . Save the file.
-. Create a folder in which to create your tests. You can give the folder any name.
-. Create a folder named `config`. In this folder, you will create configuration files to use for your tests. Configuration files contain information that the BAT CLI needs to connect to the systems where the APIs that you want to test are located.
+. Create a folder in your directory in which to create tests. You can give the folder any name.
+. Create a folder named `config`. In this folder, you create configuration files to use for your tests. Configuration files contain information that the BAT CLI needs to connect to the systems where the APIs that you want to test are located.
 
 == Example
 
@@ -63,4 +72,44 @@ reporters:
   # - type: JUnit
   #   outFile: /tmp/JUnit.xml
 ----
-The `suite` section names the suite, which contains only one test. The test is listed in the `files` section as the file `HelloWorld.dwl` in the `tests` folder. As you create tests in the
+
+=== The `suite` Section
+The `suite` section names the suite. You can use any names that you like for the suites that you write.
+
+=== The `files` Section
+
+This example project contains only one test. The test is listed in the `files` section as the file `HelloWorld.dwl` in the `tests` folder.
+
+As you create tests, you add references to them in your `bat.yaml` file. For example, suppose that in your project directory you create a folder named `api-tests` and write a test named `first-test.dwl` in that folder. In the `files` section of your `bat.yaml` file, you add the following indented line:
+
+----
+  file: api-tests/first-test.dwl
+----
+
+If you write a second test, this one named `second-test.dwl`, you add this line after that one:
+
+----
+  file: api-tests/second-test.dwl
+----
+
+The order in which you list the tests determines the order in which the BAT CLI runs them. In this example, the test `prodInfo.dwl` runs before the test `shoppingCart.dwl`:
+
+----
+files:
+  file: retail-site-tests/orderFullfillment.dwl
+  file: retail-site-tests/shoppingCart.dwl
+----
+
+To run the `orderFullfillment.dwl` test after the `shoppingCart.dwl` test, you can change the order in which they are listed:
+
+----
+files:
+  file: retail-site-tests/shoppingCart.dwl
+  file: retail-site-tests/orderFullfillment.dwl
+----
+
+Finally, you can create more than one folder to contain the tests in a test suite. You can even create subfolders within the folders that contain your tests. Just be sure that you provide the correct relative path when you list a test in the `files` section of your `bat.yaml` file.
+
+=== The `reporters` Section
+
+This section is for configuring various tools or third-party applications to report test failures. In this example, a failure of the `HelloWorld.dwl` test prompts the BAT CLI to write a report of the failure to the file `/tmp/HTML.html`. For information about setting up reports, see xref:bat-reporting-task.adoc[Configure and View Test Reports].
