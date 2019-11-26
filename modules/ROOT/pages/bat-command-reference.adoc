@@ -111,6 +111,21 @@ Prints to standard output the version numbers of installed BAT and wrapper. If t
 +
 Returns the token for accessing Anypoint Platform in the credentials file. Requires that you first run `bat login` to generate a profile.
 
+** grant
++
+Grants the BAT CLI permission to access a shared secret that is stored in Anypoint Secrets Manager. You must grant the BAT CLI permission to access any shared secret that you use in a test or to access a reporter.
++
+Run the `bat grant` command before configuring a test or a reporter to use a shared secret. The aliases that you create in the command are what you specify in tests and configurations for reporters.
++
+For example, to authenticate to an endpoint, you can use a token that is stored as a shared secret.
++
+----
+bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN
+----
++
+-g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
+-s:: Specify an alias, a colon, and then the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than shared secret that is from the same group, separate each `alias:name` pair with a comma.
+
 ** `location create`
 +
 Creates a private location in your organization in Anypoint Platform. A _private location_ is a namespace in an instance of Anypoint Virtual Cloud (VPC) that is configured to allow workers to access your private network. Requires a subscription to VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
