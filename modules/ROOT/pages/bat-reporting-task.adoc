@@ -156,11 +156,11 @@ slack_channel:: Specify the name of the Slack channel that you want to send noti
   - type: Slack
     outFile: filename.json
     options:
-      SLACK_WEBHOOK: <alias_for_the_shared_secret>
+      SLACK_WEBHOOK: <alias_of_the_shared_secret>
 ----
 +
 filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets.
+alias_of_the_shared_secret:: Specify the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets.
 . If you do not want to keep your webhook URL secret, add Slack as a reporter in your `bat.yaml` file by adding these lines to the `reporter` section:
 +
 [source,yaml]
@@ -205,11 +205,11 @@ You can use BAT to post a log in the specified collection, and create dashboards
   - type: SumoLogic
     outfile: filename.json
     options:
-      SUMO_ENDPOINT: <alias_for_the_shared_secret>
+      SUMO_ENDPOINT: <alias_of_the_shared_secret>
 ----
 +
 filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets.
+alias_of_the_shared_secret:: Specify the alias that you used for the secret for the endpoint URL when you ran the `bat grant` command. The alias must be between carets.
 . If you do not want to keep your endpoint URL secret, add these lines to the `reporters` section in your `bat.yaml` file:
 +
 [source,yaml]
@@ -234,7 +234,7 @@ reporters:
       HEADERS: "'Authorization':'Bearer token','Content-Type':'application/json'"
 ----
 
-== About Local Reports
+=== About Local Reports
 
 BAT generates basic types of reports locally in JSON and HTML. When you execute tests, the path to the reports appears in the output.
 
@@ -246,7 +246,7 @@ Reporter: /var/folders/vz/56jp75d941592x_1d8mfy9f40000gn/T/bat_report_2018032012
 Reporter: /var/folders/vz/56jp75d941592x_1d8mfy9f40000gn/T/bat_report_20180320121736.html
 ----
 
-== To Configure Local Report Generation
+=== To Configure Local Report Generation
 
 In the bat.yaml file, specify a `type` field to generate local reports. For example:
 
@@ -261,7 +261,7 @@ reporters:
     outFile: JUnit.xml
 ----
 
-== To Create a Local Custom Report
+=== To Create a Local Custom Report
 
 You can generate a custom report based on a DataWeave transformation that is specified in the bat.yaml using the `file` keyword.
 
@@ -299,10 +299,45 @@ And the result is:
 
 To email test reports that indicate failures, specify any email addresses that you want to send reports to. You can send reports to one or more email addresses, separating multiple email addresses with semicolons. Each report includes the name of the suite in which the error occurs and a list of the statements. Reports are emailed only for tests created in Anypoint Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
 
-[source,yaml,linenums]
+. In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
+. If you want to keep an email address secret and you are running tests from a private location:
+.. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+... Open a secrets group or create a new one.
+... Select Shared Secret on the left side of the screen.
+... In the *Type* field, select *Symmetric Key*.
+... In the *Key* field, paste your the email address encoded as a Base64 string.
+... Paste the same Base64 string into the *Confirm Key* field.
+.. Copy the name of the new shared secret.
+.. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+.. In your `bat.yaml` file, add `Email` as a reporter by adding these indented lines to the `reporters` section:
++
+[source,yaml]
 ----
-reporters:
   - type: Email
     options:
-      EMAILS: test@example.com;other@example.com;youremail@example.com
+      EMAILS: <alias_of_the_shared_secret>
 ----
++
+alias_of_the_shared_secret:: Specify the alias that you used for the secret for the email address when you ran the `bat grant` command. The alias must be between carets.
++
+If you want to add aliases for additional email addresses, put each alias between carets and separate the aliases with semicolons:
++
+[source,yaml]
+----
+EMAILS: <alias_1>;<alias_2>;<alias_3>
+----
+. If you do not want to keep an email address secret, add these lines to the `reporters` section in your `bat.yaml` file:
++
+[source,yaml]
+----
+  - type: Email
+    options:
+      EMAILS: email_address
+----
++
+email_address:: Specify the email address to send notifications to. If you want to use more than one email address, separate them with semicolons:
++
+[source,yaml]
+-----
+EMAILS: email_address1;email_address2;email_address3
+-----
