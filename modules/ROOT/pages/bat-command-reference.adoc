@@ -100,11 +100,17 @@ Prints to standard output the version numbers of installed BAT and wrapper. If t
 
 ** `environment ls|list|switch`
 +
-
+The two options `ls` and `list` list the environments that are available for the specified profile. If not profile is specified, the default profile is used.
++
+The `switch` option lets you use one of the listed environments. Add the name of the environment to the end of the command, as in this example that uses the environment `Sandbox`:
++
+----
+bat environment switch Sandbox
+----
 
 ** `execution ls|list`
 +
-Lists the monitors that are currently running for the specified profile. The monitors listed are any you wrote and started through the BAT CLI, and any that you created online in Anypoint Platform.
+Lists the monitors that are currently running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
 +
 The output looks like this:
 +
