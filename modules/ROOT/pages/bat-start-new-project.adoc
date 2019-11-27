@@ -1,11 +1,11 @@
-= Start a New Project
+= Start a New Test Suite
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Starting a new project for testing API endpoints involves only a few steps to create a configuration file, named `bat.yaml`. The BAT CLI uses
+Starting a new test suite for testing API endpoints involves only a few steps to create and populate with initial lines a file named `bat.yaml`.
 
-== To Start a New Project
+== To Start a New Test Suite
 . Create a directory in your computer's filesystem.
 . Change to the new directory.
 . Create a file named `bat.yaml`.
@@ -26,144 +26,10 @@ name_of_suite_of_tests:: Specify the name that you want to give the suite of tes
 . Create a folder in your directory in which to create tests. You can give the folder any name.
 . Create a folder named `config`. In this folder, you create configuration files to use for your tests. Configuration files contain information that the BAT CLI needs to connect to the systems where the APIs that you want to test are located.
 
-== Example
-
-To see the content of an example project, create another directory in your computer's filesystem. Then, change to that directory and run the `bat init` command. The command creates these folders and files:
-
-----
-.
-├── bat.yaml
-├── config
-│   ├── default.dwl
-│   ├── devx.dwl
-│   ├── qax.dwl
-│   └── stgx.dwl
-└── tests
-    └── HelloWorld.dwl
-----
-
-The `bat.yaml` file contains these lines:
-
-----
-suite:
-  name: "Hello World Suite"
-files:
-  - file: tests/HelloWorld.dwl
-reporters:
-    - type: HTML
-      outFile: /tmp/HTML.html
-  # - type: SumoLogic
-  #   options:
-  #     SUMO_ENDPOINT: <sumo_source>
-  # - type: PagerDuty
-  #   options:
-  #     PAGER_DUTY_ROUTING_KEY: <routing_key>
-  # - type: Slack
-  #   options:
-  #     SLACK_WEBHOOK: <webhook_url>
-  # - type: Email
-  #   options:
-  #     EMAILS: <email_list>
-  # - type: NewRelic
-  #   options:
-  #     NEW_RELIC_LICENSE_KEY: <license_key>
-  # - type: JSON
-  #   outFile: /tmp/JSON.json
-  # - type: JUnit
-  #   outFile: /tmp/JUnit.xml
-----
-
-=== The `suite` Section of the `bat.yaml` File
-The `suite` section names the suite. You can use any names that you like for the suites that you write.
-
-=== The `files` Section of the `bat.yaml` File
-
-This example project contains only one test. The test is listed in the `files` section as the file `HelloWorld.dwl` in the `tests` folder.
-
-As you create tests, you add references to them in your `bat.yaml` file. For example, suppose that in your project directory you create a folder named `api-tests` and write a test named `first-test.dwl` in that folder. In the `files` section of your `bat.yaml` file, you add the following indented line:
-
-----
-  file: api-tests/first-test.dwl
-----
-
-If you write a second test, this one named `second-test.dwl`, you add this line after that one:
-
-----
-  file: api-tests/second-test.dwl
-----
-
-The order in which you list the tests determines the order in which the BAT CLI runs them. In this example, the test `prodInfo.dwl` runs before the test `shoppingCart.dwl`:
-
-----
-files:
-  file: retail-site-tests/orderFullfillment.dwl
-  file: retail-site-tests/shoppingCart.dwl
-----
-
-To run the `orderFullfillment.dwl` test after the `shoppingCart.dwl` test, you can change the order in which they are listed:
-
-----
-files:
-  file: retail-site-tests/shoppingCart.dwl
-  file: retail-site-tests/orderFullfillment.dwl
-----
-
-Finally, you can create more than one folder to contain the tests in a test suite. You can even create subfolders within the folders that contain your tests. Just be sure that you provide the correct relative path when you list a test in the `files` section of your `bat.yaml` file.
-
-=== The `reporters` Section of the `bat.yaml` File
-
-This section is for configuring various tools or third-party applications to report test failures. In this example, a failure of the `HelloWorld.dwl` test prompts the BAT CLI to write a report of the failure to the file `/tmp/HTML.html`. For information about setting up reports, see xref:bat-reporting-task.adoc[Configure and View Test Reports].
-
-=== The `config` Folder
-
-You can store variables in the files in the `config` folder. For example, let's say you're developing an API and you deploy it to two different environments: `dev` and `qa`. The endpoint url for the first is `dev.myapi.com` and for the second `qa.myapi.com`. The API should behave the same in both environments.
-
-You want to test the API in both environments. However, instead of coding two tests, one for the deployment of the API in `dev` and one for the deployment of the API in `qa`, you can create a config file for each environment. In each config file, you can place a variable named `url` that holds that endpoint URL for the corresponding environment:
-
-.The content of `dev.dwl`, the config file for the `dev` environment
-----
-{
-url: "dev.myapi.com"
-}
-----
-
-.The content of `qa.dwl`, the config file for the `qa` environment
-----
-{
-url: "qa.myapi.com"
-}
-----
-
-In your test, you can use the `url` variable by placing it within this syntax: `$(config.variable)`, where _variable_ is the name of the variable that you want to use. Here is an example test that uses the `url` variable in a `GET` request to test the assertion that the response code must be 200:
-[linenums]
-----
-bat::BDD
-import * from bat::Assertions
----
-suite("Hello world suite") in [
-  it must 'answer 200' in [
-    GET `$(config.url)` with {} assert [
-      $.response.status mustEqual 200
-  ]
-]
-----
-
-When you run the test, you can use the `--config` parameter to specify which config file to use. (If you upload your test suite as a monitor to API Functional Monitoring in Anypoint Platform, you can specify the configuration to use when you create a schedule for the monitor.)
-
-Use JSON for the format of your config files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
-
-=== The `tests` folder
-
-In the example project, the test -- `HelloWorld.dwl` -- is in a folder named `tests`. As explained in the section above about the `bat.yaml` file in this project, the `files` section in the `bat.yaml` file points to the tests in a test suite.
-
-[source, yaml]
-----
-files:
-  - file: tests/HelloWorld.dwl
-----
-
-In your own test suites, the folders that contain your tests can have any name that is valid for your filesystem. You can also place tests in multiple folders.
-
 == What to Do Next
 
 Now, you can start writing tests.
+
+== See Also
+
+* xref:bat-example-test-suite.adoc[Example of a Test Suite]
