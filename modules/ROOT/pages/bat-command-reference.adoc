@@ -131,8 +131,6 @@ Grants the BAT CLI permission to access a shared secret that is stored in Anypoi
 +
 Run the `bat grant` command before configuring a test or a reporter to use a shared secret. The aliases that you create in the command are what you specify in tests and configurations for reporters.
 +
-For example, to authenticate to an endpoint, you can use a token that is stored as a shared secret.
-+
 ----
 bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN
 ----

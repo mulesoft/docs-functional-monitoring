@@ -124,11 +124,11 @@ suite(parts="Simple Suite") in [
 ----
 +
 `mySecret`:: The variable in which the secret is stored in this example. The variable is declared as a String.
-`secret(secretAlias='myAlias'):: The `secret()` function requires the input `secretAlias='name-of-alias')`, where `name-of-alias` is the alias of the shared secret that you want to use.
+`secret(secretAlias='myAlias')`:: The `secret()` function requires the input `secretAlias='name-of-alias')`, where `name-of-alias` is the alias of the shared secret that you want to use.
 `default 'notFound'`:: The message to show if a shared secret with the specified alias does not exist in Anypoint Secrets Manager.
 `$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the config file that was specified when the `bat` command to run the test suite was entered. Suppose that the config file was this:
 +
-.dev-environment.dwl
+.The example config file dev-environment.dwl
 ----
 {
   url: "https://dev.yourcompany.com/shoppingCart"
