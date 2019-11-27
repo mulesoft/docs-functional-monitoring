@@ -1,4 +1,4 @@
-= Write BAT Tests
+= Write a Test
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

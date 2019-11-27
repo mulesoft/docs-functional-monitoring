@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Starting a new test suite for testing API endpoints involves only a few steps to create and populate with initial lines a file named `bat.yaml`.
+Starting a new test suite for testing API endpoints involves only a few steps to create and populate with initial lines a file named `bat.yaml`. This file explains the structure of your test suite to the BAT CLI.
 
 == To Start a New Test Suite
 . Create a directory in your computer's filesystem.
