@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: bat-workflow-test.adoc
 
 You can use API functional monitoring to run a test or suite of tests on an API. API functional monitoring is based on Blackbox Automated Testing (BAT).
 
