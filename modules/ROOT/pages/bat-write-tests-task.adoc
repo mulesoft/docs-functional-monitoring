@@ -2,51 +2,8 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: bat-playground-task.adoc
 
+The BAT playground is a web application you can use to familiarize yourself with Behavior Driven Development (BDD) functions. The playground runs tests on the Deck of Cards API by default, but you can tweak commands to experiment and learn about BDD functions by running tests on your API using the BAT playground.
 
-. Create a test file. For example:
-+
-----
-// Functional test for http://apimon.cloudhub.io
-
-import * from bat::BDD
-import * from bat::Assertions
----
-describe `api-mon` in [
-
-  // First, get a list of users
-  GET `http://apimon.cloudhub.io/users` with {
-
-  } assert [
-    $.response.status mustEqual 200
-  ]
-
-]
-----
-+
-The GET function specifies the URL of the deployed proxy you created earlier in the workflow. For example, on CloudHub, you obtain the URL from API Manager:
-+
-image::bat-api-mgr-proxy-url.png[]
-+
-. Save the test file in the /api-monitoring/tests subdirectory as step.0.dwl.
-. Create another test file and save it as step.1.dwl.
-+
-----
-// Functional test for http://apimon.cloudhub.io
-
-import * from bat::BDD
-import * from bat::Assertions
----
-describe `api-mon` in [
-  it `assert that there are 10 users` in [
-    GET `http://apimon.cloudhub.io/users` with {} assert [
-      $.response.status mustEqual 200, //< ---- ASSERTION
-      $.response.mime mustEqual "application/json", //< ---- ASSERTION
-      log($.response.body match{case list is Array -> sizeOf(list) mustEqual 10
-        else -> false}) // < ---- ASSERTION
-    ]
-  ]
-]
-----
-+
-This test asserts that 10 is the size of the users list array returned by the API.
+Start the BAT playground by going to the following URL: `https://anypoint.mulesoft.com/apitesting/playground/`.

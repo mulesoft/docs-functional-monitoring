@@ -50,5 +50,3 @@ image::bat-html-report.png[]
 Details about the request, response, assertions, and the raw data of the response appear.
 +
 image::bat-html-report-request.png[]
-
-Next, xref:bat-playground-task.adoc[Run tests in the BAT Playground].

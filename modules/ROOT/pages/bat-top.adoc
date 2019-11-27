@@ -18,7 +18,7 @@ You can deploy an API on Anypoint Platform or your own server.
 * At least one test file.
 +
 ** You write files in Behavior Driven Development (BDD) syntax using a code or text editor, such as IntelliJ.
-** You save the files using the .dwl extension for processing by DataWeave.
+** You save the files using the `.dwl` extension for processing by DataWeave.
 
 Additional prerequisites for monitoring scheduled tests in the cloud are:
 
@@ -31,6 +31,5 @@ The BAT playground is a web application you can use to familiarize yourself with
 
 == See Also
 
-* xref:bat-install-task.adoc[To Install BAT]
-* xref:bat-playground-task.adoc[To Run Tests in the BAT Playground]
+* xref:bat-install-task.adoc[Install BAT]
 * xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
