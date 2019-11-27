@@ -152,6 +152,18 @@ When you run the test, you can use the `--config` parameter to specify which con
 
 Use JSON for the format of your config files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
 
+=== The `tests` folder
+
+In the example project, the test -- `HelloWorld.dwl` -- is in a folder named `tests`. As explained in the section above about the `bat.yaml` file in this project, the `files` section in the `bat.yaml` file points to the tests in a test suite.
+
+[source, yaml]
+----
+files:
+  - file: tests/HelloWorld.dwl
+----
+
+In your own test suites, the folders that contain your tests can have any name that is valid for your filesystem. You can also place tests in multiple folders.
+
 == What to Do Next
 
 Now, you can start writing tests.
