@@ -50,8 +50,3 @@ describe `api-mon` in [
 ----
 +
 This test asserts that 10 is the size of the users list array returned by the API.
-
-== See Also
-
-* xref:bat-execute-task.adoc[Execute BAT Tests]
-* xref:bat-workflow-test.adoc[Workflow: Test an API Using API Functional Monitoring]

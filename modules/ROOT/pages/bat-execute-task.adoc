@@ -52,7 +52,3 @@ Details about the request, response, assertions, and the raw data of the respons
 image::bat-html-report-request.png[]
 
 Next, xref:bat-playground-task.adoc[Run tests in the BAT Playground].
-
-== See Also
-
-* xref:bat-workflow-test.adoc[Workflow: Test an API Using API Functional Monitoring]
