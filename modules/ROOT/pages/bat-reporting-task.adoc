@@ -30,7 +30,7 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your license encoded as a Base64 string.
+... In the *Key* field, paste your license key encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
 c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
@@ -74,14 +74,14 @@ The integration of BAT with PagerDuty generates an incident when a test fails an
 . In PagerDuty, configure an integration:
 a. Select *Configure* > *Services*.
 b. Select the integration.
-. Copy the service key.
+. Copy the routing key.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-. If you want to keep your service key secret and you are running tests from a private location:
+. If you want to keep your routing key secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your service key encoded as a Base64 string.
+... In the *Key* field, paste your routing key encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
 c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
@@ -92,23 +92,23 @@ d. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented
  - type: PagerDuty
    outFile: filename.json
    options:
-     SERVICE_KEY: <alias_of_the_shared_secret>
+     PAGER_DUTY_ROUTING_KEY: <alias_of_the_shared_secret>
 ----
 +
 filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets.
-. If you do not want to keep your license key secret, in your `bat.yaml` file add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
+alias_of_the_shared_secret:: Specify the alias that you used for the secret for the routing key when you ran the `bat grant` command. The alias must be between carets.
+. If you do not want to keep your routing key secret, in your `bat.yaml` file add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
  - type: PagerDuty
    outFile: filename.json
    options:
-     SERVICE_KEY: "service_key"
+     PAGER_DUTY_ROUTING_KEY: "service_key"
 ----
 +
 filename.json:: Specify a name for the output file to create.
-service_key:: Specify the service key.
+service_key:: Specify the routing key.
 
 === What to Do Next
 
@@ -131,7 +131,7 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... Open a secrets group or create a new one.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your webhook encoded as a Base64 string.
+... In the *Key* field, paste your webhook URL encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
 c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
@@ -173,7 +173,7 @@ webhook_URL:: Specify the URL of the webhook.
 
 To use Sumo Logic, you create a collection and specify it in the bat.yaml. The collection can be shared with other tests or used only as a monitor. At the end of each execution, BAT generates a post to SUMO that sends the trade-off information of requests and responses that were executed during the test. This enables you to see expected results and how the test behaves.
 
-You must provide the endpoint of the collection.
+You must provide the URL of the endpoint of the collection.
 
 You can use BAT to post a log in the specified collection, and create dashboards.
 
@@ -213,6 +213,9 @@ alias_of_the_shared_secret:: Specify the alias that you used for the secret for 
     options:
       SUMO_ENDPOINT: endpoint-URL
 ----
++
+filename.json:: Specify a name for the output file to create.
+endpoint-URL:: The URL of the endpoint for the collection.
 
 == Email
 
