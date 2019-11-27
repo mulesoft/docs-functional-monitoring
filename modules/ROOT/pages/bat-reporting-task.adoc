@@ -33,7 +33,15 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... In the *Key* field, paste your license key encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 d. In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
@@ -84,7 +92,15 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... In the *Key* field, paste your routing key encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 d. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
@@ -134,7 +150,15 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... In the *Key* field, paste your webhook URL encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 d. In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
 +
 [source,yaml]
@@ -191,7 +215,15 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... In the *Key* field, paste your endpoint URL encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 d. In your `bat.yaml` file, add Sumo Logic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
@@ -235,7 +267,15 @@ a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that u
 ... In the *Key* field, paste your the email address encoded as a Base64 string.
 ... Paste the same Base64 string into the *Confirm Key* field.
 b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
+c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 d. In your `bat.yaml` file, add `Email` as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]

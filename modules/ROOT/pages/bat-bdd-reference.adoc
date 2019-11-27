@@ -1,4 +1,4 @@
-= BDD Test Writing Language Reference
+= BDD Test-Writing Syntax Reference
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -83,6 +83,65 @@ describe `Demo scenario` in [
 ----
 
 A test suite must contain at least one test (.dwl) file.
+
+== Keeping Confidential Information Secure in Tests
+
+
+
+. Store the information (such as a password, authentication token, endpoint URL, webhook URL, or something else) as a shared secret in Anypoint Secrets Manager.
+. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
+a. Open a secrets group or create a new one.
+b. Select Shared Secret on the left side of the screen.
+c. In the *Type* field, select *Symmetric Key*.
+d. In the *Key* field, paste your license key encoded as a Base64 string.
+e. Paste the same Base64 string into the *Confirm Key* field.
+. Copy the name of the new shared secret.
+. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
++
+----
+  alias:
+    secretId: "secret-ID"
+----
++
+alias:: This is the alias that you specified in the `bat grant` command.
+secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
+. Use the alias in a test by storing it in a variable, as in this example:
++
+----
+import * from bat::BDD
+import * from bat::Assertions
+
+var mySecret = String = secret(secretAlias='myAlias') default 'notFound'
+
+---
+suite(parts="Simple Suite") in [
+  it must 'answer 200' in [
+    GET '$(config.url)?token=$(mySecret)' with {} assert [
+      $.response.status mustEqual 200
+    ] execute
+  ]
+]
+----
++
+`mySecret`:: The variable in which the secret is stored in this example. The variable is declared as a String.
+`secret(secretAlias='myAlias'):: The `secret()` function requires the input `secretAlias='name-of-alias')`, where `name-of-alias` is the alias of the shared secret that you want to use.
+`default 'notFound'`:: The message to show if a shared secret with the specified alias does not exist in Anypoint Secrets Manager.
+`$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the config file that was specified when the `bat` command to run the test suite was entered. Suppose that the config file was this:
++
+.dev-environment.dwl
+----
+{
+  url: "https://dev.yourcompany.com/shoppingCart"
+}
+----
++
+Then, the command to run this test suite, when the command is run in the directory in which the `bat.yaml` file for the test suite is located and the default profile is used, is this:
++
+----
+bat --config=dev-environment.dwl
+----
+
+At runtime, the BAT CLI replaces the variable with the shared secret that it finds associated with the specified alias in Anypoint Secrets Manager.
 
 == Test Blocks
 
@@ -249,7 +308,7 @@ describe("User trades stocks") in [
 ]
 ----
 
-== To Control Execution and Delete Assets
+== Controlling Execution and Deleting Assets
 
 If you get a failure in the middle of a test, you need to delete any created assets. For example, the user creates an asset, performs a validation, and then deletes it.
 Typically, that validation fails, and since it breaks the test, the asset is not deleted and your database starts  accumulating test data. Typically this means changing a `must` to a `should` so that execution can continue, but not leave
@@ -306,7 +365,7 @@ describe `update project names` in [
 ]
 ----
 
-== To Execute Steps Selectively
+== Executing Steps Selectively
 
 The `assuming` function skips the test if the result is false. This command has the following syntax:
 

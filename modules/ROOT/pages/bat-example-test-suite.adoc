@@ -91,6 +91,10 @@ Finally, you can create more than one folder to contain the tests in a test suit
 
 This section is for configuring various tools or third-party applications to report test failures. In this example, a failure of the `HelloWorld.dwl` test prompts the BAT CLI to write a report of the failure to the file `/tmp/HTML.html`. For information about setting up reports, see xref:bat-reporting-task.adoc[Configure and View Test Reports].
 
+=== The `secrets` Section of the `bat.yaml` file
+
+If you plan to run a test suite from a private location and the APIs that you plan to test are deployed on CloudHub, you can use the BAT CLI's integration with Anypoint Secrets Manager to use shared secrets in your tests.
+
 === The `config` Folder
 
 You can store variables in the files in the `config` folder. For example, let's say you're developing an API and you deploy it to two different environments: `dev` and `qa`. The endpoint url for the first is `dev.myapi.com` and for the second `qa.myapi.com`. The API should behave the same in both environments.
