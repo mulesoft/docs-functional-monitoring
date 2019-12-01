@@ -9,7 +9,7 @@ This reference covers the syntax and key options you can use with the *bat* comm
 
 == bat Command
 
-The *bat* command provides an API functional monitoring command line interface.
+The *bat* command provides an API Functional Monitoring command line interface.
 
 === Syntax
 

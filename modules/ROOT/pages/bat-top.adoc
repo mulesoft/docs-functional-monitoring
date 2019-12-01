@@ -4,9 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :page-aliases: bat-workflow-test.adoc
 
-You can use API functional monitoring to run a test or suite of tests on an API. API functional monitoring is based on Blackbox Automated Testing (BAT).
+You can use API Functional Monitoring to run a test or suite of tests on an API. API Functional Monitoring is based on Blackbox Automated Testing (BAT).
 
-Using API functional monitoring, you can automate testing and get test reports. You can test before pushing code into your repository and before deploying to production. Tests can verify API functionality and validate results the API generates. You can monitor APIs at each stage of the software development life cycle and in production.
+Using API Functional Monitoring, you can automate testing and get test reports. You can test before pushing code into your repository and before deploying to production. Tests can verify API functionality and validate results the API generates. You can monitor APIs at each stage of the software development life cycle and in production.
 
 The prerequisites for performing API functional testing and scheduling are:
 

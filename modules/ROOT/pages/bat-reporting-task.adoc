@@ -15,7 +15,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 == New Relic
 
-Using New Relic with API functional monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
+Using New Relic with API Functional Monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
 
 New Relic has a plugin configured for BAT that can capture the metrics from test suites.
 
