@@ -24,7 +24,7 @@
  ** xref:bat-write-tests-task.adoc[Get Started Writing Tests]
  ** xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
  ** xref:bat-execute-task.adoc[Run a Test Suite]
- ** xref:bat-schedule-test-task.adoc[To Schedule Testing and Monitoring]
+ ** xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
  ** xref:bat-schedule-for-particular-location.adoc[Create a Monitor That Uses a Particular Location]
  ** xref:bat-reporting-task.adoc[Configure and View Test Reports]
  ** xref:bat-intellij-idea.adoc[Write and Run BAT Tests in IntelliJ IDEA]
