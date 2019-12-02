@@ -40,9 +40,11 @@ Monitor 5 runs on one schedule, though it could run on more than one. The schedu
 
 == Length of Time Before Tests Time Out
 
-Because tests are run in a VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager.
+Because tests are run in a VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager. To do so, follow these steps:
 
-// What are the exact steps for increasing the time?
+. Go to Runtime Manager.
+. Open the settings for the private location for which you want to increase the timeout.
+. In the *executionTimeout* field, specify a longer timeout in milliseconds.
 
 == Scheduling Tests
 
