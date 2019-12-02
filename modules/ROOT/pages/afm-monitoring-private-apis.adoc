@@ -48,6 +48,6 @@ Because tests are run in a VPC, the workers do not share resources with other Mu
 
 == Scheduling Tests
 
-When you use private locations, you can run as many workers as your allotment of vCores allows. Each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
+When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
 
 Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.
