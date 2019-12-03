@@ -44,9 +44,7 @@ Tests are run at fixed intervals that you define in schedules. Each test is asso
 
 Number of Schedules::
 +
-Initially, AFM lets your organization in Anypoint Platform run up to five workers across public locations at one time. Therefore, you can run up to five tests of the endpoints in public APIs at one time.
-+
-The number of workers that are running tests at any particular time is determined by the schedules that you associate with tests. Across the monitors that are created in AFM in your organization, there can be only five schedules. If you reach the limit and want to run more tests simultaneously, contact your MuleSoft administrator about raising your maximum.
+Initially, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more moniors simultaneously, contact your MuleSoft administrator about raising your maximum.
 
 Duration of Intervals Between Executions of Tests::
 +
