@@ -44,7 +44,7 @@ Tests are run at fixed intervals that you define in schedules. Each test is asso
 
 Number of Schedules::
 +
-By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more moniors simultaneously, contact your MuleSoft administrator about raising your maximum.
+By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft administrator about raising your maximum. You could also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations. You can monitor public APIs from private locations, too, not just private APIs.
 
 Duration of Intervals Between Executions of Tests::
 +
