@@ -313,7 +313,9 @@ EMAILS: email_address1;email_address2;email_address3
 
 == Custom Reports
 
-BAT publishes the result.json with a post to the URL specified in the bat.yaml file. You can add headers if necessary.
+BAT publishes the result.json with a post to the URL that you specify in the bat.yaml file. You can add headers if necessary.
+
+To publish custom reports for a test suite, add the following indented lines to the `reporters` section of the `bat.yaml` file, replacing the value for `URL` with your own URL.
 
 [source,yaml,linenums]
 ----
