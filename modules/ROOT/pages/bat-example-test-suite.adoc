@@ -93,7 +93,7 @@ This section is for configuring various tools or third-party applications to rep
 
 === The `secrets` Section of the `bat.yaml` file
 
-If you plan to run a test suite from a private location and the APIs that you plan to test are deployed on CloudHub, you can use the BAT CLI's integration with Anypoint Secrets Manager to use shared secrets in your tests.
+If you plan to run a test suite from a private location, you can use the BAT CLI's integration with Anypoint Secrets Manager to use shared secrets in your tests.
 
 === The `config` Folder
 

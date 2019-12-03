@@ -90,10 +90,7 @@ In your tests, you can access shared secrets in Anypoint Secrets Manager, which 
 
 [IMPORTANT]
 ====
-In a given test suite, you can use aliases for shared secrets only if the following two conditions are true:
-
-* You plan to run the tests in that suite from a private location.
-* The APIs that your test suite tests are deployed in CloudHub through Anypoint Virtual Private Cloud.
+In a given test suite, you can use aliases for shared secrets only if you plan to run the tests in that suite from a private location.
 ====
 
 . Store the information () as a shared secret in Anypoint Secrets Manager.
