@@ -127,16 +127,17 @@ Returns the token for accessing Anypoint Platform in the credentials file. Requi
 
 ** grant
 +
-Grants the BAT CLI permission to access a shared secret that is stored in Anypoint Secrets Manager. You must grant the BAT CLI permission to access any shared secret that you use in a test or to access a reporter.
+Grants Anypoint Functional Monitoring permission to access a shared secret that is stored in Anypoint Secrets Manager. You must grant Anypoint Functional Monitoring permission to access any shared secret that you use in a test or to access a reporter.
 +
 Run the `bat grant` command before configuring a test or a reporter to use a shared secret. The aliases that you create in the command are what you specify in tests and configurations for reporters.
 +
 ----
-bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN
+bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN [--forceUpdate]
 ----
 +
 -g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
 -s:: Specify an alias, a colon, and then the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than shared secret that is from the same group, separate each `alias:name` pair with a comma.
+--forceUpdate:: Specify this option if you updated a shared secret that you already granted Anypoint Functional Monitoring access to.
 
 ** `location create`
 +
