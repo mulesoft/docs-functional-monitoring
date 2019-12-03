@@ -187,7 +187,7 @@ Create a monitor in Exchange of using an arbitrary URL, for example `+http://exa
 
 ** `schedule ls | list`
 +
-List all of the schedules, and their IDs, that exist in the given profile's organization.
+List all of the schedules that exist in the given profile's organization.
 
 ** `schedule rm | remove <scheduleId>`
 +
