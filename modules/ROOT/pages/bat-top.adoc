@@ -17,10 +17,7 @@ The prerequisites for testing and scheduling are:
 +
 You write tests in Behavior Driven Development (BDD) syntax using a code or text editor, such as IntelliJ. Test files must use the `.dwl` extension for processing by DataWeave.
 
-Additional prerequisites for monitoring scheduled tests in the cloud are:
-
-* An account on Anypoint Platform.
-* A reporting tool supported by BAT.
+An additional prerequisite, this one for monitoring scheduled tests in the cloud, is an account on Anypoint Platform.
 
 
 == See Also
