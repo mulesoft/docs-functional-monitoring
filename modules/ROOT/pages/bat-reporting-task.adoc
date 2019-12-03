@@ -27,7 +27,7 @@ b. Copy your license key from the right sidebar under Account Summary.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your license key secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
-... Open a secrets group or create a new one.
+... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your license key encoded as a Base64 string.
@@ -86,7 +86,7 @@ b. Select the integration.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your routing key secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
-... Open a secrets group or create a new one.
+... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your routing key encoded as a Base64 string.
@@ -144,7 +144,7 @@ b. Search for "Incoming WebHooks" and add a configuration.
 . In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, type `metadata:`. A few blank lines below that, type reporters:`.
 . If you want to keep your webhook URL secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
-... Open a secrets group or create a new one.
+... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your webhook URL encoded as a Base64 string.
@@ -209,7 +209,7 @@ You can use BAT to post a log in the specified collection, and create dashboards
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep your endpoint URL secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
-... Open a secrets group or create a new one.
+... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your endpoint URL encoded as a Base64 string.
@@ -261,7 +261,7 @@ Reports are emailed only for tests created in Anypoint Functional Monitoring in 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . If you want to keep an email address secret and you are running tests from a private location:
 a. In Anypoint Secrets Manager, create a shared secret as a symmetric key that uses Base64 encoding.
-... Open a secrets group or create a new one.
+... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
 ... Select Shared Secret on the left side of the screen.
 ... In the *Type* field, select *Symmetric Key*.
 ... In the *Key* field, paste your the email address encoded as a Base64 string.
