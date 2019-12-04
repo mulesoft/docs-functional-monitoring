@@ -144,7 +144,7 @@ bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,
 
 ** `location create`
 +
-Creates a private location in the given profile's organization in Anypoint Platform. A _private location_ is a namespace in an instance of Anypoint Virtual Cloud (Anypoint VPC) that is configured to allow workers to access your private network. Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
+Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
 
 ** `location delete location-ID`
 +
