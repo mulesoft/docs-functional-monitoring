@@ -52,4 +52,4 @@ You can monitor public APIs from private locations, too, not just private APIs.
 
 Duration of Intervals Between Executions of Tests::
 +
-The shortest interval at which you can schedule a test to be run is fifteen minutes.
+The shortest interval that you can schedule to occur between tests is fifteen minutes.
