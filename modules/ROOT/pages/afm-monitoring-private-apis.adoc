@@ -5,15 +5,15 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (VPC). With VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
+Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
 
-A _private location_ is a worker that runs in an instance of VPC that is configured to allow workers to access your private network. AFM can create workers within VPC that can run tests against APIs that are accessible only within the network that VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single VPC.
+A _private location_ is a worker that runs in an instance of Anypoint VPC that is configured to allow workers to access your private network. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC.
 
 The tests in monitors are run on schedules. For a private location to run according to a schedule, a schedule must be associated with it. A private location can be associated with more than one schedule for more than one monitor.
 
-Before you can run tests from a private location, you must create one, which involves specifying a name and an environment for the worker to run it. The environment must be associated with a VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
+Before you can run tests from a private location, you must create one, which involves specifying a name and an environment for the worker to run it. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
-The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows a VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
+The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
 
 .The possible relationship types between monitors, schedules, private locations, APIs, and environments
 image::afm-private-locations.png[]
@@ -40,7 +40,7 @@ Monitor 5 runs on one schedule, though it could run on more than one. The schedu
 
 == Length of Time Before Tests Time Out
 
-Because tests are run in a VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager. To do so, follow these steps:
+Because tests are run in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager. To do so, follow these steps:
 
 . Go to Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
