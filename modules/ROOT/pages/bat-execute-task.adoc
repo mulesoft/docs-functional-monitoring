@@ -29,4 +29,4 @@ reporters:
       outFile: /tmp/HTML.html
 ----
 
-However, you receive reports of test failures from several supported applications. See xref:bat-reporting.adoc[Configure Reports of Test Failures].
+However, you receive reports of test failures from several supported applications. See xref:bat-reporting-task.adoc[Configure Reports of Test Failures].
