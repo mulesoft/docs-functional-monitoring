@@ -105,7 +105,7 @@ a. Open a secrets group or create a new one.
 The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed.
 +
 If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-b. Select Shared Secret on the left side of the screen.
+b. Select *Shared Secret* on the left side of the screen.
 c. In the *Type* field, select *Symmetric Key*.
 d. In the *Key* field, paste your license key encoded as a Base64 string.
 e. Paste the same Base64 string into the *Confirm Key* field.
