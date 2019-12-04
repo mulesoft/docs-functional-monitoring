@@ -104,7 +104,7 @@ Prints to standard output the version numbers of installed BAT and wrapper. If t
 +
 The two options `ls` and `list` list the environments that are available for the specified profile. If no profile is specified, the default profile is used.
 +
-The `switch` option lets you use one of the listed environments. Add the name of the environment to the end of the command, as in this example that uses the environment `Sandbox`:
+The `switch` option enables you to use one of the listed environments. Add the name of the environment to the end of the command, as in this example that uses the environment `Sandbox`:
 +
 ----
 bat environment switch Sandbox
