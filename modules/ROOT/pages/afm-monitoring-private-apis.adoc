@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
+Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
 
 A _private location_ is a worker that runs in an instance of Anypoint VPC that is configured to allow workers to access your private network. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC.
 
@@ -40,9 +40,9 @@ Monitor 5 runs on one schedule, though it could run on more than one. The schedu
 
 == Length of Time Before Tests Time Out
 
-Because tests are run in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Runtime Manager. To do so, follow these steps:
+Because tests are run in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Anypoint Runtime Manager. To do so, follow these steps:
 
-. Go to Runtime Manager.
+. Go to Anypoint Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
 . In the *executionTimeout* field, specify a longer timeout in milliseconds.
 
