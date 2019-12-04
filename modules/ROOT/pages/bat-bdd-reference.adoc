@@ -153,7 +153,7 @@ For example, suppose that the configuration file was this:
 }
 ----
 +
-Then, the command to run this test suite, when the command is run in the directory in which the `bat.yaml` file for the test suite is located and the default profile is used, is this:
+In this case, the command to run this test suite, when the command is run in the directory in which the `bat.yaml` file for the test suite is located and the default profile is used, is this:
 +
 ----
 bat --config=dev-environment.dwl
