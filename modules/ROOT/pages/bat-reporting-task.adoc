@@ -255,7 +255,7 @@ To email test reports that indicate failures, specify any email addresses that y
 
 [IMPORTANT]
 ====
-Reports are emailed only for tests created in Anypoint Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
+Reports are emailed only for tests created in API Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
 ====
 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
