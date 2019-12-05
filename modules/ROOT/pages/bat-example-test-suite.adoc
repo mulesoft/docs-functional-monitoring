@@ -63,7 +63,7 @@ As you create tests, you add references to them in your `bat.yaml` file. For exa
   file: api-tests/first-test.dwl
 ----
 
-If you write a second test, this one named `second-test.dwl`, you add this line after that one:
+If you write a second test, this one named `second-test.dwl`, you add this line next:
 
 ----
   file: api-tests/second-test.dwl
