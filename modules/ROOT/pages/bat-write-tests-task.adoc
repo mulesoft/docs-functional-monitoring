@@ -4,11 +4,17 @@ include::_attributes.adoc[]
 endif::[]
 :page-aliases: bat-playground-task.adoc
 
-A test suite, which includes a directory that contains a main file named `bat.yaml` that describes the structure of your test suite, a `config` folder that contains files in which you specify variables, also includes one or more folders in which you write tests. Tests are written in the BDD Test Writing syntax and use the `.dwl` file extension.
+A test suite is composed of the following elements:
 
-The best way to learn how to write tests in this syntax is to use the BAT playground, a web application that runs modifiable tests on the Deck of Cards API by default. There are nine different test in ascending order of complexity. Each test includes comments to show you what the code does.
+* A directory that contains a main file named `bat.yaml` that describes the structure of your test suite
+* A `config` folder that contains files in which you specify variables
+* One or more folders in which you write tests
 
-You start the BAT playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/.
+Tests are written in the BDD Test Writing syntax and use the `.dwl` file extension.
+
+The best way to learn how to write tests in this syntax is to use the BAT Playground, a web application that runs modifiable tests on the Deck of Cards API by default. There are nine different tests that are presented in ascending order of complexity. Each test includes comments to show you what the code does.
+
+You start the BAT Playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/.
 
 After you learn the basics of writing tests from the examples in the BAT Playground, you can refer to the BDD Test-Writing Syntax Reference, which
 
