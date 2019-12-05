@@ -135,7 +135,7 @@ Use JSON for the format of your configuration files, and `.dwl` as the file exte
 
 === The `tests` folder
 
-In the example test suite, the test -- `HelloWorld.dwl` -- is in a folder named `tests`. As explained in the section above about the `bat.yaml` file in this example, the `files` section in the `bat.yaml` file points to the tests in a test suite.
+In the example test suite, the test `HelloWorld.dwl` is in a folder named `tests`. As explained in the section about the `bat.yaml` file in this example, the `files` section in the `bat.yaml` file points to the tests in a test suite.
 
 [source, yaml]
 ----
