@@ -146,7 +146,7 @@ suite(parts="Simple Suite") in [
 
 For example, suppose that the configuration file was this:
 +
-.The example config file dev-environment.dwl
+.The example configuration file dev-environment.dwl
 ----
 {
   url: "https://dev.yourcompany.com/shoppingCart"

@@ -24,7 +24,7 @@ files:
 name_of_suite_of_tests:: Specify the name that you want to give the suite of tests that you plan to write.
 . Save the file.
 . Create a folder in your directory in which to create tests. You can give the folder any name.
-. Optional: Create a folder named `config`. In this folder, you create configuration files to use for your tests. Configuration files contain variables that are injected to tests at runtime. You can refer to those variables in tests by using the `config` variable. For example, to refer to a variable named `url` in a config file, you use this reference: '$(config.url)'. When you run the `bat` command to execute a test, you specify the configuration file to use by including the `--config=file.dwl` option, where `file.dwl` is the path and name of the config file in the folder for your test suite.
+. Optional: Create a folder named `config`. In this folder, you create configuration files to use for your tests. Configuration files contain variables that are injected to tests at runtime. You can refer to those variables in tests by using the `config` variable. For example, to refer to a variable named `url` in a configuration file, you use this reference: '$(config.url)'. When you run the `bat` command to execute a test, you specify the configuration file to use by including the `--config=file.dwl` option, where `file.dwl` is the path and name of the configuration file in the folder for your test suite.
 
 == What to Do Next
 
