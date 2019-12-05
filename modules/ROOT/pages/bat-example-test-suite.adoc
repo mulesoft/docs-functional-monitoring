@@ -97,18 +97,18 @@ If you plan to run a test suite from a private location, you can use the BAT CLI
 
 === The `config` Folder
 
-You can store variables in the files in the `config` folder. For example, let's say you're developing an API and you deploy it to two different environments: `dev` and `qa`. The endpoint url for the first is `dev.myapi.com` and for the second `qa.myapi.com`. The API should behave the same in both environments.
+You can store variables in the files in the `config` folder. For example, suppose that you're developing an API and you deploy it to two different environments: `dev` and `qa`. The endpoint URL for the first is `dev.myapi.com` and for the second `qa.myapi.com`. The API is intended to behave the same in both environments.
 
-You want to test the API in both environments. However, instead of coding two tests, one for the deployment of the API in `dev` and one for the deployment of the API in `qa`, you can create a config file for each environment. In each config file, you can place a variable named `url` that holds that endpoint URL for the corresponding environment:
+You want to test the API in both environments. However, instead of coding two tests, one for the deployment of the API in `dev` and one for the deployment of the API in `qa`, you can create a configuration file for each environment. In each configuration file, you can place a variable named `url` that holds that endpoint URL for the corresponding environment:
 
-.The content of `dev.dwl`, the config file for the `dev` environment
+.The content of `dev.dwl`, the configuration file for the `dev` environment
 ----
 {
 url: "dev.myapi.com"
 }
 ----
 
-.The content of `qa.dwl`, the config file for the `qa` environment
+.The content of `qa.dwl`, the configuration file for the `qa` environment
 ----
 {
 url: "qa.myapi.com"
@@ -129,9 +129,9 @@ suite("Hello world suite") in [
 ]
 ----
 
-When you run the test, you can use the `--config` parameter to specify which config file to use. (If you upload your test suite as a monitor to API Functional Monitoring in Anypoint Platform, you can specify the configuration to use when you create a schedule for the monitor.)
+When you run the test, you can use the `--config` parameter to specify which configuration file to use. (If you upload your test suite as a monitor to API Functional Monitoring in Anypoint Platform, you can specify the configuration to use when you create a schedule for the monitor.)
 
-Use JSON for the format of your config files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
+Use JSON for the format of your configuration files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
 
 === The `tests` folder
 
