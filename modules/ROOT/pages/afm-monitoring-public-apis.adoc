@@ -1,0 +1,55 @@
+= Monitoring the Endpoints of Public APIs
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:page-aliases: afm-public-versus-private.adoc
+:imagesdir: ../assets/images
+
+Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations or private locations. A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`. For information about private locations, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+
+The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
+
+The following diagram depicts the types of relationship that can exist between monitors, schedules, public locations, APIs, and environments. The different line types depict the different types of relationship.
+
+.The possible relationship types between monitors, schedules, public locations, APIs, and environments
+image::afm-public-locations.png[]
+
+* First relationship type (represented by solid black arrows)
++
+Monitor 1 runs on a single schedule. The schedule is associated with Public Location 1. The monitor is written to test one or more endpoints in public API 1 and in public API 2, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
+
+* Second relationship type (represented by dashed green arrows)
++
+Monitor 2 runs on two separate schedules, and each is associated with the same public location. Monitor 2 is written to test one or more endpoints in public API 3 and in public API 4, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
+
+* Third relationship type (represented by dashed-and-dotted blue arrows)
++
+Monitor 3 runs on two separate schedules, and each is associated with a different public location. Monitor 3 is written to test one or more endpoints in public API 5 and in public API 6, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
+
+* Fourth relationship type (represented by dotted orange arrows)
++
+Monitor 4 runs on two separate schedules, and each is associated with the same public location, though each could be associated with a different public location. Each of the two tested public APIs is in a different environment. One environment could be a test environment, and the other environment could be a production environment. Public API 7 and public API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in public API 7 and the same endpoints in public API 8, though it could also test endpoints in more public APIs.
+
+* Fifth relationship type (represented by dashed, dark blue lines)
++
+Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (though it could also test endpoints in more public APIs), both of which are accessible on the World-Wide Web.
+
+== Length of Time Before Tests Time Out
+
+To prevent tests run in public locations from consuming too many resources, AFM prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
+
+== Scheduling Tests
+
+Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets limitations on the following aspects of scheduling:
+
+Number of Schedules::
++
+By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft administrator about raising your maximum.
+
+You can also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations. 
+
+You can monitor public APIs from private locations, too, not just private APIs.
+
+Duration of Intervals Between Executions of Tests::
++
+The shortest interval that you can schedule to occur between tests is fifteen minutes.

@@ -1,4 +1,4 @@
-= To Schedule Testing and Monitoring
+= Schedule Testing and Monitoring
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

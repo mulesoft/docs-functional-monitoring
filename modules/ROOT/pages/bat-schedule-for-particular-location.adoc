@@ -1,4 +1,4 @@
-= To Create a Monitor That Uses a Particular Location
+= Create a Monitor That Uses a Particular Location
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

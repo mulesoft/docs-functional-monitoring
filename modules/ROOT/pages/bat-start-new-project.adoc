@@ -1,0 +1,41 @@
+= Start a New Test Suite
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Starting a new test suite for testing API endpoints involves only a few steps to create and populate with initial lines a file named `bat.yaml`. This file explains the structure of your test suite to the BAT CLI.
+
+== To Start a New Test Suite
+. Create a directory in your computer's filesystem.
+. Change to the new directory.
+. Create a file named `bat.yaml`.
+. Open the file for editing.
+. Add these five lines to specify the name of the test suite:
++
+[source,yaml]
+----
+suite:
+  name: "name_of_suite_of_tests"
+
+files:
+
+----
++
+name_of_suite_of_tests:: Specify the name that you want to give the suite of tests that you plan to write.
+. Save the file.
+. Create a folder in your directory in which to create tests.
++
+You can give the folder any name.
+. Optional: Create a folder named `config`.
++
+In this folder, you create configuration files to use for your tests. Configuration files contain variables that are injected to tests at runtime. You can refer to those variables in tests by using the `config` variable.
++
+For example, to refer to a variable named `url` in a configuration file, you use this reference: '$(config.url)'. When you run the `bat` command to execute a test, you specify the configuration file to use by including the `--config=file.dwl` option, where `file.dwl` is the path and name of the configuration file in the folder for your test suite.
+
+== What to Do Next
+
+You can start writing tests.
+
+== See Also
+
+* xref:bat-example-test-suite.adoc[Example of a Test Suite]

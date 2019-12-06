@@ -1,74 +1,27 @@
-= To Configure and Write BAT Tests
+= Get Started Writing Tests
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: bat-playground-task.adoc
 
-To create the example project, which includes a basic project folder, configuation files, a sample "Hello, World" test, and a `.yaml` descriptor file, you can run the command 'bat init'. To learn how to run the sample test, you can then read xref:bat-execute-task.adoc[Execute BAT Tests].
+A test suite is composed of the following elements:
 
-Alternatively, if you want to set up a basic project yourself, you can follow the steps in this procedure:
+* A directory that contains a main file named `bat.yaml` that describes the structure of your test suite
+* A `config` folder that contains files in which you specify variables
+* One or more folders in which you write tests
 
-. Create a directory for the configuration YAML, for example /api-monitoring and a subdirectory for the tests, for example /tests.
-. Create a minimal bat.yaml that is the manifest file for testing. For example, the bat.yaml for this procedure lists two test files:
-+
-----
-files:
+Tests are written in the BDD Test Writing syntax and use the `.dwl` file extension.
 
- - file: ./tests/step.0.dwl
- - file: ./tests/step.1.dwl
+The best way to learn how to write tests in this syntax is to use the BAT Playground, a web application that runs modifiable tests on the Deck of Cards API by default. There are nine different tests that are presented in ascending order of complexity. Each test includes comments to show you what the code does.
 
-suite:
-  name: "hello world test suite"
-----
-+
-. Save the bat.yaml at the top level of your testing directory /api-monitoring.
-. Create a test file. For example:
-+
-----
-// Functional test for http://apimon.cloudhub.io
+You start the BAT Playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/.
 
-import * from bat::BDD
-import * from bat::Assertions
----
-describe `api-mon` in [
+After you learn the basics of writing tests from the examples in the BAT Playground, you can refer to the BDD Test-Writing Syntax Reference, which
 
-  // First, get a list of users
-  GET `http://apimon.cloudhub.io/users` with {
 
-  } assert [
-    $.response.status mustEqual 200
-  ]
 
-]
-----
-+
-The GET function specifies the URL of the deployed proxy you created earlier in the workflow. For example, on CloudHub, you obtain the URL from API Manager:
-+
-image::bat-api-mgr-proxy-url.png[]
-+
-. Save the test file in the /api-monitoring/tests subdirectory as step.0.dwl.
-. Create another test file and save it as step.1.dwl.
-+
-----
-// Functional test for http://apimon.cloudhub.io
 
-import * from bat::BDD
-import * from bat::Assertions
----
-describe `api-mon` in [
-  it `assert that there are 10 users` in [
-    GET `http://apimon.cloudhub.io/users` with {} assert [
-      $.response.status mustEqual 200, //< ---- ASSERTION
-      $.response.mime mustEqual "application/json", //< ---- ASSERTION
-      log($.response.body match{case list is Array -> sizeOf(list) mustEqual 10
-        else -> false}) // < ---- ASSERTION
-    ]
-  ]
-]
-----
-+
-This test asserts that 10 is the size of the users list array returned by the API.
 
 == See Also
 
-* xref:bat-execute-task.adoc[Execute BAT Tests]
-* xref:bat-workflow-test.adoc[Workflow: Test an API Using API Functional Monitoring]
+* https://deckofcardsapi.com/[The website for the Deck of Cards API]
