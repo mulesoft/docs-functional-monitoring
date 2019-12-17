@@ -2,7 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
+:page-aliases: afm-delete-private-location.adoc
 :imagesdir: ../assets/images
 
 Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
