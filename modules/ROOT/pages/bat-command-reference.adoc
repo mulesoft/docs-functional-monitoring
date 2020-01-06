@@ -154,11 +154,11 @@ Sends data from the local executions.
 
 * `--update`
 +
-Updates the software to the latest version and configures a `.bat-version` file in the current folder. The program always respects the `.bat-version` configuration to run the tests. If the specified version is missing, it is downloaded before execution.
+Updates the BAT CLI to the latest version and configures a `.bat-version` file in the current folder. The program always respects the `.bat-version` configuration when running tests. If the specified version is not installed, it is downloaded and installed before execution.
 
 * `--username=<value>`
 +
-Value is an Anypoint Platform user name. If is not present ANYPOINT_USERNAME env variable is used, otherwise default username from credentials file is used.
+The value is an Anypoint Platform user name. If it is not present, the value of the environment variable ANYPOINT_USERNAME is used. If a value for this variable is not set, the default username from the credentials file is used.
 
 * `--validate | -V`
 +
@@ -170,7 +170,7 @@ Prints to standard output the version numbers of installed BAT and wrapper. If t
 
 * `--wdg`
 +
-Enables DataWeave script debugging option.
+Enables DataWeave script debugging.
 
 This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
 
