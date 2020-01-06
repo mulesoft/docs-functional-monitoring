@@ -104,15 +104,15 @@ Turns off INFO level for logging.
 
 * `--organization=<value>`
 +
-The value is the organization name set in the Anypoint Platform profile. If is not present, the environment variable ANYPOINT_ORG is used, otherwise default organization name from credentials file is used.
+The value is the organization name set in the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG is used. If a value for this variable is not set, the default organization name from credentials file is used.
 
 * `--organizationId=<value>`
 +
-Value is the organization ID for the Anypoint Platform profile. If is not present ANYPOINT_ORG_ID env variable is used, otherwise default organization ID from credentials file is used.
+The value is the organization ID for the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG_ID is used. If a value for this variable is not set, the default organization ID from credentials file is used.
 
 * `--password=<value>`
 +
-Value is the password for the Anypoint Platform user name. If is not present ANYPOINT_PASSWORD env variable is used, otherwise default password from credentials file is used.
+The value is the password for the Anypoint Platform user name. If is not present, the value of the environment variable ANYPOINT_PASSWORD is used. If a value for this variable is not set, the default password from credentials file is used.
 
 * `--profile=<value>`
 +
@@ -120,9 +120,9 @@ Profile is:
 
 ** The name of a profile for accessing an Anypoint Platform location and retaining the login information between BAT sessions. Using this option eliminates the need to relogin between sessions. Optional.
 
-** The name of a profile for scheduling an endpoint that can be different from the BAT login profile you used. By default, BAT uses the login profile for scheduling. Optional.
+** The name of a profile for scheduling a test that can be different from the BAT login profile you used. By default, BAT uses the login profile for scheduling. Optional.
 
-** If it is not present, ANYPOINT_PROFILE env variable is used, otherwise default profile.
+** If it is not present, the value of the environment variable ANYPOINT_PROFILE is used. If a value for this variable is not set, the default profile is used.
 
 * `--region=<value>`
 +
