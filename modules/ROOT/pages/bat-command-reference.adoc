@@ -188,7 +188,7 @@ bat environment switch Sandbox
 * `exchange pack`
 * `exchange publish`
 +
-The `pack` option compress the current folder as zip (ready to be uploaded to Exchange).
+The `pack` option compresses the current folder as zip (ready to be uploaded to Exchange).
 + 
 The `publish` option compress the current folder as zip and upload it to Exchange server. If the asset already exits a new version is incremented so the return zip file is real uploaded one.
 
