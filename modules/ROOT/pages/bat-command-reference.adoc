@@ -130,23 +130,23 @@ Region used to create a new location.
 
 * `--reporter=<reporterFile>[:|;]<outFile> | -R=<reporterFile>[:|;]<outFile>`
 +
-Create reporters from command line.
+Creates reporters from command line.
 
 * `--stack`
 +
-Print stack traces in standart output during execution.
+Prints stack traces in standart output during execution.
 
 * `--status-code=<code>`
 +
-Sets the HTTP status code used for test templates when using command `bat schedule endpoint`. Default value is 200.
+Sets the HTTP status code used for test templates when using the command `bat schedule endpoint`. Default value is 200.
 
 * `--timeout=<seconds>`
 +
-Timeout for tests in seconds. Optional. If is not present BAT_TESTS_TIMEOUT env variable is used, otherwise default value 3600 secs (1 hour).
+Timeout for tests in seconds. Optional. If it is not present, the value of the environment variable BAT_TESTS_TIMEOUT is used. If a value is not set for this variable, the default value of 3600 secs (1 hour) is used.
 
 * `--token=<token>`
 +
-Value is the auth token for the Anypoint Platform profile.
+The value is the auth token set in the Anypoint Platform profile.
 
 * `--track`
 +
