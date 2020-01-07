@@ -248,7 +248,7 @@ Lists the private and public locations that exist in the given profile's organiz
 
 * `location update <id>`
 +
-Updates a location by its ID. In the case of new worker version available, updates the location using lastest worker. This option is only valid for MULE locations.
+Updates a location by its ID. If a new version of the worker available, updates the location using lastest version. This option is valid only for Mule locations.
 
 * `schedule create [--cron="<expression>"] [--location=<id>]`
 +
