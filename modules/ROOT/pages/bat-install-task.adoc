@@ -5,12 +5,22 @@ endif::[]
 
 The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
 
-Run the following command to install the BAT CLI wrapper:
+== Prerequisite
 
+Before installing the BAT CLI, ensure that version 1.8 of the Java Development Kit is installed on your system.
+
+== Procedure
+
+. Run the following command to install the BAT CLI wrapper:
++
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
+. Run the command `bat -version` to find out whether the BAT CLI is installed.
 
-After installation, you can run the BAT command from any directory.
+== What To Do Next
+
+You can now start creating a test suite.
 
 == See Also
 
+* xref:bat-start-new-project.adoc[Start a New Test Suite]
 * xref:bat-command-reference.adoc[BAT Command Reference]
