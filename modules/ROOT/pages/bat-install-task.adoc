@@ -11,7 +11,7 @@ Before installing the BAT CLI, ensure that version 1.8 of the Java Development K
 
 == Procedure
 
-. Run the following command to install the BAT CLI wrapper:
+. Run the following command to install the BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
 . Run the command `bat -version` to find out whether the BAT CLI is installed.
