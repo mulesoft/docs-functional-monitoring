@@ -42,33 +42,38 @@ Executes the desired file. The root of the project is the current folder.
 The root of the project is used to resolve imports, and load libraries and files.
 
 == Command Line Options
-* `--bat-version=<version>`
+
+* `--validate | -V`
 +
-Executes BAT using the specified version.
+Validates the file or folder. Also works with `--config` to validate specific configurations.
 
 * `--config=<name>`
 +
 Selects a configuration file (from the `config` folder) and registers the result as a global variable.
 
+* `--version`
++
+Prints to standard output the version numbers of installed BAT and wrapper. If the latest version is not installed, that version is downloaded.
+
+* `--update`
++
+Updates the BAT CLI to the latest version and configures a `.bat-version` file in the current folder. The program always respects the `.bat-version` configuration when running tests. If the specified version is not installed, it is downloaded and installed before execution.
+
 * `--debug`
 +   
 Sends troubleshooting information to standard output during an execution.
 
-* `--environment=<value>`
-+   
-The value is the environment name for the Anypoint Platform profile. If it is not present, the environment variable ANYPOINT_ENV s used. If that variable is not set, the default organization name from credentials file is used.
-
-* `--environmentId=<value>`
+* `--track`
 +
-The value is the environment ID set in the Anypoint Platform profile.
+Sends data from the local executions.
 
-* `--help`
-+   
-Prints out help information.
-
-* `--host=<value>`
+* `--bat-version=<version>`
 +
-The value is the host set in the Anypoint Platform profile.
+Executes BAT using the specified version.
+
+* `--init-folder`
++
+Stores the files `exchange.json` and `main.dwl`, which you generate when you create a monitor in the current directory. Optional.
 
 * `--init`
 +
@@ -86,30 +91,6 @@ Same as the `bat init` command, which sets up a basic project folder. The folder
     └── HelloWorld.dwl
 ----
 
-* `--init-folder`
-+
-Stores the files `exchange.json` and `main.dwl`, which you generate when you create a monitor in the current directory. Optional.
-
-* `--location=<value>`
-+   
-The value is the name or ID for the location (target) to be used.
-
-* `--no-color`
-+
-Turns off colors in the logging output.
-
-* `--no-info`
-+
-Turns off INFO level for logging.
-
-* `--organization=<value>`
-+
-The value is the organization name set in the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG is used. If a value for this variable is not set, the default organization name from credentials file is used.
-
-* `--organizationId=<value>`
-+
-The value is the organization ID for the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG_ID is used. If a value for this variable is not set, the default organization ID from credentials file is used.
-
 * `--password=<value>`
 +
 The value is the password for the Anypoint Platform user name. If is not present, the value of the environment variable ANYPOINT_PASSWORD is used. If a value for this variable is not set, the default password from credentials file is used.
@@ -124,142 +105,23 @@ Profile is:
 
 ** If it is not present, the value of the environment variable ANYPOINT_PROFILE is used. If a value for this variable is not set, the default profile is used.
 
-* `--region=<value>`
-+
-Region used to create a new location.
-
-* `--reporter=<reporterFile>[:|;]<outFile> | -R=<reporterFile>[:|;]<outFile>`
-+
-Creates reporters from command line.
-
-* `--stack`
-+
-Prints stack traces in standart output during execution.
-
-* `--status-code=<code>`
-+
-Sets the HTTP status code used for test templates when using the command `bat schedule endpoint`. Default value is 200.
-
-* `--timeout=<seconds>`
-+
-Timeout for tests in seconds. Optional. If it is not present, the value of the environment variable BAT_TESTS_TIMEOUT is used. If a value is not set for this variable, the default value of 3600 secs (1 hour) is used.
-
-* `--token=<token>`
-+
-The value is the auth token set in the Anypoint Platform profile.
-
-* `--track`
-+
-Sends data from the local executions.
-
-* `--update`
-+
-Updates the BAT CLI to the latest version and configures a `.bat-version` file in the current folder. The program always respects the `.bat-version` configuration when running tests. If the specified version is not installed, it is downloaded and installed before execution.
-
 * `--username=<value>`
 +
 The value is an Anypoint Platform user name. If it is not present, the value of the environment variable ANYPOINT_USERNAME is used. If a value for this variable is not set, the default username from the credentials file is used.
 
-* `--validate | -V`
-+
-Validates the file or folder. Also works with `--config` to validate specific configurations.
-
-* `--version`
-+
-Prints to standard output the version numbers of installed BAT and wrapper. If the latest version is not installed, that version is downloaded.
-
-* `--wdg`
-+
-Enables DataWeave script debugging.
-
 This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
-
-* `environment ls|list`
-* `environment switch <name>`
-+
-The two options `ls` and `list` list the environments that are available for the specified profile. If no profile is specified, the default profile is used.
-+
-The `switch` option enables you to use one of the listed environments. Add the name of the environment to the end of the command, as in this example that uses the environment `Sandbox`:
-+
-----
-bat environment switch Sandbox
-----
-
-* `exchange pack`
-* `exchange publish`
-+
-The `pack` option compresses the current folder as zip (ready to be uploaded to Exchange).
-+ 
-The `publish` option compress the current folder as zip and upload it to Exchange server. If the asset already exits a new version is incremented so the return zip file is real uploaded one.
-
-* `execution ls|list`
-+
-Lists the monitors that are currently running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
-+
-The output looks like this:
-+
-----
-Last executions:
-
-	daily-retail-test:1.0.1                  PASSED     10 seconds ago
-	internal-run-api-check:1.0.0             PASSED     11 minutes ago
-----
-
-* `get_token`
-+
-Returns the token for accessing Anypoint Platform in the credentials file. Requires that you first run `bat login` to generate a profile.
-
-* `grant`
-+
-Grants API Functional Monitoring permission to access a shared secret that is stored in Anypoint Secrets Manager. You must grant API Functional Monitoring permission to access any shared secret that you use in a test or to access a reporter.
-+
-Run the `bat grant` command before configuring a test or a reporter to use a shared secret. The aliases that you create in the command are what you specify in tests and configurations for reporters.
-+
-----
-bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN [--forceUpdate]
-----
-+
--g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
--s:: Specify an alias, a colon, and the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than one shared secret from the same group, separate each `alias:name` pair with a comma.
-+The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
---forceUpdate:: Specify this option if API Functional Monitoring lost access to a shared secret and you need to grant access again.
-
-* `idea`
-+
-Create IntelliJ IDEA project files based on the current folder.
 
 * `init`
 +
 Sets up a basic project folder with config files, HelloWorld basic test, and a yaml descriptor file.
 
-* `location create <name> [--region=<value>]`
+* `schedule ls | list`
 +
-Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
-
-* `location delete <id>`
-+
-Deletes a private location from the list of private locations in the given profile's organization in Anypoint Platform.
-+
-`id`:: Specify the ID that identifies the location. You can obtain the ID by running the `bat location ls` command.
-
-* `location ls|list`
-+
-Lists the private and public locations that exist in the given profile's organization in Anypoint Platform. This command replaces `target ls|list`.
-
-* `location update <id>`
-+
-Updates a location by its ID. If a new version of the worker available, updates the location using lastest version. This option is valid only for Mule locations.
+List all of the schedules that exist in the given profile's organization.
 
 * `schedule create [--cron="<expression>"] [--location=<id>]`
 +
 Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 15 minutes.
-
-* `schedule disable <id>`
-Disables the schedule that is identified by the specified ID. If you run `bat schedule ls` after you run this command, you will see that the value
-
-* `schedule enable <id>`
-+
-Enables the schedule that is identified by the specified ID. Use this command only when you want to enable a schedule that you have disabled with the `bat schedule disable <id>` command.
 
 * `schedule endpoint <arbitrary-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-endpoint=<sumoEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
 +
@@ -285,21 +147,20 @@ Create a monitor in Exchange of using an arbitrary URL, for example `+http://exa
 
 ** `[--status-code=<code>]` Use code as HTTP code for test templates.
 
-* `schedule ls | list`
-+
-List all of the schedules that exist in the given profile's organization.
-
 * `schedule rm | remove <id>`
 +
 Deletes a schedule by its ID.
 
+* `schedule disable <id>`
+Disables the schedule that is identified by the specified ID. If you run `bat schedule ls` after you run this command, you will see that the value
+
+* `schedule enable <id>`
++
+Enables the schedule that is identified by the specified ID. Use this command only when you want to enable a schedule that you have disabled with the `bat schedule disable <id>` command.
+
 * `whoami`
 +
 Prints basic user information to standard output. Other profiles can be used with the `--profile` option.
-
-* `worker id`
-+
-Gets worker ID.
 
 * `worker register [--name=<value>]`
 +
@@ -308,6 +169,71 @@ Generates a post with the machine name and create a dummy target.
 * `worker unregister [--name=<value>]`
 +
 Unregisters worker.
+
+* `worker id`
++
+Gets worker ID.
+
+* `location create <name> [--region=<value>]`
++
+Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
+
+* `location delete <id>`
++
+Deletes a private location from the list of private locations in the given profile's organization in Anypoint Platform.
++
+`id`:: Specify the ID that identifies the location. You can obtain the ID by running the `bat location ls` command.
+
+* `location ls|list`
++
+Lists the private and public locations that exist in the given profile's organization in Anypoint Platform. This command replaces `target ls|list`.
+
+* `location update <id>`
++
+Updates a location by its ID. If a new version of the worker available, updates the location using lastest version. This option is valid only for Mule locations.
+
+* `get_token`
++
+Returns the token for accessing Anypoint Platform in the credentials file. Requires that you first run `bat login` to generate a profile.
+
+* `grant`
++
+Grants API Functional Monitoring permission to access a shared secret that is stored in Anypoint Secrets Manager. You must grant API Functional Monitoring permission to access any shared secret that you use in a test or to access a reporter.
++
+Run the `bat grant` command before configuring a test or a reporter to use a shared secret. The aliases that you create in the command are what you specify in tests and configurations for reporters.
++
+----
+bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,…,MyAliasN:MySecretNameN [--forceUpdate]
+----
++
+-g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
+-s:: Specify an alias, a colon, and the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than one shared secret from the same group, separate each `alias:name` pair with a comma.
++The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
+--forceUpdate:: Specify this option if API Functional Monitoring lost access to a shared secret and you need to grant access again.
+
+* `execution ls|list`
++
+Lists the monitors that are currently running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
++
+The output looks like this:
++
+----
+Last executions:
+
+	daily-retail-test:1.0.1                  PASSED     10 seconds ago
+	internal-run-api-check:1.0.0             PASSED     11 minutes ago
+----
+
+* `environment ls|list`
+* `environment switch <name>`
++
+The two options `ls` and `list` list the environments that are available for the specified profile. If no profile is specified, the default profile is used.
++
+The `switch` option enables you to use one of the listed environments. Add the name of the environment to the end of the command, as in this example that uses the environment `Sandbox`:
++
+----
+bat environment switch Sandbox
+----
 
 == BAT Command Examples
 
