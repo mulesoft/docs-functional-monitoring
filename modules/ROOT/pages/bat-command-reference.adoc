@@ -50,25 +50,9 @@ Executes BAT using the specified version.
 +
 Selects a configuration file (from the `config` folder) and registers the result as a global variable.
 
-* `--debug`
-+   
-Sends troubleshooting information to standard output during an execution.
-
-* `--environment=<value>`
-+   
-The value is the environment name for the Anypoint Platform profile. If it is not present, the environment variable ANYPOINT_ENV s used. If that variable is not set, the default organization name from credentials file is used.
-
-* `--environmentId=<value>`
+* `--init-folder`
 +
-The value is the environment ID set in the Anypoint Platform profile.
-
-* `--help`
-+   
-Prints out help information.
-
-* `--host=<value>`
-+
-The value is the host set in the Anypoint Platform profile.
+Stores the files `exchange.json` and `main.dwl`, which you generate when you create a monitor in the current directory. Optional.
 
 * `--init`
 +
@@ -86,30 +70,6 @@ Same as the `bat init` command, which sets up a basic project folder. The folder
     └── HelloWorld.dwl
 ----
 
-* `--init-folder`
-+
-Stores the files `exchange.json` and `main.dwl`, which you generate when you create a monitor in the current directory. Optional.
-
-* `--location=<value>`
-+   
-The value is the name or ID for the location (target) to be used.
-
-* `--no-color`
-+
-Turns off colors in the logging output.
-
-* `--no-info`
-+
-Turns off INFO level for logging.
-
-* `--organization=<value>`
-+
-The value is the organization name set in the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG is used. If a value for this variable is not set, the default organization name from credentials file is used.
-
-* `--organizationId=<value>`
-+
-The value is the organization ID for the Anypoint Platform profile. If is not present, the value of the environment variable ANYPOINT_ORG_ID is used. If a value for this variable is not set, the default organization ID from credentials file is used.
-
 * `--password=<value>`
 +
 The value is the password for the Anypoint Platform user name. If is not present, the value of the environment variable ANYPOINT_PASSWORD is used. If a value for this variable is not set, the default password from credentials file is used.
@@ -123,34 +83,6 @@ Profile is:
 ** The name of a profile for scheduling a test that can be different from the BAT login profile you used. By default, BAT uses the login profile for scheduling. Optional.
 
 ** If it is not present, the value of the environment variable ANYPOINT_PROFILE is used. If a value for this variable is not set, the default profile is used.
-
-* `--region=<value>`
-+
-Region used to create a new location.
-
-* `--reporter=<reporterFile>[:|;]<outFile> | -R=<reporterFile>[:|;]<outFile>`
-+
-Creates reporters from command line.
-
-* `--stack`
-+
-Prints stack traces in standart output during execution.
-
-* `--status-code=<code>`
-+
-Sets the HTTP status code used for test templates when using the command `bat schedule endpoint`. Default value is 200.
-
-* `--timeout=<seconds>`
-+
-Timeout for tests in seconds. Optional. If it is not present, the value of the environment variable BAT_TESTS_TIMEOUT is used. If a value is not set for this variable, the default value of 3600 secs (1 hour) is used.
-
-* `--token=<token>`
-+
-The value is the auth token set in the Anypoint Platform profile.
-
-* `--track`
-+
-Sends data from the local executions.
 
 * `--update`
 +
@@ -168,10 +100,6 @@ Validates the file or folder. Also works with `--config` to validate specific co
 +
 Prints to standard output the version numbers of installed BAT and wrapper. If the latest version is not installed, that version is downloaded.
 
-* `--wdg`
-+
-Enables DataWeave script debugging.
-
 This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
 
 * `environment ls|list`
@@ -184,13 +112,6 @@ The `switch` option enables you to use one of the listed environments. Add the n
 ----
 bat environment switch Sandbox
 ----
-
-* `exchange pack`
-* `exchange publish`
-+
-The `pack` option compresses the current folder as zip (ready to be uploaded to Exchange).
-+ 
-The `publish` option compress the current folder as zip and upload it to Exchange server. If the asset already exits a new version is incremented so the return zip file is real uploaded one.
 
 * `execution ls|list`
 +
@@ -223,14 +144,6 @@ bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,
 -s:: Specify an alias, a colon, and the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than one shared secret from the same group, separate each `alias:name` pair with a comma.
 +The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
 --forceUpdate:: Specify this option if API Functional Monitoring lost access to a shared secret and you need to grant access again.
-
-* `idea`
-+
-Create IntelliJ IDEA project files based on the current folder.
-
-* `init`
-+
-Sets up a basic project folder with config files, HelloWorld basic test, and a yaml descriptor file.
 
 * `location create <name> [--region=<value>]`
 +
@@ -292,10 +205,6 @@ List all of the schedules that exist in the given profile's organization.
 * `schedule rm | remove <id>`
 +
 Deletes a schedule by its ID.
-
-* `whoami`
-+
-Prints basic user information to standard output. Other profiles can be used with the `--profile` option.
 
 * `worker id`
 +
