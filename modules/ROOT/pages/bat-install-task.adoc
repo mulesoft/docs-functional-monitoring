@@ -7,7 +7,7 @@ The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that 
 
 == Prerequisite
 
-Before installing the BAT CLI, ensure that version 1.8 of the Java Development Kit is installed on your system.
+Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed on your system.
 
 == Procedure
 
