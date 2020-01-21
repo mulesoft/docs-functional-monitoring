@@ -4,20 +4,28 @@
 _Do you want to write a test case locally, or do you want to create a monitor online?_
 
 * *I want to write a test case locally.*
-+
-** _How Many Public APIs Do You Want to Test?_
+* *I want to create a monitor online.*
+
+== Writing a Test Case Locally
+
+** _How many public APIs do you want to test?_
 +
 *** *I want to test one public API.*
-+
+
 **** _Do You Have At Least One Public Schedule Remaining?_
 +
 ***** *Yes, I have at least one public schedule remaining.*
 ***** *No, I do not have at least one public schedule remaining.*
 
 *** *I want to test more than one public API.*
-
-* *I want to create a monitor online.*
+**** _Do You Have At Least One Public Schedule Remaining?_
 +
+***** *Yes, I have at least one public schedule remaining.*
+***** *No, I do not have at least one public schedule remaining.*
+
+
+== Creating a Monitor Online
+
 ** _How many public APIs do you want to test?_
 +
 *** *I want to test one public API.*
@@ -28,3 +36,7 @@ _Do you want to write a test case locally, or do you want to create a monitor on
 ***** *No, I do not have at least one public schedule remaining.*
 
 *** *I want to test more than one public API.*
+**** _Do You Have At Least One Public Schedule Remaining?_
++
+***** *Yes, I have at least one public schedule remaining.*
+***** *No, I do not have at least one public schedule remaining.*
