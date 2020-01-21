@@ -2,6 +2,8 @@
 * xref:index.adoc[About API Functional Monitoring]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
 * xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs]
+* xref:afm-dt-eval.adoc[Decision Tree: Creating Monitors When Evaluating]
+* xref:afm-dt-lic.adoc[Decision Tree: Creating Monitors When Licensed]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in API Monitor]
  ** xref:afm-create-monitor.adoc[Create a Monitor]
  ** xref:afm-create-private-location.adoc[Create a Private Location]
