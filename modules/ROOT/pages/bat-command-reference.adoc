@@ -60,7 +60,7 @@ Prints to standard output the version numbers of installed BAT and wrapper. If t
 Updates the BAT CLI to the latest version and configures a `.bat-version` file in the current folder. The program always respects the `.bat-version` configuration when running tests. If the specified version is not installed, it is downloaded and installed before execution.
 
 * `--debug`
-+   
++
 Sends troubleshooting information to standard output during an execution.
 
 * `--track`
@@ -174,7 +174,7 @@ Unregisters worker.
 +
 Gets worker ID.
 
-* `location create <name> [--region=<value>]`
+* `location create <name>`
 +
 Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
 
