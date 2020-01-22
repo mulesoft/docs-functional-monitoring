@@ -14,7 +14,7 @@ Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed
 . Run the following command to install the BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
-. Run the command `bat -version` to find out whether the BAT CLI is installed.
+. Run the command `bat -version` to verify that the BAT CLI is installed.
 
 == What To Do Next
 
