@@ -2,7 +2,14 @@
 
 When you are evaluating API Functional Monitoring, you can create a monitor that tests one or more endpoints that are in one or more public APIs. You can run up to five such monitors concurrently.
 
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs].
+
+[IMPORTANT]
+====
+Tests fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. Download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
+
+If you do not want to split a long-running test, download the monitor and run it from the BAT CLI.
+====
 
 == Before You Begin
 
@@ -53,3 +60,7 @@ To create a monitor:
 . Click *Next*.
 . If you want to be notified of failed tests, select the application that you have configured to send them and provide the information that API Functional Monitoring requires for integration with the application.
 . Click *Create Monitor*.
+
+== Result
+
+The list of monitors is displayed. Your new monitor appears at the top of the list and is running.
