@@ -10,7 +10,7 @@ After every interval, you can view the results of the test and statistics about 
 
 == Before You Begin
 
-* Ensure that your user ID has the "Anypoint Monitoring User" permission.
+* Ensure that your user ID has the Anypoint Monitoring User permission and is assigned the Exchange Administrators role.
 +
 An administrator for your organization can grant you this permission in Anypoint Access Management.
 * Determine which endpoints you want to test and the REST methods that you want to test them with.
