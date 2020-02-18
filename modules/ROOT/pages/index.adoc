@@ -15,7 +15,7 @@ The solution helps you carry out the following tasks:
 * *Black-box testing:* This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
 * *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
 
-A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
+A _monitor_ is a test that is scheduled to run at intervals.
 
 image::afm-test-and-monitor.png[]
 
