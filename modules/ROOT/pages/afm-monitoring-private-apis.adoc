@@ -29,13 +29,17 @@ image::afm-monitor-private-1.png[]
 +
 A monitor runs on a single schedule. The schedule is associated with a private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs. The private location and the APIs are all in a single environment.
 
-* Second relationship type (represented by dashed green arrows)
+* Second relationship type
 +
-Monitor 2 runs on two separate schedules, and each is associated with the same private location. The private location is shared with the schedule that runs Monitor 1. Monitor 2 is written to test one or more endpoints in private API 3 and in private API 4, though it could also test endpoints in a larger number of private APIs. The private locations and both APIs are all in a single environment.
+image::afm-monitor-private-2.png[]
++
+A monitor runs on two separate schedules, and each is associated with the same private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs. The private locations and both APIs are all in a single environment.
 
-* Third relationship type (represented by dashed-and-dotted blue arrows)
+* Third relationship type
 +
-Monitor 3 runs on two separate schedules, and each is associated with a different private location. Monitor 3 is written to test one or more endpoints in API 5 and in API 6, though it could also test endpoints in a larger number of private APIs.
+image::afm-monitor-private-3.png[]
++
+MA monitor runs on two separate schedules, and each is associated with a different private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs.
 
 * Fourth relationship type (represented by dotted orange arrows)
 +
