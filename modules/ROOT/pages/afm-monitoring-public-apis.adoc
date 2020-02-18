@@ -9,10 +9,7 @@ Public APIs are APIs with endpoints that are exposed to the open internet. In AP
 
 The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
 
-The following diagram depicts the types of relationship that can exist between monitors, schedules, public locations, APIs, and environments. The different line types depict the different types of relationship.
-
-.The possible relationship types between monitors, schedules, public locations, APIs, and environments
-image::afm-public-locations.png[]
+The following diagrams depict the types of relationship that can exist between monitors, schedules, public locations, APIs, and environments. 
 
 * First relationship type
 +
@@ -36,13 +33,13 @@ A monitor runs on two separate schedules, and each is associated with a differen
 +
 image::afm-monitor-4.png[]
 +
-Monitor 4 runs on two separate schedules, and each is associated with the same public location, though each could be associated with a different public location. Each of the two tested public APIs is in a different environment. One environment could be a test environment, and the other environment could be a production environment. Public API 7 and public API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in public API 7 and the same endpoints in public API 8, though it could also test endpoints in a larger number of public APIs.
+A monitor runs on two separate schedules, and each is associated with the same public location, though each could be associated with a different public location. Each of the two tested public APIs is in a different environment. One environment could be a test environment, and the other environment could be a production environment. Public API 1 and public API 2 are copies of the same API. The monitor is written to test one or more endpoints in public API 1 and the same endpoints in public API 2, though it could also test endpoints in a larger number of public APIs.
 
 * Fifth relationship type
 +
 image::afm-monitor-5.png[]
 +
-Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (though it could also test endpoints in a larger number of public APIs), both of which are accessible on the World-Wide Web.
+A monitor runs on a single schedule, though it could run on two. The schedule is associated with a public location. The monitor is written to test one or more endpoints in public API 1 and in public API 2 (though it could also test endpoints in a larger number of public APIs), both of which are accessible on the World-Wide Web.
 
 == Length of Time Before Tests Time Out
 
