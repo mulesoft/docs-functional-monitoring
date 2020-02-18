@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
 API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are APIs deployed are accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
 
 The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
@@ -14,6 +16,8 @@ The solution helps you carry out the following tasks:
 * *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
 
 A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
+
+image::afm-test-and-monitor.png[]
 
 You can get reports on the results of monitor executions. You can also set up integration with into a number of monitoring and issue-tracking systems.
 
