@@ -41,7 +41,9 @@ image::afm-monitor-private-3.png[]
 +
 MA monitor runs on two separate schedules, and each is associated with a different private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs.
 
-* Fourth relationship type (represented by dotted orange arrows)
+* Fourth relationship type
++
+image::afm-monitor-private-4.png[]
 +
 Monitor 4 runs on two separate schedules, and each is associated with a different private location. Each private location is in a separate environment. One environment could be a test environment, and the other environment could be a production environment. Private API 7 and Private API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in private API 7 and the same endpoints in API 8, though it could also test endpoints in a larger number of private APIs.
 
