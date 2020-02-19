@@ -41,6 +41,12 @@ image::afm-monitor-public-5.png[]
 +
 A monitor runs on a single schedule, though it could run on two. The schedule is associated with a public location. The monitor is written to test one or more endpoints in public API 1 and in public API 2 (though it could also test endpoints in a larger number of public APIs), both of which are accessible on the World-Wide Web.
 
+* Sixth relationship type
++
+image::afm-monitor-public-shared-location.png[]
++
+You can run more than one monitor from a single location. In this diagram, Monitor A runs from the public location to test public APIs 1 and 2, which are in Environment A. Monitor B runs from the same public location, but tests public APIs 3 and 4, which are in Environment B.
+
 == Length of Time Before Tests Time Out
 
 To prevent tests run in public locations from consuming too many resources, AFM prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.

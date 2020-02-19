@@ -50,11 +50,7 @@ image::afm-monitor-private-5.png[]
 +
 A monitor runs on one schedule, though it could run on more than one. The schedule is associated with a private location. The monitor is written to test one or more endpoints in public API, which is available on the world-wide web, 1 and in private API 2, though it could also test endpoints in a larger number of APIs.
 
-* Sixth relationship type
-+
-image::afm-monitor-public-shared-location.png[]
-+
-You can run more than one monitor from a single location. In this diagram, Monitor A runs from the public location to test public APIs 1 and 2, which are in Environment A. Monitor B runs from the same public location, but tests public APIs 3 and 4, which are in Environment B.
+
 
 == Length of Time Before Tests Time Out
 
