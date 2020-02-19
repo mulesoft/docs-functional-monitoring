@@ -45,7 +45,7 @@ A monitor runs on a single schedule, though it could run on two. The schedule is
 +
 image::afm-monitor-public-shared-location.png[]
 +
-You can run more than one monitor from a single location. In this diagram, Monitor A runs from the public location to test public APIs 1 and 2, which are in Environment A. Monitor B runs from the same public location, but tests public APIs 3 and 4, which are in Environment B.
+You can run more than one monitor from a single public location. In this diagram, Monitor A runs from the public location to test public APIs 1 and 2, which are in Environment A. Monitor B runs from the same public location, but tests public APIs 3 and 4, which are in Environment B.
 
 == Length of Time Before Tests Time Out
 
