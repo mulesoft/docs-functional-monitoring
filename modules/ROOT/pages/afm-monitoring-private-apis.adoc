@@ -18,10 +18,7 @@ All incoming HTTP traffic must be allowed into the environment where a private l
 
 Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
-The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
-
-.The possible relationship types between monitors, schedules, private locations, APIs, and environments
-image::afm-private-locations.png[]
+The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments.
 
 * First relationship type
 +
@@ -51,7 +48,13 @@ A monitor runs on two separate schedules, and each is associated with a differen
 +
 image::afm-monitor-private-5.png[]
 +
-Monitor 5 runs on one schedule, though it could run on more than one. The schedule is associated with a private location. Monitor 5 is written to test one or more endpoints in private API 9 and in public API 10.
+A monitor runs on one schedule, though it could run on more than one. The schedule is associated with a private location. The monitor is written to test one or more endpoints in public API, which is available on the world-wide web, 1 and in private API 2, though it could also test endpoints in a larger number of APIs.
+
+* Sixth relationship type
++
+image::afm-monitor-public-shared-location.png[]
++
+You can run more than one monitor from a single location. In this diagram, Monitor A runs from the public location to test public APIs 1 and 2, which are in Environment A. Monitor B runs from the same public location, but tests public APIs 3 and 4, which are in Environment B.
 
 == Length of Time Before Tests Time Out
 
