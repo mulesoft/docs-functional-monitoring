@@ -9,7 +9,7 @@
  ** xref:afm-add-schedule.adoc[Add a Schedule]
  ** xref:afm-modify-schedule.adoc[Modify a Schedule]
  ** xref:afm-delete-schedule.adoc[Delete a Schedule]
- ** xref:afm-view-schedules-private-location.adoc[View the Schedules That Use a Private Location]
+ ** xref:afm-view-locations-and-schedules.adoc[View Your Locations and the Schedules That Use Them]
  ** xref:afm-delete-test.adoc[Delete a Version of a Test]
  ** xref:afm-run-test-now.adoc[Run a Test Immediately]
  ** xref:afm-view-test-history.adoc[View a Test's History]

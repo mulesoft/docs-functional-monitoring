@@ -16,11 +16,8 @@ If you want to modify a schedule to use a public location instead of a private o
 
 == Procedure
 
-There are two different methods for modifying a schedule.
 
-To modify a schedule from the *Schedules* section of a monitor:
-
-. Select the monitor in which you want to modify a schedule.
+. In the list of your monitors, select the monitor in which you want to modify a schedule.
 . Locate the schedule in the list.
 . Click the three dots to the right of the list entry for the schedule.
 . Select *Modify Schedule*.
