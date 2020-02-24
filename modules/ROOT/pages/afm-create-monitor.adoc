@@ -3,13 +3,16 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test suite to run at intervals that you specify.
+You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test to run at intervals that you specify.
 
 After every interval, you can view the results of the test and statistics about API performance.
 
 
 == Before You Begin
 
+* Determine whether you want to monitor the endpoints in one or more public APIs, one or more private APIs, or a mix of both public APIs and private APIs.
++
+For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs].
 * Ensure that your user ID has the "Anypoint Monitoring User" permission.
 +
 An administrator for your organization can grant you this permission in Anypoint Access Management.
@@ -20,9 +23,7 @@ An administrator for your organization can grant you this permission in Anypoint
 The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
 ** Set an hourly schedule to start at a certain number of minutes after the hour begins.
 ** Set a daily, weekly, or monthly schedule to start at a certain time of day.
-* Determine which execution location you would like to run the monitor in.
-+
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+
 * Decide whether you would like the request messages to include additional header information.
 * Obtain one of the following pieces of information, if you would like to send reports to one of these reporting tools:
 +
