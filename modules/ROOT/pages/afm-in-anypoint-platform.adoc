@@ -7,7 +7,7 @@ endif::[]
 
 You can monitor APIs in the *Functional Monitoring* section of Anypoint Monitoring, which you can access from the home page of Anypoint Platform.
 
-To monitor an API means to check its responses to requests that are sent to the resources at its endpoints. The *Functional Monitoring* section contains tools for creating a monitor and for editing monitors, Also, if you've created a monitor by writing a test suite in the Behavior Driven Development (BDD) test-writing language, you can upload that monitor.
+To monitor an API means to check its responses to requests that are sent to the resources at its endpoints. The *Functional Monitoring* section contains tools for creating a monitor and for editing monitors. Also, if you've created a monitor by writing a test suite in the Behavior Driven Development (BDD) test-writing language, you can upload that monitor.
 
 A new monitor consists of a test and a schedule for that test. When you create a monitor, you specify for the test that the monitor includes:
 
@@ -18,9 +18,6 @@ A new monitor consists of a test and a schedule for that test. When you create a
 
 For the schedule that the monitor runs the test according to, you specify:
 
-* The version of the test to run.
-+
-You can create multiple versions of a test. When you create a monitor, the version of the test is 1.0.0. Every time you create a version of the test, the third digit is incremented by one.
 * The location from which to run the test.
 +
 Locations can be public or private. For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
