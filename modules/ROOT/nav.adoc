@@ -13,7 +13,7 @@
  ** xref:afm-delete-test.adoc[Delete a Version of a Test]
  ** xref:afm-run-test-now.adoc[Run a Test Immediately]
  ** xref:afm-view-test-history.adoc[View a Test's History]
- ** xref:afm-download-test.adoc[Download a Test]
+ ** xref:afm-download-test.adoc[Download a Monitor]
  ** xref:afm-delete-monitor.adoc[Delete a Monitor]
  ** xref:afm-edit-test.adoc[Create a New Test from an Existing One]
  ** xref:afm-upload-monitor.adoc[Upload a Monitor]
