@@ -2,8 +2,8 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
 :page-aliases: afm-view-schedules-private-location.adoc
+
 :imagesdir: ../assets/images
 
 You can find out how many schedules a private location is used by. When a private location is used by a schedule, a worker to run the test associated with the schedule is created in that location. Therefore, seeing the number of schedules that use a private location shows you how many workers are running in that location.
