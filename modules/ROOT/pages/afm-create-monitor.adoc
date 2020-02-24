@@ -96,4 +96,5 @@ After the test is complete, two things happen:
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
 * xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
 * xref:afm-edit-test.adoc[Edit a Monitor]
+* xref:afm-delete-monitor.adoc[Delete a Monitor]
 * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
