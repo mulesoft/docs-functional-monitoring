@@ -23,9 +23,8 @@ An administrator for your organization can grant you this permission in Anypoint
 The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
 ** Set an hourly schedule to start at a certain number of minutes after the hour begins.
 ** Set a daily, weekly, or monthly schedule to start at a certain time of day.
-
 * Decide whether you would like the request messages to include additional header information.
-* Obtain one of the following pieces of information, if you would like to send reports to one of these reporting tools:
+* Obtain one of the following pieces of information, if you would like to send results of failed tests to one of these reporting tools:
 +
 |===
 |Reporting Tool |Required Information
@@ -50,18 +49,32 @@ The shortest interval is every fifteen minutes. You can also choose to run the m
 == Procedure
 To create a monitor:
 
-. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create*.
-. Specify a name and a short description for the monitor.
-. Fill in the fields with the information that you have gathered.
-. Click *Create*.
+. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create Monitor* in the top-right corner of your browser window.
+. In the *Monitor Setup* section, specify the name of the monitor, the location from which to run the test, how often to run the test, and whether to validate SSL certificates.
+.. Specify a name for the monitor.
+.. Select the location from which to run the test.
++
+Public locations are grouped separately from private locations in the list. You can create a private location by clicking an option in the list.
+.. Specify the intervals at which you want the monitor to run the test.
++
+The interval that you select begins when you click *Create Monitor* at the end of this procedure.
+.. Toggle the *SSL Certificate Validation* switch off if the endpoints that your monitor will test use self-signed certificates.
++
+If they do use self-signed certificates and you do not toggle this switch off, tests against those endpoints fail.
++
+** If the toggle is on, all endpoints that use SSL certificates must have certificates that are signed by a trusted authority.
+** If the toggle is off, all endpoints that use SSL certificates must be self-signed.
++
+To test a combination of endpoints that use trusted SSL certificates and endpoints that use self-signed certificates, create two separate monitors: one for testing the first group of endpoints, the other for testing the second group of endpoints.
+. Click *Next*.
+. In the *Endpoints* section, specify one or more endpoints to include in the test, the HTTP methods to use to test them, the status codes that each endpoint is expected to return, and any assertions that you want to include for each endpoint.
+. Click *Next*.
+. If you want to be notified of failed tests, select one or more reporters.
+. Click *Create monitor*.
 
 == Result
 
-The dashboard opens. The monitor that you created is listed on the left.
-
-Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
-
-After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
+The monitor that you created is listed at the top of the list of your monitors. API Functional Monitoring begins counting down the interval of time that you selected. When the interval expires, the test is run.
 
 [IMPORTANT]
 ====
@@ -72,20 +85,15 @@ If you do not want to split a long-running test, download the monitor and run it
 
 == What to do next
 
-Click the *Scheduling* tab to see the schedule for the monitor. You can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
+After the test is complete, two things happen:
 
-After the monitor runs, click the *Monitored Endpoints* tab to see:
+* The countdown of the interval begins again.
+* A summary of the results appears under *Endpoint* in the list entry for the monitor. The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
 
-* Whether all endpoints returned the expected codes, as indicated by *PASSED* in the first column of the table
-* Statistics about the execution of the test of the endpoint
-
-As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
-
-Click *Tests* to see statistics and other information about the monitor. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test, too.
-
-If you want to delete the monitor, delete all versions of it in the *Tests* section.
 
 == See Also
 
- * xref:afm-edit-test.adoc[Edit a monitor]
- * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
+* xref:afm-edit-test.adoc[Edit a Monitor]
+* xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
