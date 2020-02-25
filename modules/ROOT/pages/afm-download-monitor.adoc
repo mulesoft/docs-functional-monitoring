@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: afm-download-test.adoc
 
 :imagesdir: ../assets/images
 
@@ -17,4 +18,4 @@ If you are new to writing tests manually, you can download tests, see how they a
 
 == Result
 
-A .zip file is downloaded to your computer. The filename is `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.
+A ZIP file is downloaded to your computer. The filename is `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.

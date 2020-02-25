@@ -11,7 +11,7 @@
  ** xref:afm-delete-schedule.adoc[Delete a Schedule]
  ** xref:afm-view-locations-and-schedules.adoc[View Your Locations and the Schedules That Use Them]
  ** xref:afm-run-test-now.adoc[Run a Test Immediately]
- ** xref:afm-view-test-history.adoc[View a Test's History]
+ ** xref:afm-view-monitor-history.adoc[View the Details of Past Executions of a Test]
  ** xref:afm-download-test.adoc[Download a Monitor]
  ** xref:afm-delete-monitor.adoc[Delete a Monitor]
  ** xref:afm-edit-test.adoc[Create a New Test from an Existing One]
