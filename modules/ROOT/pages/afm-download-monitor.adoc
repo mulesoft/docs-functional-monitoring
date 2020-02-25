@@ -1,4 +1,4 @@
-= Download a Monitor
+= Download a Copy of a Monitor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,15 +6,15 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can download a monitor and modify its test on your computer. Then, you can either run the test by using the BAT CLI or upload the monitor into the online interface for API Functional Monitoring to create a new monitor.
+You can download a copy of a monitor and modify its test on your computer. Then, you can either run the test by using the BAT CLI or upload the monitor into the online interface for API Functional Monitoring to create a new monitor.
 
 If you are new to writing tests manually, you can download tests, see how they are structured, and view the content of the files. The knowledge you gain can help you write your own tests.
 
 == Procedure
 
-. Select the monitor from which you want to dowload a test.
-. Click the *Tests* tab to see the test versions.
-. Click the Download icon for a test version.
+. In the list of your monitors, select the monitor that you want to download a copy of.
+. Click the three dots to the right of the name of the monitor.
+. Select *Download Monitor*.
 
 == Result
 
