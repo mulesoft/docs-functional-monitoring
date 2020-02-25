@@ -36,7 +36,7 @@ A monitor runs on two separate schedules, and each is associated with the same p
 +
 image::afm-monitor-private-3.png[]
 +
-MA monitor runs on two separate schedules, and each is associated with a different private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs.
+A monitor runs on two separate schedules, and each is associated with a different private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs.
 
 * Fourth example configuration
 +
