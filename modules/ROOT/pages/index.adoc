@@ -8,12 +8,17 @@ endif::[]
 
 API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables the monitoring of the functional behavior and performance of APIs, throughout the API lifecycle, in testing and production environments.
 
-You can monitor both public and private APIs:
+AFM divides APIs into two broad categories:
 
-* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
-* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet. For example, APIs that handle login requests for logging into banking websites are public APIs. Anyone with a browser and internet access can visit a login page and attempt to log in.
 
-For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which consists of a test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
+* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people or applications that are in your private network. For example, when someone tries to log into a banking website, a request might be sent to an internal database to verify that person's credentials. The API for handling the request to the database would be considered a private API because it is within your private, secure network.
+
+== Fundamentals of Monitors
+
+For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which is a named entity that consists of one test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
+
+=== Fundamentals of Tests
 
 A test consists of:
 
@@ -33,22 +38,30 @@ Tests are executed from either public locations or private locations.
 
 * A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers.
 +
-Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`.
+Public locations can run only tests of public APIs.
 
 * A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint Virtual Private Cloud.
++
+Private locations can run tests of public APIs, private APIs, or mixes of both.
+
+== Fundamentals of Schedules
 
 
-== Two Different Ways to Create Monitors
+
+
+== Two Different Tools for Creating Monitors and Running Their Tests
 
 There are two ways that you can perform functional testing:
 
 * Write tests manually and then schedule them with the Blackbox Automated Testing (BAT) CLI.
 +
 Test cases are all defined with a common, declarative, and easy-to-use behavior-description language. The language is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
-* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring. You can upload as monitors any testing projects that you wrote manually.
+* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring in Anypoint Platform. You can upload as monitors any testing projects that you wrote manually.
 
 == See also
 
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
 * xref:afm-supported-http-request-headers.adoc[Supported HTTP Request Headers]
