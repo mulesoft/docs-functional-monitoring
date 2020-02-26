@@ -6,31 +6,20 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables testing and monitoring of the functional behavior and performance of APIs, throughout the API lifecycle, in testing and production environments.
+API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables the monitoring of the functional behavior and performance of APIs, throughout the API lifecycle, in testing and production environments.
 
-== Supported Tasks
-
-AFM supports these tasks:
-
-* *Black-box testing:* This type of testing validates the overall behavior of an API and its dependencies.
-* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments.
-
-You can test and monitor both public and private APIs:
+You can monitor both public and private APIs:
 
 * _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
 * _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
 
-== Monitors
-
-You perform black-box testing and runtime monitoring of APIs by creating monitors. A _monitor_ is a test that is scheduled to run at intervals. It consists of both a test and at least one schedule.
-
-image::afm-test-and-monitor.png[]
+For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which consists of a test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
 
 A test consists of:
 
 * One or more combinations of HTTP methods and endpoints
 +
-For example, in a single test, you might send a request to the endpoint `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `https://deckofcardsapi.com/api/deck/<<deck_id>>/shuffle/` also by using the GET method.
+For example, in a single test, you might send a request to the endpoint `\https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `\https://deckofcardsapi.com/api/deck/<deck_ID>/shuffle/` also by using the GET method.
 
 * One or more assertions
 +
@@ -40,8 +29,16 @@ By default, the assertion for a test is "Status code must equal 200". However, y
 +
 By default, no headers are included in requests sent to endpoints. However, you can include any of the headers that AFM supports.
 
+Tests are executed from either public locations or private locations.
 
-You can get reports on the results of monitor executions.
+* A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers.
++
+Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`.
+
+* A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint Virtual Private Cloud.
+
+
+== Two Different Ways to Create Monitors
 
 There are two ways that you can perform functional testing:
 
