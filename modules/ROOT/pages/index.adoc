@@ -6,14 +6,18 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are APIs deployed are accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables testing and monitoring of the functional behavior and performance of APIs, throughout the API lifecycle, in testing and production environments.
 
-The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
+AFM supports these tasks:
 
-The solution helps you carry out the following tasks:
+* *Black-box testing:* This type of testing validates the overall behavior of an API and its dependencies.
+* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments.
 
-* *Black-box testing:* This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
-* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
+AFM supports the testing and monitoring of both public and private APIs:
+
+* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
+* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+
 
 A _monitor_ is a test that is scheduled to run at intervals.
 
