@@ -8,21 +8,38 @@ endif::[]
 
 API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables testing and monitoring of the functional behavior and performance of APIs, throughout the API lifecycle, in testing and production environments.
 
+== Supported Tasks
+
 AFM supports these tasks:
 
 * *Black-box testing:* This type of testing validates the overall behavior of an API and its dependencies.
 * *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments.
 
-AFM supports the testing and monitoring of both public and private APIs:
+You can test and monitor both public and private APIs:
 
 * _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
 * _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+
+== Monitors
 
 You perform black-box testing and runtime monitoring of APIs by creating monitors. A _monitor_ is a test that is scheduled to run at intervals. It consists of both a test and at least one schedule.
 
 image::afm-test-and-monitor.png[]
 
 A test consists of:
+
+* One or more combinations of HTTP methods and endpoints
++
+For example, in a single test, you might send a request to the endpoint `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `https://deckofcardsapi.com/api/deck/<<deck_id>>/shuffle/` also by using the GET method.
+
+* One or more assertions
++
+By default, the assertion for a test is "Status code must equal 200". However, you can change that assertion and add more. For example, you might add the assertion "Response header Cache-Control must equal `max-age=604800`".
+
+* Optional HTTP request headers
++
+By default, no headers are included in requests sent to endpoints. However, you can include any of the headers that AFM supports.
+
 
 You can get reports on the results of monitor executions.
 
@@ -37,3 +54,4 @@ Test cases are all defined with a common, declarative, and easy-to-use behavior-
 
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
+* xref:afm-supported-http-request-headers.adoc[Supported HTTP Request Headers]
