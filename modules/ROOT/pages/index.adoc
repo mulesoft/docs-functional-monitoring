@@ -18,7 +18,9 @@ AFM divides APIs into two broad categories:
 
 For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which is a named entity that consists of one test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
 
-For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails.
+For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails. You also get a summary of the test results whether or not a test execution fails, and can look up the results of past executions of the test.
+
+Scenarios that are more complicated are also possible. A test can run against multiple endpoints, making requests with any HTTP methods.
 
 === Fundamentals of Tests
 
@@ -27,6 +29,8 @@ Each monitor includes one test. A test consists of:
 * One or more combinations of HTTP methods and endpoints
 +
 For example, in a single test, you might send a request to the endpoint `\https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `\https://deckofcardsapi.com/api/deck/<deck_ID>/shuffle/` also by using the GET method.
++
+You can create dependencies between tests of endpoints. For example, if in your application network a request to endpoint B must be preceded by a successful request to endpoint A, you can write a test that sends a request to endpoint B only if the request to endpoint A is successful.
 
 * One or more assertions
 +
