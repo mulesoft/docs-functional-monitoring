@@ -18,9 +18,11 @@ AFM divides APIs into two broad categories:
 
 For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which is a named entity that consists of one test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
 
+For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails.
+
 === Fundamentals of Tests
 
-A test consists of:
+Each monitor includes one test. A test consists of:
 
 * One or more combinations of HTTP methods and endpoints
 +
