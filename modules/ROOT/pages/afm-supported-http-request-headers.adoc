@@ -1,0 +1,44 @@
+= Supported HTTP Request Headers
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+API Functional Monitoring supports these HTTP Request headers:
+
+* A-IM
+* Accept
+* Accept-Charset
+* Accept-Encoding
+* Accept-Language
+* Accept-Datetime
+* Access-Control-Request-Method
+* Access-Control-Request-Headers
+* Authorization
+* Cache-Control
+* Connection
+* Content-Length
+* Content-Type
+* Cookie
+* Date
+* Expect
+* Forwarded
+* Host
+* If-Match
+* If-Modified-Since
+* If-None-Match
+* If-Range
+* If-Unmodified-Since
+* Max-Forwards
+* Origin
+* Pragma
+* Proxy-Authorization
+* Range
+* Referer [_sic_]
+* TE
+* User-Agent
+* Upgrade
+* Via
+* Warning
+* DNT
+* X-Requested-With
+* X-CSRF-Token

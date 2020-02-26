@@ -18,12 +18,13 @@ AFM supports the testing and monitoring of both public and private APIs:
 * _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
 * _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
 
-
-A _monitor_ is a test that is scheduled to run at intervals.
+You perform black-box testing and runtime monitoring of APIs by creating monitors. A _monitor_ is a test that is scheduled to run at intervals. It consists of both a test and at least one schedule.
 
 image::afm-test-and-monitor.png[]
 
-You can get reports on the results of monitor executions. You can also set up integration with into a number of monitoring and issue-tracking systems.
+A test consists of:
+
+You can get reports on the results of monitor executions.
 
 There are two ways that you can perform functional testing:
 

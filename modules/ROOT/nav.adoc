@@ -28,3 +28,4 @@
  ** xref:bat-reporting-task.adoc[Configure and View Test Reports]
  ** xref:bat-intellij-idea.adoc[Write and Run BAT Tests in IntelliJ IDEA]
  ** xref:bat-command-reference.adoc[BAT CLI Reference]
+* xref:afm-supported-http-request-headers.adoc[Supported HTTP Request Headers]
