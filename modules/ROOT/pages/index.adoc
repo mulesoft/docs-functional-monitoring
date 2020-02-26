@@ -52,13 +52,46 @@ Public locations can run only tests of public APIs.
 +
 Private locations can run tests of public APIs, private APIs, or mixes of both.
 
-== Fundamentals of Schedules
+=== Fundamentals of Schedules
 
 A schedule initiates a worker, at intervals that you specify, to run the test for a monitor from a particular location, whether the location is public or private. Each schedule is associated with one test.
 
 You can set the intervals for a schedule to every fifteen minutes, every hour, every day, every week, or every month. You can even set intervals by using `cron` expressions.
 
 When you create a schedule, you specify the location from which you want the test to run every time an interval expires.
+
+=== Fundamentals of Reports
+
+When you create a monitor, you can specify that you want to be notified of test failures by means of any of a number of reporting systems. For each reporting system that you want AFM to integrate with, you must provide a piece of information.
+
+[%header,cols=3*]
+|===
+|Reporting System
+|Required Information
+|What Reports Include
+
+|Email
+|One or more email addresses, separated by semicolons
+|For each test failure, AFM emails a report that includes the name of the monitor in which the test failure occurred and a link to the test results in Anypoint Platform.
+
+|New Relic
+|License Key for New Relic
+|For each test failure, AFM sends a report that includes full test results. You can view the report in the *Plugins* > *BAT plugin* section in New Relic.
+
+|PagerDuty
+|Routing Key
+|A test failure can generate an incident when a test fails and trigger configured PagerDuty alerts. However, if a test continues to fail with the same error, AFM does not generate a new issue, but instead ignores these additional failures.
+
+|Slack
+|URL for the webhook to use
+|For each test failure, AFM sends a notification to the Slack channel at the specified webhook URL. Each notification provides the name of the monitor in which the test failue occurs.
+
+|Sumo Logic
+|URL for the endpoint to use
+|For each test failure, AFM sends a post to SUMO that contains the full test results.
+|===
+
+You can create secrets for these requirements in Secrets Manager and use those secrets in place of the actual values.
 
 
 == Two Different Tools for Creating Monitors and Running Their Tests
