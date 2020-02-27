@@ -91,7 +91,7 @@ When you create a monitor, you can specify that you want to be notified of test 
 |For each test failure, AFM sends a post to SUMO that contains the full test results.
 |===
 
-You can create secrets for these requirements in Secrets Manager and use those secrets in place of the actual values.
+You can create secrets for these requirements in Secrets Manager and use those secrets in place of each piece of required information.
 
 
 == Two Different Tools for Creating Monitors and Running Their Tests
