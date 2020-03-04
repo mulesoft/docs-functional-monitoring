@@ -15,9 +15,7 @@ You can find out how many schedules a private location is used by. When a privat
 
 == Result
 
-The list of schedules that use the private location appears to the right. For each schedule, the following information appears:
+The list of schedules that use the private location appears within the location's entry. For each schedule, the following information appears:
 
-* The length of time to elapse before the associated test is run again
-* The interval at which the test is run
-* The name of the monitor that the test is defined in
-* The test version that is run
+* The monitor that the schedule belongs to
+* The intervals at which the schedule runs the test in the monitor
