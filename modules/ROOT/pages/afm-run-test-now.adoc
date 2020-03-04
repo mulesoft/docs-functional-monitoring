@@ -7,18 +7,13 @@ endif::[]
 
 You can run a test on demand without waiting for the current interval of its schedule to elapse. Doing so does not reset the schedule, which continues to count down to the end of the current interval.
 
-== Before You Begin
-
-Because you are running the test outside of a schedule, you must select the location from which to run it. If you want to run it in the same location as that used by the schedule, you can click the *Schedules* tab to look at the schedule and see at a glance the location that it uses.
 
 == Procedure
 
-. Select the monitor for which you want to run a test on demand.
-. Click the *Tests* tab to see the list of test versions.
-. Click the Run Now icon for the test version that you want to run.
-. In the Run Versioned Test dialog, select the location and environment in which you want to run the test.
-. Click *Run Now*.
+. In the list of your monitors, select the monitor that includes the test that you want to run.
+. Click the three dots next to the name of the monitor and select *Run Test*.
+. Select a location from which to run the test.
 
 == Result
 
-The test runs immediately and the results are displayed. The current interval in the associated schedule continues to elapse.
+The test runs immediately and the results are displayed after it is finished.
