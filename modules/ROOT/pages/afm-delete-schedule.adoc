@@ -18,9 +18,18 @@ Be sure that you want to delete a schedule. AFM does not give you a chance to co
 
 == Procedure
 
+To delete a schedule, follow either of these procedures:
+
+* If you know which monitor uses the schedule, follow these steps:
 . In the list of your monitors, select the monitor in which you want to delete a schedule.
 . Locate the schedule in the list.
 . Click the three dots to the right of the list entry for the schedule.
+. Select *Delete Schedule*.
+
+* If you know which location the schedule uses, follow these steps:
+. Above the list of your monitors, click the *Manage Locations*.
+. Locate the location and expand its entry.
+. Locate the schedule and click the three dots on the right side of its entry.
 . Select *Delete Schedule*.
 
 == Result
