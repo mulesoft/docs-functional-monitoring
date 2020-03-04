@@ -88,7 +88,7 @@ If you do not want to split a long-running test, download the monitor and run it
 After the test is complete, two things happen:
 
 * The countdown of the interval begins again.
-* A summary of the results appears under *Endpoint* in the list entry for the monitor. The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
+* After the test runs for the first time, a summary of the results appears under *Endpoint* in the list entry for the monitor. The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
 
 
 == See Also
