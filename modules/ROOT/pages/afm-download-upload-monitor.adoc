@@ -1,33 +1,39 @@
-= Upload a Monitor
+= Download a Copy of a Monitor, Upload a Test Suite as a Monitor, or Both
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: afm-download-test.adoc, afm-download-monitor.adoc, afm-upload-monitor.adoc
 
 :imagesdir: ../assets/images
 
-There are three reasons you might want to upload a monitor:
+You can download a copy of a monitor and the upload the resulting test suite, or upload a test suite that you wrote outside of API Functional Monitoring.
 
-* The first reason is that you might have written a test suite (using Behavior Driven Development (BDD), the syntax for writing blackbox-automated-testing (BAT) tests for processing in DataWeave) that you want to upload as a new monitor into API Functional Monitoring (AFM) online in Anypoint Platform.
-+
-The result of uploading a test suite is that AFM uses the suite to generate a new monitor.
-+
-.The process involved in uploading a monitor for this reason results in a new monitor.
-image::afm-upload-test-suite.png[The steps involved in uploading for this reason, and the result]
+== Downloading a Copy of a Monitor and then Uploading the Resulting Test Suite
 
-* The second reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, and now wish to upload it to replace the original monitor.
+When you download a copy of a monitor, the result is a _test suite_. A test suite is a bit different from a monitor. A monitor includes one test and one or more schedules, as well as information about reporters that you want to send you notifications of test failures. A test suite can include one or more tests, as well as information about reporters; it contains no schedules. Therefore, when you download a copy of a monitor, the schedules that you created for that monitor are not included in the resulting test suite.
+
+There are two reasons that you might want to download a copy of a monitor and then upload the resulting test suite back into AFM online:
+
+* The first reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, and now wish to upload it to replace the original monitor.
 +
 You can do this if you want to include more than one test file in your monitor. The code view in the online interface for API Functional Monitoring does not let you create more than one test file.
 +
 .The process involved in uploading a monitor for this reason results in the replacement of a monitor.
 image::afm-download-edit-only-upload.png[The steps involved in uploading for this reason, and the result]
 
-* The third reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, deleted the file exchange.json that was included in the downloaded ZIP file, and now wish to upload the copy as a new monitor.
+* The second reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, deleted the file exchange.json that was included in the downloaded ZIP file, and now wish to upload the copy as a new monitor.
 +
 You can also create duplicate a monitor by downloading a copy of it, deleting the exchange.json file, and uploading the copy (now considered a test suite) as a new monitor.
 +
 .The process involved in uploading a monitor for this reason results in a new monitor.
 image::afm-download-delete-upload.png[The steps involved in uploading for this reason, and the result]
 
+== Uploading a Test Suite That You Wrote Outside of API Functional Monitoring
+
+You can upload a test suite a monitor if you wrote the test suite (using Behavior Driven Development (BDD), the syntax for writing blackbox-automated-testing (BAT) tests for processing in DataWeave). When you upload it into API Functional Monitoring (AFM) online in Anypoint Platform, it becomes a new monitor.
+
+.The process involved in uploading a test suite results in a new monitor.
+image::afm-upload-test-suite.png[The steps involved in uploading for this reason, and the result]
 
 
 == Before You Begin
@@ -63,7 +69,15 @@ The shortest interval is every fifteen minutes. You can also choose to run the m
 |===
 
 
-== Procedure
+== Procedures
+
+To download a copy of a monitor:
+
+. In the list of your monitors, find the monitor that you want to download a copy of and select it.
+. Click the three dots next to the name of the monitor and select *Download Monitor*.
++
+*Result:* A ZIP file is downloaded to your computer. The filename is `<your Anypoint Platform group ID>_<the name of the monitor>.zip`.
+
 To create a monitor by uploading a test suite:
 
 . At the top of the page that lists your monitors, click *Upload Monitor*.
