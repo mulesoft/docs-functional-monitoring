@@ -3,7 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
 You can upload a suite of tests that you have written and want to run as a monitor, viewing the results the information displays in the *Functional Monitoring* section of Anypoint Monitoring. When you create monitors by writing them, you can create more complex test cases by using features such as the DataWeave expression language and context variables for saving values between calls to endpoints.
+
+You can also upload monitors that you have downloaded from the graphical user interface for API Functional Monitoring in Anypoint Platform.
+
+image::afm-download-upload-monitor.png[]
 
 
 == Before You Begin
@@ -12,7 +18,7 @@ You can upload a suite of tests that you have written and want to run as a monit
 
 * Write a suite of tests in the BDD test-writing language. For information about writing tests, see "API Functional Monitoring with the BAT CLI", which is linked to from the *See also* section at the end of this topic.
 
-* Determine the frequency at which you would like the monitor to endpoints in the test suite. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you upload the monitor. After you upload the monitor, you can create another schedule that is more detailed, if you prefer.
+* Determine the frequency at which you would like the monitor to endpoints in the test suite. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you upload the monitor.
 
 * Determine which execution location you would like to run the monitor in.
 

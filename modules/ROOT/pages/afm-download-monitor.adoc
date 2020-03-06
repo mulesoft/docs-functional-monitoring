@@ -8,7 +8,39 @@ endif::[]
 
 You can download a copy of a monitor and modify its test on your computer. Then, you can either run the test by using the BAT CLI or upload the monitor into the online interface for API Functional Monitoring to create a new monitor.
 
-If you are new to writing tests manually, you can download tests, see how they are structured, and view the content of the files. The knowledge you gain can help you write your own tests.
+Downloading monitors and viewing their tests is a great way to learn how to write tests manually. When you write your own tests, they can include interdependencies, so that an endpoint isn't tested unless a previous endpoint passes its test.
+
+When you download a monitor, you download a ZIP file that contains these three files:
+
+main.dwl:: This file contains the test. Here is a simple test file:
++
+----
+import * from bat::BDD
+import * from bat::Assertions
+---
+suite("testFile") in [
+  GET `http://www.example.org` with {
+  "headers": {}
+} assert [
+    $.response.status mustEqual 200
+  ]
+]
+----
+
+bat.yaml:: This file describes the content of the monitor. Here is a simple example:
++
+----
+suite:
+  name: A/B
+files:
+  - file: main.dwl
+----
+
+exchange.json:: This file contains metadata about the downloaded monitor.
+
+When you create a project and write one or more tests manually in it, that project is called a _suite_, which is short for _test suite_. A suite is a bit different from a monitor. While a monitor includes one test and one or more schedules, as well as information about reporters that you want to send you notifications of test failures, a suite includes one or more tests and information about reporters. Schedules exist independently of suites, though you can manually create schedules and associate them with suites.
+
+For more information about creating suites and running the tests in them, see xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI].
 
 == Procedure
 
