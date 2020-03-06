@@ -29,4 +29,4 @@ When you create the monitor, you specify the endpoints that you want to test. Fo
 == See also
 
 * xref:afm-create-monitor.adoc[Create a Monitor]
-* xref:afm-upload-monitor.adoc[Upload a Monitor]
+* xref:afm-download-upload-monitor.adoc[Download a Copy of a Monitor, Upload a Test Suite as a Monitor, or Both]
