@@ -13,7 +13,6 @@
  ** xref:afm-run-test-now.adoc[Run a Test Immediately]
  ** xref:afm-view-monitor-history.adoc[View the Details of Past Executions of a Test]
  ** xref:afm-delete-monitor.adoc[Delete a Monitor]
- ** xref:afm-edit-test.adoc[Create a New Test from an Existing One]
  ** xref:afm-download-upload-monitor.adoc[Download a Copy of a Monitor, Upload a Test Suite as a Monitor, or Both]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
  ** xref:bat-install-task.adoc[Install BAT]
