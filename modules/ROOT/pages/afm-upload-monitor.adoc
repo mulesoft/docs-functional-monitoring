@@ -5,62 +5,101 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can upload a suite of tests that you have written and want to run as a monitor, viewing the results the information displays in the *Functional Monitoring* section of Anypoint Monitoring. When you create monitors by writing them, you can create more complex test cases by using features such as the DataWeave expression language and context variables for saving values between calls to endpoints.
+There are three reasons you might want to upload a monitor:
 
-You can also upload monitors that you have downloaded from the graphical user interface for API Functional Monitoring in Anypoint Platform.
+* The first reason is that you might have written a test suite (using Behavior Driven Development (BDD), the syntax for writing blackbox-automated-testing (BAT) tests for processing in DataWeave) that you want to upload as a new monitor into API Functional Monitoring (AFM) online in Anypoint Platform.
++
+The result of uploading a test suite is that AFM uses the suite to generate a new monitor.
++
+.The process involved in uploading a monitor for this reason results in a new monitor.
+image::afm-upload-test-suite.png[The steps involved in uploading for this reason, and the result]
 
-image::afm-download-upload-monitor.png[]
+* The second reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, and now wish to upload it to replace the original monitor.
++
+You can do this if you want to include more than one test file in your monitor. The code view in the online interface for API Functional Monitoring does not let you create more than one test file.
++
+.The process involved in uploading a monitor for this reason results in the replacement of a monitor.
+image::afm-download-edit-only-upload.png[The steps involved in uploading for this reason, and the result]
 
-image::afm-upload-test-suite.png[]
+* The third reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, deleted the file exchange.json that was included in the downloaded ZIP file, and now wish to upload the copy as a new monitor.
++
+You can also create duplicate a monitor by downloading a copy of it, deleting the exchange.json file, and uploading the copy (now considered a test suite) as a new monitor.
++
+.The process involved in uploading a monitor for this reason results in a new monitor.
+image::afm-download-delete-upload.png[The steps involved in uploading for this reason, and the result]
 
-image::afm-download-edit-only-upload.png[]
-
-image::afm-download-delete-upload.png[]
 
 
 == Before You Begin
 
-* Ensure that your user ID has the Monitoring Center User permission. An administrator for your organization can grant you this permission in Anypoint Access Management.
+* Ensure that your user ID has the "Anypoint Monitoring User" permission.
++
+An administrator for your organization can grant you this permission in Anypoint Access Management.
+* Figure out the frequency at which you would like the monitor to test the endpoints.
++
+The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
+** Set an hourly schedule to start at a certain number of minutes after the hour begins.
+** Set a daily, weekly, or monthly schedule to start at a certain time of day.
+* Decide whether you would like the request messages to include additional header information.
+* Obtain one of the following pieces of information, if you would like to send results of failed tests to one of these reporting tools:
++
+|===
+|Reporting Tool |Required Information
 
-* Write a suite of tests in the BDD test-writing language. For information about writing tests, see "API Functional Monitoring with the BAT CLI", which is linked to from the *See also* section at the end of this topic.
+|NewRelic
+|License Key
 
-* Determine the frequency at which you would like the monitor to endpoints in the test suite. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you upload the monitor.
+|PagerDuty
+|RoutingKey
 
-* Determine which execution location you would like to run the monitor in.
+|Slack
+|Webhook
 
-* If you have more than one configuration file in your test suite, determine which you plan to use for the monitor.
+|SumoLogic
+|Endpoint
+
+|Email
+|Email address
+|===
+
 
 == Procedure
 To create a monitor by uploading a test suite:
 
-. In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload*.
+. At the top of the page that lists your monitors, click *Upload Monitor*.
 . Upload the folder that contains your test suite.
-. Fill in the fields with the information that you have gathered.
-. Click *Upload*.
+. In the *Monitor Setup* section, specify the name of the monitor, the location from which to run the test, how often to run the test, and whether to validate SSL certificates.
+.. Specify a name for the monitor.
+.. Select the location from which to run the test.
++
+Public locations are grouped separately from private locations in the list. You can create a private location by clicking an option in the list.
+.. Specify the intervals at which you want the monitor to run the test.
++
+The interval that you select begins when you click *Create Monitor* at the end of this procedure.
+.. Toggle the *SSL Certificate Validation* switch off if the endpoints that your monitor will test use self-signed certificates.
++
+If they do use self-signed certificates and you do not toggle this switch off, tests against those endpoints fail.
++
+** If the toggle is on, all endpoints that use SSL certificates must have certificates that are signed by a trusted authority.
+** If the toggle is off, all endpoints that use SSL certificates must be self-signed.
++
+To test a combination of endpoints that use trusted SSL certificates and endpoints that use self-signed certificates, create two separate monitors: one for testing the first group of endpoints, the other for testing the second group of endpoints.
+. Click *Next*.
+. If you want to be notified of failed tests, select one or more reporters.
+. Click *Create Monitor*.
+
 
 == Result
 
-The dashboard opens. The monitor is listed on the left. Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty. After the monitor has run, the list item for the monitor will indicate whether the monitored endpoint passed or failed.
+The monitor that you created is listed at the top of the list of your monitors. API Functional Monitoring begins counting down the interval of time that you selected. When the interval expires, the test is run.
 
+After the test is complete, two things happen:
 
-== What to do next
-
-Click the *Scheduling* tab to see the schedule for the monitor. The *Version* column in the table of schedules displays the version number 0.0.1. This number refers to the version of the test suite that you uploaded. If you ever make changes to the test suite and upload it again, the version number will be incremented. For example, the first time that you upload a changed version of the test suite, its version number will be 0.0.2. It will also have a new schedule created for it. You can either keep the original schedule for the previous version of the monitor or delete that schedule. You can also disable and enable schedules.
-
-After the monitor runs, click the *Monitored Endpoints* tab to see:
-
-* Whether the endpoint returned the expected code, as indicated by *PASSED* in the first column of the table
-* Statistics about the execution of the test of the endpoint
-
-As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
-
-Click *Tests* to see statistics and information pertaining to the monitor. The version number shown here is 0.0.1. However, if you upload the test suite again after making changes to it, you will see here a second card of information. The version number on this card will be 0.0.2.
-
-Every subsequent version of the test suite that you upload will have its own card and that card will show the version of the monitor. If you delete the schedule for a version of the monitor, the card for that version will no longer appear in the *Tests* section.
-
-If you want to delete the monitor, delete all versions of it in the *Tests* section.
+* The countdown of the interval begins again.
+* After the test runs for the first time, a summary of the results appears under *Endpoint* in the list entry for the monitor. The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
 
 
 == See also
 
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
+* xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
