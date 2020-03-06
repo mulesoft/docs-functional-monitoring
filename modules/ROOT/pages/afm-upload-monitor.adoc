@@ -11,6 +11,12 @@ You can also upload monitors that you have downloaded from the graphical user in
 
 image::afm-download-upload-monitor.png[]
 
+image::afm-upload-test-suite.png[]
+
+image::afm-download-edit-only-upload.png[]
+
+image::afm-download-delete-upload.png[]
+
 
 == Before You Begin
 
