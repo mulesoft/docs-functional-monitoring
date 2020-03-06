@@ -69,20 +69,20 @@ If you write a second test, this one named `second-test.dwl`, you add this line 
   file: api-tests/second-test.dwl
 ----
 
-The order in which you list the tests determines the order in which the BAT CLI runs them. In this example, the test `prodInfo.dwl` runs before the test `shoppingCart.dwl`:
+The order in which you list the tests determines the order in which the BAT CLI runs them. In this example, the test `orderFulfillment.dwl` runs before the test `shoppingCart.dwl`:
 
 ----
 files:
-  file: retail-site-tests/orderFullfillment.dwl
+  file: retail-site-tests/orderFulfillment.dwl
   file: retail-site-tests/shoppingCart.dwl
 ----
 
-To run the `orderFullfillment.dwl` test after the `shoppingCart.dwl` test, you can change the order in which they are listed:
+To run the `orderFulfillment.dwl` test after the `shoppingCart.dwl` test, you can change the order in which they are listed:
 
 ----
 files:
   file: retail-site-tests/shoppingCart.dwl
-  file: retail-site-tests/orderFullfillment.dwl
+  file: retail-site-tests/orderFulfillment.dwl
 ----
 
 Finally, you can create more than one folder to contain the tests in a test suite. You can even create subfolders within the folders that contain your tests. Just be sure that you provide the correct relative path when you list a test in the `files` section of your `bat.yaml` file.

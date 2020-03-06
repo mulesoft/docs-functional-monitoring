@@ -123,7 +123,7 @@ List all of the schedules that exist in the given profile's organization.
 +
 Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 15 minutes.
 
-* `schedule endpoint <arbitrary-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-endpoint=<sumoEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
+* `schedule endpoint <arbitrary-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-logic-endpoint=<sumoLogicEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
 +
 Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, you can add options to generate the bat.yaml with different parameters.
 
@@ -133,13 +133,13 @@ Create a monitor in Exchange of using an arbitrary URL, for example `+http://exa
 
 ** `[--location="<id>"]` Set a specific location ID to the monitor.
 
-** `[--new-relic-license-key="<newRelicLicenseKey>"]` Add the new relic report to the bat.yaml.
+** `[--new-relic-license-key="<newRelicLicenseKey>"]` Add the New Relic report to the bat.yaml.
 
-** `[--slack-webhook="<slackWebHook>"]` Add the slack report to the bat.yaml.
+** `[--slack-webhook="<slackWebHook>"]` Add the Slack report to the bat.yaml.
 
-** `[--sumo-endpoint="<sumoEndpoint>"]` Add the sumo report to the bat.yaml.
+** `[--sumo-logic-endpoint="<sumoLogicEndpoint>"]` Add the Sumo Logic report to the bat.yaml.
 
-** `[--pager-duty-routing-key="<pagerDutyRoutingKey>"]` Add the pager duty report to the bat.yaml.
+** `[--pager-duty-routing-key="<pagerDutyRoutingKey>"]` Add the PagerDuty report to the bat.yaml.
 
 ** `[--custom-report-url="<customReportUrl>"] [--custom-report-headers="<header1,header2,...,headerN>"] | [--custom-report-transformation="<pathToDwlFile>"]` Add the custom report to the bat.yaml file and optionally you can add the transformation file.
 
