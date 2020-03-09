@@ -16,13 +16,17 @@ You can add a schedule to an existing monitor if either of the following two con
 == Procedure
 
 . In the list of monitors, select the monitor to which you want to add a schedule.
-. ???
-. Select *Add Schedule*.
-. In the Add Schedule dialog, specify this information:
+. On the details page for the monitor, follow one of these steps:
++
+*  If at least one schedule already exists, click the three dots in the entry for a schedule and then select *Add Schedule*.
++
+* If no schedule yet exists, click *Add Schedule*.
+. In the *Add Schedule* dialog, specify this information:
 +
 * The location to run the test from
 * The frequency at which to run the test
 . Click *Add Schedule*.
+
 
 
 == See Also
