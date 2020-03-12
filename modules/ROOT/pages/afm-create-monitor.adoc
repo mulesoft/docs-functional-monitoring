@@ -63,7 +63,7 @@ The interval that you select begins when you click *Create Monitor* at the end o
 If they do use self-signed certificates and you do not toggle this switch off, tests against those endpoints fail.
 +
 ** If the toggle is on, all endpoints that use SSL certificates must have certificates that are signed by a trusted authority.
-** If the toggle is off, all endpoints that use SSL certificates must be self-signed.
+** If the toggle is off, endpoints that use SSL certificates may be self-signed, but do not have to be.
 +
 To test a combination of endpoints that use trusted SSL certificates and endpoints that use self-signed certificates, create two separate monitors: one for testing the first group of endpoints, the other for testing the second group of endpoints.
 . Click *Next*.
