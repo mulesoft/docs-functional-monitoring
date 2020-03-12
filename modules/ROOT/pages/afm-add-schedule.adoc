@@ -31,6 +31,6 @@ You can add a schedule to an existing monitor if either of the following two con
 
 == See Also
 
-* The section "The `config` Folder" in 
+* The section "The `config` Folder" in * xref:bat-example-test-suite.adoc[Example of a Test Suite]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
 * xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
