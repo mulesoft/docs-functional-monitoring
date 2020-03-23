@@ -6,22 +6,22 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can download a copy of a monitor and the upload the resulting test suite, or upload a test suite that you wrote outside of API Functional Monitoring.
+You can download a copy of a monitor and then upload the resulting test suite, or you can upload a test suite that you wrote outside of API Functional Monitoring.
 
 == Downloading a Copy of a Monitor and then Uploading the Resulting Test Suite
 
 When you download a copy of a monitor, the result is a _test suite_. A test suite is a bit different from a monitor. A monitor includes one test and one or more schedules, as well as information about reporters that you want to send you notifications of test failures. A test suite can include one or more tests, as well as information about reporters; it contains no schedules. Therefore, when you download a copy of a monitor, the schedules that you created for that monitor are not included in the resulting test suite.
 
-There are two reasons that you might want to download a copy of a monitor and then upload the resulting test suite back into AFM online:
+There are two reasons that you might want to download a copy of a monitor and then upload the resulting test suite back into API Functional Monitoring online:
 
-* The first reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, and now wish to upload it to replace the original monitor.
+* You downloaded a copy of a monitor from API Functional Monitoring online, edited it as a test suite, and now wish to upload it to replace the original monitor.
 +
-You can do this if you want to include more than one test file in your monitor. The code view in the online interface for API Functional Monitoring does not let you create more than one test file.
+Do this to include more than one test file in your monitor. The code view in the online interface for API Functional Monitoring does not allow you to create more than one test file.
 +
 .The process involved in uploading a monitor for this reason results in the replacement of a monitor.
 image::afm-download-edit-only-upload.png[The steps involved in uploading for this reason, and the result]
 
-* The second reason is that you might have downloaded a copy of a monitor from AFM online, edited it as a test suite, deleted the file exchange.json that was included in the downloaded ZIP file, and now wish to upload the copy as a new monitor.
+* You downloaded a copy of a monitor from API Functional Monitoring online, edited it as a test suite, deleted the file exchange.json that was included in the downloaded ZIP file, and now want to upload the copy as a new monitor.
 +
 You can also create duplicate a monitor by downloading a copy of it, deleting the exchange.json file, and uploading the copy (now considered a test suite) as a new monitor.
 +
@@ -30,7 +30,7 @@ image::afm-download-delete-upload.png[The steps involved in uploading for this r
 
 == Uploading a Test Suite That You Wrote Outside of API Functional Monitoring
 
-You can upload a test suite a monitor if you wrote the test suite (using Behavior Driven Development (BDD), the syntax for writing blackbox-automated-testing (BAT) tests for processing in DataWeave). When you upload it into API Functional Monitoring (AFM) online in Anypoint Platform, it becomes a new monitor.
+You can upload a test suite a monitor if you wrote the test suite using Behavior Driven Development (BDD), the syntax for writing blackbox-automated-testing (BAT) tests for processing in DataWeave. When you upload the test suite into API Functional Monitoring online in Anypoint Platform, it becomes a new monitor.
 
 .The process involved in uploading a test suite results in a new monitor.
 image::afm-upload-test-suite.png[The steps involved in uploading for this reason, and the result]
@@ -38,14 +38,14 @@ image::afm-upload-test-suite.png[The steps involved in uploading for this reason
 
 == Before You Begin
 
-* Ensure that your user ID has the "Anypoint Monitoring User" permission.
+* Ensure that your user ID has the Anypoint Monitoring User permission.
 +
 An administrator for your organization can grant you this permission in Anypoint Access Management.
-* Figure out the frequency at which you would like the monitor to test the endpoints.
+* Decide on the frequency at which you would like the monitor to test the endpoints.
 +
-The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
-** Set an hourly schedule to start at a certain number of minutes after the hour begins.
-** Set a daily, weekly, or monthly schedule to start at a certain time of day.
+The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another, more detailed monitor later for the same test suite, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
+** An hourly schedule to start at a certain number of minutes after the hour begins
+** A daily, weekly, or monthly schedule to start at a certain time of day
 * Decide whether you would like the request messages to include additional header information.
 * Obtain one of the following pieces of information, if you would like to send results of failed tests to one of these reporting tools:
 +
@@ -53,7 +53,7 @@ The shortest interval is every fifteen minutes. You can also choose to run the m
 |Reporting Tool |Required Information
 
 |NewRelic
-|License Key
+|License key
 
 |PagerDuty
 |RoutingKey

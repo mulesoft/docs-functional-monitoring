@@ -8,11 +8,11 @@ API Functional Monitoring supports these HTTP Request headers:
 * A-IM
 * Accept
 * Accept-Charset
-* Accept-Encoding
-* Accept-Language
-* Accept-Datetime
 * Access-Control-Request-Method
 * Access-Control-Request-Headers
+* Accept-Datetime
+* Accept-Encoding
+* Accept-Language
 * Authorization
 * Cache-Control
 * Connection
@@ -20,6 +20,7 @@ API Functional Monitoring supports these HTTP Request headers:
 * Content-Type
 * Cookie
 * Date
+* DNT
 * Expect
 * Forwarded
 * Host
@@ -39,6 +40,5 @@ API Functional Monitoring supports these HTTP Request headers:
 * Upgrade
 * Via
 * Warning
-* DNT
-* X-Requested-With
 * X-CSRF-Token
+* X-Requested-With

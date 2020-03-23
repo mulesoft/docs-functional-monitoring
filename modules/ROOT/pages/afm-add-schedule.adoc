@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can add schedules to a monitor on more than one schedule if you need to each schedule to run the monitor from a different location, or if you uploaded a monitor that includes multiple configuration files and you want each schedule to use a different configuration.
+You can add schedules to a monitor if you need each schedule to run the monitor from a different location, or if you uploaded a monitor that includes multiple configuration files and you want each schedule to use a different configuration.
 
 You can add a schedule to an existing monitor if either of the following two conditions is true:
 
@@ -18,9 +18,9 @@ You can add a schedule to an existing monitor if either of the following two con
 . In the list of monitors, select the monitor to which you want to add a schedule.
 . On the details page for the monitor, follow one of these steps:
 +
-*  If at least one schedule already exists, click the three dots in the entry for a schedule and then select *Add Schedule*.
+*  If at least one schedule exists, click the three dots in the entry for a schedule and then select *Add Schedule*.
 +
-* If no schedule yet exists, click *Add Schedule*.
+* If no schedule exists, click *Add Schedule*.
 . In the *Add Schedule* dialog, specify this information:
 +
 * The location to run the test from
@@ -33,4 +33,4 @@ You can add a schedule to an existing monitor if either of the following two con
 
 * The section "The `config` Folder" in * xref:bat-example-test-suite.adoc[Example of a Test Suite]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
-* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Public and Private APIs]

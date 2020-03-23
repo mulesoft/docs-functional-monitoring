@@ -31,4 +31,4 @@ Changes take place after the current interval elapses. For example, if you chang
 == See Also
 
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
-* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Public and Private APIs]

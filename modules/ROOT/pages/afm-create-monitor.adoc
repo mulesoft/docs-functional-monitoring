@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test to run at intervals that you specify.
+You can create a monitor by completing fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test to run at intervals that you specify.
 
 After every interval, you can view the results of the test and statistics about API performance.
 
@@ -12,8 +12,8 @@ After every interval, you can view the results of the test and statistics about 
 
 * Determine whether you want to monitor the endpoints in one or more public APIs, one or more private APIs, or a mix of both public APIs and private APIs.
 +
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs].
-* Ensure that your user ID has the "Anypoint Monitoring User" permission.
+For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Public and Private APIs].
+* Ensure that your user ID has the Anypoint Monitoring User permission.
 +
 An administrator for your organization can grant you this permission in Anypoint Access Management.
 * Determine which endpoints you want to test and the REST methods that you want to test them with.
@@ -50,7 +50,7 @@ The shortest interval is every fifteen minutes. You can also choose to run the m
 To create a monitor:
 
 . In the *Functional Monitoring* section of Anypoint Monitoring, click *Create Monitor* in the top-right corner of your browser window.
-. In the *Monitor Setup* section, specify the name of the monitor, the location from which to run the test, how often to run the test, and whether to validate SSL certificates.
+. In the *Monitor Setup* section, follow these steps:
 .. Specify a name for the monitor.
 .. Select the location from which to run the test.
 +
@@ -86,7 +86,9 @@ If you do not want to split a long-running test, download the monitor and run it
 After the test is complete, two things happen:
 
 * The countdown of the interval begins again.
-* After the test runs for the first time, a summary of the results appears under *Endpoint* in the list entry for the monitor. The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
+* After the test runs for the first time, a summary of the results appears under *Endpoint* in the list entry for the monitor.
++
+The summary is something similar to "1 Failed" or "1 Failed/3 Passed", with the sum of the numbers in the summary indicating the number of endpoints in the test. Click the list entry for the monitor to view the details of the test results.
 
 
 == See Also

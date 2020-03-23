@@ -23,10 +23,10 @@ When you expand an entry, you can see the response and the request, as well as t
 . On the page that is opened, click the three dots next to the name of the monitor and select *View Test History*.
 . On the *Test History* page, click the list entry for the test execution that you want to see the details of.
 +
-You can identify a test execution the following details in the list entries:
+You can identify a test execution by using the following details in the list entries:
 +
 * Its sequential number
-* Its result: Passed or Failed
+* Its result: *Passed* or *Failed*
 * Its duration
 * Its schedule
 * The location from which the test was executed

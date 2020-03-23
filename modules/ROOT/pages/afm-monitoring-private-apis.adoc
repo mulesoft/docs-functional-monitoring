@@ -5,9 +5,9 @@ endif::[]
 :page-aliases: afm-delete-private-location.adoc
 :imagesdir: ../assets/images
 
-Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
+Private APIs are APIs with endpoints that are accessible only within your network. API Functional Monitoring lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC). With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared.
 
-A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint VPC. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC. You can run tests against a private API only from a private location. However, you can run tests against a public API either from a private location or a public location.
+A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint VPC. API Functional Monitoring can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC. You can run tests against a private API only from a private location. However, you can run tests against a public API either from a private location or a public location.
 
 The tests in monitors are run on schedules. For a private location to run according to a schedule, a schedule must be associated with it. A private location can be associated with more than one schedule for more than one monitor.
 
@@ -16,7 +16,7 @@ The tests in monitors are run on schedules. For a private location to run accord
 All incoming HTTP traffic must be allowed into the environment where a private location is running. If incoming HTTP traffic is blocked, requests sent by a schedule cannot reach the private location, and the location does not run tests.
 ====
 
-Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
+Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, API Functional Monitoring allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
 The following diagrams depict examples of configurations that are supported for monitors, private locations, APIs, and environments.
 
@@ -24,7 +24,7 @@ The following diagrams depict examples of configurations that are supported for 
 +
 image::afm-monitor-private-1.png[]
 +
-A monitor runs on a single schedule. The schedule is associated with a private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs. The private location and the APIs are all in a single environment.
+A monitor runs on a single schedule that is associated with a private location. The monitor is written to test one or more endpoints in private API 1 and in private API 2, though it could also test endpoints in a larger number of private APIs. The private location and the APIs are all in a single environment.
 
 * Second example configuration
 +
@@ -48,7 +48,7 @@ A monitor runs on two separate schedules, and each is associated with a differen
 +
 image::afm-monitor-private-5.png[]
 +
-A monitor runs on one schedule, though it could run on more than one. The schedule is associated with a private location. The monitor is written to test one or more endpoints in public API, which is available on the world-wide web, 1 and in private API 2, though it could also test endpoints in a larger number of APIs.
+A monitor runs on one schedule, though it could run on more than one. The schedule is associated with a private location. The monitor is written to test one or more endpoints in public API 1, which is available on the world-wide web, and in private API 2, though it could also test endpoints in a larger number of APIs.
 
 * Sixth example configuration
 +
@@ -59,7 +59,7 @@ You can run more than one monitor from a single private location. However, all o
 
 == Length of Time Before Tests Time Out
 
-Because tests are run in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Anypoint Runtime Manager. To do so, follow these steps:
+Because tests are run in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, API Functional Monitoring allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Anypoint Runtime Manager. To do so, follow these steps:
 
 . Go to Anypoint Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
