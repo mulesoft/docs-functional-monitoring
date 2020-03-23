@@ -5,7 +5,7 @@ endif::[]
 :page-aliases: afm-public-versus-private.adoc
 :imagesdir: ../assets/images
 
-Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations or private locations. A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`. For information about private locations, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring , tests of such endpoints are run by workers that themselves run in public locations or private locations. A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`. For information about private locations, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 
 The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
 
@@ -49,15 +49,15 @@ You can run more than one monitor from a single public location. In this diagram
 
 == Length of Time Before Tests Time Out
 
-To prevent tests run in public locations from consuming too many resources, AFM prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
+To prevent tests run in public locations from consuming too many resources, API Functional Monitoring prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
 
 == Scheduling Tests
 
-Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets limitations on the following aspects of scheduling:
+Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, API Functional Monitoring sets limitations on the following aspects of scheduling:
 
 Number of Schedules::
 +
-By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft administrator about raising your maximum.
+By default, API Functional Monitoring lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft administrator about raising your maximum.
 +
 You can also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations.
 +

@@ -6,19 +6,23 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-API Functional Monitoring (AFM) enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. AFM enables the monitoring of the functional behavior and performance of APIs in testing and production environments.
+API Functional Monitoring  enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. API Functional Monitoring enables the monitoring of the functional behavior and performance of APIs in testing and production environments.
 
-AFM divides APIs into two broad categories:
+API Functional Monitoring divides APIs into two broad categories:
 
-* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet. For example, APIs that handle login requests for logging into banking websites are public APIs. Anyone with a browser and internet access can visit a login page and attempt to log in.
+* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
++
+For example, APIs that handle login requests for logging into banking websites are public APIs. Anyone with a browser and internet access can visit a login page and attempt to log in.
 
-* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people or applications that are in your private network. For example, when someone tries to log into a banking website, a request might be sent to an internal database to verify that person's credentials. The API for handling the request to the database would be considered a private API because it is within your private, secure network.
+* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people or applications that are in your private network.
++
+For example, when someone tries to log into a banking website, a request might be sent to an internal database to verify that person's credentials. The API for handling the request to the database would be considered a private API because it is within your private, secure network.
 
 == Fundamentals of Monitors
 
 For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which is a named entity that consists of one test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
 
-For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails. You also get a summary of the test results whether or not a test execution fails, and can look up the results of past executions of the test.
+For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails. Online in API Functional Monitoring, you can view a summary of the test results whether or not a test execution fails, and can look up the results of past executions of the test.
 
 Scenarios that are more complicated are also possible. A test can run against multiple endpoints, making requests with any HTTP methods.
 
@@ -28,7 +32,7 @@ Each monitor includes one test. A test consists of:
 
 * One or more combinations of HTTP methods and endpoints
 +
-For example, in a single test, you might send a request to the endpoint `\https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `\https://deckofcardsapi.com/api/deck/<deck_ID>/shuffle/` also by using the GET method.
+For example, in a single test, you might send a request to the endpoint `\https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `\https://deckofcardsapi.com/api/deck/<deck_ID>/shuffle/`, also by using the GET method.
 +
 In a single test, you can send requests to the endpoints in public APIs, private APIs, or a mix of both.
 +
@@ -40,7 +44,7 @@ By default, the assertion for a test is "Status code must equal 200". However, y
 
 * Optional HTTP request headers
 +
-By default, no headers are included in requests sent to endpoints. However, you can include any of the headers that AFM supports.
+By default, no headers are included in requests sent to endpoints. However, you can include any of the headers that API Functional Monitoring supports.
 
 Tests are executed from either public locations or private locations.
 
@@ -62,7 +66,7 @@ When you create a schedule, you specify the location from which you want the tes
 
 === Fundamentals of Reports
 
-When you create a monitor, you can specify that you want to be notified of test failures by means of any of a number of reporting systems. For each reporting system that you want AFM to integrate with, you must provide a piece of information.
+When you create a monitor, you can specify that you want to be notified of test failures by means of any of several reporting systems. For each reporting system that you want API Functional Monitoring to integrate with, you must provide a piece of information.
 
 [%header,cols=3*]
 |===
@@ -72,23 +76,23 @@ When you create a monitor, you can specify that you want to be notified of test 
 
 |Email
 |One or more email addresses, separated by semicolons
-|For each test failure, AFM emails a report that includes the name of the monitor in which the test failure occurred and a link to the test results in Anypoint Platform.
+|For each test failure, API Functional Monitoring emails a report that includes the name of the monitor in which the test failure occurred and a link to the test results in Anypoint Platform.
 
 |New Relic
 |License Key for New Relic
-|For each test failure, AFM sends a report that includes full test results. You can view the report in the *Plugins* > *BAT plugin* section in New Relic.
+|For each test failure, API Functional Monitoring sends a report that includes full test results. You can view the report in the *Plugins* > *BAT plugin* section in New Relic.
 
 |PagerDuty
 |Routing Key
-|A test failure can generate an incident when a test fails and trigger configured PagerDuty alerts. However, if a test continues to fail with the same error, AFM does not generate a new issue, but instead ignores these additional failures.
+|A test failure can generate an incident when a test fails and trigger configured PagerDuty alerts. However, if a test continues to fail with the same error, API Functional Monitoring ignores the additional failures.
 
 |Slack
 |URL for the webhook to use
-|For each test failure, AFM sends a notification to the Slack channel at the specified webhook URL. Each notification provides the name of the monitor in which the test failue occurs.
+|For each test failure, API Functional Monitoring sends a notification to the Slack channel at the specified webhook URL. Each notification provides the name of the monitor in which the test failue occurs.
 
 |Sumo Logic
 |URL for the endpoint to use
-|For each test failure, AFM sends a post to SUMO that contains the full test results.
+|For each test failure, API Functional Monitoring sends a post to SUMO that contains the full test results.
 |===
 
 You can create secrets for these requirements in Secrets Manager and use those secrets in place of each piece of required information.
@@ -101,7 +105,9 @@ There are two ways that you can perform functional testing:
 * Write tests manually and then schedule them with the Blackbox Automated Testing (BAT) CLI.
 +
 Test cases are all defined with a common, declarative, and easy-to-use behavior-description syntax. The syntax is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
-* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring in Anypoint Platform. You can upload as monitors any testing projects that you wrote manually.
+* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring in Anypoint Platform.
++
+You can upload as monitors any testing projects that you wrote manually.
 
 == See also
 

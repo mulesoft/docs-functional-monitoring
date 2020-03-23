@@ -13,7 +13,7 @@ You might want to delete a schedule for any of the following reasons:
 
 [IMPORTANT]
 ====
-Be sure that you want to delete a schedule. AFM does not give you a chance to confirm that you want to delete it.
+Be sure that you want to delete a schedule. API Functional Monitoring does not give you a chance to confirm that you want to delete it.
 ====
 
 == Procedure
