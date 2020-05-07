@@ -45,4 +45,4 @@ The countdown to the first run of the selected test version begins.
 
 == See Also
 
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs
+* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
