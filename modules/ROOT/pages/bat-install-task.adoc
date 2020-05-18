@@ -5,9 +5,27 @@ endif::[]
 
 The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
 
-== Prerequisite
+== Prerequisite for Linux and MacOS Systems
 
 Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed on your system.
+
+== Prerequisites for Windows 10 Systems
+
+. Install Windows Subsystem Linux (WSL)
++
+The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win10.
+. Install Java 8, cURL, and unzip installed in the Linux distribution that you installed in your WSL.
+. Add the `bat` executable to your `PATH` environment variable.
+.. Open the `~/.bashrc` file (if you are using `bash`) or the `~/.zshrc` file (if you are using `zsh`) for editing. For example, to use the `vi` editor, enter this command:
++
+`vi ~/.bashrc`
++
+or
++
+`vi ~/.zshrc`
+.. Add the following line to the end of the file and then save the file:
++
+`export PATH=$PATH:~/.bat/bat/bin`
 
 == Procedure
 
