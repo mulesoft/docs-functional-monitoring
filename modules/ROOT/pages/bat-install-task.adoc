@@ -14,7 +14,7 @@ Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed
 . Install Windows Subsystem Linux (WSL)
 +
 The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win10.
-. Install Java 8, cURL, and unzip installed in the Linux distribution that you installed in your WSL.
+. Install Java 8 and cURL in the Linux distribution that you installed in your WSL.
 . Add the `bat` executable to your `PATH` environment variable.
 .. Open the `~/.bashrc` file (if you are using `bash`) or the `~/.zshrc` file (if you are using `zsh`) for editing. For example, to use the `vi` editor, enter this command:
 +
