@@ -50,10 +50,12 @@ d. In your `bat.yaml` file, add New Relic as a reporter by adding these indented
    outFile: filename.json
    options:
      NEW_RELIC_LICENSE_KEY: <alias_of_the_shared_secret>
+     DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
 filename.json:: Specify a name for the output file to create.
 alias_of_the_shared_secret:: Specify the alias that you used for the secret for the license key when you ran the `bat grant` command. The alias must be between carets.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 . If you do not want to keep your license key secret, in your `bat.yaml` file add New Relic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
@@ -61,11 +63,14 @@ alias_of_the_shared_secret:: Specify the alias that you used for the secret for 
  - type: NewRelic
    outFile: filename.json
    options:
-     NEW_RELIC_LICENSE_KEY: "license_key"
+    NEW_RELIC_LICENSE_KEY: "license_key"
+    DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
 filename.json:: Specify a name for the output file to create.
 license_key:: Specify the license key.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
+
 
 === What to Do Next
 
@@ -108,11 +113,13 @@ d. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented
  - type: PagerDuty
    outFile: filename.json
    options:
-     PAGER_DUTY_ROUTING_KEY: <alias_of_the_shared_secret>
+    PAGER_DUTY_ROUTING_KEY: <alias_of_the_shared_secret>
+    DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
 filename.json:: Specify a name for the output file to create.
 alias_of_the_shared_secret:: Specify the alias that you used for the secret for the routing key when you ran the `bat grant` command. The alias must be between carets.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 . If you do not want to keep your routing key secret, in your `bat.yaml` file add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
@@ -120,11 +127,14 @@ alias_of_the_shared_secret:: Specify the alias that you used for the secret for 
  - type: PagerDuty
    outFile: filename.json
    options:
-     PAGER_DUTY_ROUTING_KEY: "service_key"
+    PAGER_DUTY_ROUTING_KEY: "service_key"
+    DISABLED_FOR_CONFIGS: dev,qa
+
 ----
 +
 filename.json:: Specify a name for the output file to create.
 service_key:: Specify the routing key.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 === What to Do Next
 
@@ -175,10 +185,16 @@ e. In your `bat.yaml` file, add Slack as a reporter by adding these indented lin
     outFile: filename.json
     options:
       SLACK_WEBHOOK: <alias_of_the_shared_secret>
+      SEND_NOTIFICATION_IF_PASSED: true
+      AT_HERE_ENABLED: true
+      DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
 filename.json:: Specify a name for the output file to create.
 alias_of_the_shared_secret:: Specify the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets.
+SEND_NOTIFICATION_IF_PASSED:: Setting this option to `true` causes a notification to be sent if a test passes.
+AT_HERE_ENABLED:: Setting this option to `true` adds `@here` to a notification if a test fails.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 . If you do not want to keep your webhook URL secret, add Slack as a reporter in your `bat.yaml` file by adding these lines to the `reporter` section:
 +
 [source,yaml]
@@ -187,10 +203,16 @@ alias_of_the_shared_secret:: Specify the alias that you used for the secret for 
     outFile: filename.json
     options:
       SLACK_WEBHOOK: "webhook_URL"
+      SEND_NOTIFICATION_IF_PASSED: true
+      AT_HERE_ENABLED: true
+      DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
 filename.json:: Specify a name for the output file to create.
 webhook_URL:: Specify the URL of the webhook.
+SEND_NOTIFICATION_IF_PASSED:: Setting this option to `true` causes a notification to be sent if a test passes.
+AT_HERE_ENABLED:: Setting this option to `true` adds `@here` to a notification if a test fails.
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 
 == Sumo Logic
@@ -232,11 +254,13 @@ d. In your `bat.yaml` file, add Sumo Logic as a reporter by adding these indente
     outfile: filename.json
     options:
       SUMO_ENDPOINT: <alias_of_the_shared_secret>
+      DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
 filename.json:: Specify a name for the output file to create.
 alias_of_the_shared_secret:: Specify the alias that you used for the secret for the endpoint URL when you ran the `bat grant` command. The alias must be between carets.
 . If you do not want to keep your endpoint URL secret, add these lines to the `reporters` section in your `bat.yaml` file:
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 +
 [source,yaml]
 ----
@@ -244,11 +268,12 @@ alias_of_the_shared_secret:: Specify the alias that you used for the secret for 
     outfile: filename.json
     options:
       SUMO_ENDPOINT: endpoint-URL
+      DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
 filename.json:: Specify a name for the output file to create.
 endpoint-URL:: The URL of the endpoint for the collection.
-
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 == Email
 
 To email test reports that indicate failures, specify any email addresses that you want to send reports to. Each report includes the name of the suite in which the error occurs and a list of the statements.
@@ -283,12 +308,15 @@ d. In your `bat.yaml` file, add `Email` as a reporter by adding these indented l
   - type: Email
     options:
       EMAILS: <alias_of_the_shared_secret>
+      DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 alias_of_the_shared_secret:: Specify the alias that you used for the secret for the email address when you ran the `bat grant` command. The alias must be between carets.
 +
 If you want to add aliases for additional email addresses, put each alias between carets and separate the aliases with semicolons:
 +
+
 [source,yaml]
 ----
 EMAILS: <alias_1>;<alias_2>;<alias_3>
@@ -300,6 +328,7 @@ EMAILS: <alias_1>;<alias_2>;<alias_3>
   - type: Email
     options:
       EMAILS: email_address
+      DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
 email_address:: Specify the email address to send notifications to. If you want to use more than one email address, separate them with semicolons:
@@ -308,6 +337,7 @@ email_address:: Specify the email address to send notifications to. If you want 
 -----
 EMAILS: email_address1;email_address2;email_address3
 -----
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 
 
@@ -324,7 +354,9 @@ reporters:
     options:
       URL: "http://www.httpbin.org/post"
       HEADERS: "'Authorization':'Bearer token','Content-Type':'application/json'"
+      DISABLED_FOR_CONFIGS: dev,qa
 ----
+DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 == Local Reports
 
