@@ -191,7 +191,7 @@ e. In your `bat.yaml` file, add Slack as a reporter by adding these indented lin
 ----
 +
 filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets.
+alias_of_the_shared_secret:: Specify the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. `The alias must be between carets.`
 SEND_NOTIFICATION_IF_PASSED:: Setting this option to `true` causes a notification to be sent if a test passes.
 AT_HERE_ENABLED:: Setting this option to `true` adds `@here` to a notification if a test fails.
 DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
