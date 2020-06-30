@@ -241,7 +241,7 @@ describe `User trades stocks` in [
       POST `http://broker/sell_stocks` with {
         body: {
           quantity: 20,
-          paper: 'APPL'
+          paper: 'MSFT'
         }
       } assert [
         $.response.status == 201
