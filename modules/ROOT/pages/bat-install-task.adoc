@@ -27,10 +27,17 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 
 == Procedure
 
+=== Linux 
+
 . Run the following command to install the BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
 . Run the command `bat -version` to verify that the BAT CLI is installed.
+
+
+=== Windows
+
+Download and unzip from https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip
 
 == What To Do Next
 
