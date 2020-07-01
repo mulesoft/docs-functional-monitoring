@@ -21,7 +21,7 @@
  ** xref:bat-example-test-suite.adoc[Example of a Test Suite]
  ** xref:bat-start-new-project.adoc[Start a New Test Suite]
  ** xref:bat-write-tests-task.adoc[Get Started Writing Tests]
- ** xref:bat-bdd-reference.adoc[BDD Test Writing Language Reference]
+ ** xref:bat-bdd-reference.adoc[BDD Test Writing Syntax Reference]
  ** xref:bat-execute-task.adoc[Run a Test Suite]
  ** xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
  ** xref:bat-schedule-for-particular-location.adoc[Create a Monitor That Uses a Particular Location]
