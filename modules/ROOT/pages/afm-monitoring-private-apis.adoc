@@ -15,11 +15,11 @@ With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and is
 
 [NOTE]
 ====
-You can also test public APIs by using private locations. Public APIs are APIs with endpoints that are exposed to the open internet.
+You can also test public APIs by using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
 
 Also, you can test private APIs from public locations if you whitelist the IP addresses of those locations. You might want to test a private API from a public location if you do not want to use vCores on testing private APIs or if you have no vCores available.
 
-In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private Cloud. The type must be *https.port*, the source must be *Custom*, and the port range 8081. For the source, use an IP address from this list:
+In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private Cloud (Anypoint VPC). The type must be *https.port*, the source must be *Custom*, and the port range 8081. For the source, use an IP address from this list:
 
 [%header,cols=2*]
 |===
@@ -91,5 +91,3 @@ When tests are run by private locations in an instance of Anypoint VPC, the work
 . Go to Anypoint Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
 . In the *executionTimeout* field, specify a longer timeout in milliseconds.
-
-== Scheduling Tests
