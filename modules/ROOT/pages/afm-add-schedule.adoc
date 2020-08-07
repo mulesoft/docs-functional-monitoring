@@ -5,44 +5,32 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+You can add schedules to a monitor if you need each schedule to run the monitor from a different location, or if you uploaded a monitor that includes multiple configuration files and you want each schedule to use a different configuration.
+
 You can add a schedule to an existing monitor if either of the following two conditions is true:
 
-* You plan to run the test associated with the schedule in a public location and the allocation of schedules for your organization in Anypoint Platform is not exhausted.
-* You plan to run the test associated with the schedule in a private location.
+* You plan to run the monitor's test from a public location and the allocation of schedules for your organization in Anypoint Platform is not exhausted.
+* You plan to run the monitor's test from a private location.
 
-When you add a schedule to a monitor, you can use the schedule to run any of the versions of the test for that monitor.
 
 == Procedure
 
-There are two different methods that you can use to add a schedule.
-
-To add a schedule from the *Schedules* section of a monitor:
-
-. Select the monitor in which you want to add a schedule.
-. Click the *Schedules* tab.
-. Click *Add Schedule*.
-. In the Add Schedule dialog, specify this information:
+. In the list of monitors, select the monitor to which you want to add a schedule.
+. On the details page for the monitor, follow one of these steps:
 +
-* The test version that you want the schedule to run
+*  If at least one schedule exists, click the three dots in the entry for a schedule and then select *Add Schedule*.
++
+* If no schedule exists, click *Add Schedule*.
+. In the *Add Schedule* dialog, specify this information:
++
 * The location to run the test from
 * The frequency at which to run the test
-. Click *Add*.
+. Click *Add Schedule*.
 
-To add a schedule from the list of schedules that use a particular location:
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
-. Select the location that you want to use in a new schedule.
-. Click *Add Schedule* under the list of schedules to the right of the list of locations.
-. In the Add Schedule dialog, specify this information:
-+
-* The name of the monitor to apply the schedule to
-* The test version that you want the schedule to run
-* The frequency at which to run the test
-. Click *Add*.
-
-== Result
-The countdown to the first run of the selected test version begins.
 
 == See Also
 
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
+* The section "The `config` Folder" in * xref:bat-example-test-suite.adoc[Example of a Test Suite]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Public and Private APIs]

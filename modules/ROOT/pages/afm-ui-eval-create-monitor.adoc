@@ -1,0 +1,68 @@
+= Create a Monitor When Evaluating API Functional Monitoring
+
+When you are evaluating API Functional Monitoring, you can create a monitor that tests one or more endpoints that are in one or more public APIs. You can run up to five such monitors concurrently.
+
+For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs].
+
+[IMPORTANT]
+====
+Tests fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. Download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
+
+If you do not want to split a long-running test, download the monitor and run it from the BAT CLI.
+====
+
+== Before You Begin
+
+* Ensure that your user ID has the Anypoint Monitoring User permission.
++
+An administrator for your organization can use Anypoint Access Management to grant you this permission.
+* Determine the endpoints that you want to test, the HTTP methods to test them with, the expected status codes, and any assertions that you would like to include in the tests.
+* Decide the frequency at which you would like the monitor to test the endpoints.
++
+The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
+** An hourly schedule to start at a certain number of minutes after the hour begins
+** A daily, weekly, or monthly schedule to start at a certain time of day
+* Decide whether you would like the request messages to include additional header information.
+* If you would like to send reports to one or more of these reporting tools, obtain the information that is required by the reporting tools:
++
+|===
+|Reporting Tool |Required Information
+
+|NewRelic
+|License key
+
+|PagerDuty
+|RoutingKey
+
+|Slack
+|Webhook
+
+|SumoLogic
+|Endpoint
+
+|Email
+|Email address
+|===
+
+== Procedure
+To create a monitor:
+
+. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create*.
+. Name the monitor.
+. Select a public location from which to run the tests of the endpoint or endpoints that you want to monitor.
+. Select a schedule to run the monitor according to.
++
+You can change this schedule after you create the monitor.
+. Toggle the *SSL Certificate Validation* switch on or off.
++
+* If the toggle is on, all endpoints that use SSL certificates must have certificates that are signed by a trusted authority.
+* If the toggle is off, all endpoints that use SSL certificates must be self-signed.
+. Click *Next*.
+. Specify the endpoints that you want to test, the HTTP methods to test them with, the expected status codes, and any assertions that you would like to include in the tests.
+. Click *Next*.
+. If you want to be notified of failed tests, select the application that you have configured to send them and provide the information that API Functional Monitoring requires for integration with the application.
+. Click *Create Monitor*.
+
+== Result
+
+The list of monitors is displayed. Your new monitor appears at the top of the list and is running.

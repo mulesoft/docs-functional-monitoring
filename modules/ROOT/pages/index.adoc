@@ -2,29 +2,117 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: afm-delete-test.adoc, afm-edit-test.adoc, afm-create-private-location.adoc
 
-API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are APIs deployed are accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+:imagesdir: ../assets/images
 
-The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
+API Functional Monitoring  enables developers and administrators to assure the quality and reliability of APIs that are being used in application networks. API Functional Monitoring enables the monitoring of the functional behavior and performance of APIs in testing and production environments.
 
-The solution helps you carry out the following tasks:
+API Functional Monitoring divides APIs into two broad categories:
 
-* *White-box testing:* This type of testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
-* *Black-box testing:* This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
-* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
+* _Public_ APIs are APIs deployed are accessible by anyone who is connected to the internet.
++
+For example, APIs that handle login requests for logging into banking websites are public APIs. Anyone with a browser and internet access can visit a login page and attempt to log in.
 
-A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
+* _Private_ APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people or applications that are in your private network.
++
+For example, when someone tries to log into a banking website, a request might be sent to an internal database to verify that person's credentials. The API for handling the request to the database would be considered a private API because it is within your private, secure network.
 
-You can get reports on the results of monitor executions. You can also set up integration with into a number of monitoring and issue-tracking systems.
+== Fundamentals of Monitors
+
+For each API or set of interdependent APIs that you want to monitor, you create a _monitor_, which is a named entity that consists of one test, one or more schedules that run the test at intervals, and information for connecting to any third-party applications that you set up to notify you of test failures.
+
+For example, you can create a monitor that runs a test twice daily to check whether an API that handles requests to a database is returning the correct data within the expected response time. The test can use the HTTP GET method to send a request to the endpoint at which the API is awaiting such requests. You can set two schedules: one to run the test at 9 in the morning, and another to run the test at 3 in the afternoon. You can also set the monitor to notify you via an email message, a Slack post, or another method through one of the supported third-party notification tools, when a test execution fails. Online in API Functional Monitoring, you can view a summary of the test results whether or not a test execution fails, and can look up the results of past executions of the test.
+
+Scenarios that are more complicated are also possible. A test can run against multiple endpoints, making requests with any HTTP methods.
+
+=== Fundamentals of Tests
+
+Each monitor includes one test. A test consists of:
+
+* One or more combinations of HTTP methods and endpoints
++
+For example, in a single test, you might send a request to the endpoint `\https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1` by using the HTTP method GET and a request to the endpoint `\https://deckofcardsapi.com/api/deck/<deck_ID>/shuffle/`, also by using the GET method.
++
+In a single test, you can send requests to the endpoints in public APIs, private APIs, or a mix of both.
++
+You can create dependencies between tests of endpoints. For example, if in your application network a request to endpoint B must be preceded by a successful request to endpoint A, you can write a test that sends a request to endpoint B only if the request to endpoint A is successful.
+
+* One or more assertions
++
+By default, the assertion for a test is "Status code must equal 200". However, you can change that assertion and add more. For example, you might add the assertion "Response header Cache-Control must equal `max-age=604800`".
+
+* Optional HTTP request headers
++
+By default, no headers are included in requests sent to endpoints. However, you can include any of the headers that API Functional Monitoring supports.
+
+Tests are executed from either public locations or private locations.
+
+* A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers.
++
+Public locations can run only tests of public APIs.
+
+* A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint Virtual Private Cloud.
++
+Private locations can run tests of public APIs, private APIs, or mixes of both.
+
+=== Fundamentals of Schedules
+
+A schedule initiates a worker, at intervals that you specify, to run the test for a monitor from a particular location, whether the location is public or private. Each schedule is associated with one test.
+
+You can set the intervals for a schedule to every fifteen minutes, every hour, every day, every week, or every month. You can even set intervals by using `cron` expressions.
+
+When you create a schedule, you specify the location from which you want the test to run every time an interval expires.
+
+=== Fundamentals of Reports
+
+When you create a monitor, you can specify that you want to be notified of test failures by means of any of several reporting systems. For each reporting system that you want API Functional Monitoring to integrate with, you must provide a piece of information.
+
+[%header,cols=3*]
+|===
+|Reporting System
+|Required Information
+|What Reports Include
+
+|Email
+|One or more email addresses, separated by semicolons
+|For each test failure, API Functional Monitoring emails a report that includes the name of the monitor in which the test failure occurred and a link to the test results in Anypoint Platform.
+
+|New Relic
+|License Key for New Relic
+|For each test failure, API Functional Monitoring sends a report that includes full test results. You can view the report in the *Plugins* > *BAT plugin* section in New Relic.
+
+|PagerDuty
+|Routing Key
+|A test failure can generate an incident when a test fails and trigger configured PagerDuty alerts. However, if a test continues to fail with the same error, API Functional Monitoring ignores the additional failures.
+
+|Slack
+|URL for the webhook to use
+|For each test failure, API Functional Monitoring sends a notification to the Slack channel at the specified webhook URL. Each notification provides the name of the monitor in which the test failue occurs.
+
+|Sumo Logic
+|URL for the endpoint to use
+|For each test failure, API Functional Monitoring sends a post to SUMO that contains the full test results.
+|===
+
+You can create secrets for these requirements in Secrets Manager and use those secrets in place of each piece of required information.
+
+
+== Two Different Tools for Creating Monitors and Running Their Tests
 
 There are two ways that you can perform functional testing:
 
 * Write tests manually and then schedule them with the Blackbox Automated Testing (BAT) CLI.
 +
-Test cases are all defined with a common, declarative, and easy-to-use behavior-description language. The language is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
-* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring. You can upload as monitors any testing projects that you wrote manually.
+Test cases are all defined with a common, declarative, and easy-to-use behavior-description syntax. The syntax is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
+* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring in Anypoint Platform.
++
+You can upload as monitors any testing projects that you wrote manually.
 
 == See also
 
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs and Mixes of Both Public and Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
+* xref:afm-supported-http-request-headers.adoc[Supported HTTP Request Headers]
