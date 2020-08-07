@@ -127,7 +127,7 @@ secret-ID:: The ID of the secret within Anypoint Secrets Manager. This ID does n
 import * from bat::BDD
 import * from bat::Assertions
 
-var mySecret = String = secret(secretAlias='myAlias') default 'notFound'
+var mySecret: String = secret('myAlias') default 'notFound'
 
 ---
 suite(parts="Simple Suite") in [
@@ -140,9 +140,9 @@ suite(parts="Simple Suite") in [
 ----
 +
 `mySecret`:: The variable in which the secret is stored in this example. The variable is declared as a String.
-`secret(secretAlias='myAlias')`:: The `secret()` function requires the input `secretAlias='name-of-alias')`, where `name-of-alias` is the alias of the shared secret that you want to use.
+`secret('myAlias')`:: The `secret()` function requires the input `'name-of-alias'`, where `name-of-alias` is the alias of the shared secret that you want to use.
 `default 'notFound'`:: The message to show if a shared secret with the specified alias does not exist in Anypoint Secrets Manager.
-`$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the configuration file that was specified when the `bat` command to run the test suite was entered. 
+`$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the configuration file that was specified when the `bat` command to run the test suite was entered.
 
 For example, suppose that the configuration file was this:
 +
@@ -241,7 +241,7 @@ describe `User trades stocks` in [
       POST `http://broker/sell_stocks` with {
         body: {
           quantity: 20,
-          paper: 'APPL'
+          paper: 'MSFT'
         }
       } assert [
         $.response.status == 201
@@ -300,7 +300,7 @@ describe("User trades stocks") in [
       POST `http://broker/sell_stocks` with {
         body: {
           quantity: 20,
-          paper: 'APPL'
+          paper: 'MSFT'
         }
       } assert [
         $.response.status == 201
