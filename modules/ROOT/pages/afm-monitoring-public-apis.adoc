@@ -36,7 +36,7 @@ Monitor 5 runs on a single schedule, though it could run on two. The schedule is
 
 == Length of Time Before Tests Time Out
 
-To prevent tests run in public locations from consuming too many resources, AFM prevents tests from waiting longer than 120 seconds for a response from an endpoint. You cannot increase this wait time.
+To prevent tests run in public locations from consuming too many resources, AFM prevents tests from executing for more than 120 seconds. A test fails if this maximum length of time is reached. You cannot increase this wait time.
 
 == Scheduling Tests
 
@@ -46,7 +46,7 @@ Number of Schedules::
 +
 By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft Customer Success Manager about raising your maximum.
 
-You can also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations. 
+You can also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations.
 
 You can monitor public APIs from private locations, too, not just private APIs.
 
