@@ -30,7 +30,7 @@ Before you can run tests from a private location, you must create a private loca
 
 [IMPORTANT]
 ====
-Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:link[update your private location], you'll no longer need to allow incoming HTTP traffic.
+Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:update-private-locations[update your private location], you'll no longer need to allow incoming HTTP traffic.
 ====
 
 == Possible Test Configurations
