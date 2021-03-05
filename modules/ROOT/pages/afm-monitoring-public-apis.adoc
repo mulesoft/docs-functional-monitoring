@@ -34,6 +34,30 @@ Monitor 4 runs on two separate schedules, and each is associated with the same p
 +
 Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (though it could also test endpoints in more public APIs), both of which are accessible on the World-Wide Web.
 
+[NOTE]
+====
+You can also test private APIs from public locations if you allow the IP addresses of those locations. You can test a private API from a public location if you don't want to use vCores for testing private APIs, or if you have no vCores available.
+
+In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private Cloud (Anypoint VPC). The type must be *https.port*, the source must be *Custom*, and the port range 8081. For the source, use one of the following IP addresses:
+
+[%header,cols=2*]
+|===
+|Public Location
+|IP Address
+
+|us-east-1
+|3.82.89.58
+
+|us-east-2
+|3.128.151.139
+
+|eu-central-1
+|18.156.106.167
+|===
+
+For instructions on adding firewall rules, refer to xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC Firewall Rules]
+====
+
 == Length of Time Before Tests Time Out
 
 To prevent tests run in public locations from consuming too many resources, AFM prevents tests from executing for more than 120 seconds. A test fails if this maximum length of time is reached. You cannot increase this wait time.
@@ -42,14 +66,10 @@ To prevent tests run in public locations from consuming too many resources, AFM 
 
 Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets limitations on the following aspects of scheduling:
 
-Number of Schedules::
-+
-By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft Customer Success Manager about raising your maximum.
+* *Number of Schedules*: By default, AFM lets your organization in Anypoint Platform run up to five schedules for testing from public locations at one time. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft Customer Success Manager about raising your maximum.
+
+* *Duration of Intervals Between Executions of Tests*: Fifteen minutes is the shortest interval that you can schedule to occur between tests .
 
 You can also run monitors from private locations, if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations.
 
 You can monitor public APIs from private locations, too, not just private APIs.
-
-Duration of Intervals Between Executions of Tests::
-+
-The shortest interval that you can schedule to occur between tests is fifteen minutes.

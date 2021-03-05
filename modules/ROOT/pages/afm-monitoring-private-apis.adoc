@@ -16,27 +16,6 @@ With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and is
 [NOTE]
 ====
 You can also test public APIs by using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
-
-Also, you can test private APIs from public locations if you whitelist the IP addresses of those locations. You might want to test a private API from a public location if you do not want to use vCores on testing private APIs or if you have no vCores available.
-
-In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private Cloud (Anypoint VPC). The type must be *https.port*, the source must be *Custom*, and the port range 8081. For the source, use an IP address from this list:
-
-[%header,cols=2*]
-|===
-|Public Location
-|IP Address
-
-|us-east-1
-|3.82.89.58
-
-|us-east-2
-|3.128.151.139
-
-|eu-central-1
-|18.156.106.167
-|===
-
-For the steps of adding a rule to a firewall, see xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC Firewall Rules]
 ====
 
 == Association of Private Locations with Schedules
@@ -46,15 +25,12 @@ When you use private locations, you can run as many workers as your allotment of
 
 Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.
 
-
-
-
 == Creation of Private Locations
 Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
 [IMPORTANT]
 ====
-All incoming HTTP traffic must be allowed into the environment where a private location is running. If incoming HTTP traffic is blocked, requests sent by a schedule cannot reach the private location, and the location does not run tests.
+Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:link[update your private location], you'll no longer need to allow incoming HTTP traffic.
 ====
 
 
@@ -91,3 +67,7 @@ When tests are run by private locations in an instance of Anypoint VPC, the work
 . Go to Anypoint Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
 . In the *executionTimeout* field, specify a longer timeout in milliseconds.
+
+== Update Private Locations
+
+As updates become available, you'll receive notifications in the *Locations* tab. Follow the prompts to apply the update to all private locations.
