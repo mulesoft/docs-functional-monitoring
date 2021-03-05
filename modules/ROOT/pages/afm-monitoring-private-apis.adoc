@@ -15,7 +15,7 @@ With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and is
 
 [NOTE]
 ====
-You can also test public APIs by using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
+You can also test public APIs using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
 ====
 
 == Association of Private Locations with Schedules
@@ -32,7 +32,6 @@ Before you can run tests from a private location, you must create a private loca
 ====
 Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:link[update your private location], you'll no longer need to allow incoming HTTP traffic.
 ====
-
 
 == Possible Test Configurations
 The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
