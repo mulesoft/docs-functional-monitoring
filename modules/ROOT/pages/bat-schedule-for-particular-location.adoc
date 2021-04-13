@@ -25,7 +25,7 @@ Here is example output from this command:
 +
 ```
 organizationId: 612dbc11-a043-4b8b-b76e-7d51f84723c7
-targets:
+locations:
 -
   id: 75c403a6-8054-43ec-b611-63b9efff820d
   name: us-east-1
@@ -45,10 +45,10 @@ targets:
 . Copy to your clipboard the value of the `id` field for the location that you want to use.
 +
 For example, to use the private location in the example output, copy the value of the `id` field for the third location listed.
-. Create the schedule, using the `--target` parameter and pasting in the value of the `id` field, as in this example:
+. Create the schedule, using the `--location` parameter and pasting in the value of the `id` field, as in this example:
 +
 ```
-bat schedule create --target=b4b4db50-bcbb-4b9a-93e1-50259fd100f7
+bat schedule create --location=b4b4db50-bcbb-4b9a-93e1-50259fd100f7
 ```
 +
 [NOTE]
@@ -86,7 +86,7 @@ test: 612dbc11-a043-4b8b-b76e-7d51f84723c7:HelloWorldSuite
 version: 0.0.1
 organizationId: 612dbc11-a043-4b8b-b76e-7d51f84723c7
 config: default
-target:
+location:
   id: b4b4db50-bcbb-4b9a-93e1-50259fd100f7
   name: myLocation
   transport: MULE
