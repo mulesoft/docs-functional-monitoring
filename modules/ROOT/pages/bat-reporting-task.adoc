@@ -280,7 +280,7 @@ To email test reports that indicate failures, specify any email addresses that y
 
 [IMPORTANT]
 ====
-Reports are emailed only for tests created in API Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
+Reports are emailed only for tests created in API Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI locally. However,you can create a test with an email reporter through BAT CLI and then upload it to Anypoint Platform. You can also add the email reporter when you load the test in UI or with the option in command schedule
 ====
 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
