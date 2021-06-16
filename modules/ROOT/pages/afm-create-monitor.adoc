@@ -52,39 +52,29 @@ To create a monitor:
 
 == Result
 
-The detail view includes the following monitor actions:
+The *Monitor Detail* view includes the following actions:
 
-* Run 
-* View history
-* Edit
-* Download
-* Delete
+* Tap *Run* (image:afm-ui-run-button.png[width=1%,height=1%]) to immediately execute a monitor.
+* Tap *View Monitor History* (image:afm-ui-history-button.png[width=1.3%,height=1.3%]) to view a list of recent monitor runs.
+* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Edit Monitor* to modify a monitor.
+* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Download Monitor* to download a monitor as BAT source.
+* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Delete Monitor* to delete a monitor.
 
-Beneath the monitor name is a field showing the duration of the most recent run. A graph beneath the duration displays the average time each activity took, separated by day. Beside the graph, a list of the last five executions is displayed. 
+Additional displayed information includes:
 
-In the next line, you can see a table with the current schedules associated with the test. Finally, beneath the table, the last execution is shown.
-
-[IMPORTANT]
-====
-Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. Download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
-
-If you do not want to split a long-running test, download the monitor and run it from the BAT CLI.
-====
-
-== What to do next
-
-From Monitor Detail, you can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
-
-After the monitor runs, the last execution is shown in the inferior part of the screen here we can see listed:
-
-* Time elapsed since monitor started running
-* Whether all endpoints returned the expected codes, as indicated by *PASSED* or *FAILED* in the status line
+* The most recent test duration
+* Time elapsed since the monitor started running
+* The average response time for each activity (for example, DNS lookup), separated by day
+* The previous five test execution results, as indicated by *PASSED* or *FAILED* (depending on if the endpoints returned expected codes)
+* A table with the current test schedules
 * Each endpoint asserted with its HTTP method
-* Assertions expected from each endpoint
 
-To see statistics and other information about the monitor, the *Last Executions* table is displayed. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test only. When clicking in one of the executions, extra information is shown.
+[NOTE]
+====
+Tests silently fail when they run more than 120 seconds. As a workaround, download the monitor and split the test across multiple monitors via the BAT CLI. Run and time each test to ensure their running times are under 120 seconds, then upload the monitors.
 
-If you want to delete the monitor, click the three dots besides the monitor name and then choose Delete monitor.
+Alternatively, to run a monitor more than 120 seconds download the monitor and run it from the BAT CLI.
+====
 
 == See Also
 
