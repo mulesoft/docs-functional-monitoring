@@ -17,4 +17,6 @@ If you are new to writing tests manually, you can download tests, see how they a
 
 == Result
 
-A file is downloaded: `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.
+The following file is downloaded:
+
+* `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.
