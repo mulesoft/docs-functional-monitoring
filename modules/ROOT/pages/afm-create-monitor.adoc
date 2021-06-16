@@ -3,34 +3,30 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test suite to run at intervals that you specify.
+You create monitors via the Functional Monitoring UI or by uploading test suites written in BAT, a Behavior Driven Development (BDD) language. Both methods enable you to create tests against one or more endpoints, and to create test schedules that run at specified intervals. 
 
-After every interval, you can view the results of the test and statistics about API performance.
-
+This procedure describes creating monitors via the Functional Monitoring UI.
 
 == Before You Begin
 
-* Ensure that your user ID has the Anypoint Monitoring User permission and is assigned the Exchange Administrators role.
+* Ensure that your user ID has the Anypoint Monitoring User permission and that it has been assigned the Exchange Administrators role. An administrator for your organization can grant this permission in Anypoint Access Management.
+* Determine which endpoints to test and the REST methods that test them.
+* Determine the expected return status codes.
+* Determine the test interval.
 +
-An administrator for your organization can grant you this permission in Anypoint Access Management.
-* Determine which endpoints you want to test and the REST methods that you want to test them with.
-* Decide upon the return codes that you expect the methods to return.
-* Figure out the frequency at which you would like the monitor to test the endpoints.
-+
-The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
+The shortest interval is fifteen minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
+
 ** Set an hourly schedule to start at a certain number of minutes after the hour begins.
 ** Set a daily, weekly, or monthly schedule to start at a certain time of day.
-* Determine which execution location you would like to run the monitor in.
+
+* Determine the location in which to execute the monitor.
 +
 For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
-* Decide whether you would like the request messages to include additional header information.
-* Obtain one of the following pieces of information, if you would like to send reports to one of these reporting tools:
+* Determine if the requests should include additional headers.
+* For reporting, obtain one of the following pieces of information:
 +
 |===
 |Reporting Tool |Required Information
-
-|NewRelic
-|License Key
 
 |PagerDuty
 |RoutingKey
@@ -49,18 +45,24 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 == Procedure
 To create a monitor:
 
-. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create*.
-. Specify a name and a short description for the monitor.
-. Fill in the fields with the information that you have gathered.
-. Click *Create*.
+. Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
+. Specify a monitor name.
+. Populate the fields with the information gathered in "Before you Begin".
+. Click *Create Monitor*.
 
 == Result
 
-The dashboard opens. The monitor that you created is listed on the left.
+The detail view includes the following monitor actions:
 
-Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
+* Run 
+* View history
+* Edit
+* Download
+* Delete
 
-After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
+Beneath the monitor name is a field showing the duration of the most recent run. A graph beneath the duration displays the average time each activity took, separated by day. Beside the graph, a list of the last five executions is displayed. 
+
+In the next line, you can see a table with the current schedules associated with the test. Finally, beneath the table, the last execution is shown.
 
 [IMPORTANT]
 ====
@@ -71,18 +73,18 @@ If you do not want to split a long-running test, download the monitor and run it
 
 == What to do next
 
-Click the *Scheduling* tab to see the schedule for the monitor. You can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
+From Monitor Detail, you can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
 
-After the monitor runs, click the *Monitored Endpoints* tab to see:
+After the monitor runs, the last execution is shown in the inferior part of the screen here we can see listed:
 
-* Whether all endpoints returned the expected codes, as indicated by *PASSED* in the first column of the table
-* Statistics about the execution of the test of the endpoint
+* Time elapsed since monitor started running
+* Whether all endpoints returned the expected codes, as indicated by *PASSED* or *FAILED* in the status line
+* Each endpoint asserted with its HTTP method
+* Assertions expected from each endpoint
 
-As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
+To see statistics and other information about the monitor, the *Last Executions* table is displayed. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test only. When clicking in one of the executions, extra information is shown.
 
-Click *Tests* to see statistics and other information about the monitor. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test, too.
-
-If you want to delete the monitor, delete all versions of it in the *Tests* section.
+If you want to delete the monitor, click the three dots besides the monitor name and then choose Delete monitor.
 
 == See Also
 
