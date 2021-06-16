@@ -11,25 +11,24 @@ You can create a private location as part of three tasks:
 * When you add a schedule to a monitor
 * When you modify a schedule in a monitor
 
-You can also create a private location independently of these three tasks. Then, when you create a monitor, add a schedule, or modify a schedule, you can simply select the private location. The following procedure explains the steps for this last method.
+When you create a monitor, add a schedule, or modify a schedule, you can select the private location. This procedure explains the steps for this last method.
 
-For information about what a private location is and why you might want to create one, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+For information about private locations and their uses, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 
 == Before You Begin
 
-Ensure that your organization in Anypoint Platform has a subscription to Anypoint Virtual Private Cloud.
+Ensure that your Anypoint Platform organization has a subscription to Anypoint Virtual Private Cloud.
 
 == Procedure
 
-To create a private location independently of any other task:
+To create a private location:
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
-. Click *Create Private Location*.
+. When creating a test or schedule, tap the field under *Select location* and choose *Create new location*.
 . Name the location.
 +
 The name can be up to 255 characters, and can include spaces and special characters.
-. Select the environment in which to run the workers that are created to run tests in your monitors.
-. Click *Create*.
+. Select the environment where the tests will run.
+. Complete the creation of the of test or schedule. The new location is included.
 
 == Result
 
