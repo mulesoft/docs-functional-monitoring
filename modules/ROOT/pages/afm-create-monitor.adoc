@@ -78,5 +78,4 @@ Alternatively, to run a monitor more than 120 seconds download the monitor and r
 
 == See Also
 
- * xref:afm-edit-test.adoc[Edit a monitor]
  * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
