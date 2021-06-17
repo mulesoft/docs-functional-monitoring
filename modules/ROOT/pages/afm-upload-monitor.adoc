@@ -21,33 +21,25 @@ You can upload a suite of tests that you have written and want to run as a monit
 == Procedure
 To create a monitor by uploading a test suite:
 
-. In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload*.
+. In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload Monitor*.
 . Upload the folder that contains your test suite.
 . Fill in the fields with the information that you have gathered.
-. Click *Upload*.
+. Click *Upload Monitor*.
 
 == Result
 
-The dashboard opens. The monitor is listed on the left. Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty. After the monitor has run, the list item for the monitor will indicate whether the monitored endpoint passed or failed.
-
+The monitor detail opens. An indicator displays how long the execution ran. The last executions list displays the test result.
 
 == What to do next
 
-Click the *Scheduling* tab to see the schedule for the monitor. The *Version* column in the table of schedules displays the version number 0.0.1. This number refers to the version of the test suite that you uploaded. If you ever make changes to the test suite and upload it again, the version number will be incremented. For example, the first time that you upload a changed version of the test suite, its version number will be 0.0.2. It will also have a new schedule created for it. You can either keep the original schedule for the previous version of the monitor or delete that schedule. You can also disable and enable schedules.
+You can view a list of monitor schedules in the schedules table. You can also disable and enable schedules.
 
-After the monitor runs, click the *Monitored Endpoints* tab to see:
+The last executions table and the average times chart will enable you to determine the following:
 
-* Whether the endpoint returned the expected code, as indicated by *PASSED* in the first column of the table
-* Statistics about the execution of the test of the endpoint
+* Whether the endpoint returned the expected code, as indicated by *PASSED* or *FAILED*
+* Statistics about the execution of the endpoint test
 
-As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
-
-Click *Tests* to see statistics and information pertaining to the monitor. The version number shown here is 0.0.1. However, if you upload the test suite again after making changes to it, you will see here a second card of information. The version number on this card will be 0.0.2.
-
-Every subsequent version of the test suite that you upload will have its own card and that card will show the version of the monitor. If you delete the schedule for a version of the monitor, the card for that version will no longer appear in the *Tests* section.
-
-If you want to delete the monitor, delete all versions of it in the *Tests* section.
-
+As your monitor continues to run at the scheduled intervals, the statistics in this table are updated, as well as the graph.
 
 == See also
 
