@@ -12,7 +12,7 @@
  ** xref:afm-view-schedules-private-location.adoc[View the Schedules That Use a Private Location]
  ** xref:afm-run-test-now.adoc[Run a Test Immediately]
  ** xref:afm-view-test-history.adoc[View Test History]
- ** xref:afm-download-test.adoc[Download a Test]
+ ** xref:afm-download-test.adoc[Download a Monitor]
  ** xref:afm-delete-monitor.adoc[Delete a Monitor]
  ** xref:afm-upload-monitor.adoc[Upload a Monitor]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
