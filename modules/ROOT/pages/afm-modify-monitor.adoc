@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can modify monitors via the Functional Monitoring UI, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. You can also download the montor, edit the monitor in your text editor of choice, and then upload the monitor.
+You can modify monitors via the Functional Monitoring UI, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. Additionally you can download the monitor as BAT source, edit the monitor in your text editor of choice, and then upload the monitor.
 
 This procedure describes modifying monitors via the Functional Monitoring UI.
 
