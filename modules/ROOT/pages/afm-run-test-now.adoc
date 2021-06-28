@@ -19,7 +19,7 @@ To run a test from the homepage:
 
 . Hover over the test to run.
 . Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
-. Select the location and environment in which to run the test.
+. Select the location and configuration in which to run the test.
 . Click *Run now*.
 
 To run a test from its details page:
@@ -27,7 +27,7 @@ To run a test from its details page:
 . Select the monitor that includes the test to run.
 . Click the monitor.
 . Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
-. Select the location and environment in which to run the test.
+. Select the location and configuration in which to run the test.
 . Click *Run now*.
 
 == Result

@@ -22,9 +22,12 @@ You can upload a suite of tests that you have written and want to run as a monit
 To create a monitor by uploading a test suite:
 
 . In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload Monitor*.
-. Upload the folder that contains your test suite.
-. Fill in the fields with the information that you have gathered.
+. Select the folder that contains your test suite.
++
+For details on file structure and file requirements, see xref:bat-example-test-suite.adoc[Example of a Test Suite].
+
 . Click *Upload Monitor*.
+. Click *Next*.
 
 == Result
 

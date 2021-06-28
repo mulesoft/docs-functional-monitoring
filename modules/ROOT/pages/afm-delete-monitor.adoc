@@ -22,6 +22,7 @@ To delete a monitor from its detail page:
 . Select the monitor that you want to delete.
 . Click the monitor.
 . Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Delete Monitor*.
+. In the *Delete Monitor* dialog, click *Delete*.
 
 == Result
 

@@ -50,7 +50,12 @@ You can add a schedule to an existing monitor if either of the following two con
 . Click *Add*.
 
 == Result
-The countdown to the first run of the selected test version begins.
+The countdown to the first run of the selected test begins.
+
+[NOTE]
+====
+Specified test times correspond with your time zone.
+====
 
 == See Also
 
