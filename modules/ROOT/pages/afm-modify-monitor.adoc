@@ -22,7 +22,8 @@ To modify a monitor from its detail page:
 
 . Select the monitor that you want to modify.
 . Click the monitor.
-. Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Edit*.
+. Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) next to the monitor name.
+. Tap *Edit Monitor*.
 
 == Result
 
