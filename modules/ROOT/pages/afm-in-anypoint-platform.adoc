@@ -31,7 +31,7 @@ Locations can be public or private. For details, see xref:afm-monitoring-public-
 
 You can create more than one schedule per monitor.
 
-.Schedules are listed under *Next run*.
+.Schedules are listed beginning with the *Next run* column.
 image::afm-ui-test-versions-and-schedules-new.png[]
 
 == See also
