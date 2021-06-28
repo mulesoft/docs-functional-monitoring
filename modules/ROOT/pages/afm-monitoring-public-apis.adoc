@@ -68,8 +68,8 @@ Tests are run at fixed intervals that you define in schedules. Each test is asso
 
 * *Number of Schedules*: By default, your organization can run up to five schedules at one time for testing from public locations. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft Customer Success Manager about raising your maximum.
 
-* *Duration of Intervals Between Executions of Tests*: Fifteen minutes is the shortest interval that you can schedule.
+* *Duration of Intervals Between Executions of Tests*: Five minutes is the shortest interval that you can schedule, configurable via a cron expression.
 
-You can also run monitors from private locations if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations.
+You can also run monitors from private locations if you have access to Anypoint Virtual Private Cloud. There is no limit to the number of schedules that you can create to use private locations. For details, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 
 You can monitor public APIs from private locations, too, not just private APIs.
