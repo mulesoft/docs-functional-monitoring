@@ -14,10 +14,36 @@ You can add a schedule to an existing monitor if either of the following two con
 
 . Select the monitor in which you want to add a schedule.
 . Click *Add Schedule* from the *Schedules* table.
-. In the Add Schedule dialog, specify this information:
+. In the Add Schedule dialog, specify the following:
 +
 * The location in which to run the test
-* The frequency at which to run the test
+* The interval at which to run the test:
++
+|===
+|Interval |Required Information |Defintion
+
+|Hourly
+|Minutes
+|The number of minutes after each hour when the test runs, beginning 60 minutes after the schedule has been created
+
+|Daily
+|Time
+|The time (hour and minutes) in a day when the test runs
+
+|Weekly
+|Day of week, Time
+|The day of the week and time when the test runs
+
+|Monthly
+|Day of month, Time
+|The day of the month and time when the test runs
+
+|Advanced
+|Cron
+|The cron expression describing when the test runs
+
+|===
+
 * Set Starting at (min)
 * Set configuration
 

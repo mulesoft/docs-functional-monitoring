@@ -12,6 +12,7 @@ When initially specifying the private location, a test run worker associated wit
 == Procedure
 
 . Display the list of locations by opening *Location Manager* from the homepage.
+. Tap the *Private Locations* tab.
 . Select a private location.
 
 == Result
