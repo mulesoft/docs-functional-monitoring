@@ -1,20 +1,22 @@
-= Download a Test
+= Download a Monitor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-You can download a test version and modify the test on your computer. Then, you can either run the test by using the BAT CLI or upload the test into the online interface for API Functional Monitoring to create a new monitor.
+You can download a monitor and modify it on your computer. Then, you can either run the monitor by using the BAT CLI or upload the monitor into the online interface for API Functional Monitoring to create a new monitor.
 
-If you are new to writing tests manually, you can download tests, see how they are structured, and view the content of the files. The knowledge you gain can help you write your own tests.
+If you are new to writing monitors manually, you can download monitors, see how they are structured, and view the content of the files. The knowledge you gain can help you write your own monitors.
 
 == Procedure
 
-. Select the monitor from which you want to dowload a test.
-. Click the *Tests* tab to see the test versions.
-. Click the Download icon for a test version.
+. Select the monitor to download.
+. Click the monitor to enter the monitor detail page.
+. Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Download Monitor* to download a monitor as BAT source.
 
 == Result
 
-A .zip file is downloaded to your computer. The filename is `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.
+The following file is downloaded:
+
+* `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`.
