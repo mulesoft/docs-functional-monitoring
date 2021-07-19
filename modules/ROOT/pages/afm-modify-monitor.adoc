@@ -13,7 +13,7 @@ Modify a monitor from either the homepage or the monitor's detail page.
 
 To modify a monitor from the homepage:
 
-. Hover over the name of the monitor you want to modify 
+. Hover over the name of the monitor you want to modify. 
 . Click *Edit* (image:afm-ui-edit-button.png[width=1.5%,height=1.5%]).
 
 To modify a monitor from its detail page:
