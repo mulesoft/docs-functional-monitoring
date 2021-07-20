@@ -23,20 +23,20 @@ You can add a schedule to an existing monitor if either of the following two con
 |Interval |Required Information |Definition
 
 |Hourly
-|Minutes
-|The number of minutes, after each hour, that triggers the test, beginning 60 minutes after the schedule is created
+|The minute
+|The minute at which the test begins, starting 60 minutes after you create the schedule
 
 |Daily
-|Time
+|The time of each day
 |The time each day (hour and minutes) at which the test begins
 
 |Weekly
-|Day of week, Time
+|Day of the week and time of day 
 |The day of the week and the time of that day that initiates the test
 
 |Monthly
-|Day of month, Time
-|The day of the month and time when the test runs
+|Day of the month and time of day 
+|The day of the month and the time of that day that initiates the test
 
 |Advanced
 |Cron

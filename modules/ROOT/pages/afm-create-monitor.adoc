@@ -14,7 +14,7 @@ This procedure describes creating monitors via the Functional Monitoring UI.
 * Determine the expected return status codes.
 * Determine the test interval.
 +
-The shortest interval is fifteen minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
+The shortest interval is 15 minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
 
 ** Set an hourly schedule to start at a certain number of minutes after the hour begins.
 ** Set a daily, weekly, or monthly schedule to start at a certain time of day.
