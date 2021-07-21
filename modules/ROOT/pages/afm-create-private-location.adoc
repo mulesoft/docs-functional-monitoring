@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
  
-You have the opportunity to create a private location when you:
+A _private location_ is a worker that runs in a CloudHub environment associated with an Anypoint Virtual Private Cloud instance. You have the opportunity to create a private location when you:
 
 * xref:afm-create-monitor.adoc[Create a monitor]
 * xref:afm-add-schedule.adoc[Add a schedule] to a monitor
