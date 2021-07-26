@@ -31,13 +31,13 @@ For details on file structure and file requirements, see xref:bat-example-test-s
 
 == Result
 
-The monitor detail opens. An indicator displays how long the execution ran. The last executions list displays the test result.
+The *Monitor Detail* page opens. In the *Last executions* list you can view the test result and how long the test ran.
 
 == What to do next
 
 You can view a list of monitor schedules in the schedules table. You can also disable and enable schedules.
 
-The last executions table and the average times chart will enable you to determine the following:
+The last executions table and the average times chart enable you to determine:
 
 * Whether the endpoint returned the expected code, as indicated by *PASSED* or *FAILED*
 * Statistics about the execution of the endpoint test

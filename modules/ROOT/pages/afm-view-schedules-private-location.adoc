@@ -5,14 +5,14 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can determine the number of schedules that use a private location. 
+You can view the number of schedules that use a private location. 
 
 When initially specifying the private location, a test run worker associated with the schedule is created in that location. Viewing the location shows how many workers are running.
 
 == Procedure
 
 . Display the list of locations by opening *Location Manager* from the homepage.
-. Tap the *Private Locations* tab.
+. Click the *Private Locations* tab.
 . Select a private location.
 
 == Result
