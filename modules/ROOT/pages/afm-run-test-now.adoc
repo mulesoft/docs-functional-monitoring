@@ -5,15 +5,15 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can run a test before it is next scheduled to run. Doing so does not reset the schedule, which continues to run at previously set intervals.
+You can manually run tests outside of the automatic testing schedule without affecting it.
 
 == Before You Begin
 
-Because you are running the test outside of a schedule, you must select the location for the test to run. If you want to use the same location that is used by the schedule, navigate to the monitor detail page and view the location of the schedule.
+Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the same location as used by the schedule, navigate to the monitor detail page and note that location.
 
 == Procedure
 
-There are two different methods to run a test.
+Run a test either from the homepage, or from a test's details page.
 
 To run a test from the homepage:
 

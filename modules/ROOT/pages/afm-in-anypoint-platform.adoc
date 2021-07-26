@@ -6,32 +6,32 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-API Functional Monitoring allows you to verify responses to requests sent to API resources at its endpoints. You monitor APIs by accessing the *Functional Monitoring* section of Anypoint Monitoring, which you select from the home page of Anypoint Platform. 
+API Functional Monitoring enables you to monitor responses to requests sent to API resources at their endpoints. You monitor APIs by accessing the *Functional Monitoring* section of Anypoint Monitoring, which you select from the home page of Anypoint Platform. 
 
 The *Functional Monitoring* section contains tools for creating and editing monitors. Additionally, you can upload custom test suites written in BAT, a Behavior Driven Development (BDD) language.
 
-The following illustrates the components of a monitor:
+The following image illustrates the components of a monitor:
 
-.A monitor includes a test and a schedule for running the test.
 image::afm-ui-overview-a-new.png[width=40%,height=40%]
 
-Tests include:
+A monitor includes a test and a schedule for running the test. 
 
-* The endpoints to verify.
-* Optional assertions to verify at the endpoints (for example, a 200 status code).
-* Optional HTTP headers to include when sending requests to the endpoints.
-* Optional tools used to send test reports. Examples include SumoLogic and Slack.
+The monitor test includes the following:
 
-Test schedules include:
+* The endpoints to verify
+* Optional assertions to verify at the endpoints (for example, a 200 status code)
+* Optional HTTP headers to include when sending requests to the endpoints
+* Optional tools, such as SumoLogic and Slack, used to send test reports
 
-* The location from which to run the test.
+The monitor test schedule includes the following:
+
+* The location from which to run the test
 +
 Locations can be public or private. For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
-* The time interval to wait between tests.
+* The time interval between tests
 
-You can create more than one schedule per monitor.
+You can create more than one schedule per monitor test, as shown under the *Next run* column in the following image.
 
-.Schedules are listed beginning with the *Next run* column.
 image::afm-ui-test-versions-and-schedules-new.png[]
 
 == See also

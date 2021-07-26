@@ -5,11 +5,11 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Unneeded monitors can be easily deleted. However, there is no cost in keeping monitors if not scheduled to run.
+Although you can easily delete unnecessary monitors, there is no cost in keeping them.
 
 == Procedure
 
-There are two methods to delete a monitor.
+Delete a monitor either from the homepage or from its detail page.
 
 To delete a monitor from the homepage:
 
@@ -21,7 +21,7 @@ To delete a monitor from its detail page:
 
 . Select the monitor that you want to delete.
 . Click the monitor.
-. Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Delete Monitor*.
+. Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Monitor*.
 . In the *Delete Monitor* dialog, click *Delete*.
 
 == Result

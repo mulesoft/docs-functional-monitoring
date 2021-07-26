@@ -9,12 +9,12 @@ This procedure describes creating monitors via the Functional Monitoring UI.
 
 == Before You Begin
 
-* Ensure that your user ID has the Anypoint Monitoring User permission and that it has been assigned the Exchange Administrators role. An administrator for your organization can grant this permission in Anypoint Access Management. For details, see xref:access-management::roles.adoc[Roles].
-* Determine which endpoints to test and the REST methods that test them.
+* Ensure that your user ID has the Anypoint Monitoring User permission and that it is assigned the Exchange Administrators role. An administrator for your organization can grant this permission in Anypoint Access Management. For details, see xref:access-management::roles.adoc[Roles].
+* Determine which endpoints to test and by which REST methods to test them.
 * Determine the expected return status codes.
 * Determine the test interval.
 +
-The shortest interval is fifteen minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
+The shortest interval is 15 minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
 
 ** Set an hourly schedule to start at a certain number of minutes after the hour begins.
 ** Set a daily, weekly, or monthly schedule to start at a certain time of day.
@@ -47,24 +47,22 @@ To create a monitor:
 
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
 . Under *Step 1 - Setup the monitor*, specify a monitor name. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications.
-. Tap the *Step 2 - Select endpoints* tab.
-. Populate the fields with the information gathered in "Before you Begin".
+. Click the *Step 2 - Select endpoints* tab.
+. Populate the fields with the information gathered in "Before You Begin."
 +
-You can preview the test by tapping *Run now* under *Preview the result of your monitor*.
+You can preview the test by clicking *Run now* under *Preview the result of your monitor*.
 
-. Tap the *Step 3 - Set notifications* tab.
+. Click the *Step 3 - Set notifications* tab.
 . Optionally configure a notification.
 . Click *Create Monitor*.
 
-== Result
+The *Monitor Detail* view appears, and includes the following actions:
 
-The *Monitor Detail* view includes the following actions:
-
-* Tap *Run* (image:afm-ui-run-button.png[width=1%,height=1%]) to immediately execute a monitor.
-* Tap *View Monitor History* (image:afm-ui-history-button.png[width=1.3%,height=1.3%]) to view a list of recent monitor runs.
-* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Edit Monitor* to modify a monitor.
-* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Download Monitor* to download a monitor as BAT source.
-* Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) followed by *Delete Monitor* to delete a monitor.
+* Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]) to immediately execute a monitor.
+* Click *View Monitor History* (image:afm-ui-history-button.png[width=1.3%,height=1.3%]) to view a list of recent monitor runs.
+* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Edit Monitor* to modify a monitor.
+* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Download Monitor* to download a monitor as BAT source.
+* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Monitor* to delete a monitor.
 
 Additional displayed information includes:
 
@@ -72,16 +70,16 @@ Additional displayed information includes:
 * Time elapsed since the monitor started running
 * The average response time for each activity (for example, DNS lookup), separated by day
 * The previous five test execution results, as indicated by *PASSED* or *FAILED* (depending on if the endpoints returned expected codes)
-* A table with the current test schedules
+* A table displaying the current test schedules
 * Each endpoint asserted with its HTTP method
 
-Return to the homepage by tapping *Back to Monitors*.
+Return to the homepage by clicking *Back to Monitors*.
 
 [NOTE]
 ====
-Tests silently fail when run time exceeds 120 seconds. As a workaround, download the monitor and split the tests across multiple monitors via the BAT CLI. Run and time each test to ensure their running times are under 120 seconds, then upload the monitors.
+Tests silently fail when run time exceeds 120 seconds. As a workaround, download the monitor and split the tests across multiple monitors via the BAT CLI. Run and time each test to ensure their running times are under 120 seconds; then, upload the monitors.
 
-Alternatively, to run a monitor more than 120 seconds download the monitor and run it from the BAT CLI.
+Alternatively, to run a monitor for more than 120 seconds, download the monitor and run it from the BAT CLI.
 ====
 
 == See Also
