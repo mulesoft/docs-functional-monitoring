@@ -24,6 +24,19 @@ There are two ways that you can perform functional testing:
 Test cases are all defined with a common, declarative, and easy-to-use behavior-description language. The language is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
 * Create monitors in the *Functional Monitoring* section of Anypoint Monitoring. You can upload as monitors any testing projects that you wrote manually.
 
+== Versioning in the New Layout
+
+Monitor versions are not supported in the new *Monitor Detail* layout. However, your information is preserved, though it is displayed differently. For example, multiple versions migrate to the new layout as schedules of a single monitor.
+
+To benefit from the new layout, it is recommended that you use one version for each test. Perform the following in the old layout to achieve this:
+
+. Download a version of a test that should be preserved.
+. Unzip the test package.
+. Upload the unzipped directory.
+. Choose a new test name.
+. Specify a schedule rule that corresponds with the test version in the first step.
+. Delete the version downloaded in the first step.
+
 == See also
 
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
