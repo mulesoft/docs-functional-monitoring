@@ -5,18 +5,20 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can find out how many schedules a private location is used by. When a private location is used by a schedule, a worker to run the test associated with the schedule is created in that location. Therefore, seeing the number of schedules that use a private location shows you how many workers are running in that location.
+You can view the number of schedules that use a private location. 
+
+When initially specifying the private location, a test run worker associated with the schedule is created in that location. Viewing the location shows how many workers are running.
 
 == Procedure
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
+. Display the list of locations by opening *Location Manager* from the homepage.
+. Click the *Private Locations* tab.
 . Select a private location.
 
 == Result
 
-The list of schedules that use the private location appears to the right. For each schedule, the following information appears:
+The list of schedules that use the private location appears. Each schedule displays the following information:
 
-* The length of time to elapse before the associated test is run again
-* The interval at which the test is run
 * The name of the monitor that the test is defined in
-* The test version that is run
+* The interval at which the test is run
+* The configuration used when running the test

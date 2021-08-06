@@ -1,0 +1,38 @@
+= Modify a Monitor Using API Functional Monitoring
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can modify monitors via API Functional Monitoring, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. Additionally you can download the monitor as BAT source, edit the monitor in your text editor of choice, and then upload the monitor.
+
+== Procedure
+
+Modify a monitor from either the homepage or the monitor's detail page.
+
+To modify a monitor from the homepage:
+
+. Hover over the name of the monitor you want to modify. 
+. Click *Edit* (image:afm-ui-edit-button.png[width=1.5%,height=1.5%]).
+
+To modify a monitor from its detail page:
+
+. Select the monitor that you want to modify.
+. Tap *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) next to the monitor name.
+. Tap *Edit Monitor*.
+
+After following either method, the following options appear:
+
+* Tab one (*Step 1 - Select endpoints*) enables you to modify the endpoints.
++ 
+You can edit endpoint methods, URLs, optional headers, and assertions. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications.
+
+* Tab two (*Step 2 - Set notifications*) enables you to modify notifications.
+
+Alternatively, select *Switch to code editor* to edit the monitor as BAT source. For more details, see xref:bat-bdd-reference.adoc[BDD Test-Writing Syntax Reference].
+
+== See Also
+
+ * xref:afm-download-test.adoc[Download a Monitor]
+ * xref:afm-upload-monitor.adoc[Upload a Monitor]
