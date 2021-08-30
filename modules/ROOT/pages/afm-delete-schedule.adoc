@@ -7,33 +7,33 @@ endif::[]
 
 You might want to delete a schedule for any of the following reasons:
 
-* You are finished testing endpoints of a public API and you want to free resources for testing endpoints of a different public API.
-* You are finished testing endpoints of a private API.
+* You have finished testing endpoints of a public API and you want to free resources for testing endpoints of a different public API.
+* You have finished testing endpoints of a private API.
 * You have more than one schedule running the same test and you no longer need one of the schedules.
 
-[IMPORTANT]
+[NOTE]
 ====
-Be sure that you want to delete a schedule. AFM does not give you a chance to confirm that you want to delete it.
+Be sure that you want to delete the schedule. There is no opportunity to confirm the deletion.
 ====
 
 == Procedure
 
-There are two different methods for deleting a schedule.
+Anypoint Functional Monitoring provides two methods for deleting a schedule.
 
-To delete a schedule from the *Schedules* section of a monitor:
+To delete a schedule from the *Schedules* table of a monitor:
 
-. Select the monitor in which you want to modify a schedule.
-. Click the *Schedules* tab.
-. Find the schedule in the table, click the three dots on the right end of the table row, and select *Delete*.
+. Select the monitor that contains a schedule to delete.
+. Locate the schedule in the table and click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Schedule*.
 
 To delete a schedule from the table of schedules that use a particular location:
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
-. Select the location that you want to use in a new schedule.
-. Find the schedule in the table, click the three dots on the right end of the table row, and select *Delete*.
+. Display the list of locations by opening the *Locations Manager* in the homepage.
+. Select the location from which you want to delete a schedule.
+. Locate the schedule in the table and click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Schedule*.
 
 == Result
 
-If the schedule that you deleted was the only schedule that was running a particular test, the worker for that test no longer exists.
+If the deleted schedule was the only schedule running a particular test, the worker for that test no longer exists.
 
-If the schedule was the only schedule that was using a private location, you can now delete that private location, if you want to do so.
+If the schedule was the only schedule using a private location, you have the option to delete that private location.
+

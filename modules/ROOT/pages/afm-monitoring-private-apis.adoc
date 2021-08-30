@@ -19,8 +19,6 @@ You can also test public APIs using private locations. Public APIs are APIs with
 ====
 
 == Association of Private Locations with Schedules
-The tests in monitors are run on schedules. For a private location to run according to a schedule, a schedule must be associated with it. A private location can be associated with more than one schedule for more than one monitor.
-
 When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
 
 Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.
@@ -69,4 +67,4 @@ When tests are run by private locations in an instance of Anypoint VPC, the work
 
 == Update Private Locations
 
-As updates become available, you'll receive notifications in the *Locations* tab. Follow the prompts to apply the update to all private locations.
+As updates become available, you are notified in the *Locations* modal dialog. Follow the prompts to apply the update to all private locations.
