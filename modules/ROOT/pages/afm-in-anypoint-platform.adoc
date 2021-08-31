@@ -34,6 +34,8 @@ You can create more than one schedule per monitor test, as shown under the *Next
 
 image::afm-ui-test-versions-and-schedules-new.png[]
 
+A monitor reports the daily average response time (in milliseconds) of all tests (to all endpoints) as a bar graph.
+
 == See also
 
 * xref:afm-create-monitor.adoc[Create a Monitor]
