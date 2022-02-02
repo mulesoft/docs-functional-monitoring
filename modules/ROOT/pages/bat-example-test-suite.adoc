@@ -125,6 +125,7 @@ suite("Hello world suite") in [
   it must 'answer 200' in [
     GET `$(config.url)` with {} assert [
       $.response.status mustEqual 200
+    ]
   ]
 ]
 ----
