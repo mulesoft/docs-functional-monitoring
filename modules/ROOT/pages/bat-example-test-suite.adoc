@@ -118,7 +118,7 @@ url: "qa.myapi.com"
 In your test, you can use the `url` variable by placing it within this syntax: `$(config.variable)`, where _variable_ is the name of the variable that you want to use. Here is an example test that uses the `url` variable in a `GET` request to test the assertion that the response code must be 200:
 [linenums]
 ----
-bat::BDD
+import * from bat::BDD
 import * from bat::Assertions
 ---
 suite("Hello world suite") in [
