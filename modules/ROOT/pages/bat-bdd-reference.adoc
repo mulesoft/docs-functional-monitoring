@@ -86,9 +86,12 @@ A test suite must contain at least one test (.dwl) file.
 
 == Keeping Confidential Information Secure in Tests
 
-In your tests, you can access shared secrets in Anypoint Secrets Manager, which enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
+In your tests, you can access Symmetric key typed shared secrets from Anypoint Secrets Manager, which enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL
 
-NOTE: Anypoint Secrets Manager enables you to access only the above-mentioned shared resources. Other resources are not accessible.
+[IMPORTANT]
+====
+Anypoint Secrets Manager has other types of shared secrets, however, Functional Monitoring only works with Symmetric keys and using other types will break the test.
+====
 
 You create aliases for your shared secrets with the `bat grant` command. The BAT CLI stores aliases in your `bat.yaml` files in your test suites. You place aliases in your tests and, at runtime, the BAT CLI looks up the shared secrets by means of the aliases.
 
