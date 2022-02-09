@@ -90,7 +90,7 @@ In your tests, you can access shared secrets that are symmetric key types from A
 
 [IMPORTANT]
 ====
-Functional Monitoring only works with symmetric key shared secret types. Using other types from Anypoint Secrets Monitor will cause all used shared secrets stop being populated.
+Functional Monitoring only works with symmetric key shared secret types. Using other types from Anypoint Secrets Monitor will cause all used shared secrets to stop being populated.
 ====
 
 You create aliases for your shared secrets with the `bat grant` command. The BAT CLI stores aliases in your `bat.yaml` files in your test suites. You place aliases in your tests and, at runtime, the BAT CLI looks up the shared secrets by means of the aliases.
