@@ -86,7 +86,7 @@ A test suite must contain at least one test (.dwl) file.
 
 == Keeping Confidential Information Secure in Tests
 
-In your tests, you can access shared secrets that are symmetric key types from Anypoint Secrets Manager, which enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL
+In your tests, you can access shared secrets that are symmetric key types from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
 
 [IMPORTANT]
 ====
