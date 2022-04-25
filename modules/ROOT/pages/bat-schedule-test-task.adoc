@@ -65,19 +65,47 @@ The interval for schedules that run in public locations depends on the number of
 
 The limit depends on the type of location, not on whether the API is public or private, because you can test a public API from a private location.
 
-[%header,cols=2*]
+[%header,cols=4*]
 |===
-|Public Location
-|IP Address
+|Location Type
+|Number of Entitlements
+|Account Type
+|Interval Time Allowed
 
-|us-east-1
-|3.82.89.58
+|Public
+|5 or less
+|Developer
+|15 minutes
 
-|us-east-2
-|3.128.151.139
+|Public
+|5 or less
+|Employee
+|5 minutes
 
-|eu-central-1
-|18.156.106.167
+|Public
+|5 or less
+|Other 
+|15 minutes
+
+|Public
+|More than 5
+|Developer
+|15 minutes
+
+|Public
+|More than 5
+|Employee
+|5 minutes
+
+|Public
+|More than 5
+|Other 
+|5 minutes
+
+|Private
+|Any number 
+|N/A
+|5 minutes
 |===
 
 == See Also
