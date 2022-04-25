@@ -110,5 +110,5 @@ The limit depends on the type of location, not on whether the API is public or p
 
 == See Also
 
-* xref:bat-reporting-task.adoc[To Configure and View Test Reports]
-* xref:bat-command-reference.adoc[BAT Command Reference]
+* xref:bat-reporting-task.adoc[Configure Reports of Test Failures]
+* xref:bat-command-reference.adoc[BAT CLI Reference]
