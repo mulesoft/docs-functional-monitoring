@@ -42,3 +42,7 @@ To modify a schedule from the schedules list:
 == Result
 
 Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
+
+== See Also
+
+* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]

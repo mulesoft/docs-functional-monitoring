@@ -57,7 +57,7 @@ scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
 Next, configure and view test reports.
 
 [[scheduling-limits]]
-== Limitations for Schedule Intervals by Location
+== Limits for Schedule Intervals by Location
 
 The minimum interval for schedules that run in private locations is always five minutes.
 

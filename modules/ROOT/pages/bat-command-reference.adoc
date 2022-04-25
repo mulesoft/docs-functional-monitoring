@@ -260,4 +260,4 @@ BAT Version: 1.0.51
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[To Schedule a Test]
+* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
