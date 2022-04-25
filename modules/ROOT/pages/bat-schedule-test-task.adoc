@@ -11,7 +11,7 @@ After running the command, BAT creates a monitor in Anypoint Platform. The monit
 +
 `bat login --username=<value> --password=<value>`
 +
-. Create a schedule using the default, every 15 minutes, and monitor the testing. Provide an arbitrary endpoint URL and optionally specify the current directory by using --init-folder to store scheduling information. For example:
+. Create a schedule using the default and monitor the testing. Provide an arbitrary endpoint URL and optionally specify the current directory by using --init-folder to store scheduling information. For example:
 +
 `+bat schedule endpoint http://www.example.com --init-folder+`
 +
@@ -55,6 +55,30 @@ scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
 `bat schedule create --cron="0 0 12 1/1 * ? *"`
 
 Next, configure and view test reports.
+
+[[scheduling-limits]]
+== Limitations for Schedule Intervals by Location
+
+The minimum interval for schedules that run in private locations is always five minutes.
+
+The interval for schedules that run in public locations depends on the number of schedule entitlements, or API monitor entitlements, that you have. If you have more than five, the limit is five minutes. Otherwise, it is fifteen minutes.
+
+The limit depends on the type of location, not on whether the API is public or private, because you can test a public API from a private location.
+
+[%header,cols=2*]
+|===
+|Public Location
+|IP Address
+
+|us-east-1
+|3.82.89.58
+
+|us-east-2
+|3.128.151.139
+
+|eu-central-1
+|18.156.106.167
+|===
 
 == See Also
 

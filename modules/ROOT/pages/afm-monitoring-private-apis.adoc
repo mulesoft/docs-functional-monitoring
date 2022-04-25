@@ -21,7 +21,7 @@ You can also test public APIs using private locations. Public APIs are APIs with
 == Association of Private Locations with Schedules
 When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
 
-Also, you can run tests from private locations at shorter intervals, with the shortest interval being five minutes.
+Also, you can run tests from private locations with intervals of five minutes.
 
 == Creation of Private Locations
 Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
@@ -68,3 +68,7 @@ When tests are run by private locations in an instance of Anypoint VPC, the work
 == Update Private Locations
 
 As updates become available, you are notified in the *Locations* modal dialog. Follow the prompts to apply the update to all private locations.
+
+== See Also
+
+* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
