@@ -64,7 +64,7 @@ To prevent tests run in public locations from consuming too many resources, AFM 
 
 == Scheduling Tests
 
-Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests against the endpoints of public APIs, AFM sets limits on the following aspects of scheduling:
+Tests are run at fixed intervals that you define in schedules. Each test is associated with a schedule. When you run tests from public locations, AFM sets limits on the following aspects of scheduling:
 
 * *Number of Schedules*: By default, your organization can run up to five schedules at one time for testing from public locations. If you reach the limit of five schedules and want to run more monitors simultaneously, contact your MuleSoft Customer Success Manager about raising your maximum.
 
