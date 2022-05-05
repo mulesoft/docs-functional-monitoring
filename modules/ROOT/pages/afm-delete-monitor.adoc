@@ -13,7 +13,7 @@ Ensure that your user ID has the following permission set in Access Management:
 
 * *Exchange > Exchange Administrator*
 
-See xref:access-management::managing-permissions[Manage Permissions].
+See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
 == Procedure
 

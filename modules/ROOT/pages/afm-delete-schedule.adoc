@@ -26,7 +26,7 @@ Be sure that you want to delete the schedule. There is no opportunity to confirm
 
 ** *Runtime Manager > Delete Applications*
 
-An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
 == Procedure
 
@@ -52,4 +52,4 @@ If the schedule was the only schedule using a private location, you have the opt
 == See Also
 
 * xref:afm-add-schedule.adoc[Add a Schedule]
-* xref:access-management::managing-permissions[Manage Permissions]
+* xref:access-management::managing-permissions.adoc[Manage Permissions]

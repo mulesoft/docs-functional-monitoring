@@ -16,7 +16,7 @@ Ensure that you have the following permission set in Access Management:
 
 * *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
 
-An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
 == Procedure
 
@@ -68,3 +68,4 @@ Specified test times correspond with your time zone.
 == See Also
 
 * xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
+* xref:access-management::managing-permissions.adoc[Manage Permissions]
