@@ -12,7 +12,13 @@ You can modify a schedule to change:
 
 == Before You Begin
 
-To run a schedule in a public location, ensure that your Anypoint Platform organization has not reached its maximum number of schedules. When you attempt to create a new monitor, a message displays if no public schedules are available.
+* Before you run a schedule in a public location, ensure that your Anypoint Platform organization has not reached its maximum number of schedules. When you attempt to create a new monitor, a message displays if no public schedules are available.
+
+* Ensure that your user ID has the following permission set in Access Management:
+
+** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
 
 == Procedure
 
@@ -46,3 +52,4 @@ Changes take place after the current interval elapses. For example, if you chang
 == See Also
 
 * xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
+* xref:access-management::managing-permissions[Manage Permissions]

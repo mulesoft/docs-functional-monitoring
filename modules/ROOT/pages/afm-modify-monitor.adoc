@@ -7,6 +7,18 @@ endif::[]
 
 You can modify monitors via API Functional Monitoring, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. Additionally you can download the monitor as BAT source, edit the monitor in your text editor of choice, and then upload the monitor.
 
+== Before You Begin
+
+Ensure that you have the following permissions set in Access Management:
+
+* *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
++
+and
++
+* *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+
 == Procedure
 
 Modify a monitor from either the homepage or the monitor's detail page.

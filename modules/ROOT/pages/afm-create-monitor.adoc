@@ -9,7 +9,16 @@ This procedure describes creating monitors via the Functional Monitoring UI.
 
 == Before You Begin
 
-* Ensure that your user ID has the Anypoint Monitoring User permission and that it is assigned the Exchange Administrators role. An administrator for your organization can grant this permission in Anypoint Access Management. For details, see xref:access-management::roles.adoc[Roles].
+* Ensure that you have the following permissions set in Access Management:
++
+** *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
++
+and
++
+** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
++
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+
 * Determine which endpoints to test and by which REST methods to test them.
 * Determine the expected return status codes.
 * Determine the test interval.
@@ -84,4 +93,5 @@ Alternatively, to run a monitor for more than 120 seconds, download the monitor 
 
 == See Also
 
- * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
+* xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
+* xref:access-management::managing-permissions[Manage Permissions]

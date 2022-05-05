@@ -10,6 +10,14 @@ You can add a schedule to an existing monitor if either of the following two con
 * You plan to run the test associated with the schedule in a public location, and the allocation of schedules for your Anypoint Platform organization is not exhausted.
 * You plan to run the test associated with the schedule in a private location.
 
+== Before You Begin
+
+Ensure that you have the following permission set in Access Management:
+
+* *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+
 == Procedure
 
 . Select the monitor in which you want to add a schedule.

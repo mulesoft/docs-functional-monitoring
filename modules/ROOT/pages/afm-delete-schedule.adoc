@@ -16,6 +16,18 @@ You might want to delete a schedule for any of the following reasons:
 Be sure that you want to delete the schedule. There is no opportunity to confirm the deletion.
 ====
 
+== Before You Begin
+
+* Before you can delete a schedule, you must have the following permission set in Access Management:
+
+** *Exchange > Exchange Administrator*
+
+* Before you can delete a private location, you must have the following permission set in Access Management:
+
+** *Runtime Manager > Delete Applications*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
+
 == Procedure
 
 Anypoint Functional Monitoring provides two methods for deleting a schedule.
@@ -37,3 +49,7 @@ If the deleted schedule was the only schedule running a particular test, the wor
 
 If the schedule was the only schedule using a private location, you have the option to delete that private location.
 
+== See Also
+
+* xref:afm-add-schedule.adoc[Add a Schedule]
+* xref:access-management::managing-permissions[Manage Permissions]

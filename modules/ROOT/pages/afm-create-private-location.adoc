@@ -17,7 +17,13 @@ For information about private locations and their uses, see xref:afm-monitoring-
 
 == Before You Begin
 
-Ensure that your Anypoint Platform organization has a subscription to Anypoint Virtual Private Cloud.
+* Ensure that your Anypoint Platform organization has a subscription to Anypoint Virtual Private Cloud.
+
+* Ensure that you have the following permission set in Access Management:
+
+** *Runtime Manager > Create Applications*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions[Manage Permissions].
 
 == Procedure
 
@@ -45,3 +51,4 @@ You can now run tests from the private location, either by adding a schedule tha
 * xref:afm-create-monitor.adoc[Create a Monitor]
 * xref:afm-add-schedule.adoc[Add a Schedule]
 * xref:afm-modify-schedule.adoc[Modify a Schedule]
+* xref:access-management::managing-permissions[Manage Permissions]
