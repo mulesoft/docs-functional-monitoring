@@ -7,6 +7,14 @@ endif::[]
 
 Although you can easily delete unnecessary monitors, there is no cost in keeping them.
 
+== Before You Begin
+
+Ensure that your user ID has the following permission set in Access Management:
+
+* *Exchange > Exchange Administrator*
+
+See xref:access-management::managing-permissions.adoc[Manage Permissions].
+
 == Procedure
 
 Delete a monitor either from the homepage or from its detail page.
