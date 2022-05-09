@@ -17,7 +17,7 @@ and
 +
 * *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
 
-An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc.adoc[Manage Permissions].
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
 == Procedure
 
