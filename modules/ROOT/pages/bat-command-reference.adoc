@@ -109,6 +109,10 @@ Profile is:
 +
 The value is an Anypoint Platform user name. If it is not present, the value of the environment variable ANYPOINT_USERNAME is used. If a value for this variable is not set, the default username from the credentials file is used.
 
+* `--use-proxy`
++
+If this option is specified, the command will use a proxy.
+
 This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
 
 * `init`
