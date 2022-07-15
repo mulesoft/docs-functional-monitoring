@@ -43,7 +43,7 @@ The root of the project is used to resolve imports, and load libraries and files
 
 == Command Line Options
 
-* `--help
+* `--help`
 +
 Displays information on how to use the command, including a list of available options.
 
