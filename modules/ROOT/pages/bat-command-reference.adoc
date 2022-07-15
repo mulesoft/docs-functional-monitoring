@@ -39,9 +39,9 @@ You can create a `config` folder and add different configuration files in `confi
 Executes the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
 * `bat ./folder/file.dwl` +
 Executes the desired file. The root of the project is the current folder.
-The root of the project is used to resolve imports, and load libraries and files.
+The root of the project is used to resolve imports and load libraries and files.
 
-== Command Line Options
+== `bat` Command Options
 
 * `--help`
 +
