@@ -119,7 +119,7 @@ Use this option with each `bat` command if your system requires that you access 
 
 == `bat` Subcommands
 
-You can also use the `bat` command to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform. Following are the subcommands you can use as part of a `bat` command or in the `bat` interactive mode.
+You can also use the `bat` command to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform. Following are the subcommands you can use as part of a `bat` command or in the `bat` command interactive mode.
 
 * `init`
 +
