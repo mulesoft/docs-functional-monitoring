@@ -43,6 +43,10 @@ The root of the project is used to resolve imports, and load libraries and files
 
 == Command Line Options
 
+* `--help
++
+Displays information on how to use the command, including a list of available options.
+
 * `--validate | -V`
 +
 Validates the file or folder. Also works with `--config` to validate specific configurations.
@@ -111,13 +115,17 @@ The value is an Anypoint Platform user name. If it is not present, the value of 
 
 * `--use-proxy`
 +
-If this option is specified, the command will use a proxy.
+Use this option with each `bat` command if your system requires that you access Anypoint Platform through a proxy. 
 
-This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
+== `bat` Subcommands
+
+You can also use the `bat` command to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform. Following are the subcommands you can use as part of a `bat` command or in the `bat` interactive mode.
 
 * `init`
 +
 Sets up a basic project folder with config files, HelloWorld basic test, and a yaml descriptor file.
+
+
 
 * `schedule ls | list`
 +
