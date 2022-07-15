@@ -45,7 +45,7 @@ The root of the project is used to resolve imports, and load libraries and files
 
 * `--help`
 +
-Displays information on how to use the command, including a list of available options.
+Displays information on how to use the command.
 
 * `--validate | -V`
 +
