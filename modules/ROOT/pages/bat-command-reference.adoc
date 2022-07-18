@@ -7,11 +7,9 @@ The BAT command line interface lets you run tests locally and schedule monitors 
 
 This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
 
-== bat Command
+== bat Command Syntax
 
 The `bat` command provides an API Functional Monitoring command line interface.
-
-=== Syntax
 
 `bat [<file> ... | <option> ...]`
 
@@ -117,15 +115,13 @@ The value is an Anypoint Platform user name. If it is not present, the value of 
 +
 Use this option with each `bat` command if your system requires that you access Anypoint Platform through a proxy. 
 
-== `bat` Subcommands
+== `bat` Commands
 
-You can also use the `bat` command to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform. Following are the subcommands you can use as part of a `bat` command or in the `bat` command interactive mode.
+You can also use the `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
 
 * `init`
 +
 Sets up a basic project folder with config files, HelloWorld basic test, and a yaml descriptor file.
-
-
 
 * `schedule ls | list`
 +
