@@ -111,7 +111,7 @@ Profile is:
 +
 The value is an Anypoint Platform user name. If it is not present, the value of the environment variable ANYPOINT_USERNAME is used. If a value for this variable is not set, the default username from the credentials file is used.
 
-* `--use-proxy`
+* `--useProxy`
 +
 Use this option with each `bat` command if your system requires that you access Anypoint Platform through a proxy. 
 
