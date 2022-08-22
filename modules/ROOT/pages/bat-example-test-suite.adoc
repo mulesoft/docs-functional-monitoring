@@ -50,10 +50,10 @@ reporters:
 
 Every test suite must contain a `bat.yaml` file at its root level.
 
-=== The `suite` Section of the example `bat.yaml` File
+== The `suite` Section of the example `bat.yaml` File
 The `suite` section names the suite. You can use any names that you like for the suites that you write.
 
-=== The `files` Section of the example `bat.yaml` File
+== The `files` Section of the example `bat.yaml` File
 
 This example test suite contains only one test. The test is listed in the `files` section as the file `HelloWorld.dwl` in the `tests` folder.
 
@@ -87,15 +87,15 @@ files:
 
 Finally, you can create more than one folder to contain the tests in a test suite. You can even create subfolders within the folders that contain your tests. Just be sure that you provide the correct relative path when you list a test in the `files` section of your `bat.yaml` file.
 
-=== The `reporters` Section of the `bat.yaml` File
+== The `reporters` Section of the `bat.yaml` File
 
 This section is for configuring various tools or third-party applications to report test failures. In this example, a failure of the `HelloWorld.dwl` test prompts the BAT CLI to write a report of the failure to the file `/tmp/HTML.html`. For information about setting up reports, see xref:bat-reporting-task.adoc[Configure and View Test Reports].
 
-=== The `secrets` Section of the `bat.yaml` File
+== The `secrets` Section of the `bat.yaml` File
 
 If you plan to run a test suite from a private location, you can use the BAT CLI's integration with Anypoint Secrets Manager to use shared secrets in your tests.
 
-=== The `config` Folder
+== The `config` Folder
 
 You can store variables in the files in the `config` folder. For example, suppose that you're developing an API and you deploy it to two different environments: `dev` and `qa`. The endpoint URL for the first is `dev.myapi.com` and for the second `qa.myapi.com`. The API is intended to behave the same in both environments.
 
@@ -134,7 +134,7 @@ When you run the test, you can use the `--config` parameter to specify which con
 
 Use JSON for the format of your configuration files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
 
-=== The `tests` folder
+== The `tests` folder
 
 In the example test suite, the test `HelloWorld.dwl` is in a folder named `tests`. As explained in the section about the `bat.yaml` file in this example, the `files` section in the `bat.yaml` file points to the tests in a test suite.
 
