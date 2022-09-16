@@ -17,11 +17,11 @@ The best way to learn how to write tests in this syntax is to use the BAT Playgr
 [[before-you-begin]]
 == Before You Begin
 
-Before you can run the BAT playground, you must have an Anypoint Platform account. 
+Before you can run the BAT playground, you must have access to an Anypoint Platform account. 
 
 * If you already have access to an Anypoint Platform account, proceed to <<start-bat-playground>>.
 
-* If you do not have access to an Anypoint Platform organization, refer to xref::access-management::managing-your-account[Managing your Anypoint Platform Account] to sign up or get access to an existing account. After you have verified your access to Anypoint Platform, proceed to <<start-bat-playground>>.
+* If you do not have access to an Anypoint Platform account, refer to xref::access-management::managing-your-account[Managing your Anypoint Platform Account] to find out how to sign up for a new account or get access to an organization in an existing account. After you have access to an Anypoint Platform account, proceed to <<start-bat-playground>>.
 
 [[start-bat-playground]]
 == Start the BAT Playground
