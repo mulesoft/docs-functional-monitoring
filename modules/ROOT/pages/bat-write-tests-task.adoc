@@ -14,13 +14,21 @@ Tests are written in the BDD Test-Writing syntax and use the `.dwl` file extensi
 
 The best way to learn how to write tests in this syntax is to use the BAT Playground, a web application that runs modifiable tests on the Deck of Cards API by default. There are nine different tests that are presented in ascending order of complexity. Each test includes comments to show you what the code does.
 
-You start the BAT Playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/.
+[[before-you-begin]]
+== Before You Begin
+
+Before you can run the BAT playground, you must have an Anypoint Platform account. 
+
+* If you already have access to an Anypoint Platform account, proceed to <<start-bat-playground>>.
+
+* If you do not have access to an Anypoint Platform organization, refer to xref::access-management::managing-your-account[Managing your Anypoint Platform Account] to sign up or get access to an existing account. After you have verified your access to Anypoint Platform, proceed to <<start-bat-playground>>.
+
+[[start-bat-playground]]
+== Start the BAT Playground
+
+Start the BAT Playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/. You are prompted to log in to your Anypoint Platform account to access the BAT playground.
 
 After you learn the basics of writing tests from the examples in the BAT Playground, you can refer to the BDD Test-Writing Syntax Reference, which can help you go beyond the basics.
-
-
-
-
 
 == See Also
 
