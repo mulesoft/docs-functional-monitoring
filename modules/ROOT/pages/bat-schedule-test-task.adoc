@@ -79,11 +79,6 @@ The limit depends on the type of location, not on whether the API is public or p
 
 |Public
 |5 or less
-|Employee
-|5 minutes
-
-|Public
-|5 or less
 |Other 
 |15 minutes
 
@@ -91,11 +86,6 @@ The limit depends on the type of location, not on whether the API is public or p
 |More than 5
 |Developer
 |15 minutes
-
-|Public
-|More than 5
-|Employee
-|5 minutes
 
 |Public
 |More than 5
