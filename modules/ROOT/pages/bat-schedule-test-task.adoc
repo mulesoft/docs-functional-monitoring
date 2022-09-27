@@ -61,7 +61,7 @@ Next, configure and view test reports.
 
 The minimum interval for schedules that run in private locations is always five minutes.
 
-The interval for schedules that run in public locations depends on the number of schedule entitlements, or API monitor entitlements, that you have. If you have more than five, the limit is five minutes. Otherwise, it is fifteen minutes.
+The minimum interval for schedules that run in public locations depends on the number of schedule entitlements, or API monitor entitlements, that you have. If you have more than five, the limit is five minutes. Otherwise, it is fifteen minutes.
 
 The limit depends on the type of location, not on whether the API is public or private, because you can test a public API from a private location.
 
