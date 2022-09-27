@@ -102,3 +102,4 @@ The limit depends on the type of location, not on whether the API is public or p
 
 * xref:bat-reporting-task.adoc[Configure Reports of Test Failures]
 * xref:bat-command-reference.adoc[BAT CLI Reference]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
