@@ -37,7 +37,7 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 
 === Windows
 
-Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to download the BAT wrapper for Windows. After it downloads, unzip it to install it in your Windows environment.  
+Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. After it downloads, unzip it to install it in your Windows environment.  
 
 == What To Do Next
 
