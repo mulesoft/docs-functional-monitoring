@@ -1,4 +1,4 @@
-= Configure Reports of Test Failures
+= Configure and View Reports
 
 You can configure BAT for use with these reporting systems.
 
