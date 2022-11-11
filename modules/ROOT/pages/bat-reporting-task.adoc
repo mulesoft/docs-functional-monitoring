@@ -17,7 +17,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 Using New Relic with API Functional Monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
 
-API Functional Monitoring integrates with the New Relic Metric API so that New Relice can capture the metrics from test suites.
+API Functional Monitoring integrates with the New Relic Metric API so that New Relic can show the metrics from test suites.
 
 === To Configure Reporting
 
