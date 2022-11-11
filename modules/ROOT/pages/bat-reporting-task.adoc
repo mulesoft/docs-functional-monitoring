@@ -15,9 +15,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 == New Relic
 
-Using New Relic with API Functional Monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
-
-API Functional Monitoring integrates with the New Relic Metric API so that New Relic can show the metrics from test suites.
+Using New Relic with API Functional Monitoring, you can view metrics from test suites in the New Relic UI. Metrics include the times of each test, performance losses detected, and alert schedules.
 
 === To Configure Reporting
 
@@ -41,7 +39,7 @@ NOTE: If you configured a secret for the license key, use the alias that you use
 
 === What to Do Next
 
-After a test runs, go to New Relic and click *Metrics*. The BAT metrics information appears.
+After a test runs, go to New Relic and click *Metrics*. The BAT test metrics appear.
 
 Click the test suite name to see the result of the test.
 
