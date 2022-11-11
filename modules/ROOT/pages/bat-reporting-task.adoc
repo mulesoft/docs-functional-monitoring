@@ -17,7 +17,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 Using New Relic with API Functional Monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
 
-New Relic has a plugin configured for BAT that can capture the metrics from test suites.
+API Functional Monitoring integrates with the New Relic Metric API so that New Relice can capture the metrics from test suites.
 
 === To Configure Reporting
 
@@ -41,7 +41,7 @@ NOTE: If you configured a secret for the license key, use the alias that you use
 
 === What to Do Next
 
-After a test runs, go to New Relic and click Plugins. The BAT plugin information appears.
+After a test runs, go to New Relic and click *Metrics*. The BAT metrics information appears.
 
 Click the test suite name to see the result of the test.
 
@@ -52,18 +52,10 @@ The integration of BAT with PagerDuty generates an incident when a test fails an
 === To Configure Reporting
 
 . In PagerDuty, configure an integration:
-a. Select *Configure* > *Services*.
-b. Select the integration.
+.. Select *Configure* > *Services*.
+.. Select the integration.
 . Copy the routing key.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-+
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 +
 . In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
@@ -102,7 +94,6 @@ You can integrate BAT and Slack to send notifications to a Slack channel when te
 . Choose or create a channel to post notifications to.
 . Copy the webhook URL of your new configuration.
 . In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, enter `metadata:`. A few blank lines below that, enter `reporters:`.
-+
 . In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
 +
 [source,yaml]
