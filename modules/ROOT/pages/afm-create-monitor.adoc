@@ -55,9 +55,9 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 To create a monitor:
 
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
-. Under *Step 1 - Setup the monitor*, specify a monitor name. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications.
+. Under *Step 1 - Setup the monitor*, specify a monitor name. 
 . Click the *Step 2 - Select endpoints* tab.
-. Populate the fields with the information gathered in "Before You Begin."
+. Populate the fields for each endpoint with the information gathered in "Before You Begin." Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications for an endpoint.
 +
 You can preview the test by clicking *Run now* under *Preview the result of your monitor*.
 
