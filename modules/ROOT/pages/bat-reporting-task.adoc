@@ -12,7 +12,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 == New Relic
 
-Using New Relic with API Functional Monitoring, you can view metrics from test suites in the New Relic UI. Metrics include the times of each test, performance losses detected, and alert schedules.
+Using New Relic with API Functional Monitoring, you can view metrics from test suites in New Relic. Metrics include the times of each test, performance losses detected, and alert schedules.
 
 === To Configure Reporting
 
