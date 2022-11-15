@@ -38,7 +38,7 @@ After following either method, the following options appear:
 
 * Tab one (*Step 1 - Select endpoints*) enables you to modify the endpoints.
 + 
-You can edit endpoint methods, URLs, optional headers, and assertions. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications for an endpoint.
+You can edit endpoint methods, URLs, optional headers, and assertions. If the monitor needs to use self-signed certifications for an endpoint, toggle *Validate SSL Certificate*.
 
 * Tab two (*Step 2 - Set notifications*) enables you to modify notifications.
 
