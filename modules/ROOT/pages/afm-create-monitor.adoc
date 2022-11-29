@@ -1,4 +1,4 @@
-= Creating a Monitor
+= Creating Monitors
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
