@@ -47,5 +47,6 @@ Alternatively, select *Switch to code editor* to edit the monitor as BAT source.
 
 == See Also
 
+ * xref:afm-create-monitor.adoc[Create a Monitor]
  * xref:afm-download-test.adoc[Download a Monitor]
  * xref:afm-upload-monitor.adoc[Upload a Monitor]

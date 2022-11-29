@@ -96,3 +96,4 @@ Alternatively, to run a monitor for more than 120 seconds, download the monitor 
 
 * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
 * xref:access-management::managing-permissions.adoc[Manage Permissions]
+* xref:afm-modify-monitor.adoc[Modify a Monitor]
