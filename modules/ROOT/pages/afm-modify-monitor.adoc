@@ -1,4 +1,4 @@
-= Modifying a Monitor Using API Functional Monitoring
+= Modifying a Monitor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
