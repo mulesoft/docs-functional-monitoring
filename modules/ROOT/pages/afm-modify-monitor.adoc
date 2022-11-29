@@ -1,4 +1,4 @@
-= Modify a Monitor Using API Functional Monitoring
+= Modifying a Monitor Using API Functional Monitoring
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -19,7 +19,8 @@ and
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+[[modify-a-monitor]]
+== Modify a Monitor
 
 Modify a monitor from either the homepage or the monitor's detail page.
 
