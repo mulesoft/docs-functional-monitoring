@@ -39,7 +39,7 @@ The private location is added to the list of private locations. While API Functi
 
 If the indicator is red, navigate to Runtime Manager and restart the environment. Then, check the logs for the environment to troubleshoot the problem that caused it to go offline.
 
-== What to Do Next
+== What To Do Next
 
 You can now run tests from the private location, either by adding a schedule that uses the location or by modifying an existing schedule to use it.
 

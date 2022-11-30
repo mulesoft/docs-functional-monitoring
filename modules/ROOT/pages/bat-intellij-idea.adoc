@@ -9,11 +9,11 @@ You can write and run BAT tests in IntelliJ IDEA. The DataWeave 2.0 Intellij plu
 * String interpolation
 * Support for running tests
 
-== About this task
+== About This Task
 
 The steps in this procedure explain how to modify a BAT project for support in IntelliJ IDEA, open that project, create a new test file, and run a test.
 
-== Before you begin
+== Before You Begin
 
 * Ensure that the DataWeave 2.0 IntelliJ plugin in installed in your IntelliJ IDEA editor. You can install it by following these steps:
 +

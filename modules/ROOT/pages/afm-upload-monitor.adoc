@@ -30,7 +30,7 @@ For details on file structure and file requirements, see xref:bat-example-test-s
 
 The *Monitor Detail* page opens. In the *Last executions* list you can view the test result and how long the test ran.
 
-== What to do next
+== What To Do Next
 
 You can view a list of monitor schedules in the schedules table. You can also disable and enable schedules.
 

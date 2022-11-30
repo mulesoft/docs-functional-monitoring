@@ -34,7 +34,7 @@ NOTE: You can configure a secret for the license key. If you do so, use the secr
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the `.dwl` file extension.
 
-=== What to Do Next
+=== What To Do Next
 
 After a test runs, go to New Relic and click *Metrics*. The BAT test metrics appear.
 
@@ -71,7 +71,7 @@ NOTE: If you configured a secret for the service key, use the alias that you use
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
-=== What to Do Next
+=== What To Do Next
 
 If a test fails, look in PagerDuty for the report.
 
