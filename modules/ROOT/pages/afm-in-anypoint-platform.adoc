@@ -1,7 +1,4 @@
 = API Functional Monitoring in Anypoint Monitoring
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :page-aliases: afm-delete-test.adoc, afm-edit-test.adoc
 
 :imagesdir: ../assets/images
@@ -36,7 +33,7 @@ image::afm-ui-test-versions-and-schedules-new.png[]
 
 The bar graph shows the daily average response time in milliseconds of all tests to all endpoints. The colors in each bar indicate the average time for each of the steps in a test. Hover over the bar to see the details.
 
-== See also
+== See Also
 
 * xref:afm-create-monitor.adoc[Create a Monitor]
 * xref:afm-upload-monitor.adoc[Upload a Monitor]

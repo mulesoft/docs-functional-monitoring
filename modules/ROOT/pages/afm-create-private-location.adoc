@@ -1,7 +1,4 @@
-= Create a Private Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Private Locations
 
 :imagesdir: ../assets/images
  
@@ -25,7 +22,7 @@ For information about private locations and their uses, see xref:afm-monitoring-
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Create a Private Location
 
 To create a private location:
 
@@ -35,12 +32,12 @@ To create a private location:
 The name can be up to 255 characters, and can include spaces and special characters.
 . Select the environment where the tests will run.
 . Complete the creation of the of test or schedule.
-
-== Result
-
++
 The private location is added to the list of private locations. While API Functional Monitoring is registering the location, the status indicator for the location is yellow. After it is registered, if the environment in which the location was created is online, the location shows a green status indicator.
-
-If the indicator is red, navigate to Runtime Manager and restart the environment. Then, check the logs for the environment to troubleshoot the problem that caused it to go offline.
++
+. If the indicator is red: 
+.. Navigate to Runtime Manager and restart the environment. 
+.. Check the logs for the environment to troubleshoot the problem that caused it to go offline.
 
 == What to Do Next
 

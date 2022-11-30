@@ -1,9 +1,4 @@
-= Run a Test Immediately
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
+= Running Tests Immediately
 
 You can manually run tests outside of the automatic testing schedule without affecting it.
 
@@ -11,7 +6,7 @@ You can manually run tests outside of the automatic testing schedule without aff
 
 Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the same location as used by the schedule, navigate to the monitor detail page and note that location.
 
-== Procedure
+== Run a Test Immediately
 
 Run a test either from the homepage, or from a test's details page.
 
@@ -29,7 +24,5 @@ To run a test from its details page:
 . Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
 . Select the location and configuration in which to run the test.
 . Click *Run now*.
-
-== Result
-
++
 The test runs immediately and the results are displayed. The current interval in the associated schedule continues to elapse.

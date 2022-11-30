@@ -1,7 +1,4 @@
-= Create a Monitor
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Monitors
 
 You create monitors via the Functional Monitoring UI or by uploading test suites written in BAT, a Behavior Driven Development (BDD) language. Both methods enable you to create tests against one or more endpoints, and to create test schedules that run at specified intervals. 
 
@@ -51,7 +48,7 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 |===
 
 
-== Procedure
+== Create a Monitor
 To create a monitor:
 
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.

@@ -1,4 +1,4 @@
-= Configure and View Reports
+= Configuring and Viewing Reports
 
 You can configure BAT for use with these reporting systems.
 
@@ -14,7 +14,7 @@ You can also configure custom reports and reports that are sent to a location on
 
 Using New Relic with API Functional Monitoring, you can view metrics from test suites in New Relic. Metrics include the times of each test, performance losses detected, and alert schedules.
 
-=== To Configure Reporting
+=== Configure Reporting in New Relic
 
 . Obtain your New Relic license key. For details on how to do this, see the https://docs.newrelic.com/[New Relic documentation^]. 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
@@ -44,7 +44,7 @@ Click the test suite name to see the result of the test.
 
 The integration of BAT with PagerDuty generates an incident when a test fails and triggers configured PagerDuty alerts. If a monitor always fails with the same error, BAT does not generate a new issue, but instead ignores these errors.
 
-=== To Configure Reporting
+=== Configure Reporting in PagerDuty
 
 . In PagerDuty, configure an integration:
 .. Select *Configure* > *Services*.
@@ -79,7 +79,7 @@ If a test fails, look in PagerDuty for the report.
 
 You can integrate BAT and Slack to send notifications to a Slack channel when tests fail. A notification provides the name of the suite in which the error occurs.
 
-=== To Configure Failure Notifications
+=== Configure Failure Notifications in Slack
 
 . Create a webhook:
 
@@ -128,7 +128,7 @@ You must provide the URL of the endpoint of the collection.
 
 You can use BAT to post a log in the specified collection, and create dashboards.
 
-=== To Configure Reporting
+=== Configure Reporting in Sumo Logic
 
 . In Sumo Logic, select Set Up Streaming Data in the setup wizard.
 . Select *Your Custom App* > *HTTP Source* or *All Other Sources* > *HTTP Source* and specify the source category.

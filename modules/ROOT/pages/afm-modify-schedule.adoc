@@ -1,9 +1,4 @@
-= Modify a Schedule
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
+= Modifying Schedules
 
 You can modify a schedule to change:
 
@@ -20,7 +15,7 @@ You can modify a schedule to change:
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Modify a Schedule
 
 Modify a schedule either from the *Schedules* section of a monitor, or from the schedules list.
 
@@ -44,9 +39,7 @@ To modify a schedule from the schedules list:
 * The frequency at which to run the test
 * The configuration to run the test
 . Click *Save*.
-
-== Result
-
++
 Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
 
 == See Also

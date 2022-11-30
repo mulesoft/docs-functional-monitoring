@@ -1,7 +1,4 @@
-= About API Functional Monitoring
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= API Functional Monitoring Overview
 
 API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are deployed APIs that are accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
 
@@ -37,7 +34,7 @@ To benefit from the new layout, it is recommended that you use one version for e
 . Specify a schedule rule that corresponds with the test version in the first step.
 . Delete the version downloaded in the first step.
 
-== See also
+== See Also
 
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]

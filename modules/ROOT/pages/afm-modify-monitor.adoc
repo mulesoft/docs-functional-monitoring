@@ -1,9 +1,4 @@
-= Modify a Monitor Using API Functional Monitoring
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
+= Modifying Monitors
 
 You can modify monitors via API Functional Monitoring, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. Additionally you can download the monitor as BAT source, edit the monitor in your text editor of choice, and then upload the monitor.
 
@@ -19,7 +14,7 @@ and
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Modify a Monitor
 
 Modify a monitor from either the homepage or the monitor's detail page.
 

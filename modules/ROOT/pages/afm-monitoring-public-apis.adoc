@@ -1,7 +1,4 @@
 = Monitoring the Endpoints of Public APIs
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :page-aliases: afm-public-versus-private.adoc
 :imagesdir: ../assets/images
 

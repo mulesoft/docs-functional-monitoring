@@ -1,7 +1,4 @@
-= Upload a Monitor
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Uploading Monitors
 
 You can upload a suite of tests that you have written and want to run as a monitor, viewing the results the information displays in the *Functional Monitoring* section of Anypoint Monitoring. When you create monitors by writing them, you can create more complex test cases by using features such as the DataWeave expression language and context variables for saving values between calls to endpoints.
 
@@ -10,7 +7,7 @@ You can upload a suite of tests that you have written and want to run as a monit
 
 * Ensure that your user ID has the Monitoring Center User permission. An administrator for your organization can grant you this permission in Anypoint Access Management.
 
-* Write a suite of tests in the BDD test-writing language. For information about writing tests, see "API Functional Monitoring with the BAT CLI", which is linked to from the *See also* section at the end of this topic.
+* Write a suite of tests in the BDD test-writing language. For information about writing tests, see xref:bat-top.adoc[API Functional Monitoring with BAT CLI].
 
 * Determine the frequency at which you would like the monitor to endpoints in the test suite. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you upload the monitor. After you upload the monitor, you can create another schedule that is more detailed, if you prefer.
 
@@ -18,7 +15,7 @@ You can upload a suite of tests that you have written and want to run as a monit
 
 * If you have more than one configuration file in your test suite, determine which you plan to use for the monitor.
 
-== Procedure
+== Upload a Monitor
 To create a monitor by uploading a test suite:
 
 . In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload Monitor*.
@@ -28,12 +25,12 @@ For details on file structure and file requirements, see xref:bat-example-test-s
 
 . Click *Upload Monitor*.
 . Click *Next*.
++
+The *Monitor Detail* page opens. 
++
+. In the *Last executions* list, you can view the test result and how long the test ran.
 
-== Result
-
-The *Monitor Detail* page opens. In the *Last executions* list you can view the test result and how long the test ran.
-
-== What to do next
+== What to Do Next
 
 You can view a list of monitor schedules in the schedules table. You can also disable and enable schedules.
 
@@ -44,6 +41,6 @@ The last executions table and the average times chart enable you to determine:
 
 As your monitor continues to run at the scheduled intervals, the statistics in this table are updated, as well as the graph.
 
-== See also
+== See Also
 
-* xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
+* xref:bat-top.adoc[API Functional Monitoring with BAT CLI]
