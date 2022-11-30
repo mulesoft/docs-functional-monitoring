@@ -14,7 +14,7 @@ Using the BAT CLI, you can execute one test at a time or all tests listed in the
 +
 Your `bat.yaml` file for the test suite must also be at the root level in the test-suite directory.
 
-== What To Do Next
+== What to Do Next
 
 By default in the example test suite that you can generate with the `bat init` command, BAT generates an HTML report about the test results. The configuration of this report is in the `reporters` section on the `bat.yaml` file.
 +

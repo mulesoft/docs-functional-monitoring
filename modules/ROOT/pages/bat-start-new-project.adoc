@@ -29,7 +29,7 @@ In this folder, you create configuration files to use for your tests. Configurat
 +
 For example, to refer to a variable named `url` in a configuration file, you use this reference: '$(config.url)'. When you run the `bat` command to execute a test, you specify the configuration file to use by including the `--config=file.dwl` option, where `file.dwl` is the path and name of the configuration file in the folder for your test suite.
 
-== What To Do Next
+== What to Do Next
 
 You can start writing tests.
 

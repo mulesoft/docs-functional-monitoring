@@ -30,7 +30,7 @@ The *Monitor Detail* page opens.
 +
 . In the *Last executions* list, you can view the test result and how long the test ran.
 
-== What To Do Next
+== What to Do Next
 
 You can view a list of monitor schedules in the schedules table. You can also disable and enable schedules.
 
