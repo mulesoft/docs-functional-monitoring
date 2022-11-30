@@ -1,7 +1,4 @@
 = BAT CLI Reference
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 The BAT command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI.  The BAT CLI is integrated with Anypoint Platform.
 

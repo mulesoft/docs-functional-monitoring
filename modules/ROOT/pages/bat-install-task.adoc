@@ -1,7 +1,4 @@
-= To Install BAT
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Installing BAT
 
 The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
 
@@ -25,7 +22,8 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 +
 `export PATH=$PATH:~/.bat/bat/bin`
 
-== Procedure
+[[to-install-bat]]
+== Install BAT
 
 === Linux 
 
@@ -39,7 +37,7 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 
 Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. After it downloads, unzip it to install it in your Windows environment.  
 
-== What To Do Next
+== What to Do Next
 
 You can now start creating a test suite.
 

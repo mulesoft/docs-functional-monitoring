@@ -1,7 +1,4 @@
-= Get Started Writing Tests
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Getting Started Writing Tests
 :page-aliases: bat-playground-task.adoc
 
 A test suite is composed of the following elements:

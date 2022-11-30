@@ -1,22 +1,15 @@
-= View the Schedules That Use a Private Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
+= Viewing Schedules That Use a Private Location
 
 You can view the number of schedules that use a private location. 
 
 When initially specifying the private location, a test run worker associated with the schedule is created in that location. Viewing the location shows how many workers are running.
 
-== Procedure
+== View the Schedules That Use a Private Location
 
 . Display the list of locations by opening *Location Manager* from the homepage.
 . Click the *Private Locations* tab.
 . Select a private location.
-
-== Result
-
++
 The list of schedules that use the private location appears. Each schedule displays the following information:
 
 * The name of the monitor that the test is defined in

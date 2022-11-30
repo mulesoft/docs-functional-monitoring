@@ -1,7 +1,4 @@
 = Monitoring the Endpoints of Private APIs
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :page-aliases: afm-delete-private-location.adoc
 :imagesdir: ../assets/images
 

@@ -1,7 +1,4 @@
 = BDD Test-Writing Syntax Reference
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Behavior Driven Development (BDD) is the syntax for writing BAT tests for processing in DataWeave. BDD is an embedded domain specific language (EDSL) that resembles other testing frameworks, such as Mocha and Jasmine.
 

@@ -1,7 +1,4 @@
 = Example of a Test Suite
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 To see the content of an example test suite, in a terminal create a directory in your computer's filesystem. Then, change to that directory and run the `bat init` command. The command creates these folders and files:
 
@@ -134,7 +131,7 @@ When you run the test, you can use the `--config` parameter to specify which con
 
 Use JSON for the format of your configuration files, and `.dwl` as the file extension. You can put as many variables as you need in each file.
 
-== The `tests` folder
+== The `tests` Folder
 
 In the example test suite, the test `HelloWorld.dwl` is in a folder named `tests`. As explained in the section about the `bat.yaml` file in this example, the `files` section in the `bat.yaml` file points to the tests in a test suite.
 
