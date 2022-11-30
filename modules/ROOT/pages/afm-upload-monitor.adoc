@@ -41,6 +41,6 @@ The last executions table and the average times chart enable you to determine:
 
 As your monitor continues to run at the scheduled intervals, the statistics in this table are updated, as well as the graph.
 
-== See also
+== See Also
 
 * xref:bat-top.adoc[API Functional Monitoring with BAT CLI]

@@ -34,7 +34,7 @@ To benefit from the new layout, it is recommended that you use one version for e
 . Specify a schedule rule that corresponds with the test version in the first step.
 . Delete the version downloaded in the first step.
 
-== See also
+== See Also
 
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Platform]
 * xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
