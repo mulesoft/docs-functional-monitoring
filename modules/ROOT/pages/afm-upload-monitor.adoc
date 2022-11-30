@@ -7,7 +7,7 @@ You can upload a suite of tests that you have written and want to run as a monit
 
 * Ensure that your user ID has the Monitoring Center User permission. An administrator for your organization can grant you this permission in Anypoint Access Management.
 
-* Write a suite of tests in the BDD test-writing language. For information about writing tests, see "API Functional Monitoring with the BAT CLI", which is linked to from the *See also* section at the end of this topic.
+* Write a suite of tests in the BDD test-writing language. For information about writing tests, see xref:bat-top.adoc[API Functional Monitoring with BAT CLI].
 
 * Determine the frequency at which you would like the monitor to endpoints in the test suite. The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you upload the monitor. After you upload the monitor, you can create another schedule that is more detailed, if you prefer.
 
@@ -43,4 +43,4 @@ As your monitor continues to run at the scheduled intervals, the statistics in t
 
 == See also
 
-* xref:bat-top.adoc[API Functional Monitoring with the BAT CLI]
+* xref:bat-top.adoc[API Functional Monitoring with BAT CLI]
