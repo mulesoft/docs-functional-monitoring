@@ -1,5 +1,5 @@
 .xref:index.adoc[API Functional Monitoring]
-* xref:index.adoc[About API Functional Monitoring]
+* xref:index.adoc[API Functional Monitoring Overview]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
 * xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs]
 * xref:afm-in-anypoint-platform.adoc[API Functional Monitoring in Anypoint Monitoring]
