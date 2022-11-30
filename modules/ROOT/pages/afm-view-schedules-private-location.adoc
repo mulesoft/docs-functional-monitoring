@@ -1,9 +1,4 @@
 = Viewing Schedules That Use a Private Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can view the number of schedules that use a private location. 
 

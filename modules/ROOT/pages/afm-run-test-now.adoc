@@ -1,9 +1,4 @@
 = Running Tests Immediately
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can manually run tests outside of the automatic testing schedule without affecting it.
 

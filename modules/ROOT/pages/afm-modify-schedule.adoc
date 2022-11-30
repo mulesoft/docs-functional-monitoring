@@ -1,9 +1,4 @@
 = Modifying Schedules
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can modify a schedule to change:
 

@@ -1,7 +1,4 @@
 = Installing BAT
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
 

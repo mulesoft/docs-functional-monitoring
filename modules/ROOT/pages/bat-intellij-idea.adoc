@@ -1,7 +1,4 @@
 = Writing and Running BAT Tests in IntelliJ IDEA
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 You can write and run BAT tests in IntelliJ IDEA. The DataWeave 2.0 Intellij plugin, which adds the required support, offers these features:
 

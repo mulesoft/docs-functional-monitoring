@@ -1,9 +1,4 @@
 = Viewing Test History
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can review the details of past test runs.
 

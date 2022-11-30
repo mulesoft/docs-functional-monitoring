@@ -1,9 +1,4 @@
 = Modifying Monitors
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can modify monitors via API Functional Monitoring, which includes the options to edit the monitor as text fields or to edit the monitor as BAT source. Additionally you can download the monitor as BAT source, edit the monitor in your text editor of choice, and then upload the monitor.
 
