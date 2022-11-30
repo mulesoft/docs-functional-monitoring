@@ -25,10 +25,10 @@ For details on file structure and file requirements, see xref:bat-example-test-s
 
 . Click *Upload Monitor*.
 . Click *Next*.
-
-== Result
-
-The *Monitor Detail* page opens. In the *Last executions* list you can view the test result and how long the test ran.
++
+The *Monitor Detail* page opens. 
++
+. In the *Last executions* list, you can view the test result and how long the test ran.
 
 == What To Do Next
 

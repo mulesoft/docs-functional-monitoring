@@ -9,9 +9,7 @@ When initially specifying the private location, a test run worker associated wit
 . Display the list of locations by opening *Location Manager* from the homepage.
 . Click the *Private Locations* tab.
 . Select a private location.
-
-== Result
-
++
 The list of schedules that use the private location appears. Each schedule displays the following information:
 
 * The name of the monitor that the test is defined in

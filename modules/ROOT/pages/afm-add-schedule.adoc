@@ -53,8 +53,7 @@ An Anypoint Platform administrator for your organization grants permission. See 
 . Set *Configuration*.
 
 . Click *Add*.
-
-== Result
++
 The countdown to the first run of the selected test begins.
 
 [NOTE]

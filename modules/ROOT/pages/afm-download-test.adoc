@@ -11,9 +11,7 @@ If you are new to writing monitors manually, you can download monitors, see how 
 . Select the monitor to download.
 . Click the monitor to enter the monitor detail page.
 . Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Download Monitor* to download a monitor as BAT source.
-
-== Result
-
-The following file is downloaded:
-
-* `<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`
++
+The ZIP file is downloaded with the following naming convention:
++
+`<your Anypoint Platform group ID>_<the name of the monitor>_<the test version>.zip`

@@ -39,12 +39,9 @@ To delete a schedule from the table of schedules that use a particular location:
 . Display the list of locations by opening the *Locations Manager* in the homepage.
 . Select the location from which you want to delete a schedule.
 . Locate the schedule in the table and click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Schedule*.
-
-== Result
-
-If the deleted schedule was the only schedule running a particular test, the worker for that test no longer exists.
-
-If the schedule was the only schedule using a private location, you have the option to delete that private location.
++
+* If the deleted schedule was the only schedule running a particular test, the worker for that test no longer exists.
+* If the schedule was the only schedule using a private location, you have the option to delete that private location.
 
 == See Also
 

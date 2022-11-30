@@ -28,7 +28,5 @@ To delete a monitor from its detail page:
 . Click the monitor.
 . Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Monitor*.
 . In the *Delete Monitor* dialog, click *Delete*.
-
-== Result
-
++
 The monitor and its schedules are deleted. The workers provisioned for the schedules are also deleted, and their consumed resources are made available to other workers.

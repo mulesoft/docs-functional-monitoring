@@ -24,7 +24,5 @@ To run a test from its details page:
 . Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
 . Select the location and configuration in which to run the test.
 . Click *Run now*.
-
-== Result
-
++
 The test runs immediately and the results are displayed. The current interval in the associated schedule continues to elapse.
