@@ -1,4 +1,4 @@
-= Upload a Monitor
+= Uploading Monitors
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -18,7 +18,7 @@ You can upload a suite of tests that you have written and want to run as a monit
 
 * If you have more than one configuration file in your test suite, determine which you plan to use for the monitor.
 
-== Procedure
+== Upload a Monitor
 To create a monitor by uploading a test suite:
 
 . In the *Functional Monitoring* section of Anypoint Monitoring, click *Upload Monitor*.

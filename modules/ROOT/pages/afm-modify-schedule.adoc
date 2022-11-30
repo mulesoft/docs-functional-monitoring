@@ -1,4 +1,4 @@
-= Modify a Schedule
+= Modifying Schedules
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -20,7 +20,7 @@ You can modify a schedule to change:
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Modify a Schedule
 
 Modify a schedule either from the *Schedules* section of a monitor, or from the schedules list.
 

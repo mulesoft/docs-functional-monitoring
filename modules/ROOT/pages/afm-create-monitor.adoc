@@ -1,4 +1,4 @@
-= Create a Monitor
+= Creating Monitors
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -51,7 +51,7 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 |===
 
 
-== Procedure
+== Create a Monitor
 To create a monitor:
 
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.

@@ -1,4 +1,4 @@
-= Create a Private Location
+= Creating Private Locations
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -25,7 +25,7 @@ For information about private locations and their uses, see xref:afm-monitoring-
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Create a Private Location
 
 To create a private location:
 

@@ -1,4 +1,4 @@
-= Write and Run BAT Tests in IntelliJ IDEA
+= Writing and Running BAT Tests in IntelliJ IDEA
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -32,7 +32,7 @@ The steps in this procedure explain how to modify a BAT project for support in I
 
 * Log into BAT in a terminal window and run the `bat --update` command to be sure that you have the latest version of the BAT CLI.
 
-== Procedure
+== Write and Run BAT Tests in IntelliJ IDEA
 
 . If you do not already have a BAT project that you want to work with, create one with the `bat init` command in a terminal window.
 . Inside the project folder, run the command `bat idea`.

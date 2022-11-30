@@ -1,11 +1,10 @@
 = Schedule Testing and Monitoring
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-This procedure describes how to schedule, run, and monitor an API test in Anypoint Platform using the default schedule and how to use a cron job to change the schedule. BAT is deployed by default in the Production environment of Anypoint Platform when you execute the bat login command. After deploying BAT, you execute a `bat schedule <options>` command. By default, if you don't include the optional cron expression in the command, the test runs every 15 minutes. The last step in this procedure changes the default to use a cron expression that runs the test once a day for a month.
+You can schedule, run, and monitor an API test in Anypoint Platform using the default schedule and use a cron job to change the schedule. BAT is deployed by default in the Production environment of Anypoint Platform when you execute the bat login command. After deploying BAT, you execute a `bat schedule <options>` command. By default, if you don't include the optional cron expression in the command, the test runs every 15 minutes. The last step in this procedure changes the default to use a cron expression that runs the test once a day for a month.
 
 After running the command, BAT creates a monitor in Anypoint Platform. The monitor collects information about the scheduled execution of the test. To obtain this information, you need to set up a third-party reporting tool as described in the linked topic.
+
+To schedule testing and monitoring:
 
 . Log into Anypoint Platform using BAT. For example:
 +

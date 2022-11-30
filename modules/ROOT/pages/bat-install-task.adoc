@@ -1,4 +1,4 @@
-= To Install BAT
+= Installing BAT
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -25,7 +25,8 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 +
 `export PATH=$PATH:~/.bat/bat/bin`
 
-== Procedure
+[[to-install-bat]]
+== Install BAT
 
 === Linux 
 

@@ -1,11 +1,6 @@
-= Create a Monitor That Uses a Particular Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Monitors That Use a Particular Location
 
-:imagesdir: ../assets/images
-
-
+To create a monitor that uses a particular location:
 
 . Run the following command to list the locations that are in your default profile:
 +

@@ -1,4 +1,4 @@
-= Run a Test Immediately
+= Running Tests Immediately
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -11,7 +11,7 @@ You can manually run tests outside of the automatic testing schedule without aff
 
 Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the same location as used by the schedule, navigate to the monitor detail page and note that location.
 
-== Procedure
+== Run a Test Immediately
 
 Run a test either from the homepage, or from a test's details page.
 

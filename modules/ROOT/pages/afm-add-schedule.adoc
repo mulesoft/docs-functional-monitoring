@@ -1,4 +1,4 @@
-= Add a Schedule
+= Adding Schedules
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -18,7 +18,7 @@ Ensure that you have the following permission set in Access Management:
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Add a Schedule
 
 . Select the monitor in which you want to add a schedule.
 . Click *Add Schedule* from the *Schedules* table.

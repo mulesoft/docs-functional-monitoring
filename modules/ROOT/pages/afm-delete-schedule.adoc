@@ -1,4 +1,4 @@
-= Delete a Schedule
+= Deleting Schedules
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -28,7 +28,7 @@ Be sure that you want to delete the schedule. There is no opportunity to confirm
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Delete a Schedule
 
 Anypoint Functional Monitoring provides two methods for deleting a schedule.
 

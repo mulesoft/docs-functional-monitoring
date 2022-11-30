@@ -1,4 +1,4 @@
-= Download a Monitor
+= Downloading Monitors
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -9,7 +9,7 @@ You can download a monitor and modify it on your computer. Then, you can either 
 
 If you are new to writing monitors manually, you can download monitors, see how they are structured, and view the content of the files. The knowledge you gain can help you write your own monitors.
 
-== Procedure
+== Download a Monitor
 
 . Select the monitor to download.
 . Click the monitor to enter the monitor detail page.

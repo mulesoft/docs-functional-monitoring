@@ -1,4 +1,4 @@
-= Delete a Monitor
+= Deleting Monitors
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -15,7 +15,7 @@ Ensure that your user ID has the following permission set in Access Management:
 
 See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-== Procedure
+== Delete a Monitor
 
 Delete a monitor either from the homepage or from its detail page.
 
