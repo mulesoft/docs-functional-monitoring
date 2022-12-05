@@ -8,7 +8,7 @@ To schedule testing and monitoring:
 
 . Log into Anypoint Platform using BAT. For example:
 +
-`bat login --username=<value> --password=<value>`
+`bat login --client-id=<value> --client-secret=<value>` or `bat login --username=<value> --password=<value>`
 +
 . Create a schedule using the default and monitor the testing. Provide an arbitrary endpoint URL and optionally specify the current directory by using --init-folder to store scheduling information. For example:
 +
