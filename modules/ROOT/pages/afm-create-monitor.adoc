@@ -55,7 +55,7 @@ To create a monitor:
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
 . Under *Step 1 - Setup the monitor*, specify a monitor name. 
 . Click the *Step 2 - Select endpoints* tab.
-. Populate the fields for each endpoint with the information gathered in "Before You Begin." By default the monitor uses self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. If you want to allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
+. Populate the fields for each endpoint with the information gathered in "Before You Begin." By default the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. If you want to allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 +
 You can preview the test by clicking *Run now* under *Preview the result of your monitor*.
 

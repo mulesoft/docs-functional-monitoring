@@ -34,7 +34,7 @@ After following either method, the following options appear:
 
 * Tab one (*Step 1 - Select endpoints*) enables you to modify the endpoints.
 + 
-You can edit endpoint methods, URLs, optional headers, and assertions. By default the monitor uses self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. If you want to allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
+You can edit endpoint methods, URLs, optional headers, and assertions. By default the monitor validates the self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. If you want to allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 
 * Tab two (*Step 2 - Set notifications*) enables you to modify notifications.
 
