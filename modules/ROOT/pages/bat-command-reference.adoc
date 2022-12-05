@@ -15,12 +15,12 @@ To use all of the BAT commands to execute the corresponding actions in Anypoint 
 |Permission |Required For
 |Create Applications (Runtime Manager) |Create private locations
 |Delete Applications (Runtime Manager) |Delete private locations
-|Manage Settings (Runtime Manager) |Manage private locations
+|Manage Settings (Runtime Manager) |Update private locations
 |View Environment |Log in using BAT CLI
-|View Organization |Log in through a connected app using BAT CLI
+|View Organization |Use Secrets Manager through BAT CLI
 |Exchange Contributor (Exchange)| Create or modify a monitor, add or modify a schedule
 |Exchange Administrator (Exchange)| Create, modify, or delete a monitor, Add, modify, or delete a schedule 
-|Grant access to secrets (Secrets Manager) |Use secrets manager through BAT CLI
+|Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
 
 == bat Command Syntax
