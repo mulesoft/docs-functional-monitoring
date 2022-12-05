@@ -5,6 +5,22 @@ The BAT command line interface lets you run tests locally and schedule monitors 
 This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
 
 For commands to execute successfully, the account under which the BAT CLI logs in must have the required permissions for the action the command is executing. 
+== Permissions Required
+
+To use all of the BAT commands to execute the corresponding actions in Anypoint Platform, you must have the following permissions. 
+
+[options="header,footer"]
+|=======================
+|Permission |Required For
+|Create Applications (Runtime Manager) |Create private locations
+|Delete Applications (Runtime Manager) |
+|Manage Settings (Runtime Manager) |
+|View Environment |
+|View Organization |
+|Exchange Contributor (Exchange)| Create or modify a monitor, add or modify a schedule
+|Exchange Administrator (Exchange)| Create, modify, or delete a monitor, Add, modify, or delete a schedule 
+|Grant access to secrets (Secrets Manager) |
+|=======================
 
 == bat Command Syntax
 
