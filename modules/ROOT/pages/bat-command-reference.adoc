@@ -23,23 +23,29 @@ To use all of the BAT commands to execute the corresponding actions in Anypoint 
 |Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
 
-== bat Command Syntax
+== Login Options
 
-The `bat` command provides an API Functional Monitoring command line interface.
+The `bat` command provides an API Functional Monitoring command line interface. 
 
-`bat [<file> ... | <option> ...]`
+=== Login Using Connected Apps
 
 `bat [login --client-id --client-secret [--profile=<value>] --host=<value>]`
 
-This option uses the client ID and client secret from a connected app. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps]. This provides an alternative way to log in using  MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list.
+This option logs into an Anypoint Platform account using the client ID and client secret from a connected app. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps]. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list.
+
+=== Login Using Username and Password
 
 `bat [login --username=<value> [--profile=<value>] --host=<value>]`
 
-This option displays an interactive command for the password.
+This option logs into an Anypoint Platform account using username and password. It displays an interactive command for the password.
 
 `password for user [username]: <password>`
 
 You can include the option `--password=<password>` in the `login` command.
+
+== Execute Commands Stored in a File
+
+`bat [<file> ... | <option> ...]`
 
 Where:
 
@@ -54,9 +60,9 @@ When you execute bat without any arguments, BAT reads the YAML in the current di
 You can create a `config` folder and add different configuration files in `config` for the environments.
 
 * `bat ~/path/to/folder/` +
-Executes the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
+Executes from the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
 * `bat ./folder/file.dwl` +
-Executes the desired file. The root of the project is the current folder.
+Executes using the desired file. The root of the project is the current folder.
 The root of the project is used to resolve imports and load libraries and files.
 
 == `bat` Command Options
