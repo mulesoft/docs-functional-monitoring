@@ -1,14 +1,14 @@
 = BAT CLI Reference
 
-The BAT command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI.  The BAT CLI is integrated with Anypoint Platform.
+BAT CLI provides an API Functional Monitoring command line interface through an integration with Anypoint Platform. The command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI. 
 
-This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
+This reference covers the syntax and key options you can use with the `bat` commands. Using the `bat` commands, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
 
-For commands to execute successfully, the account under which the BAT CLI logs in must have the required permissions for the action the command is executing. 
+For commands to execute successfully, the account under which BAT CLI logs in must have the required permissions for the action the command is executing. 
 
 == Permissions Required
 
-To use all of the BAT commands to execute the corresponding actions in Anypoint Platform, you must have the following permissions. 
+To use all of the `bat` commands to execute the corresponding actions in Anypoint Platform, you must have the following permissions. 
 
 [options="header,footer"]
 |=======================
@@ -25,7 +25,7 @@ To use all of the BAT commands to execute the corresponding actions in Anypoint 
 
 == Login Options
 
-The `bat` command provides an API Functional Monitoring command line interface. 
+To use the `bat` commands to execute API Functional Monitoring actions, you must first log in using one of the following login methods. 
 
 === Login Using Connected Apps
 
@@ -151,7 +151,7 @@ The client secret from your connected app. You must use this option with the log
 
 == `bat` Commands
 
-You can also use the `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
+You can use the following `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
 
 * `init`
 +
