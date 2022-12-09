@@ -14,19 +14,19 @@ image::afm-public-locations.png[]
 * First relationship type (represented by solid black arrows)
 +
 Monitor 1 runs on a single schedule. The schedule is associated with Public Location 1. The monitor is written to test one or more endpoints in public API 1 and in public API 2, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
-
++
 * Second relationship type (represented by dashed green arrows)
 +
 Monitor 2 runs on two separate schedules, and each is associated with the same public location. Monitor 2 is written to test one or more endpoints in public API 3 and in public API 4, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
-
++
 * Third relationship type (represented by dashed-and-dotted blue arrows)
 +
 Monitor 3 runs on two separate schedules, and each is associated with a different public location. Monitor 3 is written to test one or more endpoints in public API 5 and in public API 6, though it could also test endpoints in more public APIs. The two APIs are in a single environment.
-
++
 * Fourth relationship type (represented by dotted orange arrows)
 +
 Monitor 4 runs on two separate schedules, and each is associated with the same public location, though each could be associated with a different public location. Each of the two tested public APIs is in a different environment. One environment could be a test environment, and the other environment could be a production environment. Public API 7 and public API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in public API 7 and the same endpoints in public API 8, though it could also test endpoints in more public APIs.
-
++
 * Fifth relationship type (represented by dashed, dark blue lines)
 +
 Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (though it could also test endpoints in more public APIs), both of which are accessible on the World-Wide Web.
@@ -53,7 +53,6 @@ In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private 
 |===
 
 For instructions on adding firewall rules, refer to xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC Firewall Rules]
-====
 
 == Length of Time Before Tests Time Out
 
