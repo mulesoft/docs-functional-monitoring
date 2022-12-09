@@ -2,7 +2,7 @@
 
 API Functional Monitoring is a component of Anypoint Platform that enables you to ensure the quality and reliability of public and private APIs that are being used in application networks.
 
-Developers and operators can use API Functional Monitoring to perform consistent testing of the functional behavior and performance of their APIs throughout the API lifecycle, in testing and production environments.
+Developers and operators can use API Functional Monitoring to perform consistent testing of the functional behavior and performance of their APIs throughout the API lifecycle, in testing and production environments. You can:
 
 * Monitor Public or Private APIs from the Anypoint Monitoring UI or by using the BAT command line interface (BAT CLI)
 * View and report on the results of monitor executions
@@ -34,10 +34,6 @@ include::_partials/afm-concepts.adoc[tag=afm-bb-testing,leveloffset=+2]
 // Definition of White Box Tests
 
 include::_partials/afm-concepts.adoc[tag=afm-wb-testing,leveloffset=+2]
-
-// Definition of Runtime Monitoring
-
-include::_partials/afm-concepts.adoc[tag=afm-runtime-monitoring,leveloffset=+2]
 
 // Definition of Runtime Monitoring
 
