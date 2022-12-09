@@ -5,7 +5,7 @@ Partials reused in index.adoc and specific feature topics
 [[afm-monitors]]
 = Monitors
 
-A monitor is a repeating schedule of one or more tests. See <<afm-test-suites>>.
+A monitor is a repeating schedule of one or more tests, or test suites. 
 
 // end::afm-monitors[]
 
@@ -14,16 +14,25 @@ A monitor is a repeating schedule of one or more tests. See <<afm-test-suites>>.
 [[afm-tests]]
 = Tests
 
-Tests are run in monitors on a defined schedule. Test cases are defined using <<afm-bdd>>, a common, declarative, and easy-to-use behavior-description language.
+Tests are run in monitors on a defined schedule. Test cases are defined using Behavior Driven Development (BDD) language, a common, declarative, and easy-to-use behavior-description language. 
 
 // end::afm-tests[]
+
+// tag::afm-bdd[]
+
+[[afm-bdd]]
+= Behavior Driven Development (BDD) Language
+
+The BDD language is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
+
+// end::afm-bdd[]
 
 // tag::afm-test-suites[]
 
 [[afm-test-suites]]
 = Test Suites
 
-Test suites are one or more tests. See <<afm-monitors>>.
+Test suites are one or more tests that can be scheduled as part of a monitor. 
 
 // end::afm-test-suites[]
 
@@ -32,7 +41,7 @@ Test suites are one or more tests. See <<afm-monitors>>.
 [[afm-schedules]]
 = Schedules
 
-The tests in monitors are run on schedules.
+The designated intervals and durations configured in monitors for test suites to run.
 
 // end::afm-schedules[]
 
@@ -41,7 +50,7 @@ The tests in monitors are run on schedules.
 [[afm-bb-testing]]
 = Black Box Testing
 
-This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
+This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals &mdash; no simulation or mocking).
 
 // end::afm-bb-testing[]
 
@@ -98,12 +107,3 @@ Private APIs are APIs with endpoints that are accessible only within your networ
 APIs with endpoints that are exposed to the open internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
 
 // end::afm-public-apis[]
-
-// tag::afm-bdd[]
-
-[[afm-bdd]]
-= Behavior Driven Development (BDD) Language
-
-The BDD language is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
-
-// end::afm-bdd[]
