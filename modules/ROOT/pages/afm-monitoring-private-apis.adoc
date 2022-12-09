@@ -4,34 +4,33 @@
 
 API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC).
 
-== Definition of "Private API"
-Private APIs are APIs with endpoints that are accessible only within your network.
+// Definition of Private APIs
 
-== Definition of "Private Location"
-With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint VPC. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC. 
+include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
+
+// Definition of Private Locations
+
+include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2] 
 
 See xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud in CloudHub 1.0 documentation] or xref:cloudhub-2::ch2-private-space-about.adoc[Private Spaces in the CloudHub 2.0 documentation].
 
-[NOTE]
-====
-You can also test public APIs using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
-====
+NOTE: You can also test public APIs using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
 
 == Association of Private Locations with Schedules
+
 When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
 
 Also, you can run tests from private locations with intervals of five minutes.
 
 == Creation of Private Locations
+
 Before you can run tests from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
-[IMPORTANT]
-====
-Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:update-private-locations[update your private location], you'll no longer need to allow incoming HTTP traffic.
-====
+IMPORTANT: Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:update-private-locations[update your private location], you'll no longer need to allow incoming HTTP traffic.
 
 == Possible Test Configurations
-The following diagram depicts the types of relationship that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
+
+The following diagram depicts the types of relationships that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
 
 .The possible relationship types between monitors, schedules, private locations, APIs, and environments
 image::afm-private-locations.png[]

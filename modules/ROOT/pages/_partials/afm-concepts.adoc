@@ -2,17 +2,11 @@ Partials reused in index.adoc and specific feature topics
 
 // tag::afm-monitors[]
 
-[[afm-monitors]]
-= Monitors
-
 A monitor is a repeating schedule of one or more tests, or test suites. 
 
 // end::afm-monitors[]
 
 // tag::afm-tests[]
-
-[[afm-tests]]
-= Tests
 
 Tests are run in monitors on a defined schedule. Test cases are defined using Behavior Driven Development (BDD) language, a common, declarative, and easy-to-use behavior-description language. 
 
@@ -20,17 +14,11 @@ Tests are run in monitors on a defined schedule. Test cases are defined using Be
 
 // tag::afm-bdd[]
 
-[[afm-bdd]]
-= Behavior Driven Development (BDD) Language
-
 The BDD language is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
 
 // end::afm-bdd[]
 
 // tag::afm-test-suites[]
-
-[[afm-test-suites]]
-= Test Suites
 
 Test suites are one or more tests that can be scheduled as part of a monitor. 
 
@@ -38,62 +26,41 @@ Test suites are one or more tests that can be scheduled as part of a monitor.
 
 // tag::afm-schedules[]
 
-[[afm-schedules]]
-= Schedules
-
-The designated intervals and durations configured in monitors for test suites to run.
+Schedules are designated intervals and durations configured in monitors for test suites to run.
 
 // end::afm-schedules[]
 
 // tag::afm-bb-testing[]
 
-[[afm-bb-testing]]
-= Black Box Testing
-
-This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals &mdash; no simulation or mocking).
+Black box testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals &mdash; no simulation or mocking).
 
 // end::afm-bb-testing[]
 
 // tag::afm-wb-testing[]
 
-[[afm-wb-testing]]
-= White Box Testing
-
-This type of testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
+White box testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
 
 // end::afm-wb-testing[]
 
 // tag::afm-runtime-monitoring[]
 
-[[afm-runtime-monitoring]]
-= Runtime Monitoring
-
-This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs and exercise dependencies, as in black-box testing.
+Runtime monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs and exercise dependencies, as in black-box testing.
 
 // end::afm-runtime-monitoring[]
 
 // tag::afm-private-locations[]
 
-[[afm-private-locations]]
-= Private Locations
-
-A private location is a worker that runs in an environment that is associated with an instance of Anypoint VPC in CloudHub 1.0 or a private space in Cloudhub 2.0. You can run tests against APIs that are accessible only within the private location. 
+A private location is a worker that runs in an environment that is associated with an instance of Anypoint VPC in CloudHub 1.0 or a private space in Cloudhub 2.0. You can run tests against APIs that are accessible only within the private location. You can create multiple private locations in a single instance of Anypoint VPC or private space.
 
 // end::afm-private-locations[]
 
 // tag::afm-public-locations[]
 
-[[afm-public-locations]]
-= Public Locations
-
-A region (which you can think of as a resource pool) that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`.
+A public location is a region, or resource pool, that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`.
 
 // end::afm-public-locations[]
 
 // tag::afm-private-apis[]
-
-[[afm-private-apis]]
-= Private APIs
 
 Private APIs are APIs with endpoints that are accessible only within your network.
 
@@ -101,9 +68,6 @@ Private APIs are APIs with endpoints that are accessible only within your networ
 
 // tag::afm-public-apis[]
 
-[[afm-public-apis]]
-= Public APIs
-
-APIs with endpoints that are exposed to the open internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
+Public APIs are APIs with endpoints that are exposed to the open internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
 
 // end::afm-public-apis[]

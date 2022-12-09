@@ -11,54 +11,89 @@ Developers and operators can use API Functional Monitoring to perform consistent
 
 Following are the concepts you need to know to use API Functional Monitoring.
 
+[[afm-monitors]]
+=== Monitors
+
 // Definition of Monitors
 
 include::_partials/afm-concepts.adoc[tag=afm-monitors,leveloffset=+2]
+
+[[afm-tests]]
+=== Tests
 
 // Definition of Tests
 
 include::_partials/afm-concepts.adoc[tag=afm-tests,leveloffset=+2]
 
+[[afm-bdd]]
+=== Behavior Driven Development (BDD) Language
+
 // Definition of Behavior Driven Development (BDD)
 
 include::_partials/afm-concepts.adoc[tag=afm-bdd,leveloffset=+2]
+
+[[afm-test-suites]]
+=== Test Suites
 
 // Definition of Test Suites
 
 include::_partials/afm-concepts.adoc[tag=afm-test-suites,leveloffset=+2]
 
+[[afm-schedules]]
+=== Schedules
+
 // Definition of Schedules
 
 include::_partials/afm-concepts.adoc[tag=afm-schedules,leveloffset=+2]
+
+[[afm-bb-testing]]
+=== Black Box Testing
 
 // Definition of Black Box Tests
 
 include::_partials/afm-concepts.adoc[tag=afm-bb-testing,leveloffset=+2]
 
+[[afm-wb-testing]]
+=== White Box Testing
+
 // Definition of White Box Tests
 
 include::_partials/afm-concepts.adoc[tag=afm-wb-testing,leveloffset=+2]
+
+[[afm-runtime-monitoring]]
+=== Runtime Monitoring
 
 // Definition of Runtime Monitoring
 
 include::_partials/afm-concepts.adoc[tag=afm-runtime-monitoring,leveloffset=+2]
 
+[[afm-private-apis]]
+=== Private APIs
+
 // Definition of Private APIs
 
 include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
+
+[[afm-public-apis]]
+=== Public APIs
 
 // Definition of Public APIs
 
 include::_partials/afm-concepts.adoc[tag=afm-public-apis,leveloffset=+2]
 
+[[afm-private-locations]]
+=== Private Locations
+
 // Definition of Private Locations
 
 include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2]
 
+[[afm-public-locations]]
+=== Public Locations
+
 // Definition of Public Locations
 
 include::_partials/afm-concepts.adoc[tag=afm-public-locations,leveloffset=+2]
-
 
 == Next Steps
 

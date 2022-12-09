@@ -2,11 +2,19 @@
 :page-aliases: afm-public-versus-private.adoc
 :imagesdir: ../assets/images
 
-Public APIs are APIs with endpoints that are exposed to the open internet. In API Functional Monitoring (AFM), tests of such endpoints are run by workers that themselves run in public locations or private locations. A _public location_ is a region (which you can think of as a resource pool) that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`. For information about private locations, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+// Definition of Public APIs
+
+include::_partials/afm-concepts.adoc[tag=afm-public-apis,leveloffset=+2]
+
+// Definition of Public Locations
+
+include::_partials/afm-concepts.adoc[tag=afm-public-locations,leveloffset=+2]
+
+For information about private locations, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 
 The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
 
-The following diagram depicts the types of relationship that can exist between monitors, schedules, public locations, APIs, and environments. The different line types depict the different types of relationship.
+The following diagram depicts the types of relationships that can exist between monitors, schedules, public locations, APIs, and environments. The different line types depict the different types of relationships.
 
 .The possible relationship types between monitors, schedules, public locations, APIs, and environments
 image::afm-public-locations.png[]
