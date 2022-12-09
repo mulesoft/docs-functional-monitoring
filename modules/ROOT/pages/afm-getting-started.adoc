@@ -1,0 +1,59 @@
+= Getting Started with API Functional Monitoring
+
+After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to get started doing functional monitoring of your APIs.
+
+== Before You Begin
+
+To use API Functional Monitoring, you must have the permissions required the action you want to execute. Permissions are set by your organization administrator. 
+
+[options="header,footer"]
+|=======================
+|Permission |Actions
+|Create Applications (Runtime Manager) |Create private locations
+|Delete Applications (Runtime Manager) |Delete private locations
+|Manage Settings (Runtime Manager) |Update private locations
+|View Environment |Log in using BAT CLI
+|View Organization |Use Secrets Manager through BAT CLI
+|Exchange Contributor (Exchange)| Create or modify a monitor; add or modify a schedule
+|Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
+|Grant access to secrets (Secrets Manager) |Use Secrets Manager
+|=======================
+
+== Monitor Your APIs
+
+Monitor your APIs using the following steps:
+
+. If you want to monitor APIs in Anypoint VPCs or private spaces, xref:afm-create-private-location.adoc[create a private location].
+
+. If you are xref:afm-in-anypoint-platform.adoc[using Functional Monitoring in the Anypoint Monitoring UI]:
+
+.. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test.
+
+.. xref:afm-add-schedules.adoc[Add schedules] for the monitors.
+
+.. If you want to run tests outside of the automatic testing schedule, you can xref:afm-run-test-now.adoc[run a test immediately].
+
+.. xref:afm-view-test-history.adoc[View monitor history] in the Functional Monitoring page to view a list of recent test runs.
+
+. If you are xref:bat-top.adoc[using BAT CLI to run tests using the command line]:
+
+.. xref:afm-install-task.adoc[Install BAT CLI]. 
+
+.. Create monitors using BAT CLI.
+
+.. Add schedules using BAT CLI.
+
+.. Run a test suite using BAT CLI.
+
+. Additionally, you can:
+
+.. Write tests manually and then [schedule them with BAT (Blackbox Automated Testing) CLI].
+
+.. xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use with BAT CLI or to modify and create more complex test cases. xref:afm-upload.monitor.adoc[Upload monitors] you have written or modified to use them in Functional Monitoring.
+
+.. If you want to run reports using BAT CLI, xref:bat-reporting-task.adoc[configure BAT to use one of the supported reporting systems].
+
+== See Also
+
+* xref:index.adoc[API Functional Monitoring Overview]
+* xref:access-management::managing-permissions.adoc[Managing Permissions in Access Management]

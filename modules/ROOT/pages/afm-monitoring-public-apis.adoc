@@ -31,9 +31,9 @@ Monitor 4 runs on two separate schedules, and each is associated with the same p
 +
 Monitor 5 runs on a single schedule, though it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (though it could also test endpoints in more public APIs), both of which are accessible on the World-Wide Web.
 
-[NOTE]
-====
-You can also test private APIs from public locations if you allow the IP addresses of those locations. You can test a private API from a public location if you don't want to use vCores for testing private APIs, or if you have no vCores available.
+== Testing Private APIs from Public Locations
+
+You can test private APIs from public locations if you allow the IP addresses of those locations. You can test a private API from a public location if you don't want to use vCores for testing private APIs, or if you have no vCores available.
 
 In Runtime Manager, add a new rule to the firewall for Anypoint Virtual Private Cloud (Anypoint VPC). The type must be *https.port*, the source must be *Custom*, and the port range 8081. For the source, use one of the following IP addresses:
 

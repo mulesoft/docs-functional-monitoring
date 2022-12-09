@@ -8,7 +8,9 @@ API Functional Monitoring (AFM) lets you monitor private APIs if you have a subs
 Private APIs are APIs with endpoints that are accessible only within your network.
 
 == Definition of "Private Location"
-With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint VPC. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC.
+With Anypoint VPC, you can run workers in CloudHub in a virtual, private, and isolated network segment, rather than in a region in which resources are shared. A _private location_ is a worker that runs in a CloudHub environment that is associated with an instance of Anypoint VPC. AFM can create workers within Anypoint VPC that can run tests against APIs that are accessible only within the network that Anypoint VPC is configured for. The APIs must be deployed in CloudHub. You can create multiple private locations in a single instance of Anypoint VPC. 
+
+See xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud in CloudHub 1.0 documentation] or xref:cloudhub-2::ch2-private-space-about.adoc[Private Spaces in the CloudHub 2.0 documentation].
 
 [NOTE]
 ====
