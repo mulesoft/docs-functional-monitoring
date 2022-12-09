@@ -19,6 +19,10 @@ include::_partials/afm-concepts.adoc[tag=afm-monitors,leveloffset=+2]
 
 include::_partials/afm-concepts.adoc[tag=afm-tests,leveloffset=+2]
 
+// Definition of Test Suites
+
+include::_partials/afm-concepts.adoc[tag=afm-test-suites,leveloffset=+2]
+
 // Definition of Schedules
 
 include::_partials/afm-concepts.adoc[tag=afm-schedules,leveloffset=+2]
@@ -38,6 +42,14 @@ include::_partials/afm-concepts.adoc[tag=afm-runtime-monitoring,leveloffset=+2]
 // Definition of Runtime Monitoring
 
 include::_partials/afm-concepts.adoc[tag=afm-runtime-monitoring,leveloffset=+2]
+
+// Definition of Private APIs
+
+include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
+
+// Definition of Public APIs
+
+include::_partials/afm-concepts.adoc[tag=afm-public-apis,leveloffset=+2]
 
 // Definition of Private Locations
 

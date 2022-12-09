@@ -1,10 +1,10 @@
 = Getting Started with API Functional Monitoring
 
-After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to get started doing functional monitoring of your APIs.
+After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to get started monitoring your APIs.
 
 == Before You Begin
 
-To use API Functional Monitoring, you must have the permissions required the action you want to execute. Permissions are set by your organization administrator. 
+To use API Functional Monitoring, you must have the permissions required for the action you want to execute. Permissions are set by your organization administrator. 
 
 [options="header,footer"]
 |=======================
@@ -39,19 +39,23 @@ Monitor your APIs using the following steps:
 
 .. xref:afm-install-task.adoc[Install BAT CLI]. 
 
-.. Create monitors using BAT CLI.
+.. Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
-.. Add schedules using BAT CLI.
+.. xref:bat-write-tests-task[Write tests] using BDD test-writing syntax.
 
-.. Run a test suite using BAT CLI.
+.. xref:bat-execute-task.adoc[Run a test suite].
+
+.. xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
+
+.. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a particular location].
 
 . Additionally, you can:
-
-.. Write tests manually and then [schedule them with BAT (Blackbox Automated Testing) CLI].
 
 .. xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use with BAT CLI or to modify and create more complex test cases. xref:afm-upload.monitor.adoc[Upload monitors] you have written or modified to use them in Functional Monitoring.
 
 .. If you want to run reports using BAT CLI, xref:bat-reporting-task.adoc[configure BAT to use one of the supported reporting systems].
+
+.. xref:bat-intellij-idea.adoc[Write and run BAT tests in IntelliJ IDEA].
 
 == See Also
 

@@ -5,7 +5,7 @@ Partials reused in index.adoc and specific feature topics
 [[afm-monitors]]
 = Monitors
 
-A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
+A monitor is a repeating schedule of one or more tests. See <<afm-test-suites>>.
 
 // end::afm-monitors[]
 
@@ -17,6 +17,15 @@ A _monitor_ is a repeating schedule of one or more tests, referred to as a _suit
 Tests are run in monitors on a defined schedule. Test cases are defined using <<afm-bdd>>, a common, declarative, and easy-to-use behavior-description language.
 
 // end::afm-tests[]
+
+// tag::afm-test-suites[]
+
+[[afm-test-suites]]
+= Test Suites
+
+Test suites are one or more tests. See <<afm-monitors>>.
+
+// end::afm-test-suites[]
 
 // tag::afm-schedules[]
 
