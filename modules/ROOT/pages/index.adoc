@@ -7,6 +7,12 @@ Developers and operators can use API Functional Monitoring to perform consistent
 * Monitor Public or Private APIs from the Anypoint Monitoring UI or by using the BAT command line interface (BAT CLI)
 * View and report on the results of monitor executions
 
+The Functional Monitoring page with a monitor named *Hello World Suite* is shown in the following image:
+
+// Screenshot of AFM
+
+include::_partials/afm-ui-scap.adoc[]
+
 == Important Concepts 
 
 Following are the concepts you need to know to use API Functional Monitoring.

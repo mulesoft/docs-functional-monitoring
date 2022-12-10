@@ -9,7 +9,9 @@ The *Functional Monitoring* section contains tools for creating and editing moni
 
 The following image illustrates the components of a monitor:
 
-image::afm-ui-overview-a-new.png[width=40%,height=40%]
+// Screenshot of AFM
+
+include::_partials/afm-ui-scap.adoc[]
 
 A monitor includes a test and a schedule for running the test. 
 
