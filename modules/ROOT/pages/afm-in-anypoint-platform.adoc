@@ -29,7 +29,9 @@ Locations can be public or private. For details, see xref:afm-monitoring-public-
 
 You can create more than one schedule per monitor test, as shown under the *Next run* column in the following image. 
 
-image::afm-ui-test-versions-and-schedules-new.png[]
+// Screenshot of AFM
+
+include::_partials/afm-ui-scap.adoc[]
 
 The bar graph shows the daily average response time in milliseconds of all tests to all endpoints. The colors in each bar indicate the average time for each of the steps in a test. Hover over the bar to see the details.
 
