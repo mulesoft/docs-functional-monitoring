@@ -1,3 +1,3 @@
 // Reused in index.adoc and afm-in-anypoint-platform.adoc
 
-image::afm-ui-overview-a-new.png[width=40%,height=40%]
+image::afm-ui-test-versions-and-schedules-new.png[]
