@@ -1,3 +1,11 @@
 // Reused in index.adoc and afm-in-anypoint-platform.adoc
 
 image::afm-ui-test-versions-and-schedules-new.png[]
+
+[calloutlist]
+. Duration of the test for the selected monitor.
+. Graph that shows the average response times. Hover over the colors in the bar to see the response time for each of the API calls.
+. Schedule information, including when the next run is scheduled, the schedule interval, and information about the location where the tests are scheduled to run.
+. Details about the previous execution, including the method executed and the assertions.
+. A summary list of the last few executions.
+. You can click *Add Schedule* to add schedules to the selected monitor. 
