@@ -4,7 +4,7 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 
 == Before You Begin
 
-To use API Functional Monitoring, you must have the permissions required for the action you want to execute. Permissions are set by your organization administrator. 
+To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
 
 [options="header,footer"]
 |=======================
