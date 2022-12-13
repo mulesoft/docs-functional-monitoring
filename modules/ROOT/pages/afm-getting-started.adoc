@@ -23,7 +23,7 @@ To use API Functional Monitoring, you must have the permissions required for the
 
 Monitor your APIs using the following steps:
 
-. If you want to monitor APIs in Anypoint VPCs or private spaces, xref:afm-create-private-location.adoc[create a private location].
+. If you want to monitor APIs in Anypoint VPCs, xref:afm-create-private-location.adoc[create a private location].
 
 . If you are xref:afm-in-anypoint-platform.adoc[using Functional Monitoring in the Anypoint Monitoring UI]:
 

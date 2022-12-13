@@ -50,7 +50,7 @@ Runtime monitoring ensures that deployed APIs are operating within expected perf
 
 // tag::afm-private-locations[]
 
-A private location is a worker that runs in an environment that is associated with an instance of Anypoint VPC in CloudHub 1.0 or a private space in Cloudhub 2.0. You can run tests against APIs that are accessible only within the private location. You can create multiple private locations in a single instance of Anypoint VPC or private space.
+A private location is a worker that runs in an environment that is associated with an instance of Anypoint VPC in CloudHub. You can run tests against APIs that are accessible only within the private location. You can create multiple private locations in a single instance of Anypoint VPC.
 
 // end::afm-private-locations[]
 
