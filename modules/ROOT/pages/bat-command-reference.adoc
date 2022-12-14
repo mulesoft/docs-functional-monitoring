@@ -147,7 +147,7 @@ The client ID from your connected app. You must use this option with the login c
 
 * `--client-secret`
 +
-The client secret from your connected app. You must use this option with the login command if you are logging in using a connected app. 
+The client secret from your connected app. You must use this option with the login command if you log in using a connected app. 
 
 == `bat` Commands
 
