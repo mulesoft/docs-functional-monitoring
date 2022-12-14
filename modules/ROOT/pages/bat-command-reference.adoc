@@ -37,7 +37,7 @@ This option logs into an Anypoint Platform account using the client ID and clien
 
 `bat [login --username=<value> [--profile=<value>] --host=<value>]`
 
-This option logs into an Anypoint Platform account using username and password. It displays an interactive command for the password.
+This option logs in to an Anypoint Platform account using a username and password. It displays an interactive command for the password.
 
 `password for user [username]: <password>`
 
