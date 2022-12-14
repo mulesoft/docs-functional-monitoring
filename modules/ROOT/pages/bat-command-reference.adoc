@@ -31,7 +31,7 @@ To use the `bat` commands to execute API Functional Monitoring actions, you must
 
 `bat [login --client-id --client-secret [--profile=<value>] --host=<value>]`
 
-This option logs into an Anypoint Platform account using the client ID and client secret from a connected app. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps]. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list.
+This option logs into an Anypoint Platform account using the client ID and client secret from a connected app. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
 === Login Using a Username and Password
 
