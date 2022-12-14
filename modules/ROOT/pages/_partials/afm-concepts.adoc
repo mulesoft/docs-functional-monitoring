@@ -2,7 +2,7 @@ Partials reused in index.adoc and specific feature topics
 
 // tag::afm-monitors[]
 
-A monitor is a repeating schedule of one or more tests, or test suites. 
+A monitor is a repeating schedule of one or more tests. Monitors may also be referred to as test suites. 
 
 // end::afm-monitors[]
 
@@ -14,13 +14,13 @@ Tests are run in monitors on a defined schedule. Test cases are defined using Be
 
 // tag::afm-bdd[]
 
-The BDD language is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
+The BDD language is used to write tests. It is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
 
 // end::afm-bdd[]
 
 // tag::afm-test-suites[]
 
-Test suites are one or more tests that can be scheduled as part of a monitor. 
+See <<afm-monitors>>. 
 
 // end::afm-test-suites[]
 
