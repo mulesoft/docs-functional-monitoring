@@ -143,7 +143,7 @@ Use this option with each `bat` command if your system requires that you access 
 
 * `--client-id`
 +
-The client ID from your connected app. You must use this option with the login command if you are logging in using a connected app. 
+The client ID from your connected app. You must use this option with the login command if you log in using a connected app. 
 
 * `--client-secret`
 +
