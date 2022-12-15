@@ -27,7 +27,7 @@ The steps in this procedure explain how to modify a BAT project for support in I
 . Select *DataWeave 2.0 IntelliJ Plugin* and then click *Install* in the plugin details.
 . Restart IntelliJ IDEA.
 
-* Log into BAT in a terminal window and run the `bat --update` command to be sure that you have the latest version of the BAT CLI.
+* Log in to BAT in a terminal window and run the `bat --update` command to be sure that you have the latest version of the BAT CLI.
 
 == Write and Run BAT Tests in IntelliJ IDEA
 

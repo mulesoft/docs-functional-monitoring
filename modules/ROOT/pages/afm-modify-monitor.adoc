@@ -14,6 +14,7 @@ and
 
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
+[[modify-a-monitor]]
 == Modify a Monitor
 
 Modify a monitor from either the homepage or the monitor's detail page.
@@ -33,7 +34,7 @@ After following either method, the following options appear:
 
 * Tab one (*Step 1 - Select endpoints*) enables you to modify the endpoints.
 + 
-You can edit endpoint methods, URLs, optional headers, and assertions. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications.
+You can edit endpoint methods, URLs, optional headers, and assertions. By default, the monitor validates the self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 
 * Tab two (*Step 2 - Set notifications*) enables you to modify notifications.
 
@@ -41,5 +42,6 @@ Alternatively, select *Switch to code editor* to edit the monitor as BAT source.
 
 == See Also
 
+ * xref:afm-create-monitor.adoc[Create a Monitor]
  * xref:afm-download-test.adoc[Download a Monitor]
  * xref:afm-upload-monitor.adoc[Upload a Monitor]

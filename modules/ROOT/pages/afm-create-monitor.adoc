@@ -4,6 +4,7 @@ You create monitors via the Functional Monitoring UI or by uploading test suites
 
 This procedure describes creating monitors via the Functional Monitoring UI.
 
+[[before-you-begin]]
 == Before You Begin
 
 * Ensure that you have the following permissions set in Access Management:
@@ -47,14 +48,15 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 |Email address
 |===
 
-
+[[create-a-monitor]]
 == Create a Monitor
+
 To create a monitor:
 
 . Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
-. Under *Step 1 - Setup the monitor*, specify a monitor name. Additionally, toggle *Validate SSL Certificate* to specify if the monitor needs to use self-signed certifications.
+. Under *Step 1 - Setup the monitor*, specify a monitor name. 
 . Click the *Step 2 - Select endpoints* tab.
-. Populate the fields with the information gathered in "Before You Begin."
+. Populate the fields for each endpoint with the information gathered in <<before-you-begin>>. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 +
 You can preview the test by clicking *Run now* under *Preview the result of your monitor*.
 
@@ -92,3 +94,4 @@ Alternatively, to run a monitor for more than 120 seconds, download the monitor 
 
 * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
 * xref:access-management::managing-permissions.adoc[Manage Permissions]
+* xref:afm-modify-monitor.adoc[Modify a Monitor]
