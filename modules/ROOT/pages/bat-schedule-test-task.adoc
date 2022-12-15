@@ -6,7 +6,7 @@ After running the command, BAT creates a monitor in Anypoint Platform. The monit
 
 To schedule testing and monitoring:
 
-. Log into Anypoint Platform using BAT. For example:
+. Log in to Anypoint Platform using BAT. For example:
 +
 `bat login --client-id=<value> --client-secret=<value>` or `bat login --username=<value> --password=<value>`
 +

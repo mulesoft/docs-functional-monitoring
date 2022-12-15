@@ -12,7 +12,7 @@ The solution helps you carry out the following tasks:
 
 A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
 
-You can get reports on the results of monitor executions. You can also set up integration with into a number of monitoring and issue-tracking systems.
+You can get reports on the results of monitor executions. You can also set up integration with a number of monitoring and issue-tracking systems.
 
 There are two ways that you can perform functional testing:
 
