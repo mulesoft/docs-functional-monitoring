@@ -1,22 +1,51 @@
 = BAT CLI Reference
 
-The BAT command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI.  The BAT CLI is integrated with Anypoint Platform.
+BAT CLI provides an API Functional Monitoring command line interface through an integration with Anypoint Platform. The command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI. 
 
-This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
+This reference covers the syntax and key options you can use with the `bat` commands. Using the `bat` commands, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
 
-== bat Command Syntax
+For commands to execute successfully, the account under which BAT CLI logs in must have the required permissions for the action the command is executing. 
 
-The `bat` command provides an API Functional Monitoring command line interface.
+== Permissions Required
 
-`bat [<file> ... | <option> ...]`
+To use all of the `bat` commands to execute the corresponding actions in Anypoint Platform, you must have the following permissions. 
+
+[options="header,footer"]
+|=======================
+|Permission |Actions
+|Create Applications (Runtime Manager) |Create private locations
+|Delete Applications (Runtime Manager) |Delete private locations
+|Manage Settings (Runtime Manager) |Update private locations
+|View Environment |Log in using BAT CLI
+|View Organization |Use Secrets Manager through BAT CLI
+|Exchange Contributor (Exchange)| Create or modify a monitor; add or modify a schedule
+|Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
+|Grant access to secrets (Secrets Manager) |Use Secrets Manager
+|=======================
+
+== Login Options
+
+To use the `bat` commands to execute API Functional Monitoring actions, you must first log in using one of the following login methods. 
+
+=== Login Using Connected Apps
+
+`bat [login --client-id --client-secret [--profile=<value>] --host=<value>]`
+
+This option logs in to an Anypoint Platform account using the client ID and client secret from a connected app. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+
+=== Login Using a Username and Password
 
 `bat [login --username=<value> [--profile=<value>] --host=<value>]`
 
-This option displays an interactive command for the password.
+This option logs in to an Anypoint Platform account using a username and password. It displays an interactive command for the password.
 
 `password for user [username]: <password>`
 
 You can include the option `--password=<password>` in the `login` command.
+
+== Execute Commands Stored in a File
+
+`bat [<file> ... | <option> ...]`
 
 Where:
 
@@ -31,9 +60,9 @@ When you execute bat without any arguments, BAT reads the YAML in the current di
 You can create a `config` folder and add different configuration files in `config` for the environments.
 
 * `bat ~/path/to/folder/` +
-Executes the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
+Executes from the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
 * `bat ./folder/file.dwl` +
-Executes the desired file. The root of the project is the current folder.
+Executes using the desired file. The root of the project is the current folder.
 The root of the project is used to resolve imports and load libraries and files.
 
 == `bat` Command Options
@@ -112,9 +141,17 @@ The value is an Anypoint Platform user name. If it is not present, the value of 
 +
 Use this option with each `bat` command if your system requires that you access Anypoint Platform through a proxy. 
 
+* `--client-id`
++
+The client ID from your connected app. You must use this option with the login command if you log in using a connected app. 
+
+* `--client-secret`
++
+The client secret from your connected app. You must use this option with the login command if you log in using a connected app. 
+
 == `bat` Commands
 
-You can also use the `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
+You can use the following `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
 
 * `init`
 +
