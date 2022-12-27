@@ -85,32 +85,29 @@ A test suite must contain at least one test (.dwl) file.
 
 In your tests, you can access shared secrets that are symmetric key types from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
 
-[IMPORTANT]
-====
-Functional Monitoring only works with symmetric key shared secret types. Using other types from Anypoint Secrets Monitor will cause all used shared secrets to stop being populated.
-====
+=== Limitations
+
+* Functional Monitoring works only with symmetric key shared secret types. Using other types from Anypoint Secrets Monitor will cause all used shared secrets to stop being populated.
+
+* In a given test suite, you can use aliases for shared secrets only if you plan to run the tests in that suite from a private location.
 
 You create aliases for your shared secrets with the `bat grant` command. The BAT CLI stores aliases in your `bat.yaml` files in your test suites. You place aliases in your tests and, at runtime, the BAT CLI looks up the shared secrets by means of the aliases.
-
-[IMPORTANT]
-====
-In a given test suite, you can use aliases for shared secrets only if you plan to run the tests in that suite from a private location.
-====
 
 . Store the information as a shared secret in Anypoint Secrets Manager.
 . In Anypoint Secrets Manager, create a shared secret as a symmetric key.
 +
 If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 when you create the secret.
-
-a. Open a secrets group or create a new one.
++
+.. Open a secrets group or create a new one.
 +
 The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed.
 +
 If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-b. Select *Shared Secret* on the left side of the screen.
-c. In the *Type* field, select *Symmetric Key*.
-d. In the *Key* field, paste your license key encoded as a Base64 string.
-e. Paste the same Base64 string into the *Confirm Key* field.
+.. Select *Shared Secret* on the left side of the screen.
+.. In the *Type* field, select *Symmetric Key*.
+.. In the *Key* field, paste your license key encoded as a Base64 string.
+.. Paste the same Base64 string into the *Confirm Key* field.
+
 . Copy the name of the new shared secret.
 . At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
 +
@@ -145,7 +142,7 @@ suite(parts="Simple Suite") in [
 `secret('myAlias')`:: The `secret()` function requires the input `'name-of-alias'`, where `name-of-alias` is the alias of the shared secret that you want to use.
 `default 'notFound'`:: The message to show if a shared secret with the specified alias does not exist in Anypoint Secrets Manager.
 `$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the configuration file that was specified when the `bat` command to run the test suite was entered.
-
++
 For example, suppose that the configuration file was this:
 +
 .The example configuration file dev-environment.dwl
