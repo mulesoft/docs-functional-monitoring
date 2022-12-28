@@ -27,7 +27,7 @@ To monitor your APIs in Functional Monitoring:
 
 . To monitor APIs in Anypoint VPCs, xref:afm-create-private-location.adoc[create a private location].
 
-. xref:afm-add-schedules.adoc[Add schedules] for the monitors.
+. xref:afm-add-schedule.adoc[Add schedules] for the monitors.
 
 . xref:afm-view-test-history.adoc[View monitor history].
 
@@ -35,7 +35,7 @@ To monitor your APIs in Functional Monitoring:
 
 To monitor your APIs using BAT CLI:
 
-. xref:bat-install-task.adoc[Install BAT CLI] in the location where you want to run the test. 
+. xref:bat-install-task.adoc[Install BAT CLI]. 
 
 . Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
