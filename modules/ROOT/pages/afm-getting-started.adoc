@@ -19,15 +19,13 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 |Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
 
-* If you plan to functionally monitor using the command line, you must xref:afm-install-task.adoc[Install BAT CLI]. 
-
-* If you plan to monitor APIs in Anypoint VPCs, you must xref:afm-create-private-location.adoc[create a private location].
-
 == Monitor Your APIs Using the Functional Monitoring UI
 
 To monitor your APIs in Functional Monitoring:
 
 . xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test.
+
+. To monitor APIs in Anypoint VPCs, xref:afm-create-private-location.adoc[create a private location].
 
 . xref:afm-add-schedules.adoc[Add schedules] for the monitors.
 
@@ -36,6 +34,8 @@ To monitor your APIs in Functional Monitoring:
 == Monitor Your APIs Using BAT CLI
 
 To monitor your APIs using BAT CLI:
+
+. xref:afm-install-task.adoc[Install BAT CLI] in the location where you want to run the test. 
 
 . Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
