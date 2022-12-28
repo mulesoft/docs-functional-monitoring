@@ -1,6 +1,6 @@
 // Reused in index.adoc and afm-in-anypoint-platform.adoc
 
-image::afm-ui-test-versions-and-schedules-new.png[]
+image::afm-ui-test-versions-and-schedules-new.png[AFM page showing a selected monitor's details]
 
 [calloutlist]
 . Duration of the test for the selected monitor.
