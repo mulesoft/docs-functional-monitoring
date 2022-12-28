@@ -1,4 +1,4 @@
-Partials reused in index.adoc and specific feature topics
+// Partials reused in index.adoc and specific feature topics
 
 // tag::afm-monitors[]
 
