@@ -4,8 +4,8 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 
 == Before You Begin
 
- * To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
-+
+To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
+
 [options="header,footer"]
 |=======================
 |Permission |Actions
@@ -35,7 +35,7 @@ To monitor your APIs in Functional Monitoring:
 
 To monitor your APIs using BAT CLI:
 
-. xref:afm-install-task.adoc[Install BAT CLI] in the location where you want to run the test. 
+. xref:bat-install-task.adoc[Install BAT CLI] in the location where you want to run the test. 
 
 . Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
@@ -55,7 +55,7 @@ Additionally you can:
 
 * xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use them with BAT CLI or to modify them to create more complex test cases. 
 
-* xref:afm-upload.monitor.adoc[Upload monitors] you have manually written or modified to use them in Functional Monitoring.
+* xref:afm-upload-monitor.adoc[Upload monitors] you have manually written or modified to use them in Functional Monitoring.
 
 * xref:bat-reporting-task.adoc[Use BAT CLI to configure monitoring reports] in one of the supported reporting systems.
 

@@ -12,7 +12,7 @@ include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
 
 include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2] 
 
-See xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud in CloudHub 1.0 documentation] or xref:cloudhub-2::ch2-private-space-about.adoc[Private Spaces in the CloudHub 2.0 documentation].
+See xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud in the CloudHub 1.0 documentation].
 
 NOTE: You can also test public APIs using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
 
