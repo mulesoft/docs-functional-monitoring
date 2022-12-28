@@ -4,8 +4,8 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 
 == Before You Begin
 
-To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
-
+ * To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
++
 [options="header,footer"]
 |=======================
 |Permission |Actions
@@ -19,43 +19,49 @@ To use API Functional Monitoring, you must have the permissions required for the
 |Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
 
-== Monitor Your APIs
+* If you plan to functionally monitor using the command line, you must xref:afm-install-task.adoc[Install BAT CLI]. 
 
-Monitor your APIs using the following steps:
+* If you plan to monitor APIs in Anypoint VPCs, you must xref:afm-create-private-location.adoc[create a private location].
 
-. If you want to monitor APIs in Anypoint VPCs, xref:afm-create-private-location.adoc[create a private location].
+== Monitor Your APIs Using the Functional Monitoring UI
 
-. If you are xref:afm-in-anypoint-platform.adoc[using Functional Monitoring in the Anypoint Monitoring UI]:
+To monitor your APIs in Functional Monitoring:
 
-.. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test.
+. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test.
 
-.. xref:afm-add-schedules.adoc[Add schedules] for the monitors.
+. xref:afm-add-schedules.adoc[Add schedules] for the monitors.
 
-.. If you want to run tests outside of the automatic testing schedule, you can xref:afm-run-test-now.adoc[run a test immediately].
+. xref:afm-view-test-history.adoc[View monitor history].
 
-.. xref:afm-view-test-history.adoc[View monitor history] in the Functional Monitoring page to view a list of recent test runs.
+== Monitor Your APIs Using BAT CLI
 
-. If you are xref:bat-top.adoc[using BAT CLI to run tests using the command line]:
+To monitor your APIs using BAT CLI:
 
-.. xref:afm-install-task.adoc[Install BAT CLI]. 
+. Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
-.. Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
+. xref:bat-write-tests-task[Write tests] using BDD test-writing syntax.
 
-.. xref:bat-write-tests-task[Write tests] using BDD test-writing syntax.
+. xref:bat-execute-task.adoc[Run a test suite].
 
-.. xref:bat-execute-task.adoc[Run a test suite].
+. xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
 
-.. xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
+. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a particular location].
 
-.. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a particular location].
+== Additional Options and Reporting
 
-. Additionally, you can:
+Additionally you can:
 
-.. xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use with BAT CLI or to modify and create more complex test cases. xref:afm-upload.monitor.adoc[Upload monitors] you have written or modified to use them in Functional Monitoring.
+* xref:afm-run-test-now.adoc[Run tests outside of the automatic testing schedule] without affecting the schedule.
 
-.. If you want to run reports using BAT CLI, xref:bat-reporting-task.adoc[configure BAT to use one of the supported reporting systems].
+* xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use them with BAT CLI or to modify them to create more complex test cases. 
 
-.. xref:bat-intellij-idea.adoc[Write and run BAT tests in IntelliJ IDEA].
+* xref:afm-upload.monitor.adoc[Upload monitors] you have manually written or modified to use them in Functional Monitoring.
+
+* xref:bat-reporting-task.adoc[Use BAT CLI to configure monitoring reports] in one of the supported reporting systems.
+
+* xref:bat-intellij-idea.adoc[Write and run BAT tests in IntelliJ IDEA].
+
+
 
 == See Also
 
