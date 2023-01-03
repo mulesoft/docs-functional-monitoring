@@ -61,6 +61,10 @@ The countdown to the first run of the selected test begins.
 Specified test times correspond with your time zone.
 ====
 
+// Explanation and table with schedule interval options by location type
+
+include::_partials/afm-ref-schedule-interval.adoc[leveloffset=+1]
+
 == See Also
 
 * xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]

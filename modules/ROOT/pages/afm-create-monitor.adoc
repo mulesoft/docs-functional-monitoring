@@ -21,11 +21,7 @@ An Anypoint Platform administrator for your organization grants permission. See 
 * Determine the expected return status codes.
 * Determine the test interval.
 +
-The shortest interval is 15 minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
-
-** Set an hourly schedule to start at a certain number of minutes after the hour begins.
-** Set a daily, weekly, or monthly schedule to start at a certain time of day.
-
+For details, see xref:afm-add-schedule.adoc[Adding Schedules].
 * Determine the location in which to execute the monitor.
 +
 For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
@@ -34,6 +30,9 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 +
 |===
 |Reporting Tool |Required Information
+
+|New Relic
+|License Key
 
 |PagerDuty
 |RoutingKey

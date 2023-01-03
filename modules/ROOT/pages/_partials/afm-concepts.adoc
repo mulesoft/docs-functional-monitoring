@@ -62,7 +62,7 @@ A public location is a region, or resource pool, that is shared with other MuleS
 
 // tag::afm-private-apis[]
 
-Private APIs are APIs with endpoints that are accessible only within your network.
+Private APIs are APIs with endpoints that are accessible only within your network, inside an Anypoint VPC.
 
 // end::afm-private-apis[]
 
