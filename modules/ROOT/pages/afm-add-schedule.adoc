@@ -19,10 +19,10 @@ An Anypoint Platform administrator for your organization grants permission. See 
 
 . Select the monitor in which you want to add a schedule.
 . Click *Add Schedule* from the *Schedules* table.
-. In the *Add Schedule* dialog, specify the following:
+. In the *Add Schedule* dialog box, select the following:
 +
 * The location in which to run the test
-* The interval at which to run the test:
+* The monitor schedule interval and its required information:
 +
 |===
 |Interval |Required Information |Definition
@@ -45,11 +45,10 @@ An Anypoint Platform administrator for your organization grants permission. See 
 
 |Advanced
 |Cron
-|The cron expression for the time that initiates the test
+|The cron expression for the frequency of the test. 
 
 |===
 
-. Set *Starting at (min)*.
 . Set *Configuration*.
 
 . Click *Add*.
