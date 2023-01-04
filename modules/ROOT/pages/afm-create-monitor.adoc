@@ -16,8 +16,6 @@ and
 ** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
 +
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
-+ 
-Refer to the information gathered in xref:afm-getting-started.adoc#before-you-begin[Getting Started with API Functional Monitoring, Before You Begin].
 
 [[create-a-monitor]]
 == Create a Monitor
@@ -41,7 +39,28 @@ To create a monitor:
 +
 . Click the *Step 3 - Set notifications* tab.
 +
-* Optionally select notifiers from the list of integrating reporting tools and enter the required information in the value field for each notifier.
+* Optionally select notifiers from the list of integrating reporting tools and enter the required information in the value field for each notifier:
++
+|===
+|Reporting Tool |Required Information
+
+|New Relic
+|License Key
+
+|PagerDuty
+|RoutingKey
+
+|Slack
+|Webhook
+
+|SumoLogic
+|Endpoint
+
+|Email
+|Email address
+|===
++
+To hide the required information in the monitor files, see xref:bat-reporting-task[Configuring and Viewing Reports]. 
 +
 . Click *Create Monitor*.
 
@@ -51,3 +70,5 @@ To create a monitor:
 * xref:access-management::managing-permissions.adoc[Managing  Permissions]
 * xref:afm-modify-monitor.adoc[Modifying Monitors]
 * xref:afm-add-schedule.adoc[Adding Schedules]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs]

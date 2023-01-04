@@ -18,46 +18,16 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 |Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
 |Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
-+
-* Determine which endpoints to test and by which REST methods to test them.
-* Determine the expected return status codes.
-* Determine the test interval.
-+
-For details, see xref:afm-add-schedule.adoc[Adding Schedules].
-* Determine the location in which to execute the monitor.
-+
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
-* Determine if the requests should include additional headers.
-* For optional reporting, obtain the required information for the reporting tool you plan to use:
-+
-|===
-|Reporting Tool |Required Information
-
-|New Relic
-|License Key
-
-|PagerDuty
-|RoutingKey
-
-|Slack
-|Webhook
-
-|SumoLogic
-|Endpoint
-
-|Email
-|Email address
-|===
 
 == Monitor Your APIs Using the Functional Monitoring UI
 
 To monitor your APIs in Functional Monitoring:
 
-. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test.
-
-. To monitor APIs in Anypoint VPCs, xref:afm-create-private-location.adoc[create a private location].
-
-. xref:afm-add-schedule.adoc[Add schedules] for the monitors.
+. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test. This includes:
++
+* Adding locations and schedules 
+* Configuring tests for each endpoint
+* Setting notifications through reporting tools
 
 . xref:afm-view-test-history.adoc[View monitor history].
 
@@ -90,8 +60,6 @@ Additionally you can:
 * xref:bat-reporting-task.adoc[Use BAT CLI to configure monitoring reports] in one of the supported reporting systems.
 
 * xref:bat-intellij-idea.adoc[Write and run BAT tests in IntelliJ IDEA].
-
-
 
 == See Also
 
