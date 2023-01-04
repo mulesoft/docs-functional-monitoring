@@ -4,8 +4,8 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 
 == Before You Begin
 
-To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
-
+* To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
++
 [options="header,footer"]
 |=======================
 |Permission |Actions
@@ -18,6 +18,36 @@ To use API Functional Monitoring, you must have the permissions required for the
 |Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
 |Grant access to secrets (Secrets Manager) |Use Secrets Manager
 |=======================
++
+* Determine which endpoints to test and by which REST methods to test them.
+* Determine the expected return status codes.
+* Determine the test interval.
++
+For details, see xref:afm-add-schedule.adoc[Adding Schedules].
+* Determine the location in which to execute the monitor.
++
+For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+* Determine if the requests should include additional headers.
+* For optional reporting, obtain the required information for the reporting tool you plan to use:
++
+|===
+|Reporting Tool |Required Information
+
+|New Relic
+|License Key
+
+|PagerDuty
+|RoutingKey
+
+|Slack
+|Webhook
+
+|SumoLogic
+|Endpoint
+
+|Email
+|Email address
+|===
 
 == Monitor Your APIs Using the Functional Monitoring UI
 

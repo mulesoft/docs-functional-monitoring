@@ -65,6 +65,16 @@ Specified test times correspond with your time zone.
 
 include::_partials/afm-ref-schedule-interval.adoc[leveloffset=+1]
 
+== Scheduling Long-Running Tests
+
+Tests for a monitor that are run in public locations silently fail when the run time exceeds 120 seconds. If you need longer tests, the best solution is to use a private location, because you can run tests of long duration in private locations. 
+
+If you want to run longer-running tests in a public location, you can:
+
+. Download the monitor and split the tests across multiple monitors using the BAT CLI. 
+. Run and time each test to ensure their running times are under 120 seconds. 
+. Upload the tests as separate monitors to run in the web UI or simply run them through BAT CLI. 
+
 == See Also
 
 * xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
