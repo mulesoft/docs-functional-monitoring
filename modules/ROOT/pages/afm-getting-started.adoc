@@ -45,7 +45,7 @@ To monitor your APIs using BAT CLI:
 
 . xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
 
-. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a particular location].
+. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a specific location].
 
 == Additional Options and Reporting
 

@@ -291,4 +291,4 @@ alias:
 ----
 +
 * `alias`: This is the alias that you specified in the `bat grant` command.
-* `secret-ID`: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
+* `secret-ID`: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any specific secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.

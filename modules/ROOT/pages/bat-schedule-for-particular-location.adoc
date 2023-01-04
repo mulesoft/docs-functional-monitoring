@@ -1,6 +1,6 @@
-= Creating Monitors That Use a Particular Location
+= Creating Monitors That Use a Specific Location
 
-To create a monitor that uses a particular location:
+To create a monitor that uses a specific location:
 
 . Run the following command to list the locations that are in your default profile:
 +
