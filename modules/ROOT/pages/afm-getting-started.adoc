@@ -4,8 +4,8 @@ After you become familiar with the API Functional Monitoring UI and concepts cov
 
 == Before You Begin
 
-* To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
-+
+To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
+
 [options="header,footer"]
 |=======================
 |Permission |Actions
@@ -26,7 +26,7 @@ To monitor your APIs in Functional Monitoring:
 . xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test. This includes:
 +
 * Adding locations and schedules 
-* Configuring tests for each endpoint
+* Configuring tests for the API endpoints
 * Setting notifications through reporting tools
 
 . xref:afm-view-test-history.adoc[View monitor history].
