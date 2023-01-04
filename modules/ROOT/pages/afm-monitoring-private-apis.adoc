@@ -30,7 +30,7 @@ IMPORTANT: Previously, for tests to run, you had to allow incoming HTTP traffic 
 
 == Possible Test Configurations
 
-The following diagram depicts the types of relationships that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
+The following diagram depicts the types of relationships that can exist between monitors, private locations, APIs, and environments. It shows five monitors created in AFM. It also shows an instance of Anypoint VPC in CloudHub 1.0 in which there are two associated environments: Environment A and Environment B. In Environment A, there are four private locations and seven APIs being tested. In Environment B, there are one private location and three APIs to be tested. The different line types depict five relationship types.
 
 .The possible relationship types between monitors, schedules, private locations, APIs, and environments
 image::afm-private-locations.png[]
