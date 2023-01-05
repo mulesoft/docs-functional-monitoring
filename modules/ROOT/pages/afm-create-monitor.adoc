@@ -7,14 +7,14 @@ This procedure describes creating monitors via the Functional Monitoring UI.
 [[before-you-begin]]
 == Before You Begin
 
-* Ensure that you have the following permissions set in Access Management:
-+
-** *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
+Ensure that you have the following permissions set in Access Management:
+
+* *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
 +
 and
 +
-** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
-+
+* *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
 [[create-a-monitor]]
@@ -27,8 +27,7 @@ To create a monitor:
 .. Specify a monitor name.
 .. Select a testing location. 
 .. Set the monitoring schedule. 
-. Click the *Step 2 - Select endpoints* tab.
-. Populate the fields for each endpoint. 
+. Click the *Step 2 - Select endpoints* tab and enter the following for each endpoint: 
 .. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 .. Select the method and enter the endpoint URL.
 .. Search for, select, or configure custom headers and insert a value for each header. 
@@ -39,7 +38,7 @@ To create a monitor:
 +
 . Click the *Step 3 - Set notifications* tab.
 +
-* Optionally select notifiers from the list of integrating reporting tools and enter the required information in the value field for each notifier:
+* Optionally select notifiers from the list of integrating reporting tools and enter the required information in the value field for each selected notifier:
 +
 |===
 |Reporting Tool |Required Information
