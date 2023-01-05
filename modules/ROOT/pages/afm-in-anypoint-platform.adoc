@@ -37,5 +37,5 @@ The bar graph shows the daily average response time in milliseconds of all tests
 
 == See Also
 
-* xref:afm-create-monitor.adoc[Create a Monitor]
-* xref:afm-upload-monitor.adoc[Upload a Monitor]
+* xref:afm-create-monitor.adoc[Creating Monitors]
+* xref:afm-upload-monitor.adoc[Uploading Monitors]

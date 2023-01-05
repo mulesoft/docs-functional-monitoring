@@ -66,7 +66,7 @@ To hide the required information in the monitor files, see xref:bat-reporting-ta
 == See Also
 
 * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
-* xref:access-management::managing-permissions.adoc[Managing  Permissions]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]
 * xref:afm-modify-monitor.adoc[Modifying Monitors]
 * xref:afm-add-schedule.adoc[Adding Schedules]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]

@@ -45,5 +45,5 @@ To delete a schedule from the table of schedules that use a specific location:
 
 == See Also
 
-* xref:afm-add-schedule.adoc[Add a Schedule]
-* xref:access-management::managing-permissions.adoc[Manage Permissions]
+* xref:afm-add-schedule.adoc[Adding Schedules]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]

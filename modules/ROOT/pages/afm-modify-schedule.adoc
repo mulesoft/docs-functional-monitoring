@@ -44,5 +44,5 @@ Changes take place after the current interval elapses. For example, if you chang
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
-* xref:access-management::managing-permissions.adoc[Manage Permissions]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]
