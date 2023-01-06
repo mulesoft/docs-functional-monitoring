@@ -80,4 +80,4 @@ You can monitor public APIs from private locations, too, not just private APIs.
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]

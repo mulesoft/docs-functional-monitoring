@@ -302,4 +302,4 @@ BAT Version: 1.0.51
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]

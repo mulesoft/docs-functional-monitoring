@@ -67,4 +67,4 @@ As updates become available, you are notified in the *Locations* modal dialog. F
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]
