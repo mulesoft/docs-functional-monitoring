@@ -2,7 +2,7 @@
 
 // tag::afm-monitors[]
 
-A monitor is a repeating schedule of one or more tests. Monitors may also be referred to as test suites. 
+A monitor is a repeating schedule of one or more tests. Monitors might also be referred to as test suites. 
 
 // end::afm-monitors[]
 
@@ -32,19 +32,19 @@ Schedules are designated intervals and durations configured in monitors for test
 
 // tag::afm-bb-testing[]
 
-Black box testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals &mdash; no simulation or mocking).
+Black box testing validates the overall behavior of an API and its live dependencies as a whole, based entirely on inputs and outputs. These tests are done without knowing or altering the API internals &mdash and without simulation or mocking.
 
 // end::afm-bb-testing[]
 
 // tag::afm-wb-testing[]
 
-White box testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
+White box testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies, such as back-end systems and other APIs.
 
 // end::afm-wb-testing[]
 
 // tag::afm-runtime-monitoring[]
 
-Runtime monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs and exercise dependencies, as in black-box testing.
+Runtime monitoring ensures that deployed APIs are operating within the expected performance level in production environments. Runtime monitoring uses behavioral test cases with real inputs, expected outputs, and live dependencies.
 
 // end::afm-runtime-monitoring[]
 

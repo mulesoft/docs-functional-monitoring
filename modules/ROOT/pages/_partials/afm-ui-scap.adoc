@@ -4,8 +4,8 @@ image::afm-ui-test-versions-and-schedules-new.png[AFM page showing a selected mo
 
 [calloutlist]
 . Duration of the test for the selected monitor.
-. The daily average response time in milliseconds of all tests to all endpoints. The colors in each bar indicate the breakdown of the average time for each of the steps in a test. Hover over the bar to see the breakdown details.
+. Daily average response time in milliseconds of all tests to all endpoints. The colors in each bar indicate the breakdown of the average time for each of the steps in a test. Hover over the bar to see the breakdown details.
 . Schedule information, including when the next run is scheduled, the schedule interval, and information about the location where the tests are scheduled to run.
 . Details about the previous execution, including the method executed and the assertions.
 . A summary list of the last few executions.
-. *Add Schedule* button to add schedules to the selected monitor. 
+. Option to add schedules to the selected monitor. 
