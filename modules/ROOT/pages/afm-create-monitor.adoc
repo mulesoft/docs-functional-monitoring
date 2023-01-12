@@ -27,18 +27,19 @@ To create a monitor:
 .. Specify a monitor name.
 .. Select a testing location. 
 .. Set the monitoring schedule. 
-. Click the *Step 2 - Select endpoints* tab and enter the following for each endpoint: 
+. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint: 
 .. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 .. Select the method and enter the endpoint URL.
 .. Search for, select, or configure custom headers and insert a value for each header. 
-.. For POST, PUT, or PATCH endpoints, insert the body content.
-.. Configure assertions' status code, response body, and response header.   
+.. For POST, PUT, or PATCH endpoints, optionally insert body content.
+.. Optionally select headers and insert their values.
+.. Select assertion information.   
 +
 .. Preview the test by clicking *Run now* under *Preview the result of your monitor*.
 +
 . Click the *Step 3 - Set notifications* tab.
 +
-* Optionally select notifiers from the list of integrating reporting tools and enter the required information in the value field for each selected notifier:
+* Optionally select notifiers from the list of integrated reporting tools and enter the required information in the value field for each selected notifier:
 +
 |===
 |Reporting Tool |Required Information

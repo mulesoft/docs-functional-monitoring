@@ -66,7 +66,7 @@ include::_partials/afm-ref-schedule-interval.adoc[leveloffset=+1]
 
 == Scheduling Long-Running Tests
 
-Tests for a monitor that are run in public locations silently fail when the run time exceeds 120 seconds. If you need longer tests, the best solution is to use a private location, because you can run tests of long duration in private locations. 
+Tests for a monitor that are run in public locations silently fail when the run time exceeds 120 seconds. If you need longer tests, the best solution is to use a private location, because you can run tests that have a long duration in private locations. 
 
 If you want to run longer-running tests in a public location, you can:
 
