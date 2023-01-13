@@ -23,3 +23,7 @@ The *History* page is opened for the test. The page displays the status of each 
 * The headers in the request
 * The headers in the response
 * The results of the test assertions
+
+== Download Test History 
+
+You can download the `result.json` file that contains the full execution information. 

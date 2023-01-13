@@ -1,0 +1,73 @@
+// Reused in index.adoc and specific feature topics
+
+// tag::afm-monitors[]
+
+A monitor is a repeating schedule of one or more tests. Monitors are also called test suites. 
+
+// end::afm-monitors[]
+
+// tag::afm-tests[]
+
+Tests run in monitors on a defined schedule. Test cases are defined using Behavior Driven Development (BDD) language, a common, declarative, and easy-to-use behavior-description language. 
+
+// end::afm-tests[]
+
+// tag::afm-bdd[]
+
+The BDD language is used to write tests. It is based on DataWeave and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
+
+// end::afm-bdd[]
+
+// tag::afm-test-suites[]
+
+See <<afm-monitors>>. 
+
+// end::afm-test-suites[]
+
+// tag::afm-schedules[]
+
+Schedules are designated intervals and durations configured in monitors for test suites to run.
+
+// end::afm-schedules[]
+
+// tag::afm-bb-testing[]
+
+Black box testing validates the overall behavior of an API and its live dependencies as a whole, based entirely on inputs and outputs. These tests are done without knowing or altering the API internals &mdash and without simulation or mocking.
+
+// end::afm-bb-testing[]
+
+// tag::afm-wb-testing[]
+
+White box testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies, such as back-end systems and other APIs.
+
+// end::afm-wb-testing[]
+
+// tag::afm-runtime-monitoring[]
+
+Runtime monitoring ensures that deployed APIs operate within the expected performance level in production environments. Runtime monitoring uses behavioral test cases with real inputs, expected outputs, and live dependencies.
+
+// end::afm-runtime-monitoring[]
+
+// tag::afm-private-locations[]
+
+A private location is a mule application that runs in an environment in Cloudhub 1.0. You can run tests against APIs that are accessible only within the private location. The private location environment might have an Anypoint VPC associated with it. You can create multiple private locations in a single instance of Anypoint VPC.
+
+// end::afm-private-locations[]
+
+// tag::afm-public-locations[]
+
+A public location is a region, or resource pool, that is shared with other MuleSoft customers. Examples of such regions are `us-east-1`, `us-east-2`, and `eu-central-1`.
+
+// end::afm-public-locations[]
+
+// tag::afm-private-apis[]
+
+Private APIs are APIs with endpoints that are accessible only within your network inside an Anypoint VPC.
+
+// end::afm-private-apis[]
+
+// tag::afm-public-apis[]
+
+Public APIs are APIs with endpoints that are exposed to the public internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
+
+// end::afm-public-apis[]

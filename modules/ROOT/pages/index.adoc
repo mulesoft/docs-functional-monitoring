@@ -1,38 +1,109 @@
 = API Functional Monitoring Overview
 
-API Functional Monitoring is a framework for assuring the quality and reliability of public and private APIs that are being used in application networks. Public APIs are deployed APIs that are accessible by anyone. Private APIs are APIs deployed in Anypoint Virtual Private Cloud in CloudHub and accessible only to people who are in your private network.
+API Functional Monitoring is a component of Anypoint Platform that enables you to ensure the quality and reliability of public and private APIs that are being used in application networks.
 
-The API Functional Monitoring solution enables developers and operators to perform consistent testing of the functional behavior and performance of their APIs, throughout the API lifecycle, in testing and production environments.
+Developers and operators can use API Functional Monitoring to perform consistent testing of the functional behavior and performance of APIs throughout the API lifecycle, in testing and production environments. You can:
 
-The solution helps you carry out the following tasks:
+* Monitor Public or Private APIs from the Anypoint Monitoring UI or by using the BAT command line interface (BAT CLI)
+* View and report on the results of monitor executions
 
-* *White-box testing:* This type of testing validates the behavior of individual APIs against the understanding of how their internals work. As part of this type of testing, you mock and simulate dependencies (for example, back-end systems and other APIs).
-* *Black-box testing:* This type of testing validates the overall behavior of an API and its real/live dependencies as a whole, based purely on inputs and outputs (i.e. without knowing or altering the API internals - no simulation or mocking).
-* *Runtime monitoring:* This type of monitoring ensures that deployed APIs are operating within expected performance in production environments. It makes use of behavioral test cases that use real inputs and expected outputs, and exercise dependencies, as in black-box testing.
+The Functional Monitoring page with a monitor selected is shown in the following image:
 
-A _monitor_ is a repeating schedule of one or more tests, referred to as a _suite_.
+// Screenshot of AFM
 
-You can get reports on the results of monitor executions. You can also set up integration with a number of monitoring and issue-tracking systems.
+include::_partials/afm-ui-scap.adoc[]
 
-There are two ways that you can perform functional testing:
+== Functional Monitoring Concepts 
 
-* Write tests manually and then schedule them with the Blackbox Automated Testing (BAT) CLI.
-+
-Test cases are all defined with a common, declarative, and easy-to-use behavior-description language. The language is based on the DataWeave language and follows the “given-when-then” approach to describe behavior in terms of conditions and expected outcomes.
-* Create monitors in the *Functional Monitoring* section of Anypoint Monitoring. You can upload as monitors any testing projects that you wrote manually.
+Following are the concepts you need to know to use API Functional Monitoring.
 
-== Versioning in the New Layout
+[[afm-monitors]]
+=== Monitors
 
-Monitor versions are not supported in the new *Monitor Detail* layout. However, your information is preserved, though it is displayed differently. For example, multiple versions migrate to the new layout as schedules of a single monitor.
+// Definition of Monitors
 
-To benefit from the new layout, it is recommended that you use one version for each test. Perform the following in the old layout to achieve this:
+include::_partials/afm-concepts.adoc[tag=afm-monitors,leveloffset=+2]
 
-. Download a version of a test that should be preserved.
-. Unzip the test package.
-. Upload the unzipped directory.
-. Choose a new test name.
-. Specify a schedule rule that corresponds with the test version in the first step.
-. Delete the version downloaded in the first step.
+[[afm-tests]]
+=== Tests
+
+// Definition of Tests
+
+include::_partials/afm-concepts.adoc[tag=afm-tests,leveloffset=+2]
+
+[[afm-bdd]]
+=== Behavior Driven Development (BDD) Language
+
+// Definition of Behavior Driven Development (BDD)
+
+include::_partials/afm-concepts.adoc[tag=afm-bdd,leveloffset=+2]
+
+[[afm-test-suites]]
+=== Test Suites
+
+// Definition of Test Suites
+
+include::_partials/afm-concepts.adoc[tag=afm-test-suites,leveloffset=+2]
+
+[[afm-schedules]]
+=== Schedules
+
+// Definition of Schedules
+
+include::_partials/afm-concepts.adoc[tag=afm-schedules,leveloffset=+2]
+
+[[afm-bb-testing]]
+=== Black Box Testing
+
+// Definition of Black Box Tests
+
+include::_partials/afm-concepts.adoc[tag=afm-bb-testing,leveloffset=+2]
+
+[[afm-wb-testing]]
+=== White Box Testing
+
+// Definition of White Box Tests
+
+include::_partials/afm-concepts.adoc[tag=afm-wb-testing,leveloffset=+2]
+
+[[afm-runtime-monitoring]]
+=== Runtime Monitoring
+
+// Definition of Runtime Monitoring
+
+include::_partials/afm-concepts.adoc[tag=afm-runtime-monitoring,leveloffset=+2]
+
+[[afm-private-apis]]
+=== Private APIs
+
+// Definition of Private APIs
+
+include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
+
+[[afm-public-apis]]
+=== Public APIs
+
+// Definition of Public APIs
+
+include::_partials/afm-concepts.adoc[tag=afm-public-apis,leveloffset=+2]
+
+[[afm-private-locations]]
+=== Private Locations
+
+// Definition of Private Locations
+
+include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2]
+
+[[afm-public-locations]]
+=== Public Locations
+
+// Definition of Public Locations
+
+include::_partials/afm-concepts.adoc[tag=afm-public-locations,leveloffset=+2]
+
+== Next Steps
+
+Continue to xref:afm-getting-started.adoc[Getting Started with API Functional Monitoring].
 
 == See Also
 

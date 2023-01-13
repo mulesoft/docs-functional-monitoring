@@ -43,5 +43,5 @@ You can now start creating a test suite.
 
 == See Also
 
-* xref:bat-start-new-project.adoc[Start a New Test Suite]
+* xref:bat-start-new-project.adoc[Starting a New Test Suite]
 * xref:bat-command-reference.adoc[BAT Command Reference]

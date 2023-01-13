@@ -19,10 +19,10 @@ An Anypoint Platform administrator for your organization grants permission. See 
 
 . Select the monitor in which you want to add a schedule.
 . Click *Add Schedule* from the *Schedules* table.
-. In the *Add Schedule* dialog, specify the following:
+. In the *Add Schedule* dialog box, select the following:
 +
 * The location in which to run the test
-* The interval at which to run the test:
+* The monitor schedule interval and its required information:
 +
 |===
 |Interval |Required Information |Definition
@@ -45,11 +45,10 @@ An Anypoint Platform administrator for your organization grants permission. See 
 
 |Advanced
 |Cron
-|The cron expression for the time that initiates the test
+|The cron expression for the frequency of the test. 
 
 |===
 
-. Set *Starting at (min)*.
 . Set *Configuration*.
 
 . Click *Add*.
@@ -60,6 +59,20 @@ The countdown to the first run of the selected test begins.
 ====
 Specified test times correspond with your time zone.
 ====
+
+// Explanation and table with schedule interval options by location type
+
+include::_partials/afm-ref-schedule-interval.adoc[leveloffset=+1]
+
+== Scheduling Long-Running Tests
+
+Tests for a monitor that are run in public locations silently fail when the run time exceeds 120 seconds. If you need longer tests, the best solution is to use a private location, because you can run tests that have a long duration in private locations. 
+
+If you want to run longer-running tests in a public location, you can:
+
+. Download the monitor and split the tests across multiple monitors using the BAT CLI. 
+. Run and time each test to ensure that their running times are under 120 seconds. 
+. Upload the tests as separate monitors to run in the web UI or run them through BAT CLI. 
 
 == See Also
 

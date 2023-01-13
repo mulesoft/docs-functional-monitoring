@@ -26,4 +26,4 @@ reporters:
       outFile: /tmp/HTML.html
 ----
 
-However, you can receive reports of test failures from several supported applications, not just in an HTMl file. See xref:bat-reporting-task.adoc[Configure Reports of Test Failures].
+However, you can receive reports of test failures from several supported applications, not just in an HTMl file. See xref:bat-reporting-task.adoc[Configuring and Viewing Reports].

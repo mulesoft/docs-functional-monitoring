@@ -11,29 +11,31 @@ The following image illustrates the components of a monitor:
 
 image::afm-ui-overview-a-new.png[width=40%,height=40%]
 
-A monitor includes a test and a schedule for running the test. 
+A monitor includes a test and one or more schedules for running tests. 
 
-The monitor test includes the following:
+A monitor test includes the following:
 
 * The endpoints to verify
 * Optional assertions to verify at the endpoints (for example, a 200 status code)
 * Optional HTTP headers to include when sending requests to the endpoints
 * Optional tools, such as SumoLogic and Slack, used to send test reports
 
-The monitor test schedule includes the following:
+A monitor test schedule includes the following:
 
 * The location from which to run the test
 +
 Locations can be public or private. For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 * The time interval between tests
 
-You can create more than one schedule per monitor test, as shown under the *Next run* column in the following image. 
+The Functional Monitoring page with a monitor selected is shown in the following image: 
 
-image::afm-ui-test-versions-and-schedules-new.png[]
+// Screenshot of AFM
+
+include::_partials/afm-ui-scap.adoc[]
 
 The bar graph shows the daily average response time in milliseconds of all tests to all endpoints. The colors in each bar indicate the average time for each of the steps in a test. Hover over the bar to see the details.
 
 == See Also
 
-* xref:afm-create-monitor.adoc[Create a Monitor]
-* xref:afm-upload-monitor.adoc[Upload a Monitor]
+* xref:afm-create-monitor.adoc[Creating Monitors]
+* xref:afm-upload-monitor.adoc[Uploading Monitors]

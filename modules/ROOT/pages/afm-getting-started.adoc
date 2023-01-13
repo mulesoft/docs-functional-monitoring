@@ -1,0 +1,67 @@
+= Getting Started with API Functional Monitoring
+
+After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to start monitoring your APIs.
+
+== Before You Begin
+
+To use API Functional Monitoring, you must have the permissions required for the actions you want to execute. Permissions are set by your organization administrator. 
+
+[options="header,footer"]
+|=======================
+|Permission |Actions
+|Create Applications (Runtime Manager) |Create private locations
+|Delete Applications (Runtime Manager) |Delete private locations
+|Manage Settings (Runtime Manager) |Update private locations
+|View Environment |Log in using BAT CLI
+|View Organization |Use Secrets Manager through BAT CLI
+|Exchange Contributor (Exchange)| Create or modify a monitor; add or modify a schedule
+|Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
+|Grant access to secrets (Secrets Manager) |Use Secrets Manager
+|=======================
+
+== Monitor Your APIs Using the Functional Monitoring UI
+
+To monitor your APIs in Functional Monitoring:
+
+. xref:afm-create-monitor.adoc[Create monitors] for the APIs that you want to test. This includes:
++
+* Adding locations and schedules 
+* Configuring tests for the API endpoints
+* Setting notifications through reporting tools
+
+. xref:afm-view-test-history.adoc[View monitor history].
+
+== Monitor Your APIs Using BAT CLI
+
+To monitor your APIs using BAT CLI:
+
+. xref:bat-install-task.adoc[Install BAT CLI]. 
+
+. Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
+
+. xref:bat-write-tests-task[Write tests] using BDD test-writing syntax.
+
+. xref:bat-execute-task.adoc[Run a test suite].
+
+. xref:bat-schedule-test-task.adoc[Schedule testing and monitoring].
+
+. xref:bat-schedule-for-particular-location.adoc[Create monitors that use a specific location].
+
+== Additional Options and Reporting
+
+Additionally you can:
+
+* xref:afm-run-test-now.adoc[Run tests outside of the automatic testing schedule] without affecting the schedule.
+
+* xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use them with BAT CLI or to modify them to create more complex test cases. 
+
+* xref:afm-upload-monitor.adoc[Upload monitors] you have manually written or modified to use them in Functional Monitoring.
+
+* xref:bat-reporting-task.adoc[Use BAT CLI to configure monitoring reports] in one of the supported reporting systems.
+
+* xref:bat-intellij-idea.adoc[Write and run BAT tests in IntelliJ IDEA].
+
+== See Also
+
+* xref:index.adoc[API Functional Monitoring Overview]
+* xref:access-management::managing-permissions.adoc[Managing Permissions in Access Management]
