@@ -68,6 +68,6 @@ Private APIs are APIs with endpoints that are accessible only within your networ
 
 // tag::afm-public-apis[]
 
-Public APIs are APIs with endpoints that are exposed to the open internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
+Public APIs are APIs with endpoints that are exposed to the public internet. Tests of such endpoints are run by workers that themselves run in public locations or private locations.
 
 // end::afm-public-apis[]
