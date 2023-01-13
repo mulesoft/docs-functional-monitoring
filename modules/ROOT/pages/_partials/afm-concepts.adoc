@@ -44,7 +44,7 @@ White box testing validates the behavior of individual APIs against the understa
 
 // tag::afm-runtime-monitoring[]
 
-Runtime monitoring ensures that deployed APIs are operating within the expected performance level in production environments. Runtime monitoring uses behavioral test cases with real inputs, expected outputs, and live dependencies.
+Runtime monitoring ensures that deployed APIs operate within the expected performance level in production environments. Runtime monitoring uses behavioral test cases with real inputs, expected outputs, and live dependencies.
 
 // end::afm-runtime-monitoring[]
 
