@@ -2,7 +2,7 @@
 
 // tag::afm-monitors[]
 
-A monitor is a repeating schedule of one or more tests. Monitors might also be referred to as test suites. 
+A monitor is a repeating schedule of one or more tests. Monitors are also called test suites. 
 
 // end::afm-monitors[]
 
