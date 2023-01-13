@@ -1,6 +1,6 @@
 = Masking Headers in Monitors
 
-You can mask, or hide, the authentication headers in a monitor that you run in a private location. 
+You can mask the authentication headers in a monitor that you run in a private location. 
 
 To do so, do the following:
 
