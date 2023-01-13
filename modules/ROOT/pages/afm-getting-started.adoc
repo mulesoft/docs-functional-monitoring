@@ -1,6 +1,6 @@
 = Getting Started with API Functional Monitoring
 
-After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to get started monitoring your APIs.
+After you become familiar with the API Functional Monitoring UI and concepts covered in the xref:index.adoc[API Functional Monitoring Overview], you are ready to start monitoring your APIs.
 
 == Before You Begin
 
