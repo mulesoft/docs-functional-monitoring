@@ -8,7 +8,7 @@ A monitor is a repeating schedule of one or more tests. Monitors are also called
 
 // tag::afm-tests[]
 
-Tests are run in monitors on a defined schedule. Test cases are defined using Behavior Driven Development (BDD) language, a common, declarative, and easy-to-use behavior-description language. 
+Tests run in monitors on a defined schedule. Test cases are defined using Behavior Driven Development (BDD) language, a common, declarative, and easy-to-use behavior-description language. 
 
 // end::afm-tests[]
 
