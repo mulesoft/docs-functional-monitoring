@@ -15,7 +15,7 @@
  ** xref:afm-download-test.adoc[Downloading Monitors]
  ** xref:afm-delete-monitor.adoc[Deleting Monitors]
  ** xref:afm-upload-monitor.adoc[Uploading Monitors]
- ** xref:afm-mask-headers-in-monitors.adoc[Masking Headers in Monitors]
+ ** xref:afm-mask-info-in-monitors.adoc[Masking Headers in Monitors]
 * xref:bat-top.adoc[API Functional Monitoring with BAT CLI]
  ** xref:bat-install-task.adoc[Installing BAT CLI]
  ** xref:bat-example-test-suite.adoc[Example of a Test Suite]
