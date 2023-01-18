@@ -23,9 +23,9 @@ include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,levelo
 
 Modify your monitor to use the information you configured in Secrets Manager.
 
-To add the secret to your monitor:
+To add the secret to a monitor:
 
-. Download your monitor. See xref:afm-download-test.adoc#download-a-monitor[Download a Monitor].
+. Create or download a monitor. See xref:afm-create-monitor.adoc[Creating Monitors] or xref:afm-download-test.adoc[Downloading Monitors].
 . Modify the `main.dwl` file to replace the sensitive information with the client ID and client secret you configured in Anypoint Secrets manager. In the following example, the sensitive information in headers are masked. 
 +
 ----
