@@ -269,16 +269,8 @@ And the result is:
 
 // Procedure to add secrets in Secret Manager
 
-include::_partials/afm-task-config-secrets.adoc[leveloffset=+1]
+include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,leveloffset=+1]
 
-To add the Secret to the bat.yaml File
+// Procedure to grant access to the secret
 
-. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
-+
-----
-alias:
- secretId: "secret-ID"
-----
-+
-* `alias`: This is the alias that you specified in the `bat grant` command.
-* `secret-ID`: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
+include::_partials/afm-task-config-secrets.adoc[tag=grant-access-to-secret,leveloffset=+2]
