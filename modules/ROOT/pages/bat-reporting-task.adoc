@@ -267,10 +267,6 @@ And the result is:
 }
 ----
 
-[[configure-secret]]
-
-== Configuring a Secret in Anypoint Secret Manager
-
 // Procedure to add secrets in Secret Manager
 
 include::_partials/afm-task-config-secrets.adoc[leveloffset=+1]
