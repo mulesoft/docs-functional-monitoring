@@ -1,18 +1,13 @@
 = Using Secrets to Mask Sensitive Information in Monitors
 
-You can mask sensitive information in monitors that you run in a private location. Information that can be masked includes headers, token values, username and password, and body values.
+You can mask sensitive information in monitors that you run in a private location. You can mask headers, token values, username and password, and body values.
 
-To do so, do the following:
+To mask the header information:
 
 . <<configure-secret,Configure a shared secret>> in Secrets Manager for the information you want to mask. 
-. <<add-secret-to-monitor,Modify your monitor>> to use the information from Secrets Manager.
+. <<add-secret-to-monitor,Modify your monitor>> to use the information from Secrets Manager. 
 . <<grant-access-to-secret,Grant the monitor permission>> to access the secret, which creates an alias for the secret.
 . To deploy your changes, <<deploy-updated-monitor,upload the modified monitor>> to Functional Monitoring.
-
-To mask the header information, the following files must be modified:
-
-* `main.dwl`: Contains the test code to which the information from Secrets Manager must be added.
-* `bat.yaml`: Contains configuration information that is modified later by BAT CLI when you grant your monitor access to the secrets. 
 
 // Procedure to add secrets in Secret Manager
 
@@ -49,7 +44,7 @@ suite("HTTP Monitor") in [
 ] 
 ----
 
-After you have modified the monitor's `main.dwl` file to add the secret information to the code, grant the monitor access to the secrets you configured in Secrets Manager. See <<grant-access-to-secret>>.
+After you modify the monitor's `main.dwl` file to add the secret information to the code, grant the monitor access to the secrets you configured in Secrets Manager. See <<grant-access-to-secret>>.
 
 // Procedure to grant the monitor access to the secret
 
