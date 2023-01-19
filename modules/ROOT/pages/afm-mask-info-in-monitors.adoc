@@ -1,6 +1,6 @@
 = Using Secrets to Mask Sensitive Information in Monitors
 
-You can mask sensitive information in monitors that you run in a private location. 
+You can mask sensitive information in monitors that you run in a private location. Information that can be masked includes headers, token values, username and password, and body values.
 
 To do so, do the following:
 
