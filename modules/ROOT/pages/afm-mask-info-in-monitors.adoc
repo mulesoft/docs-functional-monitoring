@@ -21,7 +21,9 @@ Modify your monitor to use the information you configured in Secrets Manager.
 To add the secret to a monitor:
 
 . Create or download a monitor. See xref:afm-create-monitor.adoc[Creating Monitors] or xref:afm-download-test.adoc[Downloading Monitors].
-. Modify the `main.dwl` file to replace the sensitive information with the client ID and client secret you configured in Secrets Manager. In the following example, the sensitive information in headers are masked. The 'clientId-alias' and 'clientSecret-alias' are aliases for the secrets stored in Secrets Manager. See <<grant-access-to-secret>> to learn how to generate the alias.
+. Modify the `main.dwl` file to replace the sensitive information with the client ID and client secret you configured in Secrets Manager. 
++
+In the following example, the sensitive information in headers are masked. The 'clientId-alias' and 'clientSecret-alias' are aliases for the secrets stored in Secrets Manager. See <<grant-access-to-secret>> to learn how to generate the alias.
 +
 ----
 import * from bat::BDD
