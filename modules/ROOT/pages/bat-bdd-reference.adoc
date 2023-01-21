@@ -119,7 +119,7 @@ When you run this command, the BAT CLI creates a section named `secrets` in your
 ----
 +
 alias:: The alias that you specified in the `bat grant` command.
-secret-ID:: The ID of the secret within Anypoint Secrets Manager. This ID does not appear in Anypoint Secrets Manager, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
+secret-ID:: The ID of the secret within Anypoint Secrets Manager. This ID does not appear in Anypoint Secrets Manager, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any specific secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
 . Use the alias in a test by storing it in a variable, as in this example:
 +
 ----

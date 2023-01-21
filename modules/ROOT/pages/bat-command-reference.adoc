@@ -218,7 +218,7 @@ Gets worker ID.
 
 * `location create <name>`
 +
-Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
+Creates a private location in the given profile's organization in Anypoint Platform. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private and public locations.
 
 * `location delete <id>`
 +
@@ -302,4 +302,4 @@ BAT Version: 1.0.51
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[Schedule Testing and Monitoring]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]

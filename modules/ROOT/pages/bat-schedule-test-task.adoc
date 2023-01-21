@@ -1,4 +1,4 @@
-= Schedule Testing and Monitoring
+= Scheduling Testing and Monitoring
 
 You can schedule, run, and monitor an API test in Anypoint Platform using the default schedule and use a cron job to change the schedule. BAT is deployed by default in the Production environment of Anypoint Platform when you execute the `bat login` command. After deploying BAT, you execute a `bat schedule <options>` command. By default, if you don't include the optional cron expression in the command, the test runs every 15 minutes. The last step in this procedure changes the default to use a cron expression that runs the test once a day for a month.
 
@@ -6,7 +6,7 @@ After running the command, BAT creates a monitor in Anypoint Platform. The monit
 
 To schedule testing and monitoring:
 
-. Log in to Anypoint Platform using BAT. For example:
+. Log in to Anypoint Platform using BAT CLI. For example:
 +
 `bat login --client-id=<value> --client-secret=<value>` or `bat login --username=<value> --password=<value>`
 +
@@ -55,50 +55,12 @@ scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
 
 Next, configure and view test reports.
 
-[[scheduling-limits]]
-== Limits for Schedule Intervals by Location
+// Explanation and table with schedule interval options by location type
 
-The minimum interval for schedules that run in private locations is always five minutes.
-
-The minimum interval for schedules that run in public locations depends on the number of schedule entitlements, or API monitor entitlements, that you have. If you have more than five, the limit is five minutes. Otherwise, it is fifteen minutes.
-
-The limit depends on the type of location, not on whether the API is public or private, because you can test a public API from a private location.
-
-[%header,cols=4*]
-|===
-|Location Type
-|Number of Entitlements
-|Account Type
-|Interval Time Allowed
-
-|Public
-|5 or less
-|Developer
-|15 minutes
-
-|Public
-|5 or less
-|Other 
-|15 minutes
-
-|Public
-|More than 5
-|Developer
-|15 minutes
-
-|Public
-|More than 5
-|Other 
-|5 minutes
-
-|Private
-|Any number 
-|N/A
-|5 minutes
-|===
+include::_partials/afm-ref-schedule-interval.adoc[leveloffset=+1]
 
 == See Also
 
-* xref:bat-reporting-task.adoc[Configure Reports of Test Failures]
+* xref:bat-reporting-task.adoc[Configuring and Viewing Reports]
 * xref:bat-command-reference.adoc[BAT CLI Reference]
 * xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]

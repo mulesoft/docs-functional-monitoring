@@ -1,0 +1,41 @@
+[[scheduling-limits]]
+= Limits for Schedule Intervals by Location
+
+The minimum interval for schedules that run in private locations is always five minutes.
+
+The minimum interval for schedules that run in public locations depends on the number of schedule entitlements, or API monitor entitlements, that you have. If you have more than five, the limit is five minutes. Otherwise, it is fifteen minutes.
+
+The limit depends on the type of location, not on whether the API is public or private, because you can test a public API from a private location.
+
+[%header,cols=4*]
+|===
+|Location Type
+|Number of Entitlements
+|Account Type
+|Interval Time Allowed
+
+|Public
+|5 or less
+|Developer
+|15 minutes
+
+|Public
+|5 or less
+|Other 
+|15 minutes
+
+|Public
+|More than 5
+|Developer
+|15 minutes
+
+|Public
+|More than 5
+|Other 
+|5 minutes
+
+|Private
+|Any number 
+|N/A
+|5 minutes
+|===

@@ -30,7 +30,7 @@ Using New Relic with API Functional Monitoring, you can view metrics from test s
 +
 * `new-relic-license-key`: Specify the New Relic license key enclosed in double quotation marks. 
 +
-NOTE: You can configure a secret for the license key. If you do so, use the secret's alias in `new-relic-license-key`. The alias must be between backticks. See <<configure-secret>>. 
+You can configure a secret to securely pass the license key. If you do so, use the secret's alias in `new-relic-license-key`. The alias must be between backticks. See <<configure-secret>>. 
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the `.dwl` file extension.
 
@@ -67,7 +67,7 @@ The integration of BAT with PagerDuty generates an incident when a test fails an
 * `filename.json`: Specify a name for the output file to create.
 * `service_key`: Specify the routing key.
 +
-NOTE: If you configured a secret for the service key, use the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
+You can configure a secret to securely pass the service key. If you do so, use the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
@@ -114,7 +114,7 @@ You can integrate BAT and Slack to send notifications to a Slack channel when te
 * `filename.json`: Specify a name for the output file to create.
 * `webhook_URL`: Specify the URL of the webhook.
 +
-NOTE: If you configured a secret for the webhook URL, use the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
+You can configure a secret to securely pass the webhook URL. If you do so, use the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
 +
 * `SEND_NOTIFICATION_IF_PASSED`: Setting this option to `true` causes a notification to be sent if a test passes.
 * `AT_HERE_ENABLED`: Setting this option to `true` adds `@here` to a notification if a test fails.
@@ -147,7 +147,7 @@ You can use BAT to post a log in the specified collection, and create dashboards
 * `filename.json`: Specify a name for the output file to create.
 * `endpoint-URL`: The URL of the endpoint for the collection.
 +
-NOTE: If you configured a secret for the endpoint URL key, use the alias that you used for the secret for the endpoint URL key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
+You can configure a secret to securely pass the endpoint URL key. If you do so, use the alias that you used for the secret for the endpoint URL key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
@@ -183,7 +183,7 @@ EMAILS: <alias_1>;<alias_2>;<alias_3>
 EMAILS: email_address1;email_address2;email_address3
 -----
 +
-NOTE: If you configured a secret for the email addresses, use the alias that you used for the secret for each email address when you ran the `bat grant` command. The alias must be between carets. 
+You can configure a secret to securely pass the email addresses. If you do so, use the alias that you used for the secret for each email address when you ran the `bat grant` command. The alias must be between carets. 
 To specify multiple email address aliases, put each alias between carets and separate the aliases with semicolons. See <<configure-secret>>.
 +
 * `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.

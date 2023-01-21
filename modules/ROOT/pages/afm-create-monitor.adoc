@@ -7,33 +7,45 @@ This procedure describes creating monitors via the Functional Monitoring UI.
 [[before-you-begin]]
 == Before You Begin
 
-* Ensure that you have the following permissions set in Access Management:
-+
-** *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
+Ensure that you have the following permissions set in Access Management:
+
+* *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
 +
 and
 +
-** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
-+
+* *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
 An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
 
-* Determine which endpoints to test and by which REST methods to test them.
-* Determine the expected return status codes.
-* Determine the test interval.
-+
-The shortest interval is 15 minutes. Monitors can also run hourly, daily, weekly, or monthly. The schedule begins immediately after creating the monitor, and you can modify the schedule after the monitor has been created. For example:
+[[create-a-monitor]]
+== Create a Monitor
 
-** Set an hourly schedule to start at a certain number of minutes after the hour begins.
-** Set a daily, weekly, or monthly schedule to start at a certain time of day.
+To create a monitor:
 
-* Determine the location in which to execute the monitor.
+. Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
+. Under *Step 1 - Setup the monitor*:
+.. Specify a monitor name.
+.. Select a testing location. 
+.. Set the monitoring schedule. 
+. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint: 
+.. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
+.. Select the method and enter the endpoint URL.
+.. Search for, select, or configure custom headers and insert a value for each header. 
+.. For POST, PUT, or PATCH endpoints, optionally insert body content.
+.. Optionally select headers and insert their values.
+.. Select assertion information.   
 +
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
-* Determine if the requests should include additional headers.
-* For optional reporting, obtain one of the following pieces of information:
+.. Preview the test by clicking *Run now* under *Preview the result of your monitor*.
++
+. Click the *Step 3 - Set notifications* tab.
++
+* Optionally select notifiers from the list of integrated reporting tools and enter the required information in the value field for each selected notifier:
 +
 |===
 |Reporting Tool |Required Information
+
+|New Relic
+|License Key
 
 |PagerDuty
 |RoutingKey
@@ -47,51 +59,16 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 |Email
 |Email address
 |===
-
-[[create-a-monitor]]
-== Create a Monitor
-
-To create a monitor:
-
-. Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
-. Under *Step 1 - Setup the monitor*, specify a monitor name. 
-. Click the *Step 2 - Select endpoints* tab.
-. Populate the fields for each endpoint with the information gathered in <<before-you-begin>>. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 +
-You can preview the test by clicking *Run now* under *Preview the result of your monitor*.
-
-. Click the *Step 3 - Set notifications* tab.
-. Optionally configure a notification.
+To hide the required information in the monitor files, see xref:bat-reporting-task[Configuring and Viewing Reports]. 
++
 . Click *Create Monitor*.
-
-The *Monitor Detail* view appears, and includes the following actions:
-
-* Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]) to immediately execute a monitor.
-* Click *View Monitor History* (image:afm-ui-history-button.png[width=1.3%,height=1.3%]) to view a list of recent monitor runs.
-* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Edit Monitor* to modify a monitor.
-* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Download Monitor* to download a monitor as BAT source.
-* Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Monitor* to delete a monitor.
-
-Additional displayed information includes:
-
-* The most recent test duration
-* Time elapsed since the monitor started running
-* The average response time for each activity (for example, DNS lookup), separated by day
-* The previous five test execution results, as indicated by *PASSED* or *FAILED* (depending on if the endpoints returned expected codes)
-* A table displaying the current test schedules
-* Each endpoint asserted with its HTTP method
-
-Return to the homepage by clicking *Back to Monitors*.
-
-[NOTE]
-====
-Tests silently fail when run time exceeds 120 seconds. As a workaround, download the monitor and split the tests across multiple monitors via the BAT CLI. Run and time each test to ensure their running times are under 120 seconds; then, upload the monitors.
-
-Alternatively, to run a monitor for more than 120 seconds, download the monitor and run it from the BAT CLI.
-====
 
 == See Also
 
 * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
-* xref:access-management::managing-permissions.adoc[Manage Permissions]
-* xref:afm-modify-monitor.adoc[Modify a Monitor]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]
+* xref:afm-modify-monitor.adoc[Modifying Monitors]
+* xref:afm-add-schedule.adoc[Adding Schedules]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs]
