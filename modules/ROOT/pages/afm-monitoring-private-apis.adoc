@@ -12,7 +12,7 @@ include::_partials/afm-concepts.adoc[tag=afm-private-apis,leveloffset=+2]
 
 include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2] 
 
-To test private endpoints, you must use the internal URLs of the applications. These are the internal/VPC IP addresses of the Mule workers, in the form of `mule-worker-internal-myapp.region.cloudhub.io`. The VPC must also have access to the applications' ports. See the xref:cloudhub-1::cloudhub-networking-guide.adoc[CloudHub Networking Guide].
+To test private endpoints, use the internal URLs of the applications. These are the internal/VPC IP addresses of the Mule workers, in the form of `mule-worker-internal-myapp.region.cloudhub.io`. The VPC must also have access to the applications' ports. See the xref:cloudhub-1::cloudhub-networking-guide.adoc[CloudHub Networking Guide].
 
 NOTE: You can also test public APIs using private locations. Public APIs are APIs with endpoints that are exposed to the internet.
 
