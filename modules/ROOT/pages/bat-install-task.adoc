@@ -25,11 +25,24 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 [[to-install-bat]]
 == Install BAT
 
+You can install BAT CLI on Linux or Windows OS. 
+
+=== Mac OS
+
+For the standard Mac OS use the instructions for Linux. To run BAT CLI in a Windows partition on a Mac, use the instructions for Windows. 
+
 === Linux 
 
-. Run the following command to install the BAT CLI:
+. Ensure that the user under which you are installing has write and execute permissions for the directory into which you plan to install BAT CLI.
++
+. Run the following command to install BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
++
+. Navigate to the directory under which you installed. 
++
+TIP: You can add your installation directory path to your Linux shell file PATH so that you can run the commands from any directory. 
++
 . Run the command `bat -version` to verify that the BAT CLI is installed.
 
 
