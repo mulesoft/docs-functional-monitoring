@@ -29,13 +29,13 @@ You can install BAT CLI on Linux or Windows OS. To install and run BAT CLI on a 
 
 === Linux 
 
-. Ensure that the user under which you are installing has write and execute permissions for the directory into which you plan to install BAT CLI.
+. Ensure that the user under which you are installing has write and execute permissions for the directory into which you plan to install BAT CLI and to `/usr/local/bin`.
 +
 . Run the following command to install BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
 +
-This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation script automatically adds a `bat` file to the `/usr/local/bin` directory that points to the actual BAT CLI installation directory. If this does not work, you can manually add `$HOME/.bat/bat/bin` to your shell environment's path to execute BAT CLI or rerun the installation under a user with write permission.
+This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation script automatically adds a `bat` file to the `/usr/local/bin` directory that points to the actual BAT CLI installation directory. If this does not work, you can manually add `$HOME/.bat/bat/bin` to your shell environment's path to execute BAT CLI or rerun the installation under a user with write permission for `/usr/local/bin`.
 +
 . Run the command `bat -version` to verify that BAT CLI is installed.
 
