@@ -25,11 +25,7 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 [[to-install-bat]]
 == Install BAT
 
-You can install BAT CLI on Linux or Windows OS. 
-
-=== Mac OS
-
-For the standard Mac OS use the instructions for Linux. To run BAT CLI in a Windows partition on a Mac, use the instructions for Windows. 
+You can install BAT CLI on Linux or Windows OS. To install and run BAT CLI on a Mac using the standard Mac OS, use the instructions for Linux. To install and run BAT CLI in a Windows partition on a Mac, use the instructions for Windows. 
 
 === Linux 
 
@@ -41,14 +37,22 @@ For the standard Mac OS use the instructions for Linux. To run BAT CLI in a Wind
 +
 . Navigate to the directory under which you installed. 
 +
-TIP: You can add your installation directory path to your Linux shell file PATH so that you can run the commands from any directory. 
+TIP: You can add your installation directory path to your Linux shell file PATH environment variable so that you can run the commands from any directory. 
 +
-. Run the command `bat -version` to verify that the BAT CLI is installed.
+. Run the command `bat -version` to verify that BAT CLI is installed.
 
 
 === Windows
 
-Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. After it downloads, unzip it to install it in your Windows environment.  
+. Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. 
++
+. After the ZIP file downloads, unzip it to install BAT CLI in your Windows environment.  
++
+. Navigate to the directory under which you installed. 
++
+TIP: You can add your installation directory path to your startup file PATH environment variable so that you can run the commands from any directory. 
++
+. Run the command `bat -version` to verify that BAT CLI is installed.
 
 == What to Do Next
 
