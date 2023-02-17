@@ -43,12 +43,6 @@ This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation 
 
 . Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. 
 +
-. After the ZIP file downloads, unzip it to install BAT CLI in your Windows environment.  
-+
-. Navigate to the directory in which you installed. 
-+
-TIP: You can add your installation directory path to your startup file PATH environment variable so that you can run the commands from any directory. 
-+
 . Run the command `bat -version` to verify that BAT CLI is installed.
 
 == What to Do Next
