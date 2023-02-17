@@ -14,14 +14,14 @@ For information about private locations, see xref:afm-monitoring-private-apis.ad
 
 The tests in monitors are run on schedules. For a worker to run in a public location according to a schedule, a schedule must be associated with it. A public location can be associated with more than one schedule for more than one monitor.
 
-The following diagram depicts the types of relationships monitors of public APIs can have with their schedules, public locations, APIs, and environments. Each type of relationship is indicated with a unique line style.
+The following diagram depicts the types of relationships that monitors of public APIs can have with their schedules, public locations, APIs, and environments. Each type of relationship is indicated with a unique line style.
 
 .The possible relationship types between monitors, schedules, public locations, APIs, and environments
 image::afm-public-locations.png[]
 
 . Monitor 1's relationships (indicated with solid black arrows): single schedule, single location, single environment
 +
-Monitor 1 runs on a single schedule. The schedule is associated with Public Location 1. The monitor is written to test one or more endpoints in public API 1 and in public API 2, although it could also test endpoints in more public APIs. The two APIs are in a single environment.
+Monitor 1 runs on a single schedule. The schedule is associated with Public Location 1. The monitor is written to test one or more endpoints in public API 1 and in public API 2, although it could also test endpoints in more public APIs. The two APIs are in a single environment, environment A.
 +
 . Monitor 2's relationships (indicated with dashed green arrows): multiple schedules, single location, single environment
 +
