@@ -12,6 +12,8 @@ Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed
 +
 The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win10.
 . Install Java 8, curl, and the application "unzip" into the Linux distribution that you installed in your WSL.
+. Ensure that the `JAVA_HOME` variable in your environment is set to the location of your Java installation.
++
 . Add the `bat` executable to your `PATH` environment variable:
 .. Open the `~/.bashrc` file (if you are using `bash`) or the `~/.zshrc` file (if you are using `zsh`) for editing. For example, to use the `vi` editor, enter either of these commands:
 +
@@ -25,17 +27,27 @@ The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win
 [[to-install-bat]]
 == Install BAT
 
-=== Linux 
+You can install BAT CLI on Linux, MacOS, and Windows.
 
-. Run the following command to install the BAT CLI:
+=== Linux and MacOS Systems
+
+. Ensure that the user under which you are installing has write and execute permissions for the directory into which you plan to install BAT CLI and to `/usr/local/bin`.
++
+. Run the following command to install BAT CLI:
 +
 `curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
-. Run the command `bat -version` to verify that the BAT CLI is installed.
-
++
+This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation script automatically adds a `bat` file to the `/usr/local/bin` directory that points to the actual BAT CLI installation directory. If this does not work, you can manually add `$HOME/.bat/bat/bin` to your shell environment's path to execute BAT CLI or rerun the installation under a user with write permission for `/usr/local/bin`.
++
+. Run the command `bat -version` to verify that BAT CLI is installed.
 
 === Windows
 
-Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. After it downloads, unzip it to install it in your Windows environment.  
+. Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. 
++
+. Unzip the ZIP file to install BAT CLI in your Windows environment.
++
+. Run the command `bat -version` to verify that BAT CLI is installed.
 
 == What to Do Next
 
