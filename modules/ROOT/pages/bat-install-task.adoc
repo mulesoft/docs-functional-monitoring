@@ -12,6 +12,8 @@ Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed
 +
 The instructions are at https://docs.microsoft.com/en-us/windows/wsl/install-win10.
 . Install Java 8, curl, and the application "unzip" into the Linux distribution that you installed in your WSL.
+. Ensure that the `JAVA_HOME` variable in your environment is set to the location of your Java installation.
++
 . Add the `bat` executable to your `PATH` environment variable:
 .. Open the `~/.bashrc` file (if you are using `bash`) or the `~/.zshrc` file (if you are using `zsh`) for editing. For example, to use the `vi` editor, enter either of these commands:
 +
@@ -43,9 +45,7 @@ This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation 
 
 . Click https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[here^] to automatically download the ZIP file of the BAT wrapper for Windows. 
 +
-. Unzip to ZIP file in the directory into which you want to install.
-+
-. Ensure that the `JAVA_HOME` variable in your environment is set to the location of your Java installation.
+. Unzip the ZIP file in the directory into which you want to install.
 +
 . Run the command `bat -version` to verify that BAT CLI is installed.
 
