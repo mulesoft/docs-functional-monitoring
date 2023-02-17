@@ -37,23 +37,23 @@ image::afm-private-locations.png[]
 
 . Monitor 1's relationships (indicated with solid black arrows): single schedule, single location, single environment
 +
-Monitor 1 runs on a single schedule. The schedule is associated with Private Location 1. The monitor is written to test one or more endpoints in private API 1 and in private API 2, although it could also test endpoints in more private APIs. The private location and the APIs are all in a single environment, environment A.
+Monitor 1 runs on a single schedule, Schedule A. The schedule is associated with Private Location 1. The monitor is written to test one or more endpoints in Private API 1 and in Private API 2, although it could also test endpoints in more private APIs. The private location and APIs are in a single environment, environment A.
 +
 . Monitor 2's relationships (indicated with dashed green arrows): multiple schedules, single location, single environment
 +
-Monitor 2 runs on two separate schedules, and each is associated with the same private location. The private location is shared with the schedule that runs Monitor 1. Monitor 2 is written to test one or more endpoints in private API 3 and in private API 4, although it could also test endpoints in more private APIs. The private locations and both APIs are all in a single environment.
+Monitor 2 runs on two separate schedules, Schedule B and Schedule C, and each is associated with the same private location. The private location is shared with the schedule that runs Monitor 1. Monitor 2 is written to test one or more endpoints in private API 3 and in private API 4, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
 +
 . Monitor 3's relationships (indicated with dashed-and-dotted blue arrows): multiple schedules, multiple locations, single environment
 +
-Monitor 3 runs on two separate schedules, and each is associated with a different private location. Monitor 3 is written to test one or more endpoints in API 5 and in API 6, although it could also test endpoints in more private APIs.
+Monitor 3 runs on two separate schedules, Schedule D and Schedule E, and each is associated with a different private location. Monitor 3 is written to test one or more endpoints in API 5 and in API 6, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
 +
 . Monitor 4's relationships (indicated with dotted orange arrows): multiple schedules, multiple environments
 +
-Monitor 4 runs on two separate schedules, and each is associated with a different private location. Each private location is in a separate environment. One environment could be a test environment, and the other environment could be a production environment. Private API 7 and Private API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in private API 7 and the same endpoints in API 8, although it could also test endpoints in more private APIs.
+Monitor 4 runs on two separate schedules, Schedule F and Schedule G, and each is associated with a different private location. Private Location 4 and Private API 7 are in Environment A and Private Location 5 and Private API 8 are in Environment B. One environment could be a test environment, and the other environment could be a production environment, where Private API 7 and Private API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in Private API 7 and the same endpoints in Private API 8, although it could also test endpoints in more private APIs. 
 +
 . Monitor 5's relationships (indicated with solid violet arrows): tests private and public APIs
 +
-Monitor 5 runs on one schedule, although it could run on more than one. The schedule is associated with a private location. Monitor 5 is written to test one or more endpoints in private API 9 and in public API 10.
+Monitor 5 runs on one schedule, Schedule H, although it could run on more than one. The schedule is associated with a private location, Private Location 5. Monitor 5 is written to test one or more endpoints in Private API 9 and in Public API 10. Private Location 5 and Private API 9 are in Environment B, and Public API 10 is on the web.
 
 == Length of Time Before Tests Time Out
 
