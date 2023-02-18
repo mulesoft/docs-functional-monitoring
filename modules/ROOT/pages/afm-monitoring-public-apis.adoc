@@ -37,7 +37,7 @@ Monitor 4 runs on two separate schedules, Schedule F and Schedule G. Each of the
 +
 . Monitor 5's relationships (indicated with solid dark blue arrows): tests APIs in Cloudhub environments and on the web
 +
-Monitor 5 runs on a single schedule, Schedule H, although it could run on multiple schedules. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (although it could also test endpoints in more public APIs), both of which are accessible on the web.
+Monitor 5 runs on a single schedule, Schedule H, although it could run on multiple schedules. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10, although it could also test endpoints in more public APIs. Both APIs are accessible on the web.
 
 == Testing Private APIs from Public Locations
 

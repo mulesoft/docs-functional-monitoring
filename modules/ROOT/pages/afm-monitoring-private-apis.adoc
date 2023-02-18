@@ -53,7 +53,7 @@ Monitor 4 runs on two separate schedules, Schedule F and Schedule G, and each is
 +
 . Monitor 5's relationships (indicated with solid dark blue arrows): tests private and public APIs
 +
-Monitor 5 runs on one schedule, Schedule H, although it could run on more than one. The schedule is associated with a private location, Private Location 5. Monitor 5 is written to test one or more endpoints in Private API 9 and in Public API 10. Private Location 5 and Private API 9 are in Environment B, and Public API 10 is on the web.
+Monitor 5 runs on one schedule, Schedule H, although it could run on multiple schedules. The schedule is associated with a private location, Private Location 5. Monitor 5 is written to test one or more endpoints in Private API 9 and in Public API 10. Private Location 5 and Private API 9 are in Environment B, and Public API 10 is on the web.
 
 == Length of Time Before Tests Time Out
 
