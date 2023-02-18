@@ -27,7 +27,7 @@ Monitor 1 runs on a single schedule, Schedule A, which is associated with Public
 +
 Monitor 2 runs on two separate schedules, Schedule B and Schedule C,each of which is associated with the same public location, Public Location 1. Monitor 2 is written to test one or more endpoints in public API 3 and public API 4, although it could also test endpoints in more public APIs. The two APIs are in a single environment, Environment A.
 +
-. Monitor 3's relationships (indicated with dashed-and-dotted blue arrows): multiple schedules, multiple locations, single environment
+. Monitor 3's relationships (indicated with dashed-and-dotted light blue arrows): multiple schedules, multiple locations, single environment
 +
 Monitor 3 runs on two separate schedules, Schedule D and Schedule E,each of which is associated with a different public location, Public Location 1 and Public Location 2. Monitor 3 is written to test one or more endpoints in public API 5 and public API 6, although it could also test endpoints in more public APIs. The two APIs are in a single environment, Environment A.
 +
@@ -35,7 +35,7 @@ Monitor 3 runs on two separate schedules, Schedule D and Schedule E,each of whic
 +
 Monitor 4 runs on two separate schedules, Schedule F and Schedule G. Each of the schedules is associated with the same public location, Public Location 2, although each could be associated with a different public location. Each of the two tested public APIs is in a different environment, Environment A and Environment B. One environment could be a test environment, and the other environment could be a production environment. Public API 7 and public API 8 are copies of the same API. Monitor 4 is written to test one or more endpoints in public API 7 and the same endpoints in public API 8, although it could also test endpoints in more public APIs.
 +
-. Monitor 5's relationships (indicated with solid violet arrows): tests APIs in Cloudhub environments and on the web
+. Monitor 5's relationships (indicated with solid dark blue arrows): tests APIs in Cloudhub environments and on the web
 +
 Monitor 5 runs on a single schedule, Schedule H, although it could run on two. The schedule is associated with Public Location 2. Monitor 5 is written to test one or more endpoints in public API 9 and in public API 10 (although it could also test endpoints in more public APIs), both of which are accessible on the World-Wide Web.
 
