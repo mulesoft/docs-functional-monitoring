@@ -41,11 +41,11 @@ Monitor 1 runs on a single schedule, Schedule A. The schedule is associated with
 +
 . Monitor 2's relationships (indicated with dashed green arrows): multiple schedules, single location, single environment
 +
-Monitor 2 runs on two separate schedules, Schedule B and Schedule C, and each is associated with the same private location. The private location is shared with the schedule that runs Monitor 1. Monitor 2 is written to test one or more endpoints in private API 3 and in private API 4, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
+Monitor 2 runs on two separate schedules, Schedule B and Schedule C, and each is associated with the same private location, Private Location 1. The private location is shared with the schedule that runs Monitor 1. Monitor 2 is written to test one or more endpoints in private API 3 and in private API 4, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
 +
 . Monitor 3's relationships (indicated with dashed-and-dotted blue arrows): multiple schedules, multiple locations, single environment
 +
-Monitor 3 runs on two separate schedules, Schedule D and Schedule E, and each is associated with a different private location. Monitor 3 is written to test one or more endpoints in API 5 and in API 6, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
+Monitor 3 runs on two separate schedules, Schedule D and Schedule E, and each is associated with a different private location, Private Location 2 and Private Location 3. Monitor 3 is written to test one or more endpoints in API 5 and in API 6, although it could also test endpoints in more private APIs. The private locations and APIs are in a single environment, environment A.
 +
 . Monitor 4's relationships (indicated with dotted orange arrows): multiple schedules, multiple environments
 +
