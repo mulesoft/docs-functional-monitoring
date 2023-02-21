@@ -32,7 +32,6 @@ IMPORTANT: Previously, for tests to run, you had to allow incoming HTTP traffic 
 
 The following diagram depicts the types of relationships that monitors of private APIs can have with their schedules, public locations, APIs, and environments. Each type of relationship is indicated with a unique line style.
 
-.The possible relationship types between monitors, schedules, private locations, APIs, and environments
 image::afm-private-locations.png[]
 
 . Monitor 1's relationships (indicated with solid black arrows): single schedule, single location, single environment

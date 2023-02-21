@@ -16,7 +16,6 @@ The tests in monitors are run on schedules. For a worker to run in a public loca
 
 The following diagram depicts the types of relationships that monitors of public APIs can have with their schedules, public locations, APIs, and environments. Each type of relationship is indicated with a unique line style.
 
-.The possible relationship types between monitors, schedules, public locations, APIs, and environments
 image::afm-public-locations.png[]
 
 . Monitor 1's relationships (indicated with solid black arrows): single schedule, single location, single environment
