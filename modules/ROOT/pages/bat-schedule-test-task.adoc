@@ -44,7 +44,7 @@ scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
 ----
 +
 . Go to the path for one of the local reporters listed in the output to see information about the executed test. For example, on Mac OSX, go to `/var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180226111256.html`.
-. Go to Exchange and take a look at the asset named after the monitor URL that you provided in the `bat schedule endpoint` command. It is `+http://www.example.com+` in this example. 
+. Go to Exchange and view the asset named after the monitor URL that you provided in the `bat schedule endpoint` command. It is `+http://www.example.com+` in this example. 
 . List the schedule of tests.
 +
 `bat schedule list [--profile=<value>]`
