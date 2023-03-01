@@ -163,11 +163,11 @@ List all of the schedules that exist in the given profile's organization.
 
 * `schedule create [--cron="<expression>"] [--location=<id>]`
 +
-Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 15 minutes.
+Create a scheduler using a cron expression and generating a ZIP file that includes the tests and all the files. If you do not enter a cron expression, tests are scheduled to run every 15 minutes.
 
-* `schedule endpoint <arbitrary-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-logic-endpoint=<sumoLogicEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
+* `schedule endpoint <monitor-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-logic-endpoint=<sumoLogicEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
 +
-Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, you can add options to generate the bat.yaml with different parameters.
+Create a monitor in Exchange using a URL, such as the following example URL: `+http://example.com+`. Optionally, you can add options to generate the `bat.yaml` with different parameters.
 
 ** `[--cron="<expression>"]` By default, tests are scheduled to run every 15 minutes. You can change with the cron expression.
 
