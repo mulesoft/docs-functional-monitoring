@@ -83,7 +83,7 @@ A test suite must contain at least one test (.dwl) file.
 
 == Keeping Confidential Information Secure in Tests
 
-In your tests, you can access shared secrets that are symmetric key types from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
+In your tests, you can access shared secrets from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
 
 // Limitations for using secrets 
 
@@ -463,5 +463,6 @@ suite("Example for until and while") in [
 
 == See Also
 
-* https://forums.mulesoft.com[MuleSoft Forum].
-* https://help.mulesoft.com[Contact MuleSoft Support].
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://help.mulesoft.com[Contact MuleSoft Support]
+* xref:afm-mask-info-in-monitors.adoc[]
