@@ -2,10 +2,6 @@
 
 In monitors that you run in a private location, you can mask sensitive information such as headers, token values, username and password, and body values.
 
-// Limitations for using secrets 
-
-include::_partials/afm-task-config-secrets.adoc[tag=secrets-limitations,leveloffset=+2]
-
 To mask the header information:
 
 . <<configure-secret,Configure a shared secret>> in Secrets Manager for the information you want to mask. 
@@ -13,6 +9,9 @@ To mask the header information:
 . <<grant-access-to-secret,Grant the monitor permission>> to access the secret, which creates an alias for the secret.
 . To deploy your changes, <<deploy-updated-monitor,upload the modified monitor>> to Functional Monitoring.
 
+// Limitations for using secrets 
+
+include::_partials/afm-task-config-secrets.adoc[tag=secrets-limitations,leveloffset=+2]
 // Procedure to add secrets in Secret Manager
 
 include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,leveloffset=+1]
