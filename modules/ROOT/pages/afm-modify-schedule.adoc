@@ -32,7 +32,7 @@ To modify a schedule from the *Schedules* section of a monitor:
 To modify a schedule from the schedules list:
 
 . Display the list of locations by opening the *Locations manager* dialog in the homepage.
-. Select the location in which the schedule is currently running.
+. Select the location in which the schedule is running.
 . Find the schedule in the list, click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]), and select *Modify Schedule*.
 . In the Modify Schedule dialog, change one or more of these items:
 +
