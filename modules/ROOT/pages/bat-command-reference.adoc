@@ -250,12 +250,12 @@ bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,
 +
 -g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
 -s:: Specify an alias, a colon, and the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than one shared secret from the same group, separate each `alias:name` pair with a comma.
-+The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
++The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
 --forceUpdate:: Specify this option if API Functional Monitoring lost access to a shared secret and you need to grant access again.
 
 * `execution ls|list`
 +
-Lists the monitors that are currently running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
+Lists the monitors that are running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
 +
 The output looks like this:
 +
@@ -303,3 +303,4 @@ BAT Version: 1.0.51
 == See Also
 
 * xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]
+* xref:afm-mask-info-in-monitors.adoc[]

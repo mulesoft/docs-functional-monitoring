@@ -83,45 +83,27 @@ A test suite must contain at least one test (.dwl) file.
 
 == Keeping Confidential Information Secure in Tests
 
-In your tests, you can access shared secrets that are symmetric key types from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
+In your tests, you can access shared secrets from Anypoint Secrets Manager. Secrets Manager enables you to securely store sensitive information, such as a password, authentication token, endpoint URL, or webhook URL.
 
-=== Limitations
+// Limitations for using secrets 
 
-* Functional Monitoring works only with symmetric key shared secret types. Using other types from Anypoint Secrets Monitor causes all used shared secrets to stop being populated.
+include::_partials/afm-task-config-secrets.adoc[tag=secrets-limitations,leveloffset=+2]
 
-* In a given test suite, you can use aliases for shared secrets only if you plan to run the tests in that suite from a private location.
+// Procedure to add secrets in Secret Manager
 
-You create aliases for your shared secrets with the `bat grant` command. The BAT CLI stores aliases in your `bat.yaml` files in your test suites. You place aliases in your tests and, at runtime, the BAT CLI looks up the shared secrets by means of the aliases.
+include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,leveloffset=+2]
 
-. Store the information as a shared secret in Anypoint Secrets Manager.
-. In Anypoint Secrets Manager, create a shared secret as a symmetric key.
-+
-If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 when you create the secret.
-+
-.. Open a secrets group or create a new one.
-+
-The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed.
-+
-If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-.. Select *Shared Secret* on the left side of the screen.
-.. In the *Type* field, select *Symmetric Key*.
-.. In the *Key* field, paste your license key encoded as a Base64 string.
-.. Paste the same Base64 string into the *Confirm Key* field.
+// Procedure to grant the monitor access to the secret
 
-. Copy the name of the new shared secret.
-. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret.
-+
-When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
-+
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: The alias that you specified in the `bat grant` command.
-secret-ID:: The ID of the secret within Anypoint Secrets Manager. This ID does not appear in Anypoint Secrets Manager, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any specific secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-. Use the alias in a test by storing it in a variable, as in this example:
-+
+After you modify the monitor's `main.dwl` file to add the secret information to the code, grant the monitor access to the secrets you configured in Secrets Manager. See <<grant-access-to-secret>>.
+
+include::_partials/afm-task-config-secrets.adoc[tag=grant-access-to-secret,leveloffset=+2]
+
+[[use-alias-example]]
+=== Example of Using an Alias
+
+Use the alias in a test by storing it in a variable, as in this example:
+
 ----
 import * from bat::BDD
 import * from bat::Assertions
@@ -137,23 +119,23 @@ suite(parts="Simple Suite") in [
   ]
 ]
 ----
-+
+
 `mySecret`:: The variable in which the secret is stored in this example. The variable is declared as a String.
 `secret('myAlias')`:: The `secret()` function requires the input `'name-of-alias'`, where `name-of-alias` is the alias of the shared secret that you want to use.
 `default 'notFound'`:: The message to show if a shared secret with the specified alias does not exist in Anypoint Secrets Manager.
 `$(mySecret)`:: The use of the variable `mySecret` to supply the authentication token for the endpoint at the URL that is defined in the configuration file that was specified when the `bat` command to run the test suite was entered.
-+
+
 For example, suppose that the configuration file was this:
-+
+
 .The example configuration file dev-environment.dwl
 ----
 {
   url: "https://dev.yourcompany.com/shoppingCart"
 }
 ----
-+
+
 In this case, the command to run this test suite, when the command is run in the directory in which the `bat.yaml` file for the test suite is located and the default profile is used, is this:
-+
+
 ----
 bat --config=dev-environment.dwl
 ----
@@ -481,5 +463,6 @@ suite("Example for until and while") in [
 
 == See Also
 
-* https://forums.mulesoft.com[MuleSoft Forum].
-* https://help.mulesoft.com[Contact MuleSoft Support].
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://help.mulesoft.com[Contact MuleSoft Support]
+* xref:afm-mask-info-in-monitors.adoc[]

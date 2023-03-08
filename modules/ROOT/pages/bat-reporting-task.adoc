@@ -274,3 +274,8 @@ include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,levelo
 // Procedure to grant access to the secret
 
 include::_partials/afm-task-config-secrets.adoc[tag=grant-access-to-secret,leveloffset=+2]
+
+== See Also
+
+xref:afm-create-monitor.adoc[]
+xref:afm-mask-info-in-monitors.adoc[]
