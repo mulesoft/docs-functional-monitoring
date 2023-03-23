@@ -26,3 +26,5 @@ To validate a test when creating or modifying a monitor, switch to the code edit
 
 * https://deckofcardsapi.com/[The website for the Deck of Cards API]
 * xref:bat-bdd-reference.adoc[]
+* xref:afm-create-monitor.adoc[]
+* xref:afm-modify-monitor.adoc[]
