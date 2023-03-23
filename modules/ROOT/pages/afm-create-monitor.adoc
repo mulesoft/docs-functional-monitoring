@@ -27,16 +27,14 @@ To create a monitor:
 .. Specify a monitor name.
 .. Select a testing location. 
 .. Set the monitoring schedule. 
-. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint: 
+. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint in the form view: 
 .. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 .. Select the method and enter the endpoint URL.
 .. Search for, select, or configure custom headers and insert a value for each header. 
 .. For POST, PUT, or PATCH endpoints, optionally insert body content.
 .. Optionally select headers and insert their values.
-.. Select assertion information.   
-+
+.. Select assertion information.  
 .. Preview the test by clicking *Run now* under *Preview the result of your monitor*.
-+
 . Click the *Step 3 - Set notifications* tab.
 +
 * Optionally select notifiers from the list of integrated reporting tools and enter the required information in the value field for each selected notifier:
@@ -63,6 +61,8 @@ To create a monitor:
 To hide the required information in the monitor files, see xref:bat-reporting-task[Configuring and Viewing Reports]. 
 +
 . Click *Create Monitor*.
+
+NOTE: On the *Step 2 - Select endpoints* tab, you can alternatively click *Switch to code editor* to edit the monitor as BAT source. For more details, see xref:bat-bdd-reference.adoc[BDD Test-Writing Syntax Reference].  
 
 == See Also
 
