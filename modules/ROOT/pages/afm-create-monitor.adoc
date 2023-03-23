@@ -27,7 +27,7 @@ To create a monitor:
 .. Specify a monitor name.
 .. Select a testing location. 
 .. Set the monitoring schedule. 
-. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint in the form view: 
+. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint: 
 .. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
 .. Select the method and enter the endpoint URL.
 .. Search for, select, or configure custom headers and insert a value for each header. 
