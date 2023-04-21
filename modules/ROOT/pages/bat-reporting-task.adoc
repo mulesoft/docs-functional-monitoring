@@ -88,7 +88,7 @@ You can integrate BAT and Slack to send notifications to a Slack channel when te
 
 . Choose or create a channel to post notifications to.
 . Copy the webhook URL of your new configuration.
-. In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, enter `metadata:`. A few blank lines below that, enter `reporters:`.
+. In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, enter `metadata:`. A few blank lines after that, enter `reporters:`.
 . In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
 +
 [source,yaml]

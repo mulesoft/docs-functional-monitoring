@@ -26,7 +26,7 @@ Also, you can run tests from private locations with intervals of five minutes.
 
 Before you can run tests of private APIs from a private location, you must create a private location, which involves specifying a name and an environment for the worker to run in. The environment must be associated with an instance of Anypoint VPC and must be the same environment that an API to be tested is deployed in. For example, you might create a private location that you name `myLocation` and set it to run in environment `myEnvironment`. When you choose to run a test in `myLocation`, AFM allocates a worker in `myEnvironment` in Anypoint Virtual Private Cloud.
 
-IMPORTANT: Previously, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:update-private-locations[update your private location], you'll no longer need to allow incoming HTTP traffic.
+IMPORTANT: In early versions of private locations, for tests to run, you had to allow incoming HTTP traffic into the private location's environment. If you xref:update-private-locations[update your private location], you'll no longer need to allow incoming HTTP traffic.
 
 == Possible Test Configurations
 
