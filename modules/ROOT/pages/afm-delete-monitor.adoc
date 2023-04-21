@@ -1,18 +1,32 @@
-= Delete a Monitor
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Deleting Monitors
 
 :imagesdir: ../assets/images
 
-You can delete a monitor that you no longer need. However, there is no cost to keeping the monitor if it is not scheduled to run.
+Although you can easily delete unnecessary monitors, there is no cost in keeping them.
 
-== Procedure
+== Before You Begin
+
+Ensure that your user ID has the following permission set in Access Management:
+
+* *Exchange > Exchange Administrator*
+
+See xref:access-management::managing-permissions.adoc[Manage Permissions].
+
+== Delete a Monitor
+
+Delete a monitor either from the homepage or from its detail page.
+
+To delete a monitor from the homepage:
+
+. Hover over the test to delete. 
+. Click *Delete* (image:afm-ui-trash-button.png[width=1.5%,height=1.5%]).
+. In the *Delete Monitor* dialog, click *Delete*.
+
+To delete a monitor from its detail page:
 
 . Select the monitor that you want to delete.
-. In the top-right corner of the screen, click the *Delete* button that is next to the trash-can icon.
-. In the Delete Monitor dialog, click *Delete*.
-
-== Result
-
-The monitor, all versions of its test, and all schedules that are associated with those versions are deleted. The workers that are provisioned for the schedules are all deleted and the resources they are consuming are made available to other workers.
+. Click the monitor.
+. Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) > *Delete Monitor*.
+. In the *Delete Monitor* dialog, click *Delete*.
++
+The monitor and its schedules are deleted. The workers provisioned for the schedules are also deleted, and their consumed resources are made available to other workers.

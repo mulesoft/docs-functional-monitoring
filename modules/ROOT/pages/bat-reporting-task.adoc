@@ -1,7 +1,4 @@
-= Configure Reports of Test Failures
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Configuring and Viewing Reports
 
 You can configure BAT for use with these reporting systems.
 
@@ -15,66 +12,31 @@ You can also configure custom reports and reports that are sent to a location on
 
 == New Relic
 
-Using New Relic with API Functional Monitoring, you can determine the times of each test, detect performance loss, and schedule alerts.
+Using New Relic with API Functional Monitoring, you can view metrics from test suites in New Relic. Metrics include the times of each test, performance losses detected, and alert schedules.
 
-New Relic has a plugin configured for BAT that can capture the metrics from test suites.
+=== Configure Reporting in New Relic
 
-=== To Configure Reporting
-
-. Obtain your New Relic license key.
-a. Go to the New Relic Account Settings.
-b. Copy your license key from the right sidebar under Account Summary.
+. Obtain your New Relic license key. For details on how to do this, see the https://docs.newrelic.com/[New Relic documentation^]. 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-. If you want to keep your license key secret and you are running tests from a private location:
-a. In Anypoint Secrets Manager, create a shared secret as a symmetric key. If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 before you create the secret.
-... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-... Select Shared Secret on the left side of the screen.
-... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your license key encoded as a Base64 string.
-... Paste the same Base64 string into the *Confirm Key* field.
-b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
-+
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-d. In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
+. In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
  - type: NewRelic
-   outFile: filename.json
    options:
-     NEW_RELIC_LICENSE_KEY: <alias_of_the_shared_secret>
+     NEW_RELIC_LICENSE_KEY: <new-relic-license-key>
      DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
-filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the license key when you ran the `bat grant` command. The alias must be between back ticks.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-. If you do not want to keep your license key secret, in your `bat.yaml` file add New Relic as a reporter by adding these indented lines to the `reporters` section:
+* `new-relic-license-key`: Specify the New Relic license key enclosed in double quotation marks. 
 +
-[source,yaml]
-----
- - type: NewRelic
-   outFile: filename.json
-   options:
-    NEW_RELIC_LICENSE_KEY: "license_key"
-    DISABLED_FOR_CONFIGS: dev,qa
-----
+You can configure a secret to securely pass the license key. If you do so, use the secret's alias in `new-relic-license-key`. The alias must be between backticks. See <<configure-secret>>. 
 +
-filename.json:: Specify a name for the output file to create.
-license_key:: Specify the license key.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the `.dwl` file extension.
 
 === What to Do Next
 
-After a test runs, go to New Relic and click Plugins. The BAT plugin information appears.
+After a test runs, go to New Relic and click *Metrics*. The BAT test metrics appear.
 
 Click the test suite name to see the result of the test.
 
@@ -82,45 +44,15 @@ Click the test suite name to see the result of the test.
 
 The integration of BAT with PagerDuty generates an incident when a test fails and triggers configured PagerDuty alerts. If a monitor always fails with the same error, BAT does not generate a new issue, but instead ignores these errors.
 
-=== To Configure Reporting
+=== Configure Reporting in PagerDuty
 
 . In PagerDuty, configure an integration:
-a. Select *Configure* > *Services*.
-b. Select the integration.
+.. Select *Configure* > *Services*.
+.. Select the integration.
 . Copy the routing key.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-. If you want to keep your routing key secret and you are running tests from a private location:
-a. In Anypoint Secrets Manager, create a shared secret as a symmetric key. If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 before you create the secret.
-... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-... Select Shared Secret on the left side of the screen.
-... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your routing key encoded as a Base64 string.
-... Paste the same Base64 string into the *Confirm Key* field.
-b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
 +
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-d. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
-+
-[source,yaml]
-----
- - type: PagerDuty
-   outFile: filename.json
-   options:
-    PAGER_DUTY_ROUTING_KEY: <alias_of_the_shared_secret>
-    DISABLED_FOR_CONFIGS: dev,qa
-----
-+
-filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the routing key when you ran the `bat grant` command. The alias must be between carets.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-. If you do not want to keep your routing key secret, in your `bat.yaml` file add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
+. In your `bat.yaml` file, add PagerDuty as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -132,9 +64,12 @@ DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The
 
 ----
 +
-filename.json:: Specify a name for the output file to create.
-service_key:: Specify the routing key.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
+* `filename.json`: Specify a name for the output file to create.
+* `service_key`: Specify the routing key.
++
+You can configure a secret to securely pass the service key. If you do so, use the alias that you used for the secret for the service key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
++
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 === What to Do Next
 
@@ -144,58 +79,26 @@ If a test fails, look in PagerDuty for the report.
 
 You can integrate BAT and Slack to send notifications to a Slack channel when tests fail. A notification provides the name of the suite in which the error occurs.
 
-=== To Configure Failure Notifications
+=== Configure Failure Notifications in Slack
 
 . Create a webhook:
-a. In Slack, go to your organization’s app directory page.
-b. Search for "Incoming WebHooks" and add a configuration.
+
+.. In Slack, go to your organization's app directory page.
+.. Search for "Incoming WebHooks" and add a configuration.
+
 . Choose or create a channel to post notifications to.
 . Copy the webhook URL of your new configuration.
-. In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, type `metadata:`. A few blank lines below that, type reporters:`.
-. If you want to keep your webhook URL secret and you are running tests from a private location:
-a. In Anypoint Secrets Manager, create a shared secret as a symmetric key. If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 before you create the secret.
-... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-... Select Shared Secret on the left side of the screen.
-... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your webhook URL encoded as a Base64 string.
-... Paste the same Base64 string into the *Confirm Key* field.
-b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
-+
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-d. In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
+. In your `bat.yaml` file, create the `metadata` and `reporters` sections, if they do not already exist in the file. On a blank line, enter `metadata:`. A few blank lines below that, enter `reporters:`.
+. In your `bat.yaml` file, add the Slack channel to the `metadata` section by adding this indented line:
 +
 [source,yaml]
 ----
   slack_channel: slack_channel
 ----
 +
-slack_channel:: Specify the name of the Slack channel that you want to send notifications to.
-e. In your `bat.yaml` file, add Slack as a reporter by adding these indented lines to the `reporters` section:
+* `slack_channel`: Specify the name of the Slack channel that you want to send notifications to.
 +
-[source,yaml]
-----
-  - type: Slack
-    outFile: filename.json
-    options:
-      SLACK_WEBHOOK: <alias_of_the_shared_secret>
-      SEND_NOTIFICATION_IF_PASSED: true
-      AT_HERE_ENABLED: true
-      DISABLED_FOR_CONFIGS: dev,qa.
-----
-+
-filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. `The alias must be between carets.`
-SEND_NOTIFICATION_IF_PASSED:: Setting this option to `true` causes a notification to be sent if a test passes.
-AT_HERE_ENABLED:: Setting this option to `true` adds `@here` to a notification if a test fails.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-. If you do not want to keep your webhook URL secret, add Slack as a reporter in your `bat.yaml` file by adding these lines to the `reporter` section:
+. In your `bat.yaml` file, add Slack as a reporter by adding these indented lines to the `reporters` section:
 +
 [source,yaml]
 ----
@@ -208,12 +111,14 @@ DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The
       DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
-filename.json:: Specify a name for the output file to create.
-webhook_URL:: Specify the URL of the webhook.
-SEND_NOTIFICATION_IF_PASSED:: Setting this option to `true` causes a notification to be sent if a test passes.
-AT_HERE_ENABLED:: Setting this option to `true` adds `@here` to a notification if a test fails.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-
+* `filename.json`: Specify a name for the output file to create.
+* `webhook_URL`: Specify the URL of the webhook.
++
+You can configure a secret to securely pass the webhook URL. If you do so, use the alias that you used for the secret for the webhook URL when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
++
+* `SEND_NOTIFICATION_IF_PASSED`: Setting this option to `true` causes a notification to be sent if a test passes.
+* `AT_HERE_ENABLED`: Setting this option to `true` adds `@here` to a notification if a test fails.
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the `.dwl` file extension.
 
 == Sumo Logic
 
@@ -223,44 +128,12 @@ You must provide the URL of the endpoint of the collection.
 
 You can use BAT to post a log in the specified collection, and create dashboards.
 
-=== To Configure Reporting
+=== Configure Reporting in Sumo Logic
 
 . In Sumo Logic, select Set Up Streaming Data in the setup wizard.
 . Select *Your Custom App* > *HTTP Source* or *All Other Sources* > *HTTP Source* and specify the source category.
 . Copy the endpoint URL.
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-. If you want to keep your endpoint URL secret and you are running tests from a private location:
-a. In Anypoint Secrets Manager, create a shared secret as a symmetric key. If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 before you create the secret.
-... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-... Select Shared Secret on the left side of the screen.
-... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your endpoint URL encoded as a Base64 string.
-... Paste the same Base64 string into the *Confirm Key* field.
-b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
-+
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-d. In your `bat.yaml` file, add Sumo Logic as a reporter by adding these indented lines to the `reporters` section:
-+
-[source,yaml]
-----
-  - type: SumoLogic
-    outfile: filename.json
-    options:
-      SUMO_ENDPOINT: <alias_of_the_shared_secret>
-      DISABLED_FOR_CONFIGS: dev,qa.
-----
-+
-filename.json:: Specify a name for the output file to create.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the endpoint URL when you ran the `bat grant` command. The alias must be between carets.
-. If you do not want to keep your endpoint URL secret, add these lines to the `reporters` section in your `bat.yaml` file:
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 +
 [source,yaml]
 ----
@@ -271,9 +144,13 @@ DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The
       DISABLED_FOR_CONFIGS: dev,qa.
 ----
 +
-filename.json:: Specify a name for the output file to create.
-endpoint-URL:: The URL of the endpoint for the collection.
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
+* `filename.json`: Specify a name for the output file to create.
+* `endpoint-URL`: The URL of the endpoint for the collection.
++
+You can configure a secret to securely pass the endpoint URL key. If you do so, use the alias that you used for the secret for the endpoint URL key when you ran the `bat grant` command. The alias must be between carets. See <<configure-secret>>.
++
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
+
 == Email
 
 To email test reports that indicate failures, specify any email addresses that you want to send reports to. Each report includes the name of the suite in which the error occurs and a list of the statements.
@@ -281,39 +158,7 @@ To email test reports that indicate failures, specify any email addresses that y
 Because reports are emailed only for tests created in or uploaded to the API Functional Monitoring in Anypoint Platform, after you add the reporters to your test in BAT CLI, upload the test. You can alternatively add the email reporting tool in the monitor's *Notifications* tab after you upload the test.
 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
-. If you want to keep an email address secret and you are running tests from a private location:
-a. In Anypoint Secrets Manager, create a shared secret as a symmetric key. If the info that you want to store as a shared secret is currently in plain text, then you must encode it in Base64 before you create the secret.
-... Open a secrets group or create a new one. The group must be created in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. In the output, there is the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command `bat environment switch name`, where `name` is the name of the environment.
-... Select Shared Secret on the left side of the screen.
-... In the *Type* field, select *Symmetric Key*.
-... In the *Key* field, paste your the email address encoded as a Base64 string.
-... Paste the same Base64 string into the *Confirm Key* field.
-b. Copy the name of the new shared secret.
-c. At a command prompt, run the `bat grant` command, specifying an alias for the shared secret. When you run this command, the BAT CLI creates a section named `secrets` in your test suite's `bat.yaml` file, if the section does not already exist. In that section, the BAT CLI adds these indented lines:
 +
-----
-  alias:
-    secretId: "secret-ID"
-----
-+
-alias:: This is the alias that you specified in the `bat grant` command.
-secret-ID:: This is the ID of the secret within Anypoint Secrets Manager. This ID does not appear in ASM, so there is no way for someone looking in your `bat.yaml` file to associate the ID with any particular secret. The BAT CLI uses this ID to look up the secret that you associated with the alias.
-d. In your `bat.yaml` file, add `Email` as a reporter by adding these indented lines to the `reporters` section:
-+
-[source,yaml]
-----
-  - type: Email
-    options:
-      EMAILS: <alias_of_the_shared_secret>
-      DISABLED_FOR_CONFIGS: dev,qa
-----
-+
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-alias_of_the_shared_secret:: Specify the alias that you used for the secret for the email address when you ran the `bat grant` command. The alias must be between carets.
-+
-If you want to add aliases for additional email addresses, put each alias between carets and separate the aliases with semicolons:
-+
-
 [source,yaml]
 ----
 EMAILS: <alias_1>;<alias_2>;<alias_3>
@@ -328,15 +173,17 @@ EMAILS: <alias_1>;<alias_2>;<alias_3>
       DISABLED_FOR_CONFIGS: dev,qa
 ----
 +
-email_address:: Specify the email address to send notifications to. If you want to use more than one email address, separate them with semicolons:
+* `email_address`: Specify the email address to send notifications to. If you want to use more than one email address, separate them with semicolons:
 +
 [source,yaml]
 -----
 EMAILS: email_address1;email_address2;email_address3
 -----
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
-
-
++
+You can configure a secret to securely pass the email addresses. If you do so, use the alias that you used for the secret for each email address when you ran the `bat grant` command. The alias must be between carets. 
+To specify multiple email address aliases, put each alias between carets and separate the aliases with semicolons. See <<configure-secret>>.
++
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 == Custom Reports
 
@@ -353,7 +200,8 @@ reporters:
       HEADERS: "'Authorization':'Bearer token','Content-Type':'application/json'"
       DISABLED_FOR_CONFIGS: dev,qa
 ----
-DISABLED_FOR_CONFIGS:: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
+
+* `DISABLED_FOR_CONFIGS`: Disables the reporter for one or more configurations. The value is the name of one configuration or multiple names that are separated by commas. Names do not include the .dwl file extension.
 
 == Local Reports
 
@@ -415,3 +263,16 @@ And the result is:
   "result": "The suite <Hello world suite> with assertion <answer 200> is ok"
 }
 ----
+
+// Procedure to add secrets in Secret Manager
+
+include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,leveloffset=+1]
+
+// Procedure to grant access to the secret
+
+include::_partials/afm-task-config-secrets.adoc[tag=grant-access-to-secret,leveloffset=+2]
+
+== See Also
+
+xref:afm-create-monitor.adoc[]
+xref:afm-mask-info-in-monitors.adoc[]

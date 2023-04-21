@@ -1,24 +1,28 @@
-= Run a Test Immediately
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Running Tests Immediately
 
-:imagesdir: ../assets/images
-
-You can run a test on demand without waiting for the current interval of its schedule to elapse. Doing so does not reset the schedule, which continues to run at previously set intervals.
+You can manually run tests outside of the automatic testing schedule without affecting it.
 
 == Before You Begin
 
-Because you are running the test outside of a schedule, you must select the location from which to run it. If you want to run it in the same location as that used by the schedule, you can click the *Schedules* tab to look at the schedule and see at a glance the location that it uses.
+Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the same location as used by the schedule, navigate to the monitor detail page and note that location.
 
-== Procedure
+== Run a Test Immediately
 
-. Select the monitor for which you want to run a test on demand.
-. Click the *Tests* tab to see the list of test versions.
-. Click the Run Now icon for the test version that you want to run.
-. In the Run Versioned Test dialog, select the location and environment in which you want to run the test.
-. Click *Run Now*.
+Run a test either from the homepage, or from a test's details page.
 
-== Result
+To run a test from the homepage:
 
+. Hover over the test to run.
+. Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
+. Select the location and configuration in which to run the test.
+. Click *Run now*.
+
+To run a test from its details page:
+
+. Select the monitor that includes the test to run.
+. Click the monitor.
+. Click *Run* (image:afm-ui-run-button.png[width=1%,height=1%]).
+. Select the location and configuration in which to run the test.
+. Click *Run now*.
++
 The test runs immediately and the results are displayed. The current interval in the associated schedule continues to elapse.

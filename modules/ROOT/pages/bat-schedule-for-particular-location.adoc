@@ -1,11 +1,6 @@
-= Create a Monitor That Uses a Particular Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Monitors That Use a Specific Location
 
-:imagesdir: ../assets/images
-
-
+To create a monitor that uses a specific location:
 
 . Run the following command to list the locations that are in your default profile:
 +
@@ -55,11 +50,9 @@ bat schedule create --target=b4b4db50-bcbb-4b9a-93e1-50259fd100f7
 ====
 This schedule uses the default interval of 15 minutes.
 ====
-
-== Result
-
++
 The output of the `bat schedule create` command looks like this:
-
++
 ```
 #Creating artifact...
   + exchange.json
@@ -75,8 +68,8 @@ The output of the `bat schedule create` command looks like this:
 # Version 0.0.1 published
 scheduleId: 345305b4-0244-4a75-a304-220495e2e34a
 ```
-
-If you run the `bat schedule ls` command, you see an entry like this one:
++
+. If you run the `bat schedule ls` command, you see an entry like this one:
 
 ```
 # HelloWorldSuite

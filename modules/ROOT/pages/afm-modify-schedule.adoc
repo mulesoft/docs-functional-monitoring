@@ -1,49 +1,48 @@
-= Modify a Schedule
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Modifying Schedules
 
-:imagesdir: ../assets/images
+You can modify a schedule to change:
 
-You can modify a schedule if you want to change:
-
-* The test version that it runs
-* The location in which the test is run from
+* The location at which the test is run
 * The frequency at which to run the test
-* The monitor in which the test is defined
 
 == Before You Begin
 
-If you want to modify a schedule to use a public location instead of a private one, ensure that your organization in Anypoint Platform has not reached its maximum number of schedules for public locations. An indicator at the top of the *Monitors* section gives the count of such schedules that are already being used.
+* Before you run a schedule in a public location, ensure that your Anypoint Platform organization has not reached its maximum number of schedules. When you attempt to create a new monitor, a message displays if no public schedules are available.
 
-== Procedure
+* Ensure that your user ID has the following permission set in Access Management:
 
-There are two different methods for modifying a schedule.
+** *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
+
+== Modify a Schedule
+
+Modify a schedule either from the *Schedules* section of a monitor, or from the schedules list.
 
 To modify a schedule from the *Schedules* section of a monitor:
 
 . Select the monitor in which you want to modify a schedule.
-. Click the *Schedules* tab.
-. Find the schedule in the list, click the three dots on the right end of the table row, and select *Modify*.
-. In the Modify Schedule dialog, change one or more of these items:
+. Find the schedule in the list, click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]), and select *Modify Schedule*.
+. In the *Modify Schedule* dialog, change one or more of the following:
 +
-* The test version that you want the schedule to run
-* The location to run the test from
+* The location at which to run the test
 * The frequency at which to run the test
 . Click *Save*.
 
-To add a schedule from the list of schedules that use a particular location:
+To modify a schedule from the schedules list:
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
-. Select the location that you want to use in a new schedule.
-. Find the schedule in the list, click the three dots on the right end of the table row, and select *Modify*.
+. Display the list of locations by opening the *Locations manager* dialog in the homepage.
+. Select the location in which the schedule is running.
+. Find the schedule in the list, click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]), and select *Modify Schedule*.
 . In the Modify Schedule dialog, change one or more of these items:
 +
-* The name of the monitor to apply the schedule to
-* The test version that you want the schedule to run
 * The frequency at which to run the test
+* The configuration to run the test
 . Click *Save*.
-
-== Result
-
++
 Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
+
+== See Also
+
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]

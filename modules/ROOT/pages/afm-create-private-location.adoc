@@ -1,41 +1,47 @@
-= Create a Private Location
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Private Locations
 
 :imagesdir: ../assets/images
  
-You can create a private location as part of three tasks:
+// Definition of Private Locations
 
-* When you create a monitor
-* When you add a schedule to a monitor
-* When you modify a schedule in a monitor
+include::_partials/afm-concepts.adoc[tag=afm-private-locations,leveloffset=+2]
 
-You can also create a private location independently of these three tasks. Then, when you create a monitor, add a schedule, or modify a schedule, you can simply select the private location. The following procedure explains the steps for this last method.
+You can create a private location when you:
 
-For information about what a private location is and why you might want to create one, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
+* xref:afm-create-monitor.adoc[Create a monitor]
+* xref:afm-add-schedule.adoc[Add a schedule] to a monitor
+* xref:afm-modify-schedule.adoc[Modify a schedule] in a monitor
+
+This procedure explains how to create a private location when you modify a schedule.
+
+For information about private locations and their uses, see xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
 
 == Before You Begin
 
-Ensure that your organization in Anypoint Platform has a subscription to Anypoint Virtual Private Cloud.
+* Ensure that your Anypoint Platform organization has a subscription to Anypoint Virtual Private Cloud.
 
-== Procedure
+* Ensure that you have the following permission set in Access Management:
 
-To create a private location independently of any other task:
+** *Runtime Manager > Create Applications*
 
-. Display the list of locations by clicking the *Locations* tab at the top of the screen.
-. Click *Create Private Location*.
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
+
+== Create a Private Location
+
+To create a private location:
+
+. When creating a test or schedule, click the field under *Select location* and select *Create new location*.
 . Name the location.
 +
 The name can be up to 255 characters, and can include spaces and special characters.
-. Select the environment in which to run the workers that are created to run tests in your monitors.
-. Click *Create*.
-
-== Result
-
-The private location is added to the list of private locations. While API Functional Monitoring is registering the location, the status indicator for the location is yellow. After it is registered, if the environment in which the location was created is online, the location shows a green status indicator.
-
-If the indicator is red, navigate to Runtime Manager and restart the environment. Then, check the logs for the environment to troubleshoot the problem that caused it to go offline.
+. Select the environment where the tests will run.
+. Complete the creation of the of test or schedule.
++
+While API Functional Monitoring is registering the private location, the status indicator is yellow. After the location is successfully registered, the status indicator is green.
++
+. If the status indicator is red: 
+.. Navigate to Runtime Manager and restart the application/worker cloudhub application. 
+.. Check the logs for the application/worker cloudhub application to troubleshoot the issue.
 
 == What to Do Next
 
@@ -43,6 +49,8 @@ You can now run tests from the private location, either by adding a schedule tha
 
 == See Also
 
-* xref:afm-create-monitor.adoc[Create a Monitor]
-* xref:afm-add-schedule.adoc[Add a Schedule]
-* xref:afm-modify-schedule.adoc[Modify a Schedule]
+* xref:afm-create-monitor.adoc[Creating Monitors]
+* xref:afm-add-schedule.adoc[Adding Schedules]
+* xref:afm-modify-schedule.adoc[Modifying Schedules]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]
+* xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud]

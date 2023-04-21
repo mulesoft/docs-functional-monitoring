@@ -1,0 +1,13 @@
+= Versioning Monitors
+
+Although you cannot directly version monitors, you can use schedule rules to specify versions. If you were using an earlier version of API Functional Monitoring where tests were versioned, your test version information is preserved, although it is displayed differently. Multiple test versions that were migrated are now schedules of a single monitor.
+
+To use the version information you had in the earlier version:
+
+. Navigate to the old layout. 
+. Download a version of a test that should be preserved.
+. Unzip the test package.
+. Upload the unzipped directory.
+. Choose a new test name.
+. Specify a schedule rule that corresponds with the test version in the first step.
+. Delete the version downloaded in the first step.

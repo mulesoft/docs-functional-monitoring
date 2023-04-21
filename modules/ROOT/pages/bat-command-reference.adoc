@@ -1,27 +1,51 @@
 = BAT CLI Reference
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-The BAT command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI.  The BAT CLI is integrated with Anypoint Platform.
+BAT CLI provides an API Functional Monitoring command line interface through an integration with Anypoint Platform. The command line interface lets you run tests locally and schedule monitors for continuous API testing. You can schedule tests in the cloud using the CLI-xAPI. 
 
-This reference covers the syntax and key options you can use with the *bat* command. Using the *bat* command, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
+This reference covers the syntax and key options you can use with the `bat` commands. Using the `bat` commands, you can debug and run tests, get credentials for scheduling tests, schedule tests, list test schedules, and perform additional operations.
 
-== bat Command
+For commands to execute successfully, the account under which BAT CLI logs in must have the required permissions for the action the command is executing. 
 
-The `bat` command provides an API Functional Monitoring command line interface.
+== Permissions Required
 
-=== Syntax
+To use all of the `bat` commands to execute the corresponding actions in Anypoint Platform, you must have the following permissions. 
 
-`bat [<file> ... | <option> ...]`
+[options="header,footer"]
+|=======================
+|Permission |Actions
+|Create Applications (Runtime Manager) |Create private locations
+|Delete Applications (Runtime Manager) |Delete private locations
+|Manage Settings (Runtime Manager) |Update private locations
+|View Environment |Log in using BAT CLI
+|View Organization |Use Secrets Manager through BAT CLI
+|Exchange Contributor (Exchange)| Create or modify a monitor; add or modify a schedule
+|Exchange Administrator (Exchange)| Create, modify, or delete a monitor; add, modify, or delete a schedule 
+|Grant access to secrets (Secrets Manager) |Use Secrets Manager
+|=======================
+
+== Login Options
+
+To use the `bat` commands to execute API Functional Monitoring actions, you must first log in using one of the following login methods. 
+
+=== Login Using Connected Apps
+
+`bat [login --client-id --client-secret [--profile=<value>] --host=<value>]`
+
+This option logs in to an Anypoint Platform account using the client ID and client secret from a connected app. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+
+=== Login Using a Username and Password
 
 `bat [login --username=<value> [--profile=<value>] --host=<value>]`
 
-This option displays an interactive command for the password.
+This option logs in to an Anypoint Platform account using a username and password. It displays an interactive command for the password.
 
 `password for user [username]: <password>`
 
 You can include the option `--password=<password>` in the `login` command.
+
+== Execute Commands Stored in a File
+
+`bat [<file> ... | <option> ...]`
 
 Where:
 
@@ -36,12 +60,16 @@ When you execute bat without any arguments, BAT reads the YAML in the current di
 You can create a `config` folder and add different configuration files in `config` for the environments.
 
 * `bat ~/path/to/folder/` +
-Executes the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
+Executes from the desired folder. BAT searches for and executes the `bat.yaml` and `main.dwl` files.
 * `bat ./folder/file.dwl` +
-Executes the desired file. The root of the project is the current folder.
-The root of the project is used to resolve imports, and load libraries and files.
+Executes using the desired file. The root of the project is the current folder.
+The root of the project is used to resolve imports and load libraries and files.
 
-== Command Line Options
+== `bat` Command Options
+
+* `--help`
++
+Displays information on how to use the command.
 
 * `--validate | -V`
 +
@@ -109,7 +137,21 @@ Profile is:
 +
 The value is an Anypoint Platform user name. If it is not present, the value of the environment variable ANYPOINT_USERNAME is used. If a value for this variable is not set, the default username from the credentials file is used.
 
-This command line also offers cloud integration, and to schedule and configure tests and monitors using the Anypoint Platform.
+* `--useProxy`
++
+Use this option with each `bat` command if your system requires that you access Anypoint Platform through a proxy. 
+
+* `--client-id`
++
+The client ID from your connected app. You must use this option with the login command if you log in using a connected app. 
+
+* `--client-secret`
++
+The client secret from your connected app. You must use this option with the login command if you log in using a connected app. 
+
+== `bat` Commands
+
+You can use the following `bat` commands to manage cloud integration and to schedule and configure tests and monitors using Anypoint Platform.
 
 * `init`
 +
@@ -121,11 +163,11 @@ List all of the schedules that exist in the given profile's organization.
 
 * `schedule create [--cron="<expression>"] [--location=<id>]`
 +
-Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 15 minutes.
+Create a scheduler using a cron expression and generating a ZIP file that includes the tests and all the files. If you do not enter a cron expression, tests are scheduled to run every 15 minutes.
 
-* `schedule endpoint <arbitrary-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-logic-endpoint=<sumoLogicEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
+* `schedule endpoint <monitor-URL> [--cron="<expression>"] [--name=<suiteName>] [--location=<id>] [--new-relic-license-key=<newRelicLicenseKey>] [--slack-webhook=<slackWebHook>] [--email-list=<emails>] [--sumo-logic-endpoint=<sumoLogicEndpoint>] [--pager-duty-routing-key=<pagerDutyRoutingKey>] [--custom-report-url=<customReportUrl>] [--custom-report-headers=<header1,header2,...,headerN>] [--custom-report-transformation=<pathToDwlFile>][--init-folder] [--status-code=<code>]`
 +
-Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, you can add options to generate the bat.yaml with different parameters.
+Create a monitor in Exchange using a URL, such as the following example URL: `+http://example.com+`. Optionally, you can add options to generate the `bat.yaml` with different parameters.
 
 ** `[--cron="<expression>"]` By default, tests are scheduled to run every 15 minutes. You can change with the cron expression.
 
@@ -176,7 +218,7 @@ Gets worker ID.
 
 * `location create <name>`
 +
-Creates a private location in the given profile's organization in Anypoint Platform.  Requires a subscription to Anypoint VPC. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private locations and public locations.
+Creates a private location in the given profile's organization in Anypoint Platform. See xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs] for more information about private and public locations.
 
 * `location delete <id>`
 +
@@ -190,7 +232,7 @@ Lists the private and public locations that exist in the given profile's organiz
 
 * `location update <id>`
 +
-Updates a location by its ID. If a new version of the worker available, updates the location using lastest version. This option is valid only for Mule locations.
+Updates a location by its ID. If a new version of the worker available, updates the location using latest version. This option is valid only for Mule locations.
 
 * `get_token`
 +
@@ -208,12 +250,12 @@ bat grant -g=MySecretGroupName -s=MyAlias1:MySecretName1,MyAlias2:MySecretName2,
 +
 -g:: Specify the name of the group in Anypoint Secrets Manager in which the shared secret is stored.
 -s:: Specify an alias, a colon, and the name of the shared secret. The alias can be any combination of alphanumeric characters. The name of the shared secret is the name that identifies the shared secret in the group. If you want to use a single command to grant the BAT CLI permission to use more than one shared secret from the same group, separate each `alias:name` pair with a comma.
-+The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are currently using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
++The secret must be created in a secrets group that is in the same environment that you are using in the BAT CLI. To find out which environment you are using in the BAT CLI, run the command `bat whoami`. The output contains the ID for the environment. Run the command `bat environment ls` to list the environments that you have access to. Match the ID from the `bat whoami` command with one of the environments listed. If you need to switch to the environment that your secrets group is in, run the command bat environment switch name, where name is the name of the environment.
 --forceUpdate:: Specify this option if API Functional Monitoring lost access to a shared secret and you need to grant access again.
 
 * `execution ls|list`
 +
-Lists the monitors that are currently running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
+Lists the monitors that are running for the specified profile. If no profile is specified, the default profile is used. The monitors listed are all of those in the current environment and for the current profile that were written and started through the BAT CLI, and any that were created online in Anypoint Platform.
 +
 The output looks like this:
 +
@@ -260,4 +302,5 @@ BAT Version: 1.0.51
 
 == See Also
 
-* xref:bat-schedule-test-task.adoc[To Schedule a Test]
+* xref:bat-schedule-test-task.adoc[Scheduling Testing and Monitoring]
+* xref:afm-mask-info-in-monitors.adoc[]

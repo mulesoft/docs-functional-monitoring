@@ -1,35 +1,50 @@
-= Create a Monitor
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Creating Monitors
 
-You can create a monitor by filling in fields if you do not know how to write tests in the Behavior Driven Development (BDD) test-writing language or how to use the BAT CLI. This method of creating a monitor creates a test that tests one or more endpoints, and schedules the test suite to run at intervals that you specify.
+You create monitors via the Functional Monitoring UI or by uploading test suites written in BAT, a Behavior Driven Development (BDD) language. Both methods enable you to create tests against one or more endpoints, and to create test schedules that run at specified intervals. 
 
-After every interval, you can view the results of the test and statistics about API performance.
+This procedure describes creating monitors via the Functional Monitoring UI.
 
-
+[[before-you-begin]]
 == Before You Begin
 
-* Ensure that your user ID has the Anypoint Monitoring User permission and is assigned the Exchange Administrators role.
+Ensure that you have the following permissions set in Access Management:
+
+* *Anypoint Monitoring > Viewer* or *Anypoint Monitoring > Administrator* 
 +
-An administrator for your organization can grant you this permission in Anypoint Access Management.
-* Determine which endpoints you want to test and the REST methods that you want to test them with.
-* Decide upon the return codes that you expect the methods to return.
-* Figure out the frequency at which you would like the monitor to test the endpoints.
+and
 +
-The shortest interval is every fifteen minutes. You can also choose to run the monitor hourly, daily, weekly, or monthly. The schedule begins immediately after you create the monitor. You can schedule another monitor later for the same test suite that is more detailed, if you prefer. You can also modify the schedule after you create the monitor, if you want to specify any of these options:
-** Set an hourly schedule to start at a certain number of minutes after the hour begins.
-** Set a daily, weekly, or monthly schedule to start at a certain time of day.
-* Determine which execution location you would like to run the monitor in.
+* *Exchange > Exchange Administrator* or *Exchange > Exchange Contributor*
+
+An Anypoint Platform administrator for your organization grants permission. See xref:access-management::managing-permissions.adoc[Manage Permissions].
+
+[[create-a-monitor]]
+== Create a Monitor
+
+To create a monitor:
+
+. Click *Create Monitor* in the *Functional Monitoring* section of Anypoint Monitoring.
+. Under *Step 1 - Setup the monitor*:
+.. Specify a monitor name.
+.. Select a testing location. 
+.. Set the monitoring schedule. 
+. Click the *Step 2 - Select endpoints* tab and set up the tests as follows for each endpoint: 
+.. By default, the monitor validates self-signed certifications for each endpoint, so *Validate SSL Certificate* is toggled on. To allow unsafe self-signed certifications for an endpoint, toggle *Validate SSL Certificate* off.
+.. Select the method and enter the endpoint URL.
+.. Search for, select, or configure custom headers and insert a value for each header. 
+.. For POST, PUT, or PATCH endpoints, optionally insert body content.
+.. Optionally select headers and insert their values.
+.. Select assertion information.   
 +
-For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs] and xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs].
-* Decide whether you would like the request messages to include additional header information.
-* Obtain one of the following pieces of information, if you would like to send reports to one of these reporting tools:
+.. Preview the test by clicking *Run now* under *Preview the result of your monitor*.
++
+. Click the *Step 3 - Set notifications* tab.
++
+* Optionally select notifiers from the list of integrated reporting tools and enter the required information in the value field for each selected notifier:
 +
 |===
 |Reporting Tool |Required Information
 
-|NewRelic
+|New Relic
 |License Key
 
 |PagerDuty
@@ -44,47 +59,16 @@ For details, see xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints o
 |Email
 |Email address
 |===
-
-
-== Procedure
-To create a monitor:
-
-. In the *Functional Monitoring* section of Anypoint Monitoring, click *Create*.
-. Specify a name and a short description for the monitor.
-. Fill in the fields with the information that you have gathered.
-. Click *Create*.
-
-== Result
-
-The dashboard opens. The monitor that you created is listed on the left.
-
-Beneath the name of the monitor is an indicator that explains when the current run of the monitor began. A line at the bottom of the list item shows how much time remains before the next run of the monitor. Also, the *Monitored Endpoints*, *Tests*, and *Schedules* sections will all be empty.
-
-After the monitor has run, the list item for the test suite will indicate whether the monitored endpoints passed or failed.
-
-[IMPORTANT]
-====
-Tests silently fail when they take more than 120 seconds to run. As a workaround, you can split a long-running test into multiple tests. Download the monitor, split the test across multiple monitors in the BAT CLI, run and time each test to be sure that it is under 120 seconds, and then upload the monitors.
-
-If you do not want to split a long-running test, download the monitor and run it from the BAT CLI.
-====
-
-== What to do next
-
-Click the *Scheduling* tab to see the schedule for the monitor. You can add additional schedules and delete schedules that you no longer want to run. You can also disable schedules, if you want to pause them, and then enable them again.
-
-After the monitor runs, click the *Monitored Endpoints* tab to see:
-
-* Whether all endpoints returned the expected codes, as indicated by *PASSED* in the first column of the table
-* Statistics about the execution of the test of the endpoint
-
-As your monitor continues to run at the scheduled intervals, the statistics in this table are updated. They show the minimum, average, and maximum runtime for up to five executions of the test.
-
-Click *Tests* to see statistics and other information about the monitor. Because you have only one test in the monitor that you just created, the statistics and information in this section apply to the test, too.
-
-If you want to delete the monitor, delete all versions of it in the *Tests* section.
++
+To hide the required information in the monitor files, see xref:bat-reporting-task[Configuring and Viewing Reports]. 
++
+. Click *Create Monitor*.
 
 == See Also
 
- * xref:afm-edit-test.adoc[Edit a monitor]
- * xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
+* xref:bat-top.adoc[API Functional Monitoring with the Blackbox Automated Testing (BAT) CLI]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]
+* xref:afm-modify-monitor.adoc[Modifying Monitors]
+* xref:afm-add-schedule.adoc[Adding Schedules]
+* xref:afm-monitoring-public-apis.adoc[Monitoring the Endpoints of Public APIs]
+* xref:afm-monitoring-private-apis.adoc[Monitoring the Endpoints of Private APIs]
