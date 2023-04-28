@@ -16,7 +16,23 @@ Before you can write and run tests, you must have access to an Anypoint Platform
 
 [[test-examples]]
 == Use Examples to Learn the Basics
-Learn the basics of writing tests using the provided examples. See xref:bat-example-test-suite.adoc[] to locate the examples. See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own tests.
+Learn the basics of writing tests using the provided examples. 
+
+To select examples:
+
+* In the code editor *Load Test Examples* selector above the code editor, select an example. Examples include:
++
+** Test an expected status code
+** Validate multiple assertions
+** Set and reuse variables
+** Iterate
+** Extract functions
+** Assert with regex
+** Repeat n times
++
+The code in the code editor automatically changes to show the selected example code.
++
+See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own tests.
 
 [[validate-tests]]
 == Validate Tests
