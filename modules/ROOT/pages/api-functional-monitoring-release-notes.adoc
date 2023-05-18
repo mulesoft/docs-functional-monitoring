@@ -1,1 +1,1 @@
-include::include::release-notes::partial$api-functional-monitoring-rn-landing-page.adoc[tags=!excludeIntroAFM]
+include::release-notes::partial$api-functional-monitoring-rn-landing-page.adoc[tags=!excludeIntroAFM]
