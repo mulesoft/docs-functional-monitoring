@@ -194,7 +194,7 @@ Create a monitor in Exchange using a URL, such as the following example URL: `+h
 Deletes a schedule by its ID.
 
 * `schedule disable <id>`
-Disables the schedule that is identified by the specified ID. If you run `bat schedule ls` after you run this command, you will see that the value
+Disables the schedule that is identified by the specified ID.
 
 * `schedule enable <id>`
 +
@@ -294,7 +294,7 @@ Example output if you do not have the latest version is:
 +
 ----
 Updating Version: You have an older BAT version.
-The new version will be downloaded in /Users/<username>/.bat/bat-cli-1.0.51
+The new version is downloaded in /Users/<username>/.bat/bat-cli-1.0.51
 Downloading version 1.0.51. Please wait`.......................
 BAT Wrapper: 1.0.53
 BAT Version: 1.0.51
