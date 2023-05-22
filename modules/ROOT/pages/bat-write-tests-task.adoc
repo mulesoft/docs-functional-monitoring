@@ -21,7 +21,7 @@ Learn the basics of writing tests using the provided examples.
 To select examples:
 
 . In the *Create Monitor* or *Edit Monitor* page, click *Switch to code editor*. 
-. In the *Load Test Examples* selector above the code editor, select an example. Examples include:
+. In the selector above the code editor, select a test example. Examples include:
 +
 ** Test an expected status code
 ** Validate multiple assertions
@@ -37,7 +37,7 @@ See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own te
 
 [[validate-tests]]
 == Validate Tests
-To validate a test when creating or modifying a monitor, switch to the code editor view and then click *Validate Test*.
+To validate a test after creating or modifying a monitor, click *Validate Test*.
 
 == See Also
 
