@@ -155,10 +155,7 @@ You can configure a secret to securely pass the endpoint URL key. If you do so, 
 
 To email test reports that indicate failures, specify any email addresses that you want to send reports to. Each report includes the name of the suite in which the error occurs and a list of the statements.
 
-[IMPORTANT]
-====
-Reports are emailed only for tests created in API Functional Monitoring in Anypoint Platform, not for tests created with the BAT CLI.
-====
+Because reports are emailed only for tests created in or uploaded to the API Functional Monitoring in Anypoint Platform, after you add the reporters to your test in BAT CLI, upload the test. You can alternatively add the email reporting tool in the monitor's *Notifications* tab after you upload the test.
 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 +
