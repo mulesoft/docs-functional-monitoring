@@ -34,7 +34,7 @@ To create a private location:
 . Name the location.
 +
 The name can be up to 255 characters, and can include spaces and special characters.
-. Select the environment where the tests will run.
+. Select the environment for the tests.
 . Complete the creation of the of test or schedule.
 +
 While API Functional Monitoring is registering the private location, the status indicator is yellow. After the location is successfully registered, the status indicator is green.
