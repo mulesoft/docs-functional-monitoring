@@ -463,6 +463,6 @@ suite("Example for until and while") in [
 
 == See Also
 
-* https://forums.mulesoft.com[MuleSoft Forum]
-* https://help.mulesoft.com[Contact MuleSoft Support]
+* https://forums.mulesoft.com[MuleSoft Forum^]
+* https://help.mulesoft.com[Contact MuleSoft Support^]
 * xref:afm-mask-info-in-monitors.adoc[]
