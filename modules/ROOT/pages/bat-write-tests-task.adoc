@@ -32,12 +32,10 @@ To select examples:
 ** Repeat n times
 +
 The code in the code editor automatically changes to show the selected example code.
-
-See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own tests.
-
-[[validate-tests]]
-== Validate Tests
-To validate a test after creating or modifying a monitor, click *Validate Test*.
++
+. Modify the example test for your own needs. See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own tests.
++ 
+. Validate whether the test works by clicking *Validate Test*.
 
 == See Also
 
