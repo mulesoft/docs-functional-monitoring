@@ -20,7 +20,7 @@ Learn the basics of writing tests using the provided examples.
 
 To select examples:
 
-. In the *Create Monitor* or *Edit Monitor* page, click *Switch to code editor*. 
+. In the *Create Monitor* page, click *Switch to code editor*. 
 . In the selector menu for the code editor, select a test example. Examples include:
 +
 ** Test an expected status code
