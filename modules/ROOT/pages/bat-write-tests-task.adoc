@@ -26,10 +26,10 @@ To select examples:
 ** Test an expected status code
 ** Validate multiple assertions
 ** Set and reuse variables
-** Iterate
-** Extract functions
-** Assert with regex
-** Repeat n times
+** Iterate test
+** Extract function
+** Assert with regex expression
+** Repeat N times
 +
 The code in the code editor automatically changes to show the selected example code.
 +
