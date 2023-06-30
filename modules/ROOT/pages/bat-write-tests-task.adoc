@@ -37,6 +37,8 @@ The code in the code editor automatically changes to show the selected example c
 + 
 . Validate whether the test works by clicking *Validate Test*.
 
+NOTE: The example menu is available only when creating a monitor. 
+
 == See Also
 
 * https://deckofcardsapi.com/[The website for the Deck of Cards API^]
