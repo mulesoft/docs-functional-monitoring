@@ -40,7 +40,7 @@ To modify a schedule from the schedules list:
 * The configuration to run the test
 . Click *Save*.
 +
-Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes left in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
+Changes take place after the current interval elapses. For example, if you change the interval of a schedule from every 15 minutes to every hour and the timer on the monitor shows that there are 5 minutes remaining in the current interval, the new interval goes into effect after the five minutes elapse and the test is run.
 
 == See Also
 

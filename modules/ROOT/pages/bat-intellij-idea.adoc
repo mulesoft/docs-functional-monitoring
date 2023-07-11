@@ -44,9 +44,8 @@ The steps in this procedure explain how to modify a BAT project for support in I
 +
 *Result*: A new Bat Test file appears in the Tests folder. Double-click that to open it in the editor pane. Write your test in that file.
 . To run a test:
-.. Open it in the editor pane.
-.. Right-click in the file.
-.. In the right-click menu, select *Run* > *Bat Test _filename_*.
+.. Open the test in the editor.
+.. Right-click in the file and select *Run* > *Bat Test _filename_*.
 
 +
 *Result*: The output of the test appears in the *Run* tool window.

@@ -31,7 +31,7 @@ To use the `bat` commands to execute API Functional Monitoring actions, you must
 
 `bat [login --client-id --client-secret [--profile=<value>] --host=<value>]`
 
-This option logs in to an Anypoint Platform account using the client ID and client secret from a connected app. This provides an alternative way to log in using MFA (multi-factor authentication), so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list. For information on connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+This option logs in to an Anypoint Platform account using the client ID and client secret from a connected app. This provides an alternative way to log in using MFA (multi-factor authentication) so that a second factor is not required. MFA is now required for non-SSO accounts unless they are on your organization's exemption list. For information about connected apps, which are configured by organization administrators, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
 === Login Using a Username and Password
 
@@ -69,7 +69,7 @@ The root of the project is used to resolve imports and load libraries and files.
 
 * `--help`
 +
-Displays information on how to use the command.
+Displays information about how to use the command.
 
 * `--validate | -V`
 +
@@ -194,7 +194,7 @@ Create a monitor in Exchange using a URL, such as the following example URL: `+h
 Deletes a schedule by its ID.
 
 * `schedule disable <id>`
-Disables the schedule that is identified by the specified ID. If you run `bat schedule ls` after you run this command, you will see that the value
+Disables the schedule that is identified by the specified ID.
 
 * `schedule enable <id>`
 +
@@ -294,7 +294,7 @@ Example output if you do not have the latest version is:
 +
 ----
 Updating Version: You have an older BAT version.
-The new version will be downloaded in /Users/<username>/.bat/bat-cli-1.0.51
+The new version is downloaded in /Users/<username>/.bat/bat-cli-1.0.51
 Downloading version 1.0.51. Please wait`.......................
 BAT Wrapper: 1.0.53
 BAT Version: 1.0.51

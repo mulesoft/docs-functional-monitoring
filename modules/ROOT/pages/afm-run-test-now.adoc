@@ -4,7 +4,7 @@ You can manually run tests outside of the automatic testing schedule without aff
 
 == Before You Begin
 
-Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the same location as used by the schedule, navigate to the monitor detail page and note that location.
+Because you are running the test outside of a schedule, you must select the location in which you want it to run. If you want to use the location that is used by the schedule, navigate to the monitor detail page to view the location information.
 
 == Run a Test Immediately
 

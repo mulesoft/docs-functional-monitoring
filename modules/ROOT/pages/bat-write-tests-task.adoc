@@ -9,25 +9,39 @@ A test suite is composed of the following elements:
 
 Tests are written in the BDD Test-Writing syntax and use the `.dwl` file extension.
 
-The best way to learn how to write tests in this syntax is to use the BAT Playground, a web application that runs modifiable tests on the Deck of Cards API by default. There are nine different tests that are presented in ascending order of complexity. Each test includes comments to show you what the code does.
-
 [[before-you-begin]]
 == Before You Begin
 
-Before you can run the BAT playground, you must have access to an Anypoint Platform account. 
+Before you can write and run tests, you must have access to an Anypoint Platform account. 
 
-* If you already have access to an Anypoint Platform account, proceed to <<start-bat-playground>>.
+[[test-examples]]
+== Use Examples to Learn the Basics
+Learn the basics of writing tests using the provided examples. 
 
-* If you do not have access to an Anypoint Platform account, refer to xref::access-management::managing-your-account[Managing your Anypoint Platform Account] to find out how to sign up for a new account or get access to an organization in an existing account. After you have access to an Anypoint Platform account, proceed to <<start-bat-playground>>.
+To select examples:
 
-[[start-bat-playground]]
-== Start the BAT Playground
+. In the *Create Monitor* page, click *Switch to code editor*. 
+. In the selector menu for the code editor, select a test example. Examples include:
++
+** Test an expected status code
+** Validate multiple assertions
+** Set and reuse variables
+** Iterate test
+** Extract function
+** Assert with regex expression
+** Repeat N times
++
+The code in the code editor automatically changes to show the selected example code.
++
+. Modify the example test for your own needs. See xref:bat-bdd-reference.adoc[] to understand the syntax and write your own tests.
++ 
+. Validate whether the test works by clicking *Validate Test*.
 
-Start the BAT Playground by going to the following URL: https://anypoint.mulesoft.com/apitesting/playground/. You are prompted to log in to your Anypoint Platform account to access the BAT playground.
-
-After you learn the basics of writing tests from the examples in the BAT Playground, you can refer to the BDD Test-Writing Syntax Reference, which can help you go beyond the basics.
+NOTE: The example menu is available only when creating a monitor. 
 
 == See Also
 
-* https://deckofcardsapi.com/[The website for the Deck of Cards API]
-* xref:bat-bdd-reference.adoc[BDD Test-Writing Syntax Reference]
+* https://deckofcardsapi.com/[The website for the Deck of Cards API^]
+* xref:bat-bdd-reference.adoc[]
+* xref:afm-create-monitor.adoc[]
+* xref:afm-modify-monitor.adoc[]
