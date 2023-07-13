@@ -11,7 +11,8 @@ To mask the header information:
 
 // Limitations for using secrets 
 
-include::_partials/afm-task-config-secrets.adoc[tag=secrets-limitations,leveloffset=+2]
+include::_partials/afm-task-config-secrets.adoc[tag=secrets-limitations,leveloffset=+1]
+
 // Procedure to add secrets in Secret Manager
 
 include::_partials/afm-task-config-secrets.adoc[tag=config-in-secrets-mgr,leveloffset=+1]
