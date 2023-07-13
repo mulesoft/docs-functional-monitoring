@@ -31,7 +31,7 @@ To modify a monitor from its detail page:
 . Click *More* (image:afm-ui-more-button.png[width=0.75%,height=0.75%]) next to the monitor name.
 . Click *Edit Monitor*.
 
-You can edit the endpoints' *Validate SSL Certificate* toggle setting, methods, URLs, optional headers, and assertions. See xref:create-monitor.adoc[Creating Monitors] for more detail on the fields.
+You can edit the endpoints' *Validate SSL Certificate* toggle setting, methods, URLs, optional headers, and assertions. See xref:afm-create-monitor.adoc[Creating Monitors] for more detail on the fields.
 
 Click *Switch to code editor* to edit the monitor as BAT source. For more details, see xref:bat-bdd-reference.adoc[BDD Test-Writing Syntax Reference].
 
