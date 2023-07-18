@@ -12,7 +12,6 @@
  ** xref:afm-modify-schedule.adoc[Modifying Schedules]
  ** xref:afm-delete-schedule.adoc[Deleting Schedules]
  ** xref:afm-view-schedules-private-location.adoc[Viewing Schedules That Use a Private Location]
- ** xref:afm-run-test-now.adoc[Running Tests Immediately]
  ** xref:afm-view-test-history.adoc[Viewing Test History]
  ** xref:afm-download-test.adoc[Downloading Monitors]
  ** xref:afm-delete-monitor.adoc[Deleting Monitors]
