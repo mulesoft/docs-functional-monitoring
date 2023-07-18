@@ -51,8 +51,6 @@ To monitor your APIs using BAT CLI:
 
 Additionally you can:
 
-* xref:afm-run-test-now.adoc[Run tests outside of the automatic testing schedule] without affecting the schedule.
-
 * xref:afm-download-test.adoc[Download monitors] from Functional Monitoring to use them with BAT CLI or to modify them to create more complex test cases. 
 
 * xref:afm-upload-monitor.adoc[Upload monitors] you have manually written or modified to use them in Functional Monitoring.
