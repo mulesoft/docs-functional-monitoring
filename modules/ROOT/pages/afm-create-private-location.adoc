@@ -53,4 +53,4 @@ You can now run tests from the private location, either by adding a schedule tha
 * xref:afm-add-schedule.adoc[Adding Schedules]
 * xref:afm-modify-schedule.adoc[Modifying Schedules]
 * xref:access-management::managing-permissions.adoc[Managing Permissions]
-* xref:cloudhub-1::virtual-private-cloud.adoc[Virtual Private Cloud]
+* xref:cloudhub::virtual-private-cloud.adoc[Virtual Private Cloud]
