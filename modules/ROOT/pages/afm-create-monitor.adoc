@@ -58,7 +58,7 @@ To create a monitor:
 |Email address
 |===
 +
-To hide the required information in the monitor files, see xref:bat-reporting-task[Configuring and Viewing Reports]. 
+To hide the required information in the monitor files, see xref:bat-reporting-task.adoc[Configuring and Viewing Reports]. 
 +
 . Click *Create Monitor*.
 

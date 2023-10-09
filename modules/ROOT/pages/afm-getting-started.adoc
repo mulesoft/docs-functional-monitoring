@@ -39,7 +39,7 @@ To monitor your APIs using BAT CLI:
 
 . Create a test suite xref:bat-example-test-suite.adoc[from an example] or by xref:bat-start-new-project.adoc[populating the lines yourself].
 
-. xref:bat-write-tests-task[Write tests] using BDD test-writing syntax.
+. xref:bat-write-tests-task.adoc[Write tests] using BDD test-writing syntax.
 
 . xref:bat-execute-task.adoc[Run a test suite].
 
