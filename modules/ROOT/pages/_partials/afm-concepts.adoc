@@ -50,7 +50,7 @@ Runtime monitoring ensures that deployed APIs operate within the expected perfor
 
 // tag::afm-private-locations[]
 
-A private location is a Mule application that runs in an environment in CloudHub 1.0. You can run tests against APIs that are accessible only within the private location. The private location environment might have an Anypoint VPC associated with it. You can create multiple private locations in a single instance of Anypoint VPC.
+A private location is a Mule application that runs in an environment in CloudHub 1.0 or Cloudhub 2.0. You can run tests against APIs that are accessible only within the private location. The private location environment might have an Anypoint VPC associated with it. You can create multiple private locations in a single instance of Anypoint VPC.
 
 // end::afm-private-locations[]
 
