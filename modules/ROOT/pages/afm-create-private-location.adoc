@@ -37,6 +37,8 @@ The name can be up to 255 characters, and can include spaces and special charact
 . Select the environment for the tests.
 . Select the deployment target.
 . Complete the creation of the of test or schedule.
+
+NOTE: If your deployment target is set to any variant of CloudHub 2.0, a connected app is created automatically.
 +
 While API Functional Monitoring is registering the private location, the status indicator is yellow. After the location is successfully registered, the status indicator is green.
 +
