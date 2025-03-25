@@ -36,7 +36,7 @@ To create a private location:
 The name can be up to 255 characters, and can include spaces and special characters.
 . Select the environment for the tests.
 . Select the deployment target.
-. Complete the creation of the of test or schedule.
+. Complete the creation of the of test or schedule. By default, it uses 0.2 vCores replica size.
 
 NOTE: If your deployment target is set to any variant of CloudHub 2.0, a connected app is created automatically.
 +
