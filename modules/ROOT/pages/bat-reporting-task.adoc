@@ -40,6 +40,29 @@ After a test runs, go to New Relic and click *Metrics*. The BAT test metrics app
 
 Click the test suite name to see the result of the test.
 
+=== Find AFM metrics in New Relic
+
+To locate AFM metrics in New Relic:
+
+. In New Relic, click *All capabilities* in the left navigation.
+. Click *Data explorer*.
+. Click *Metrics*.
+. In the search bar, type `successfully-afm-execution`.
+. (Optional) To narrow the results, add a filter by agent and type `Api Functional Monitoring`.
+. Click the metric name to view the time series and related dimensions.
+
+If you prefer NRQL, you can query metrics directly, for example:
+
+[source,sql]
+----
+FROM Metric 
+SELECT count(*) 
+WHERE metricName = 'successfully-afm-execution' 
+SINCE 1 hour ago TIMESERIES
+----
+
+ Use additional filters (for example, by test suite name) to focus on a specific monitor run or environment.
+
 == PagerDuty
 
 The integration of BAT with PagerDuty generates an incident when a test fails and triggers configured PagerDuty alerts. If a monitor always fails with the same error, BAT does not generate a new issue, but instead ignores these errors.
