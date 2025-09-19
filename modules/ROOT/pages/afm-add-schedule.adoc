@@ -76,5 +76,5 @@ If you want to run longer-running tests in a public location, you can:
 
 == See Also
 
-* xref:afm-public-versus-private.adoc[Differences in the Monitoring of Public and Private APIs]
+* xref:afm-monitoring-public-apis.adoc[Differences in the Monitoring of Public and Private APIs]
 * xref:access-management::managing-permissions.adoc[Manage Permissions]
