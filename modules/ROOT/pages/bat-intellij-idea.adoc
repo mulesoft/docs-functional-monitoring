@@ -21,7 +21,7 @@ The steps in this procedure explain how to modify a BAT project for support in I
 . Select *Plugins* and then click *Browse Repositories*.
 . Click *Manage Repositories*.
 . Click the plus icon to add a custom repository.
-. Paste in the following URL: https://plugins.jetbrains.com/plugins/Develop/10362
+. Paste in the following URL: https://plugins.jetbrains.com/plugins/list?channel=Develop&pluginId=10362
 . Click *Check Now* to verify that the repository is reachable. Then, click *OK*.
 . In the *Browse Repositories* dialog, search on `dataweave`.
 . Select *DataWeave 2.0 IntelliJ Plugin* and then click *Install* in the plugin details.
