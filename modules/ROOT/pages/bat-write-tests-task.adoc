@@ -41,7 +41,7 @@ NOTE: The example menu is available only when creating a monitor.
 
 == See Also
 
-* https://deckofcardsapi.com/[The website for the Deck of Cards API^]
+* https://deckofcardsapi.com/[The website for the Deck of Cards API]
 * xref:bat-bdd-reference.adoc[]
 * xref:afm-create-monitor.adoc[]
 * xref:afm-modify-monitor.adoc[]

@@ -16,7 +16,7 @@ Using New Relic with API Functional Monitoring, you can view metrics from test s
 
 === Configure Reporting in New Relic
 
-. Obtain your New Relic license key. For details on how to do this, see the https://docs.newrelic.com/[New Relic documentation^]. 
+. Obtain your New Relic license key. For details on how to do this, see the https://docs.newrelic.com/[New Relic documentation]. 
 . In your `bat.yaml` file, create the `reporters` section, if one doesn't already exist in the file. On a blank line, type `reporters:`.
 . In your `bat.yaml` file, add New Relic as a reporter by adding these indented lines to the `reporters` section:
 +
