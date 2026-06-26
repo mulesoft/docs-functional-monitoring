@@ -2,6 +2,11 @@
 :page-aliases: afm-delete-private-location.adoc
 :imagesdir: ../assets/images
 
+[IMPORTANT]
+====
+API Functional Monitoring now supports Mule Runtime 4.9 LTS (Java 17). You can now upgrade your private monitoring locations to version 4.9.
+====
+
 API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC).
 
 // Definition of Private APIs
