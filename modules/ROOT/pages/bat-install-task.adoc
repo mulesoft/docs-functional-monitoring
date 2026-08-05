@@ -4,14 +4,14 @@ The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that 
 
 == Prerequisite for Linux and MacOS Systems
 
-Before installing the BAT CLI, ensure that AdoptOpenJDK's OpenJDK 8 is installed on your system.
+Before installing the BAT CLI, ensure that Java 17 is installed on your system.
 
 == Prerequisites for Windows 10 Systems
 
 . Install Windows Subsystem for Linux (WSL)
 +
 The instructions are at https://learn.microsoft.com/en-us/windows/wsl/install.
-. Install Java 8, curl, and the application "unzip" into the Linux distribution that you installed in your WSL.
+. Install Java 17, curl, and the application "unzip" into the Linux distribution that you installed in your WSL.
 . Ensure that the `JAVA_HOME` variable in your environment is set to the location of your Java installation.
 +
 . Add the `bat` executable to your `PATH` environment variable:

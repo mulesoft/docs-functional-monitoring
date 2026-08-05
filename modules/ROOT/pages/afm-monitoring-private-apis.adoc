@@ -2,6 +2,11 @@
 :page-aliases: afm-delete-private-location.adoc
 :imagesdir: ../assets/images
 
+[IMPORTANT]
+====
+API Functional Monitoring now supports Mule Runtime 4.9 LTS (Java 17). You can now upgrade your private monitoring locations to version 4.9.
+====
+
 API Functional Monitoring (AFM) lets you monitor private APIs if you have a subscription to Anypoint Virtual Private Cloud (Anypoint VPC).
 
 // Definition of Private APIs
@@ -65,6 +70,22 @@ When tests are run by private locations in an instance of Anypoint VPC, the work
 == Update Private Locations
 
 As updates become available, you are notified in the *Locations* modal dialog. Follow the prompts to apply the update to all private locations.
+
+=== Mule Runtime Compatibility
+
+Private locations run on a Mule Runtime version that you manage. To maintain security and support, ensure your private locations run on a supported Long-Term Support (LTS) version:
+
+[options="header"]
+|===
+|Runtime Version |Status |Action Required
+|Mule 4.9 LTS (Java 17) |Supported |No action required
+|Mule 4.6 LTS |Supported |Plan upgrade to 4.9 before end of support
+|Mule 4.4 LTS |End of Life — no longer supported |Upgrade to 4.6 or 4.9 immediately
+|===
+
+If your private locations run on Mule Runtime 4.4, upgrade to 4.6 or 4.9 as soon as possible. Running monitors on an EOL runtime poses security risks and is not supported.
+
+After upgrading, validate your private location's compatibility within your VPC and security configuration. See xref:afm-create-private-location.adoc[Creating Private Locations].
 
 == See Also
 
