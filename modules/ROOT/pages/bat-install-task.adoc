@@ -2,9 +2,14 @@
 
 The Blackbox Automated Testing (BAT) CLI wrapper is a command line wrapper that you install to execute API tests.
 
-== Prerequisite for Linux and MacOS Systems
+== Prerequisite for Linux and macOS Systems
 
-Before installing the BAT CLI, ensure that Java 17 is installed on your system.
+Before installing BAT CLI, ensure that Java 17 is installed:
+
+[source,shell]
+----
+java -version
+----
 
 == Prerequisites for Windows 10 Systems
 
@@ -27,19 +32,63 @@ The instructions are at https://learn.microsoft.com/en-us/windows/wsl/install.
 [[to-install-bat]]
 == Install BAT
 
-You can install BAT CLI on Linux, MacOS, and Windows.
+You can install BAT CLI on Linux, macOS, and Windows.
 
-=== Linux and MacOS Systems
+=== Linux and macOS Systems
 
-. Ensure that the user under which you are installing has write and execute permissions for the directory into which you plan to install BAT CLI and to `/usr/local/bin`.
+. https://repository-master.mulesoft.org/nexus/content/repositories/releases/com/mulesoft/bat/bat-wrapper/1.1.14/bat-wrapper-1.1.14.zip[Download the BAT CLI ZIP file] and save it in your `Downloads` directory.
 +
-. Run the following command to install BAT CLI:
+. Open a terminal and run the following command to install BAT CLI:
 +
-`curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash`
+[source,shell]
+----
+BAT_ZIP="$(ls -t "$HOME"/Downloads/bat-wrapper*.zip 2>/dev/null | head -n 1)"
+if [ -z "$BAT_ZIP" ]; then
+  echo "BAT CLI ZIP file was not found in the Downloads directory."
+else
+  mkdir -p "$HOME/.bat"
+  unzip -o "$BAT_ZIP" -d "$HOME/.bat"
+  chmod +x "$HOME/.bat/bat/bin/bat"
+fi
+----
 +
-This installs BAT CLI into the `$HOME/.bat/bat/bin` directory. The installation script automatically adds a `bat` file to the `/usr/local/bin` directory that points to the actual BAT CLI installation directory. If this does not work, you can manually add `$HOME/.bat/bat/bin` to your shell environment's path to execute BAT CLI or rerun the installation under a user with write permission for `/usr/local/bin`.
+The command selects the most recently downloaded BAT CLI ZIP file and installs it under `$HOME/.bat`.
 +
-. Run the command `bat -version` to verify that BAT CLI is installed.
+. Add BAT CLI to your `PATH`.
++
+Identify your default shell:
++
+[source,shell]
+----
+basename "$SHELL"
+----
++
+* If the command displays `zsh`, run:
++
+[source,shell]
+----
+echo 'export PATH="$HOME/.bat/bat/bin:$PATH"' >> "$HOME/.zshrc"
+. "$HOME/.zshrc"
+----
++
+* If the command displays `bash`, run:
++
+[source,shell]
+----
+echo 'export PATH="$HOME/.bat/bat/bin:$PATH"' >> "$HOME/.bashrc"
+. "$HOME/.bashrc"
+----
++
+* If a different shell is displayed, add `$HOME/.bat/bat/bin` to the startup file used by that shell.
++
+. Run the following command to verify that BAT CLI is installed:
++
+[source,shell]
+----
+bat --version
+----
++
+The installation is successful if the command displays the BAT CLI version.
 
 === Windows
 
