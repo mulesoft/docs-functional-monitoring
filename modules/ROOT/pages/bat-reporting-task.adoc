@@ -2,6 +2,8 @@
 
 You can configure BAT for use with these reporting systems.
 
+NOTE: If your monitors run in a private location deployed to a CloudHub 2.0 private space, additional network configuration is required before the private location can reach external reporting systems. See xref:afm-monitoring-private-apis.adoc#third-party-integrations[Third-Party Monitoring Integrations in CloudHub 2.0 Private Spaces].
+
 * New Relic
 * PagerDuty
 * Slack

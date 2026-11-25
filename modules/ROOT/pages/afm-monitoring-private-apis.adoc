@@ -23,7 +23,7 @@ NOTE: You can also test public APIs using private locations. Public APIs are API
 
 == Association of Private Locations with Schedules
 
-When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft does not limit the number of schedules that you can create for tests that are run from private locations.
+When you use private locations, you can run as many workers as your allotment of vCores allows. By default, each worker consumes 0.2 vCores. Therefore, MuleSoft doesn't limit the number of schedules that you can create for tests that are run from private locations.
 
 Also, you can run tests from private locations with intervals of five minutes.
 
@@ -61,7 +61,7 @@ Monitor 5 runs on one schedule, Schedule H, although it could run on multiple sc
 
 == Length of Time Before Tests Time Out
 
-When tests are run by private locations in an instance of Anypoint VPC, the workers do not share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Anypoint Runtime Manager. To do so, follow these steps:
+When tests are run by private locations in an instance of Anypoint VPC, the workers don't share resources with other MuleSoft customers. Therefore, AFM allows tests to wait for a default of thirty minutes for a response from an endpoint. You can increase this time in Anypoint Runtime Manager. To do so, follow these steps:
 
 . Go to Anypoint Runtime Manager.
 . Open the settings for the private location for which you want to increase the timeout.
@@ -83,9 +83,25 @@ Private locations run on a Mule Runtime version that you manage. To maintain sec
 |Mule 4.4 LTS |End of Life — no longer supported |Upgrade to 4.6 or 4.9 immediately
 |===
 
-If your private locations run on Mule Runtime 4.4, upgrade to 4.6 or 4.9 as soon as possible. Running monitors on an EOL runtime poses security risks and is not supported.
+If your private locations run on Mule Runtime 4.4, upgrade to 4.6 or 4.9 as soon as possible. Running monitors on an EOL runtime poses security risks and isn't supported.
 
 After upgrading, validate your private location's compatibility within your VPC and security configuration. See xref:afm-create-private-location.adoc[Creating Private Locations].
+
+[[third-party-integrations]]
+== Third-Party Monitoring Integrations in CloudHub 2.0 Private Spaces
+
+In CloudHub 2.0, private locations run as Mule applications in your private space. Private spaces have no direct internet access, and MuleSoft doesn't provide a default internet route. Outbound traffic from your Mule applications can leave the private space only through a transit gateway or VPN connection to your network.
+
+When you configure a monitor to send results to a third-party monitoring or alerting system, the outbound call originates from within the Mule application. The request travels through your transit gateway or VPN connection to your network, and then through your organization's proxy and egress controls before reaching the third-party system. MuleSoft doesn't route, inspect, or proxy this traffic.
+
+To enable this integration, complete all of the following steps:
+
+. Connect your private space to your network. For more information, see xref:cloudhub-2::ps-create-configure-tgw.adoc[] or xref:cloudhub-2::ps-create-configure-vpn.adoc[].
+. Add routes to the monitoring system's endpoints in your private space route table. Routes accept IP address ranges in CIDR format only, not domain names. Add the IP ranges published by the third-party monitoring system. For more details, see xref:cloudhub-2::ps-manage.adoc[].
+. Configure your network to route traffic arriving from the private space through your organization's proxy or firewall before it reaches the internet, and allow only the domains or IP addresses of the third-party monitoring system.
+
+If any of these steps is incomplete, the private location can't deliver monitor results to the third-party system.
+
 
 == See Also
 
